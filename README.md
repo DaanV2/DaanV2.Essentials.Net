@@ -1,4 +1,5 @@
-﻿# Essentials
+﻿# DaanV2 - Essentials
+this project is a base for all other projects to make sure they all have the same tools, functions. but also very important is the contract the interfaces this library gives.
 
 ## Builders
 Builders are objects that can take a whole range of different objects or just a whole bunch of one type and put them together in a single specified object.
