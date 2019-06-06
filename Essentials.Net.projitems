@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b1f153d9-f47c-4fe9-bd9f-ffacb81fb3f9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DaanV2</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)LICENSE.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Compiler Context\Compiler Context - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Compiler Context\Compiler Context - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Decompiler Context\Decompiler Context - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Decompiler Context\Decompiler Context - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Interfaces\ICompiler Context\ICompiler Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Interfaces\ICompiler\ICompiler - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Interfaces\ICompiler\ICompiler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Interfaces\IDecompiler Context\IDecompiler - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compilers\Interfaces\IDecompiler\IDecompiler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerators\PathType\PathType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer.cs" />
+  </ItemGroup>
+</Project>
