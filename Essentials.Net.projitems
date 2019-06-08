@@ -35,5 +35,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Contains Find.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Variables.cs" />
   </ItemGroup>
 </Project>
