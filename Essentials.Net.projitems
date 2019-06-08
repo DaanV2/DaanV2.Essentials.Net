@@ -33,6 +33,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializationFactory\ISerializationFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Contains Find.cs" />

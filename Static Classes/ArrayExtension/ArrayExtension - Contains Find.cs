@@ -3,9 +3,7 @@
 namespace DaanV2 {
     public static partial class ArrayExtension {
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="Type"></typeparam>
         /// <param name="Array"></param>
         /// <param name="Find"></param>
@@ -20,9 +18,7 @@ namespace DaanV2 {
             return false;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="Type"></typeparam>
         /// <param name="Array"></param>
         /// <param name="Find"></param>

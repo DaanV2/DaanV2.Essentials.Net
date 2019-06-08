@@ -21,9 +21,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2.Builders {
-    /// <summary>The specification how a builder should function</summary>
-    public interface IBuilder<TypeToBuild> {
-        /// <summary>Adds the specific object to the build</summary>
+    ///DOLATER <summary>Add Description</summary>
         /// <param name="O">The object to add</param>
         void Add(Object O);
 
