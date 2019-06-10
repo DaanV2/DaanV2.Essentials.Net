@@ -18,27 +18,27 @@ using System;
 
 namespace DaanV2.Serialization {
     ///DOLATER <summary> add description for interface: IConfigSerializerFactory</summary>
-    public interface IConfigSerializerFactory {
+    public interface ISerializerFactory<TypeStream> {
 
         ///DOLATER <summary>Add Description</summary>
         /// <param name="ForType"></param>
         /// <returns></returns>
-        ISerializer<TIn> GetSerializer<TIn>();
+        ISerializer<TIn, TypeStream> GetSerializer<TIn>();
 
         ///DOLATER <summary>Add Description</summary>
         /// <param name="ForType"></param>
         /// <returns></returns>
-        ISerializer<Object> GetSerializer(Type ForType);
+        ISerializer<Object, TypeStream> GetSerializer(Type ForType);
 
 
         ///DOLATER <summary>Add Description</summary>
         /// <returns></returns>
-        IDeserializer<TOut> GetDeserializer<TOut>();
+        IDeserializer<TOut, TypeStream> GetDeserializer<TOut>();
 
         ///DOLATER <summary>Add Description</summary>
         /// <param name="ForType"></param>
         /// <returns></returns>
-        IDeserializer<Object> GetDeserializer(Type ForType);
+        IDeserializer<Object, TypeStream> GetDeserializer(Type ForType);
 
 
         ///DOLATER <summary>Add Description</summary>

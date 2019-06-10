@@ -14,12 +14,11 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System.IO;
 
 namespace DaanV2.Serialization {
     ///DOLATER <summary>Add Description</summary>
     /// <typeparam name="TypeOut"></typeparam>
-    public interface IDeserializer<TypeOut, TypeStream> where TypeStream : Stream {
+    public interface IDeserializer<TypeOut, TypeStream> {
         ///DOLATER <summary>Add Description</summary>
         /// <param name="stream"></param>
         /// <returns></returns>

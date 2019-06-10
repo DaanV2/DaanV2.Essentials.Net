@@ -17,21 +17,26 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Builders {
-    ///DOLATER <summary>Add Description</summary>
-    /// <param name="O">The object to add</param>
-    private void Add(Object O);
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TypeToBuild"></typeparam>
+    public interface IBuilder<TypeToBuild> {
+        ///DOLATER <summary>Add Description</summary>
+        /// <param name="O">The object to add</param>
+        void Add(Object O);
 
-    /// <summary>Checks if the given object can be added to the builder</summary>
-    /// <param name="O">The object to check</param>
-    /// <returns>A <see cref="Boolean"/></returns>
-    private Boolean CanAccept(Object O);
+        /// <summary>Checks if the given object can be added to the builder</summary>
+        /// <param name="O">The object to check</param>
+        /// <returns>A <see cref="Boolean"/></returns>
+        Boolean CanAccept(Object O);
 
-    /// <summary>Set the base object of this builder to work on</summary>
-    /// <param name="Base">The base object</param>
-    private void SetBase(TypeToBuild Base);
+        /// <summary>Set the base object of this builder to work on</summary>
+        /// <param name="Base">The base object</param>
+        void SetBase(TypeToBuild Base);
 
-    /// <summary>Returns the builded version of the specified <see cref="TypeToBuild"/></summary>
-    /// <returns>A <see cref="TypeToBuild"/></returns>
-    private TypeToBuild BuildFinal();
-}
+        /// <summary>Returns the builded version of the specified <see cref="TypeToBuild"/></summary>
+        /// <returns>A <see cref="TypeToBuild"/></returns>
+        TypeToBuild BuildFinal();
+    }
 }
