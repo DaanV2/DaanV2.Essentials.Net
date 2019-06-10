@@ -18,10 +18,10 @@ using System.IO;
 
 namespace DaanV2.Serialization {
     ///DOLATER <summary> add description for interface: IDeserializer</summary>
-    public interface IDeserializer<TypeOut, TypeContext> {
+    public interface IDeserializer<TypeOut, TypeStream, TypeContext> where TypeStream : Stream {
         ///DOLATER <summary>Add Description</summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        TypeOut Deserialize(Stream stream, TypeContext Context);
+        TypeOut Deserialize(TypeStream stream, TypeContext Context);
     }
 }

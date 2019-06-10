@@ -19,10 +19,10 @@ using System.IO;
 namespace DaanV2.Serialization {
     ///DOLATER <summary>Add Description</summary>
     /// <typeparam name="TypeIn"></typeparam>
-    public interface ISerializer<TypeIn> {
+    public interface ISerializer<TypeIn, TypeStream> where TypeStream : Stream {
         ///DOLATER <summary>Add Description</summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        void Serialize(TypeIn O, Stream stream);
+        void Serialize(TypeIn O, TypeStream stream);
     }
 }

@@ -20,10 +20,10 @@ namespace DaanV2.Serialization {
     ///DOLATER <summary>Add Description</summary>
     /// <typeparam name="TypeIn"></typeparam>
     /// <typeparam name="TypeContext"></typeparam>
-    public interface ISerializer<TypeIn, TypeContext> {
+    public interface ISerializer<TypeIn, TypeStream, TypeContext> where TypeStream : Stream{
         ///DOLATER <summary>Add Description</summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        void Serialize(TypeIn O, Stream stream, TypeContext Context);
+        void Serialize(TypeIn O, TypeStream stream, TypeContext Context);
     }
 }
