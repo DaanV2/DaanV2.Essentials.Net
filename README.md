@@ -23,6 +23,17 @@ Deserializing is the opposite of this process.
 - Compilers
     - CompilerContext<T>
     - DecompilerContext
+- Serialization
+	- DeserializerAttribute
+	- SerializerAttribute
+	
+## Static Classes
+- Serialization
+	- Serialization
+- Extensions
+	- Array Extension
+	- Task Extension
+	- Type Extension
 
 ## Interfaces
 A list of interfaces that can be found with this project. T is for the primary generic type that can be processed, C for the context type.

@@ -40,6 +40,17 @@ namespace DaanV2.Serialization {
         /// <returns></returns>
         IDeserializer<Object, TypeStream> GetDeserializer(Type ForType);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Deserialize"></param>
+        void SetDeserializeType(Type Deserializer);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Serialize"></param>
+        void SetSerializeType(Type Serializer);
 
         ///DOLATER <summary>Add Description</summary>
         String Name { get; }

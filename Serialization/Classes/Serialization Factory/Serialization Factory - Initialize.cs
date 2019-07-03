@@ -14,24 +14,18 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System.Threading.Tasks;
+using System;
+using System.Runtime.Serialization;
 
-namespace DaanV2 {
-    public static partial class TaskExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-		public static void WaitAll(this Task[] Tasks) {
-            Task.WaitAll(Tasks);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-        public static void WaitAny(this Task[] Tasks) {
-            Task.WaitAny(Tasks);
+namespace DaanV2.Serialization {
+    ///DOLATER <summary> add description for class: SerializationFactory</summary>
+	[Serializable, DataContract]
+    public partial class SerializationFactory {
+        /// <summary>Creates a new instance of <see cref="SerializationFactory"/></summary>
+        public SerializationFactory() {
+            this.Name = Name;
+            this.Deserializer = null;
+            this.Serializer = null;
         }
     }
 }

@@ -15,8 +15,8 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Compilers {
-    public partial class CompilerContext<ProcessObjectType> {
+    public partial class CompilerContext<TypeIn> {
         ///DOLATER <summary>Add Description</summary>
-        public ProcessObjectType ObjectToProcess { get; set; }
+        public TypeIn ObjectToProcess { get; set; }
     }
 }

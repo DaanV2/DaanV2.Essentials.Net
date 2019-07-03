@@ -19,13 +19,13 @@ using System.Runtime.Serialization;
 
 namespace DaanV2.Compilers {
     ///DOLATER <summary>Add Description</summary>
-    /// <typeparam name="ProcessObjectType"></typeparam>
+    /// <typeparam name="TypeIn"></typeparam>
 	[Serializable, DataContract]
-    public partial class CompilerContext<ProcessObjectType> : DecompilerContext, ICompilerContext<ProcessObjectType> {
+    public partial class CompilerContext<TypeIn> : DecompilerContext, ICompilerContext<TypeIn> {
 
         /// <summary>Creates a new instance of <see cref="CompilerContext"/></summary>
         /// <param name="ToCompile">DOLATER FILL IN</param>
-        public CompilerContext(ProcessObjectType ToCompile, String OutputPath = "", PathType OutputType = PathType.File) :
+        public CompilerContext(TypeIn ToCompile, String OutputPath = "", PathType OutputType = PathType.File) :
             base(OutputPath, OutputType) {
             this.ObjectToProcess = ToCompile;
         }

@@ -14,24 +14,20 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System.Threading.Tasks;
+using System;
+using System.Runtime.Serialization;
 
-namespace DaanV2 {
-    public static partial class TaskExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-		public static void WaitAll(this Task[] Tasks) {
-            Task.WaitAll(Tasks);
-        }
+namespace DaanV2.Serialization {
+    ///DOLATER <summary> add description for class: DeserializerAttribute</summary>
+	[Serializable, DataContract, AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
+    public partial class DeserializerAttribute : Attribute {
+        /// <summary>Creates a new instance of <see cref="DeserializerAttribute"/></summary>
+        public DeserializerAttribute() : this(String.Empty) { }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-        public static void WaitAny(this Task[] Tasks) {
-            Task.WaitAny(Tasks);
+        /// <summary>Creates a new instance of <see cref="DeserializerAttribute"/></summary>
+        /// <param name="Name"></param>
+        public DeserializerAttribute(String Name) {
+            this.FactoryName = Name;
         }
     }
 }

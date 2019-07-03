@@ -14,24 +14,18 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    public static partial class TaskExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-		public static void WaitAll(this Task[] Tasks) {
-            Task.WaitAll(Tasks);
-        }
+    ///DOLATER <summary> add description for class: TypeExtension</summary>
+    public static partial class TypeExtension {
+        /// <summary>Creates a new instance of <see cref="TypeExtension"/></summary>
+        static TypeExtension() {
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
-        public static void WaitAny(this Task[] Tasks) {
-            Task.WaitAny(Tasks);
         }
     }
 }

@@ -31,12 +31,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\PathType\PathType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Serialization Factory\Serialization Factory - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Serialization Factory\Serialization Factory - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Serialization Factory\Serialization Factory - ISerializerFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Serializer Attribute\Serializer Attribute - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Serializer Attribute\Serializer Attribute - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\IDeserializer\IDeserializer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerialization Factory\ISerialization Factory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Add.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Functions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Array Extension\Array Extension - Contains Find.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Contains.cs" />
   </ItemGroup>
 </Project>
