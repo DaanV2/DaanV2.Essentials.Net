@@ -22,9 +22,8 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public partial class DeserializerAttribute {
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>The name of the factory this class belongs to</summary>
         public String FactoryName { get; set; }
     }
 }

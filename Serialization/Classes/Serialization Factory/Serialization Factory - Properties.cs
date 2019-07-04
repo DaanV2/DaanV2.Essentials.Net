@@ -23,15 +23,16 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public partial class SerializationFactory {
-        ///DOLATER <summary>Add Description</summary>
+
+        /// <summary>The name of this factory</summary>
         [DataMember]
         public String Name { get; set; }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>The type of the deserializer</summary>
         [DataMember]
         public Type Deserializer { get; set; }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>The type of the serializer<summary>
         [DataMember]
         public Type Serializer { get; set; }
     }

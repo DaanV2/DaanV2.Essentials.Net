@@ -16,11 +16,13 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Compilers {
-    ///DOLATER <summary> add description for interface: ICompiler</summary>
+    /// <summary>The interface responsible for forming the contract on how Decompilers should behave</summary>
+    /// <typeparam name="TypeTo">The type that needs to be returned</typeparam>
     public interface IDecompiler<TypeTo> {
 
-        /// DOLATER<summary></summary>
-        /// <param name="Context"></param>
+        /// <summary>Decompiles the given context into the specified object</summary>
+        /// <param name="Context">The context that specifies where the information can be found</param>
+        /// <returns><see cref="TypeTo"/></returns>
         TypeTo Decompile(IDecompilerContext Context);
     }
 }

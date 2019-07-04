@@ -21,8 +21,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for class: TypeExtension</summary>
+    /// <summary>The class responsible for extending the possiblies of the <see cref="Type"/> class</summary>
     public static partial class TypeExtension {
+
         /// <summary>Creates a new instance of <see cref="TypeExtension"/></summary>
         static TypeExtension() {
 

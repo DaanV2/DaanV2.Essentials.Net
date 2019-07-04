@@ -21,6 +21,7 @@ namespace DaanV2.Builders {
     /// <typeparam name="TypeBuild">The type to build to</typeparam>
     /// <typeparam name="ContextType">The context type</typeparam>
     public interface IBuilder<TypeToBuild, ContextType> : IBuilder<TypeToBuild> {
+
         /// <summary>Adds the specific object to the build</summary
         /// <param name="O">The object to check if it can be added</param>
         /// <param name="Context">The relevant context needed to possibly help identify the object</param>

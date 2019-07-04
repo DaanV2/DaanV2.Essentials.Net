@@ -16,7 +16,8 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Compilers {
     public partial class CompilerContext<TypeIn> {
-        ///DOLATER <summary>Add Description</summary>
+
+        /// <summary>The object to compile</summary>
         public TypeIn ObjectToProcess { get; set; }
     }
 }

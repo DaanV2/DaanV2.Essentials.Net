@@ -18,18 +18,15 @@ using System.Threading.Tasks;
 
 namespace DaanV2 {
     public static partial class TaskExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
+
+        /// <summary>Waits for all tasks to finish</summary>
+        /// <param name="Tasks">The array of tasks to wait for</param>
 		public static void WaitAll(this Task[] Tasks) {
             Task.WaitAll(Tasks);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Tasks"></param>
+        /// <summary>Waits for any of the tasks to finish</summary>
+        /// <param name="Tasks">The array of tasks to wait for</param>
         public static void WaitAny(this Task[] Tasks) {
             Task.WaitAny(Tasks);
         }

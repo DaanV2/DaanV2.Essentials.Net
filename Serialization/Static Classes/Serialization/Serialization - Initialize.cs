@@ -22,8 +22,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary> add description for class: Serialization</summary>
+    /// <summary>The class that holds all the serializer factories</summary>
     public static partial class Serialization {
+
         /// <summary>Creates a new instance of <see cref="Serialization"/></summary>
         static Serialization() {
             Serialization.Factories = new Dictionary<String, ISerializerFactory<System.IO.Stream>>();

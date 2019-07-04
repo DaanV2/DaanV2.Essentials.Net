@@ -17,14 +17,15 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for class: PathType</summary>
+    /// <summary>A enumerator that helps indentifing what kind of path has been filled in</summary>
 	[Serializable]
     public enum PathType {
-        ///DOLATER <summary>Add Description</summary>
+
+        /// <summary>Marks that the given path is unknown</summary>
         Unknown,
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Marks that the given path is a file</summary>
         File,
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Marks that the given path is a folder</summary>
         Folder
     }
 }

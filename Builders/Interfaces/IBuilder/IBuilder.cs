@@ -17,12 +17,11 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Builders {
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <typeparam name="TypeToBuild"></typeparam>
+    /// <summary>The inferface that is responsible for forming the contract between builders and output types</summary>
+    /// <typeparam name="TypeToBuild">The eventuall resulting type</typeparam>
     public interface IBuilder<TypeToBuild> {
-        ///DOLATER <summary>Add Description</summary>
+
+        /// <summary>Add the given object to the object to build</summary>
         /// <param name="O">The object to add</param>
         void Add(Object O);
 

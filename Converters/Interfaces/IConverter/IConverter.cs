@@ -16,13 +16,14 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Converters {
-    ///DOLATER <summary>Add Description</summary>
-    /// <typeparam name="TypeFrom"></typeparam>
-    /// <typeparam name="TypeTo"></typeparam>
+    /// <summary>The interface responisble for forming the contract on how Converter should behave</summary>
+    /// <typeparam name="TypeFrom">The object to convert into the specified type</typeparam>
+    /// <typeparam name="TypeTo">The type that is returned after conversion</typeparam>
     public interface IConverter<TypeFrom, TypeTo> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Process"></param>
-        /// <returns></returns>
+
+        /// <summary>Converts the given object into the specified type</summary>
+        /// <param name="Process">The object to convert</param>
+        /// <returns><see cref="TypeTo"/></returns>
         TypeTo Convert(TypeFrom Process);
     }
 }

@@ -23,9 +23,8 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public partial class SerializerAttribute {
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>The name of the factory that this class belongs to</summary>
         [DataMember]
         public String FactoryName { get; set; }
     }

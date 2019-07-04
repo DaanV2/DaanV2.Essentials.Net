@@ -15,12 +15,15 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
+using System;
+
 namespace DaanV2.Compilers {
     public partial class DecompilerContext {
-        ///DOLATER <summary>Add Description</summary>
-        public System.String Path { get; set; }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Gets or sets the filepath/folder to the place that needs to be decompiled of this <see cref="DecompilerContext"/></summary>
+        public String Path { get; set; }
+
+        /// <summary>Gets or sets the path type of this <see cref="DecompilerContext"/></summary>
         public PathType PathType { get; set; }
     }
 }

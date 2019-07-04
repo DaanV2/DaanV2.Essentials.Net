@@ -18,14 +18,19 @@ using System;
 using System.Runtime.Serialization;
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary> add description for class: SerializationFactory</summary>
+    /// <summary>The basic serialization factory that allows for creation of (de)serializer of a generic type</summary>
 	[Serializable, DataContract]
     public partial class SerializationFactory {
+
         /// <summary>Creates a new instance of <see cref="SerializationFactory"/></summary>
-        public SerializationFactory() {
+        /// <param name="Name"></param>
+        public SerializationFactory(string Name) {
             this.Name = Name;
             this.Deserializer = null;
             this.Serializer = null;
         }
+
+        /// <summary>Creates a new instance of <see cref="SerializationFactory"/></summary>
+        public SerializationFactory() : this(String.Empty) { }
     }
 }

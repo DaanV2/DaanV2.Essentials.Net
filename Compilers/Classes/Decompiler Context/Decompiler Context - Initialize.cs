@@ -15,12 +15,16 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
+using System.Runtime.Serialization;
 
 namespace DaanV2.Compilers {
-    ///DOLATER <summary>Add Description for class: DecompilerContext</summary>
-	[Serializable]
+    ///<summary>The class responsible for giving the necessary information to decompile a file/folder</summary>
+	[Serializable, DataContract]
     public partial class DecompilerContext : IDecompilerContext {
+
         /// <summary>Creates a new instance of <see cref="DecompilerContext"/></summary>
+        /// <param name="InputPath">The input path that points to a folder/file</param>
+        /// <param name="PathInputType">The type of path being inputted</param>
         public DecompilerContext(String InputPath = "", PathType PathInputType = PathType.File) {
             this.Path = InputPath;
             this.PathType = PathInputType;

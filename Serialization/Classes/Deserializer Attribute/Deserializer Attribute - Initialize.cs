@@ -18,9 +18,10 @@ using System;
 using System.Runtime.Serialization;
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary> add description for class: DeserializerAttribute</summary>
+    /// <summary></summary>
 	[Serializable, DataContract, AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public partial class DeserializerAttribute : Attribute {
+
         /// <summary>Creates a new instance of <see cref="DeserializerAttribute"/></summary>
         public DeserializerAttribute() : this(String.Empty) { }
 

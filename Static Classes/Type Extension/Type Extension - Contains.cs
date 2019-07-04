@@ -18,11 +18,11 @@ using System;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Name"></param>
-        /// <returns></returns>
+
+        /// <summary>Returns the given attribute</summary>
+        /// <param name="Object">The object to retrieve attributes from</param>
+        /// <param name="Value">The type of the attribute to return</param>
+        /// <returns><see cref="Object"/></returns>
         public static Object GetAttribute(this Type Object, Type Value) {
             Object[] Attributes = Object.GetCustomAttributes(Value, true);
 
@@ -35,11 +35,10 @@ namespace DaanV2 {
             return default;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <summary>Returns the given attribute</summary>
+        /// <param name="Object">The object to retrieve attributes from</param>
+        /// <typeparam name="T">The type of the attribute to return</typeparam>
+        /// <returns><see cref="T"/></returns>
         public static T GetAttribute<T>(this Type Object) {
             Type Find = typeof(T);
             Object[] Attributes = Object.GetCustomAttributes(Find, true);
@@ -53,12 +52,10 @@ namespace DaanV2 {
             return default;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Object"></param>
-        /// <param name="Contains"></param>
-        /// <returns></returns>
+        /// <summary>Checks if the given type implement the given interface type</summary>
+        /// <param name="Object">The object to look through</param>
+        /// <param name="Contains">The interface type to find</param>
+        /// <returns><see cref="bool"/></returns>
         public static Boolean ContainsInterface(this Type Object, Type Contains) {
             Type[] Interfaces = Object.GetInterfaces();
 

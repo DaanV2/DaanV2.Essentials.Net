@@ -16,15 +16,16 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Converters {
-    ///DOLATER <summary>Add Description</summary>
-    /// <typeparam name="TypeFrom"></typeparam>
-    /// <typeparam name="TypeTo"></typeparam>
-    /// <typeparam name="TypeContext"></typeparam>
+    /// <summary>The interface responisble for forming the contract on how Converter should behave</summary>
+    /// <typeparam name="TypeFrom">The object to convert into the specified type</typeparam>
+    /// <typeparam name="TypeTo">The type that is returned after conversion</typeparam>
+    /// <typeparam name="TypeContext">The type of the context</typeparam>
     public interface IConverterInto<TypeFrom, TypeTo, TypeContext> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Process"></param>
-        /// <param name="Context"></param>
-        /// <returns></returns>
+
+        /// <summary>Convert the given object into the specified type</summary>
+        /// <param name="Process">The object to convert</param>
+        /// <param name="Context">The context needed to convert the given object</param>
+        /// <param name="Into">The object that receives the converted object</param>
         void Convert(TypeFrom Process, TypeContext Context, TypeTo Into);
     }
 }

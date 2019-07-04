@@ -16,11 +16,16 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary> add description for interface: IDeserializer</summary>
+    /// <summary>The interface that is responisble for forming the contract on how Deserializer should behave</summary>
+    /// <typeparam name="TypeOut">The type to be returned after deserializing</typeparam>
+    /// <typeparam name="TypeStream">The type of the stream to be used</typeparam>
+    /// <typeparam name="TypeContext">The context needed for deserializing</typeparam>
     public interface IDeserializer<TypeOut, TypeStream, TypeContext> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
+
+        /// <summary>Deserializer the given stream into the specified type</summary>
+        /// <param name="stream">The stream to read from</param>
+        /// <param name="Context">The context needed to read the stream</param>
+        /// <returns><see cref="TypeOut"/></returns>
         TypeOut Deserialize(TypeStream stream, TypeContext Context);
     }
 }

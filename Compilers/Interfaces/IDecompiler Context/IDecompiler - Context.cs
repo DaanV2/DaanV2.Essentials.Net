@@ -17,12 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Compilers {
-    ///DOLATER <summary>Add Description</summary>
+    /// <summary>The interface responisble for forming the contract on how the Decompilers context should behave</summary>
     public interface IDecompilerContext {
-        ///DOLATER <summary>Add Description</summary>
+
+        /// <summary>Get or sets the filepath/folderpath</summary>
         String Path { get; set; }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Gets or sets the path type</summary>
         PathType PathType { get; set; }
     }
 }

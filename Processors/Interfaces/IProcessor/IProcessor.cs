@@ -16,11 +16,12 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    ///DOLATER <summary>Add Description</summary>
-    /// <typeparam name="TypeProcess"></typeparam>
+    /// <summary>The inferface responsible for forming the contract on how processor should behave</summary>
+    /// <typeparam name="TypeProcess">The type to process</typeparam>
     public interface IProcessor<TypeProcess> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="O"></param>
+
+        /// <summary>Processes the given object</summary>
+        /// <param name="O">The object to process</param>
         void Process(TypeProcess O);
     }
 }

@@ -23,9 +23,8 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public static partial class Serialization {
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>The internal list of factories</summary>
         public static Dictionary<String, ISerializerFactory<Stream>> Factories { get; set; }
     }
 }

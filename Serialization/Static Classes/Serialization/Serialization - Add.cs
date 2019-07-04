@@ -20,45 +20,59 @@ using System.Reflection;
 
 namespace DaanV2.Serialization {
     public static partial class Serialization {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Factory"></param>
+
+        /// <summary>Add the given factory into the internal list</summary>
+        /// <param name="Factory">The factory to add</param>
         public static void Add(ISerializerFactory<Stream> Factory) {
             Serialization.Factories[Factory.Name] = Factory;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Add the specified assembly into the internal list. <para> Only types that implement 
+        /// <see cref="ISerializerFactory{TypeStream}"/>, <see cref="SerializableAttribute"/>, <see cref="DeserializerAttribute"/>
+        /// are accepted</para></summary>
         /// <param name="assembly"></param>
         public static void Add(Assembly assembly) {
+            Type T;
+            SerializerAttribute SAttribute;
+            DeserializerAttribute DAttribute;
             Type[] Types = assembly.GetTypes();
             Int32 Max = Types.Length;
-            Type T;
-            DaanV2.Serialization.SerializerAttribute SAttribute;
-            DaanV2.Serialization.DeserializerAttribute DAttribute;
 
+            //Loop through all types
             for (Int32 I = 0; I < Max; I++) {
                 T = Types[I];
-                if (T.ContainsInterface(typeof(ISerializerFactory<Stream>))) { 
 
-                }
-                else {
-                    SAttribute = T.GetAttribute<DaanV2.Serialization.SerializerAttribute>();
-                    DAttribute = T.GetAttribute< DaanV2.Serialization.DeserializerAttribute >();
+                //Does the type implement ISerializerFactory?
+                if (T.ContainsInterface(typeof(ISerializerFactory<Stream>))) {
+                    //Create factory
+                    ISerializerFactory<Stream> Temp = (ISerializerFactory < Stream > )Activator.CreateInstance(T);
 
-                    if (SAttribute != null) Serialization.Get(SAttribute.FactoryName).SetSerializeType(T);
-                    if (DAttribute != null) Serialization.Get(DAttribute.FactoryName).SetSerializeType(T);
+                    //If an older factory exists
+                    if (Serialization.Factories.ContainsKey(Temp.Name)) {
+                        //Transfer info
+                        ISerializerFactory<Stream> Old = Serialization.Factories[Temp.Name];
+                        Temp.SetDeserializeType(Old.GetDeserializeType());
+                        Temp.SetSerializeType(Old.GetSerializeType());
+                    }
+
+                    //Add factory to list
+                    Serialization.Factories[Temp.Name] = Temp;
                 }
+
+                //Grab the attributes
+                SAttribute = T.GetAttribute<SerializerAttribute>();
+                DAttribute = T.GetAttribute<DeserializerAttribute>();
+
+                //If null then no attribute was found
+                if (SAttribute != null) Serialization.Get(SAttribute.FactoryName).SetSerializeType(T);
+                if (DAttribute != null) Serialization.Get(DAttribute.FactoryName).SetSerializeType(T);
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Name"></param>
-        /// <returns></returns>
+        /// <summary>Returns the factory with the specified name
+        /// <para>If no factory is found, then one is made.</para></summary>
+        /// <param name="Name">The name of the specified name</param>
+        /// <returns><see cref="ISerializerFactory{Stream}"/></returns>
         private static ISerializerFactory<Stream> Get(String Name) {
             if (!Serialization.Factories.ContainsKey(Name))
                 Serialization.Factories[Name] = new SerializationFactory();

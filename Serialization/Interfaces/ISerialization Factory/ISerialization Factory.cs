@@ -17,42 +17,45 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary> add description for interface: IConfigSerializerFactory</summary>
+    /// <summary>The interface responisble for form the contract on what a SerializerFactory should contain</summary>
+    /// <typeparam name="TypeStream">The type of stream used by the serializers</typeparam>
     public interface ISerializerFactory<TypeStream> {
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="ForType"></param>
-        /// <returns></returns>
+        /// <summary>Returns a serializer that is able to serialize the given type through the given stream</summary>
+        /// <typeparam name="TIn">The type to create a serializer for</typeparam>
+        /// <returns><see cref="ISerializer{TIn, TypeStream}"/></returns>
         ISerializer<TIn, TypeStream> GetSerializer<TIn>();
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="ForType"></param>
-        /// <returns></returns>
+        /// <summary>Returns a serializer that is able to serialize the given type through the given stream</summary>
+        /// <param name="ForType">The type to create a serializer for</typeparam>
+        /// <returns><see cref="ISerializer{Object, TypeStream}"/></returns>
         ISerializer<Object, TypeStream> GetSerializer(Type ForType);
 
-
-        ///DOLATER <summary>Add Description</summary>
-        /// <returns></returns>
+        /// <summary>Returns a deserializer that is able to deserialize the given type through the given stream</summary>
+        /// <typeparam name="TOut">The type to create a deserializer for</typeparam>
+        /// <returns><see cref="IDeserializer{TOut, TypeStream}"/></returns>
         IDeserializer<TOut, TypeStream> GetDeserializer<TOut>();
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="ForType"></param>
-        /// <returns></returns>
+        /// <summary>Returns a deserializer that is able to deserialize the given type through the given stream</summary>
+        /// <param name="ForType">The type to create a deserializer for</typeparam>
+        /// <returns><see cref="IDeserializer{TOut, TypeStream}"/></returns>
         IDeserializer<Object, TypeStream> GetDeserializer(Type ForType);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Deserialize"></param>
+        /// <summary>Sets the deserializer type</summary>
+        /// <param name="Deserialize">The type to set as the deserializer</param>
         void SetDeserializeType(Type Deserializer);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Serialize"></param>
+        /// <summary>Sets the serializer type</summary>
+        /// <param name="Serialize">The type to set as the serializer</param>
         void SetSerializeType(Type Serializer);
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Gets the deserializer</summary>
+        Type GetDeserializeType();
+
+        /// <summary>Gets the serializer type</summary>
+        Type GetSerializeType();
+
+        /// <summary>Gets the name of the serializer factory</summary>
         String Name { get; }
     }
 }

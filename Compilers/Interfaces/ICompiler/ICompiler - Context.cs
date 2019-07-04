@@ -16,11 +16,12 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Compilers {
-    ///DOLATER <summary> add description for interface: ICompiler</summary>
+    /// <summary>The inferface responsible for forming the contract that tells how to compile an object with given context</summary>
     public interface ICompiler<TypeFrom, TypeContext> {
 
-        /// DOLATER<summary></summary>
-        /// <param name="Context"></param>
+        /// <summary>Compiles the given object and context</summary>
+        /// <param name="Process">The object to compile</param>
+        /// <param name="Context">The context needed to compile the object</param>
         void Compile(ICompilerContext<TypeFrom> Process, TypeContext Context);
     }
 }

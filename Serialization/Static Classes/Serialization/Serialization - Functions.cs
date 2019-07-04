@@ -20,9 +20,8 @@ using System.IO;
 
 namespace DaanV2.Serialization {
     public static partial class Serialization {
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <summary>Returns a list of names of all factories currently in the internal list</summary>
         /// <returns></returns>
         public static List<String> GetNames() {
             List<String> Out = new List<String>(Serialization.Factories.Count);

@@ -23,66 +23,75 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public partial class SerializationFactory : ISerializerFactory<Stream> {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="TOut"></typeparam>
-        /// <returns></returns>
+
+        /// <summary>Returns a deserializer that is able to deserializer the given object</summary>
+        /// <typeparam name="TOut">The type that needs to be returned after deserializing</typeparam>
+        /// <returns><see cref="IDeserializer{TOut, Stream}"/></returns>
         public IDeserializer<TOut, Stream> GetDeserializer<TOut>() {
             if (this.Deserializer == null)
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
 
-            return (IDeserializer<TOut, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(typeof(TOut)));
+            return this.Deserializer.IsGenericType
+                ? (IDeserializer<TOut, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(typeof(TOut)))
+                : (IDeserializer<TOut, Stream>)Activator.CreateInstance(this.Deserializer);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ForType"></param>
-        /// <returns></returns>
+        /// <summary>Returns a deserializer that is able to deserializer the given object</summary>
+        /// <param name="ForType">The type that needs to be returned after deserializing</typeparam>
+        /// <returns><see cref="IDeserializer{Object, Stream}"/></returns>
         public IDeserializer<Object, Stream> GetDeserializer(Type ForType) {
             if (this.Deserializer == null)
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
 
-            return (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(ForType));
+            return this.Deserializer.IsGenericType
+                ? (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(ForType))
+                : (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="TIn"></typeparam>
-        /// <returns></returns>
+        /// <summary>Returns a serializer that is able to serializer the given object</summary>
+        /// <typeparam name="TIn">The type that is being inputted for serialization</typeparam>
+        /// <returns><see cref="ISerializer{TypeIn, Stream}"/></returns>
         public ISerializer<TIn, Stream> GetSerializer<TIn>() {
             if (this.Serializer == null)
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
 
-            return (ISerializer<TIn, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(typeof(TIn)));
+            return this.Serializer.IsGenericType
+                ? (ISerializer<TIn, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(typeof(TIn)))
+                : (ISerializer<TIn, Stream>)Activator.CreateInstance(this.Serializer);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ForType"></param>
-        /// <returns></returns>
+        /// <summary>Returns a serializer that is able to serializer the given object</summary>
+        /// <param name="ForType">The type that is being inputted for serialization</typeparam>
+        /// <returns><see cref="ISerializer{Object, Stream}"/></returns>
         public ISerializer<Object, Stream> GetSerializer(Type ForType) {
             if (this.Serializer == null)
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
 
-            return (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(ForType));
+            return this.Serializer.IsGenericType
+                ? (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(ForType))
+                : (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Deserialize"></param>
+        /// <summary>Gets the deserializing base type</summary>
+        /// <returns><see cref="Type"/></returns>
+        public Type GetDeserializeType() {
+            return this.Deserializer;
+        }
+
+        /// <summary>Gets the serializing base type</summary>
+        /// <returns><see cref="Type"/></returns>
+        public Type GetSerializeType() {
+            return this.Serializer;
+        }
+
+        /// <summary>Sets the deserializing base type</summary>
+        /// <param name="Deserialize">The type to set as the base for deserializers</param>
         public void SetDeserializeType(Type Deserialize) {
             this.Deserializer = Deserialize;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Deserialize"></param>
+        /// <summary>Sets the serializing base type</summary>
+        /// <param name="Serialize">The type to set as the base for serializers</param>
         public void SetSerializeType(Type Serialize) {
             this.Serializer = Serialize;
         }
