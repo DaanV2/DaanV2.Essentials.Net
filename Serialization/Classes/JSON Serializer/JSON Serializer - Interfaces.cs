@@ -10,18 +10,14 @@ namespace DaanV2.Serialization {
         ISerializer<TypeSerialize, Stream>,
         IDeserializer<TypeSerialize, Stream> {
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="stream"></param>
         /// <returns></returns>
         public TypeSerialize Deserialize(Stream stream) {
             return (TypeSerialize)this.serializer.ReadObject(stream);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="O"></param>
         /// <param name="stream"></param>
         public void Serialize(TypeSerialize O, Stream stream) {

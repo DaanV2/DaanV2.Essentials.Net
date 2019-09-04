@@ -27,9 +27,7 @@ namespace DaanV2.Serialization {
             Serialization.Factories[Factory.Name] = Factory;
         }
 
-        /// <summary>Add the specified assembly into the internal list. <para> Only types that implement 
-        /// <see cref="ISerializerFactory{TypeStream}"/>, <see cref="SerializableAttribute"/>, <see cref="DeserializerAttribute"/>
-        /// are accepted</para></summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="assembly"></param>
         public static void Add(Assembly assembly) {
             Type T;

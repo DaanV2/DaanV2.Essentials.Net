@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 namespace DaanV2.Serialization {
     public partial class JSONSerializer<TypeSerialize> {
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         private DataContractJsonSerializer serializer;
     }
 }
