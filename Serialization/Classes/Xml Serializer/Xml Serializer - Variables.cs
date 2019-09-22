@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace DaanV2.Serialization {
     public partial class XmlSerializer<TypeSerialize> {
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         private System.Xml.Serialization.XmlSerializer Serializer;
     }
 }

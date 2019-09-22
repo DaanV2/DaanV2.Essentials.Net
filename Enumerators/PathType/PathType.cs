@@ -21,9 +21,7 @@ namespace DaanV2 {
 	[Serializable]
     public enum PathType {
 
-        /// <summary>Marks that the given path is unknown</summary>
-        Unknown,
-        /// <summary>Marks that the given path is a file</summary>
+        ///DOLATER <summary>Add Description</summary>
         File,
         /// <summary>Marks that the given path is a folder</summary>
         Folder
