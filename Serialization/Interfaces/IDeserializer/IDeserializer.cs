@@ -14,13 +14,14 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
+using System;
 
 namespace DaanV2.Serialization {
     /// <summary>The inferface that is responsible for forming the contract on how Deserializer should behave</summary>
     /// <typeparam name="TypeOut">The type that needs to be returned after deserializing</typeparam>
     public interface IDeserializer<TypeOut, TypeStream> {
 
-        /// <summary>Deserialize the given stream into the specified Type</summary>
+        /// <summary>Deserialize the given stream into the specified <see cref="Type"/></summary>
         /// <param name="stream">The stream to read from</param>
         /// <returns><see cref="TypeOut"/></returns>
         TypeOut Deserialize(TypeStream stream);

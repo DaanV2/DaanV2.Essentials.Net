@@ -18,7 +18,7 @@ using System;
 using System.Runtime.Serialization;
 
 namespace DaanV2.Serialization {
-    /// <summary></summary>
+    /// <summary>The attribute that marks a class that it is a deserializer and what factory it belongs to</summary>
 	[Serializable, DataContract, AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public partial class DeserializerAttribute : Attribute {
 

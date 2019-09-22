@@ -24,7 +24,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Creates a new instance of <see cref="SerializationFactory"/></summary>
         /// <param name="Name"></param>
-        public SerializationFactory(string Name) {
+        public SerializationFactory(String Name) {
             this.Name = Name;
             this.Deserializer = null;
             this.Serializer = null;

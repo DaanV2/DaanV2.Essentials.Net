@@ -15,11 +15,7 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DaanV2.Serialization {
     public partial class SerializationFactory : ISerializerFactory<Stream> {
@@ -28,8 +24,9 @@ namespace DaanV2.Serialization {
         /// <typeparam name="TOut">The type that needs to be returned after deserializing</typeparam>
         /// <returns><see cref="IDeserializer{TOut, Stream}"/></returns>
         public IDeserializer<TOut, Stream> GetDeserializer<TOut>() {
-            if (this.Deserializer == null)
+            if (this.Deserializer == null) {
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
+            }
 
             return this.Deserializer.IsGenericType
                 ? (IDeserializer<TOut, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(typeof(TOut)))
@@ -40,8 +37,9 @@ namespace DaanV2.Serialization {
         /// <param name="ForType">The type that needs to be returned after deserializing</typeparam>
         /// <returns><see cref="IDeserializer{Object, Stream}"/></returns>
         public IDeserializer<Object, Stream> GetDeserializer(Type ForType) {
-            if (this.Deserializer == null)
+            if (this.Deserializer == null) {
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
+            }
 
             return this.Deserializer.IsGenericType
                 ? (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(ForType))
@@ -52,8 +50,9 @@ namespace DaanV2.Serialization {
         /// <typeparam name="TIn">The type that is being inputted for serialization</typeparam>
         /// <returns><see cref="ISerializer{TypeIn, Stream}"/></returns>
         public ISerializer<TIn, Stream> GetSerializer<TIn>() {
-            if (this.Serializer == null)
+            if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
+            }
 
             return this.Serializer.IsGenericType
                 ? (ISerializer<TIn, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(typeof(TIn)))
@@ -64,8 +63,9 @@ namespace DaanV2.Serialization {
         /// <param name="ForType">The type that is being inputted for serialization</typeparam>
         /// <returns><see cref="ISerializer{Object, Stream}"/></returns>
         public ISerializer<Object, Stream> GetSerializer(Type ForType) {
-            if (this.Serializer == null)
+            if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
+            }
 
             return this.Serializer.IsGenericType
                 ? (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(ForType))

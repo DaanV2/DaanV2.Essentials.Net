@@ -17,6 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2 {
+    /// <summary>The class that extends op on the existing type code</summary>
     public static partial class TypeExtension {
 
         /// <summary>Returns the given attribute</summary>
@@ -55,18 +56,22 @@ namespace DaanV2 {
         /// <summary>Checks if the given type implement the given interface type</summary>
         /// <param name="Object">The object to look through</param>
         /// <param name="Contains">The interface type to find</param>
-        /// <returns><see cref="bool"/></returns>
+        /// <returns><see cref="Boolean"/></returns>
         public static Boolean ContainsInterface(this Type Object, Type Contains) {
             Type[] Interfaces = Object.GetInterfaces();
 
             if (Contains.IsGenericType) {
                 for (Int32 I = 0; I < Interfaces.Length; I++) {
-                    if (Interfaces[I].GetGenericTypeDefinition() == Contains) return true;
+                    if (Interfaces[I].GetGenericTypeDefinition() == Contains) {
+                        return true;
+                    }
                 }
             }
             else {
                 for (Int32 I = 0; I < Interfaces.Length; I++) {
-                    if (Interfaces[I] == Contains) return true;
+                    if (Interfaces[I] == Contains) {
+                        return true;
+                    }
                 }
             }
 

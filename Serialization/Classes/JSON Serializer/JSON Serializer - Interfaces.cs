@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System;
 
 namespace DaanV2.Serialization {
-    public partial class JSONSerializer<TypeSerialize> : 
+    public partial class JSONSerializer<TypeSerialize> :
         ISerializer<TypeSerialize, Stream>,
         IDeserializer<TypeSerialize, Stream> {
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Deserialize the given stream into the specified <see cref="Type"/></summary>
         /// <param name="stream"></param>
         /// <returns></returns>
         public TypeSerialize Deserialize(Stream stream) {
             return (TypeSerialize)this.serializer.ReadObject(stream);
         }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Serializes the given object into the given stream</summary>
         /// <param name="O"></param>
         /// <param name="stream"></param>
         public void Serialize(TypeSerialize O, Stream stream) {

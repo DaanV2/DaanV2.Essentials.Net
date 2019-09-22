@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Xml.Serialization;
 
 namespace DaanV2.Serialization {
     public partial class XmlSerializer<TypeSerialize> {
 
-        ///DOLATER <summary>Add Description</summary>
-        private System.Xml.Serialization.XmlSerializer Serializer;
+        /// <summary>The given xml serializer that connects to the interface</summary>
+        private XmlSerializer Serializer;
     }
 }
