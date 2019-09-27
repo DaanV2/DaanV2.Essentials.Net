@@ -1,7 +1,9 @@
-﻿namespace DaanV2.Serialization {
+﻿using System.Xml.Serialization;
+
+namespace DaanV2.Serialization {
     public partial class XmlSerializer<TypeSerialize> {
 
-        ///DOLATER <summary>Add Description</summary>
-        private System.Xml.Serialization.XmlSerializer Serializer;
+        /// <summary>The given xml serializer that connects to the interface</summary>
+        private XmlSerializer Serializer;
     }
 }
