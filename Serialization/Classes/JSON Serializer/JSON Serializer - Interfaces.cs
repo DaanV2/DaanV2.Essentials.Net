@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace DaanV2.Serialization {
-    public partial class JSONSerializer<TypeSerialize> : 
+    public partial class JSONSerializer<TypeSerialize> :
         ISerializer<TypeSerialize, Stream>,
         IDeserializer<TypeSerialize, Stream> {
 

@@ -43,7 +43,7 @@ namespace DaanV2.Serialization {
                 //Does the type implement ISerializerFactory?
                 if (T.ContainsInterface(typeof(ISerializerFactory<Stream>))) {
                     //Create factory
-                    ISerializerFactory<Stream> Temp = (ISerializerFactory < Stream > )Activator.CreateInstance(T);
+                    ISerializerFactory<Stream> Temp = (ISerializerFactory<Stream>)Activator.CreateInstance(T);
 
                     //If an older factory exists
                     if (Serialization.Factories.ContainsKey(Temp.Name)) {
@@ -62,8 +62,13 @@ namespace DaanV2.Serialization {
                 DAttribute = T.GetAttribute<DeserializerAttribute>();
 
                 //If null then no attribute was found
-                if (SAttribute != null) Serialization.Get(SAttribute.FactoryName).SetSerializeType(T);
-                if (DAttribute != null) Serialization.Get(DAttribute.FactoryName).SetSerializeType(T);
+                if (SAttribute != null) {
+                    Serialization.Get(SAttribute.FactoryName).SetSerializeType(T);
+                }
+
+                if (DAttribute != null) {
+                    Serialization.Get(DAttribute.FactoryName).SetSerializeType(T);
+                }
             }
         }
 
@@ -72,8 +77,9 @@ namespace DaanV2.Serialization {
         /// <param name="Name">The name of the specified name</param>
         /// <returns><see cref="ISerializerFactory{Stream}"/></returns>
         private static ISerializerFactory<Stream> Get(String Name) {
-            if (!Serialization.Factories.ContainsKey(Name))
+            if (!Serialization.Factories.ContainsKey(Name)) {
                 Serialization.Factories[Name] = new SerializationFactory();
+            }
 
             return Serialization.Factories[Name];
         }

@@ -24,8 +24,9 @@ namespace DaanV2.Serialization {
         /// <param name="FactoryName">The name of the factory to usee</param>
         /// <returns><see cref="IDeserializer{TypeOut, Stream}"/></returns>
         public static IDeserializer<TypeOut, Stream> GetDeserializer<TypeOut>(String FactoryName) {
-            if (!Serialization.Factories.ContainsKey(FactoryName))
+            if (!Serialization.Factories.ContainsKey(FactoryName)) {
                 throw new Exception("No factory has been found with the name " + FactoryName);
+            }
 
             return Serialization.Factories[FactoryName].GetDeserializer<TypeOut>();
         }
@@ -36,8 +37,9 @@ namespace DaanV2.Serialization {
         /// <param name="ForType">The type to deserializer</param>
         /// <returns><see cref="IDeserializer{Object, Stream}"/></returns>
         public static IDeserializer<Object, Stream> GetDeserializer(String FactoryName, Type ForType) {
-            if (!Serialization.Factories.ContainsKey(FactoryName))
+            if (!Serialization.Factories.ContainsKey(FactoryName)) {
                 throw new Exception("No factory has been found with the name " + FactoryName);
+            }
 
             return Serialization.Factories[FactoryName].GetDeserializer(ForType);
         }
@@ -47,8 +49,9 @@ namespace DaanV2.Serialization {
         /// <param name="FactoryName">The name of the factory to usee</param>
         /// <returns><see cref="ISerializer{TypeIn, Stream}"/></returns>
         public static ISerializer<TypeIn, Stream> GetSerializer<TypeIn>(String FactoryName) {
-            if (!Serialization.Factories.ContainsKey(FactoryName))
+            if (!Serialization.Factories.ContainsKey(FactoryName)) {
                 throw new Exception("No factory has been found with the name " + FactoryName);
+            }
 
             return Serialization.Factories[FactoryName].GetSerializer<TypeIn>();
         }
@@ -58,8 +61,9 @@ namespace DaanV2.Serialization {
         /// <param name="ForType">The type to serialize</param>
         /// <returns><see cref="ISerializer{Object, Stream}"/></returns>
         public static ISerializer<Object, Stream> GetSerializer(String FactoryName, Type ForType) {
-            if (!Serialization.Factories.ContainsKey(FactoryName))
+            if (!Serialization.Factories.ContainsKey(FactoryName)) {
                 throw new Exception("No factory has been found with the name " + FactoryName);
+            }
 
             return Serialization.Factories[FactoryName].GetSerializer(ForType);
         }
