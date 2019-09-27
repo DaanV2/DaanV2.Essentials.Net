@@ -17,6 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.Threading.Tasks;
 
 namespace DaanV2 {
+    /// <summary>The static class thats extends op on existing task code</summary>
     public static partial class TaskExtension {
 
         /// <summary>Waits for all tasks to finish</summary>

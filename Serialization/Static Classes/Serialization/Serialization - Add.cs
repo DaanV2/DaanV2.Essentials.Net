@@ -27,7 +27,7 @@ namespace DaanV2.Serialization {
             Serialization.Factories[Factory.Name] = Factory;
         }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Add the contents of a assembly to the internal list of factories</summary>
         /// <param name="assembly"></param>
         public static void Add(Assembly assembly) {
             Type T;

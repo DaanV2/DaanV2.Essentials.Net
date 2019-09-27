@@ -19,9 +19,9 @@ using System;
 namespace DaanV2 {
     /// <summary>A enumerator that helps indentifing what kind of path has been filled in</summary>
 	[Serializable]
-    public enum PathType {
+    public enum PathType : Byte {
 
-        ///DOLATER <summary>Add Description</summary>
+        ///<summary>Marks that the given path belongs to a file</summary>
         File,
         /// <summary>Marks that the given path is a folder</summary>
         Folder

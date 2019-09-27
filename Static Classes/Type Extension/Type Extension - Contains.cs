@@ -17,6 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2 {
+    /// <summary>The class that extends op on the existing type code</summary>
     public static partial class TypeExtension {
 
         /// <summary>Returns the given attribute</summary>
