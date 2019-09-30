@@ -30,7 +30,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\PathType\PathType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IReader\IReader.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IWriter\IWriter - Multiple.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IWriter\IWriter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
