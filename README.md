@@ -6,7 +6,7 @@ This project is a base for all other projects to make sure they all have the sam
 
 ## Builders
 
-Builders are objects that can take a whole range of different objects or just a whole bunch of one type and put them together in a single specified object.
+Builders are objects that can take a whole range of diFFerent objects or just a whole bunch of one type and put them together in a single specified object.
 
 ## Compilers
 
