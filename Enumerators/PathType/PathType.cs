@@ -15,10 +15,11 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
+using System.Runtime.Serialization;
 
 namespace DaanV2 {
     /// <summary>A enumerator that helps indentifing what kind of path has been filled in</summary>
-	[Serializable]
+	[Serializable, DataContract]
     public enum PathType : Byte {
 
         ///<summary>Marks that the given path belongs to a file</summary>

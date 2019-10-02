@@ -17,11 +17,4 @@ namespace DaanV2.IO {
         ///DOLATER <summary> add description</summary>
         void Close();
     }
-
-    ///DOLATER <summary> add description for interface: IReader</summary>
-    public interface IReader<TOut> : IReader {
-        ///DOLATER <summary> add description</summary>
-        /// <param name="value"></param>
-        TOut Read();        
-    }
 }
