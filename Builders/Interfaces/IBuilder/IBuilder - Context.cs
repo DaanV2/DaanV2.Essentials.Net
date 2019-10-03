@@ -14,24 +14,13 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System;
 
 namespace DaanV2.Builders {
     /// <summary>The interface that responsible for building a specified class with/without context</summary>
     /// <typeparam name="TypeBuild">The type to build to</typeparam>
     /// <typeparam name="ContextType">The context type</typeparam>
-    public interface IBuilder<TypeToBuild, ContextType> : IBuilder<TypeToBuild> {
-
-        /// <summary>Adds the specific object to the build</summary
-        /// <param name="O">The object to check if it can be added</param>
-        /// <param name="Context">The relevant context needed to possibly help identify the object</param>
-        /// <returns>A <see cref="Boolean"/></returns>
-        void Add(Object O, ContextType Context);
-
-        /// <summary>Return true/false whenever the given object is able to be added to this build</summary>
-        /// <param name="O">The object to check if it can be added</param>
-        /// /// <param name="Context">The relevant context needed to possibly help identify the object</param>
-        /// <returns>A <see cref="Boolean"/></returns>
-        Boolean CanAccept(Object O, ContextType Context);
+    public interface IBuilderContext<TypeToBuild, TIn, ContextType> :
+        IBuilder<TypeToBuild, TIn>,
+        IBuilderAddContext<TypeToBuild, ContextType> {
     }
 }

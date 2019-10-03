@@ -1,5 +1,5 @@
-﻿using System.IO;
-using System;
+﻿using System;
+using System.IO;
 
 namespace DaanV2.Serialization {
     public partial class JSONSerializer<TypeSerialize> :

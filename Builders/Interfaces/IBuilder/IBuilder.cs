@@ -14,22 +14,12 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System;
 
 namespace DaanV2.Builders {
     /// <summary>The inferface that is responsible for forming the contract between builders and output types</summary>
-    /// <typeparam name="TypeToBuild">The eventuall resulting type</typeparam>
-    public interface IBuilder<TypeToBuild> {
-
-        /// <summary>Add the given object to the object to build</summary>
-        /// <param name="O">The object to add</param>
-        void Add(Object O);
-
-        /// <summary>Checks if the given object can be added to the builder</summary>
-        /// <param name="O">The object to check</param>
-        /// <returns>A <see cref="Boolean"/></returns>
-        Boolean CanAccept(Object O);
-
+    /// <typeparam name="TypeToBuild"></typeparam>
+    /// <typeparam name="T2"></typeparam>
+    public interface IBuilder<TypeToBuild, TIn> : IBuilderAdd<TIn> {
         /// <summary>Set the base object of this builder to work on</summary>
         /// <param name="Base">The base object</param>
         void SetBase(TypeToBuild Base);
