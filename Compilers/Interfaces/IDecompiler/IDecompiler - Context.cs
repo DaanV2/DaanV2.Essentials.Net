@@ -18,6 +18,11 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Compilers {
     /// <summary>The interface responsible for forming the contract on how Decompilers should behave</summary>
     /// <typeparam name="TypeTo">The type that needs to be returned</typeparam>
-    public interface IDecompiler<TypeTo> : IDecompiler<TypeTo, IDecompilerContext> {
+    public interface IDecompiler<TypeTo, TypeContext> {
+
+        /// <summary>Decompiles the given context into the specified object</summary>
+        /// <param name="Context">The context that specifies where the information can be found</param>
+        /// <returns><see cref="TypeTo"/></returns>
+        TypeTo Decompile(TypeContext Context);
     }
 }
