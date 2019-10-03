@@ -67,7 +67,7 @@ namespace DaanV2.Serialization {
                 }
 
                 if (DAttribute != null) {
-                    Serialization.Get(DAttribute.FactoryName).SetSerializeType(T);
+                    Serialization.Get(DAttribute.FactoryName).SetDeserializeType(T);
                 }
             }
         }

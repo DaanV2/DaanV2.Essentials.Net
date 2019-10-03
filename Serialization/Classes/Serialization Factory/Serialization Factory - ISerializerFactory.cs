@@ -33,19 +33,6 @@ namespace DaanV2.Serialization {
                 : (IDeserializer<TOut, Stream>)Activator.CreateInstance(this.Deserializer);
         }
 
-        /// <summary>Returns a deserializer that is able to deserializer the given object</summary>
-        /// <param name="ForType">The type that needs to be returned after deserializing</typeparam>
-        /// <returns><see cref="IDeserializer{Object, Stream}"/></returns>
-        public IDeserializer<Object, Stream> GetDeserializer(Type ForType) {
-            if (this.Deserializer == null) {
-                throw new Exception($"Deserializer type for '{this.Name}' not filled in");
-            }
-
-            return this.Deserializer.IsGenericType
-                ? (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer.MakeGenericType(ForType))
-                : (IDeserializer<Object, Stream>)Activator.CreateInstance(this.Deserializer);
-        }
-
         /// <summary>Returns a serializer that is able to serializer the given object</summary>
         /// <typeparam name="TIn">The type that is being inputted for serialization</typeparam>
         /// <returns><see cref="ISerializer{TypeIn, Stream}"/></returns>
@@ -66,7 +53,7 @@ namespace DaanV2.Serialization {
             if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
             }
-
+            
             return this.Serializer.IsGenericType
                 ? (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(ForType))
                 : (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer);

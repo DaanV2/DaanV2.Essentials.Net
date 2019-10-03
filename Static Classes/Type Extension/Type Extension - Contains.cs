@@ -62,8 +62,10 @@ namespace DaanV2 {
 
             if (Contains.IsGenericType) {
                 for (Int32 I = 0; I < Interfaces.Length; I++) {
-                    if (Interfaces[I].GetGenericTypeDefinition() == Contains) {
-                        return true;
+                    if (Interfaces[I].IsGenericType) {
+                        if (Interfaces[I].GetGenericTypeDefinition() == Contains) {
+                            return true;
+                        }
                     }
                 }
             }

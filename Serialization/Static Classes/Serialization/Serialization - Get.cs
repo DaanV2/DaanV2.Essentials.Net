@@ -31,19 +31,6 @@ namespace DaanV2.Serialization {
             return Serialization.Factories[FactoryName].GetDeserializer<TypeOut>();
         }
 
-        /// <summary>Returns a deserializer from the specified factory</summary>
-        /// <typeparam name="TypeOut">
-        /// <param name="FactoryName">The name of the factory to usee</param>
-        /// <param name="ForType">The type to deserializer</param>
-        /// <returns><see cref="IDeserializer{Object, Stream}"/></returns>
-        public static IDeserializer<Object, Stream> GetDeserializer(String FactoryName, Type ForType) {
-            if (!Serialization.Factories.ContainsKey(FactoryName)) {
-                throw new Exception("No factory has been found with the name " + FactoryName);
-            }
-
-            return Serialization.Factories[FactoryName].GetDeserializer(ForType);
-        }
-
         /// <summary>Returns a serializer from the specified factory</summary>
         /// <typeparam name="TypeIn">The type to serializer</typeparam>
         /// <param name="FactoryName">The name of the factory to usee</param>
@@ -54,18 +41,6 @@ namespace DaanV2.Serialization {
             }
 
             return Serialization.Factories[FactoryName].GetSerializer<TypeIn>();
-        }
-
-        /// <summary>Returns a serializer from the specified factory</summary>
-        /// <param name="FactoryName">The name of the factory to usee</param>
-        /// <param name="ForType">The type to serialize</param>
-        /// <returns><see cref="ISerializer{Object, Stream}"/></returns>
-        public static ISerializer<Object, Stream> GetSerializer(String FactoryName, Type ForType) {
-            if (!Serialization.Factories.ContainsKey(FactoryName)) {
-                throw new Exception("No factory has been found with the name " + FactoryName);
-            }
-
-            return Serialization.Factories[FactoryName].GetSerializer(ForType);
         }
     }
 }

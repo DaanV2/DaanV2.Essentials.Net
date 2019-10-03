@@ -26,20 +26,10 @@ namespace DaanV2.Serialization {
         /// <returns><see cref="ISerializer{TIn, TypeStream}"/></returns>
         ISerializer<TIn, TypeStream> GetSerializer<TIn>();
 
-        /// <summary>Returns a serializer that is able to serialize the given type through the given stream</summary>
-        /// <param name="ForType">The type to create a serializer for</typeparam>
-        /// <returns><see cref="ISerializer{Object, TypeStream}"/></returns>
-        ISerializer<Object, TypeStream> GetSerializer(Type ForType);
-
         /// <summary>Returns a deserializer that is able to deserialize the given type through the given stream</summary>
         /// <typeparam name="TOut">The type to create a deserializer for</typeparam>
         /// <returns><see cref="IDeserializer{TOut, TypeStream}"/></returns>
         IDeserializer<TOut, TypeStream> GetDeserializer<TOut>();
-
-        /// <summary>Returns a deserializer that is able to deserialize the given type through the given stream</summary>
-        /// <param name="ForType">The type to create a deserializer for</typeparam>
-        /// <returns><see cref="IDeserializer{TOut, TypeStream}"/></returns>
-        IDeserializer<Object, TypeStream> GetDeserializer(Type ForType);
 
         /// <summary>Sets the deserializer type</summary>
         /// <param name="Deserialize">The type to set as the deserializer</param>
