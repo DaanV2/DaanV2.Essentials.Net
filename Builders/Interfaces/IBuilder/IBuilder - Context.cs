@@ -21,6 +21,6 @@ namespace DaanV2.Builders {
     /// <typeparam name="ContextType">The context type</typeparam>
     public interface IBuilderContext<TypeToBuild, TIn, ContextType> :
         IBuilder<TypeToBuild, TIn>,
-        IBuilderAddContext<TypeToBuild, ContextType> {
+        IBuilderAddContext<TIn, ContextType> {
     }
 }

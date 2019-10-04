@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EscherProjects.Essentials.Net.Compilers {
+namespace DaanV2.Compilers {
     ///DOLATER <summary> add description for interface: IDecompilerInto</summary>
-    public interface IDecompilerInto<TOut, ContextType> {
+    public interface IDecompilerInto<TReceiver, ContextType> {
         /// <summary>
         /// 
         /// </summary>
         /// <param name=""></param>
         /// <param name="Receiver"></param>
-        void DecompileInto(ContextType Context, TOut Receiver);
+        void DecompileInto(ContextType Context, TReceiver Receiver);
     }
 }
