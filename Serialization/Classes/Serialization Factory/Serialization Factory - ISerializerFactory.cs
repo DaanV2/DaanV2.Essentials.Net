@@ -53,7 +53,7 @@ namespace DaanV2.Serialization {
             if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
             }
-            
+
             return this.Serializer.IsGenericType
                 ? (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer.MakeGenericType(ForType))
                 : (ISerializer<Object, Stream>)Activator.CreateInstance(this.Serializer);
