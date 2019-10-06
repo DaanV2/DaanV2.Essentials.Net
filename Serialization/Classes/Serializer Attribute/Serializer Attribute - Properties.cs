@@ -22,6 +22,6 @@ namespace DaanV2.Serialization {
 
         /// <summary>The name of the factory that this class belongs to</summary>
         [DataMember]
-        public String FactoryName { get; set; }
+        public String FactoryName { get; set; } //TODO Convert to full property
     }
 }

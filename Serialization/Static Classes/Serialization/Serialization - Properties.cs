@@ -22,6 +22,6 @@ namespace DaanV2.Serialization {
     public static partial class Serialization {
 
         /// <summary>The internal list of factories</summary>
-        public static Dictionary<String, ISerializerFactory<Stream>> Factories { get; set; }
+        public static Dictionary<String, ISerializerFactory<Stream>> Factories { get; set; } //TODO Convert to full property
     }
 }

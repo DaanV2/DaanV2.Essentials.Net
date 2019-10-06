@@ -20,6 +20,6 @@ namespace DaanV2.Compilers {
     public interface ICompilerContext<ProcessObjectType> : IDecompilerContext {
 
         /// <summary>Gets or sets the object to process</summary>
-        ProcessObjectType ObjectToProcess { get; set; }
+        ProcessObjectType ObjectToProcess { get; set; } //TODO Convert to full property
     }
 }

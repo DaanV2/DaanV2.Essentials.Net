@@ -22,14 +22,14 @@ namespace DaanV2.Serialization {
 
         /// <summary>The name of this factory</summary>
         [DataMember]
-        public String Name { get; set; }
+        public String Name { get; set; } //TODO Convert to full property
 
         /// <summary>The type of the deserializer</summary>
         [DataMember]
-        public Type Deserializer { get; set; }
+        public Type Deserializer { get; set; } //TODO Convert to full property
 
         /// <summary>The type of the serializer<summary>
         [DataMember]
-        public Type Serializer { get; set; }
+        public Type Serializer { get; set; } //TODO Convert to full property
     }
 }

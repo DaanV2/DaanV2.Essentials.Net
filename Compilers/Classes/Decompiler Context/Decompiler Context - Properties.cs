@@ -21,9 +21,9 @@ namespace DaanV2.Compilers {
     public partial class DecompilerContext {
 
         /// <summary>Gets or sets the filepath/folder to the place that needs to be decompiled of this <see cref="DecompilerContext"/></summary>
-        public String Path { get; set; }
+        public String Path { get; set; } //TODO Convert to full property
 
         /// <summary>Gets or sets the path type of this <see cref="DecompilerContext"/></summary>
-        public PathType PathType { get; set; }
+        public PathType PathType { get; set; } //TODO Convert to full property
     }
 }
