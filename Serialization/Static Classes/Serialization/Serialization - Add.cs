@@ -28,7 +28,7 @@ namespace DaanV2.Serialization {
         }
 
         /// <summary>Add the contents of a assembly to the internal list of factories</summary>
-        /// <param name="assembly"></param>
+        /// <param name="assembly">FILL_ME_IN</param
         public static void Add(Assembly assembly) {
             Type T;
             SerializerAttribute SAttribute;

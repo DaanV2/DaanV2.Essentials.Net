@@ -6,7 +6,7 @@ namespace DaanV2.IO {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="O"></param>
+        /// <param name="O">FILL_ME_IN</param
         void Write(Object O);
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace DaanV2.IO {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="value">FILL_ME_IN</param
         void Write(TIn value);
     }
 }
