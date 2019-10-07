@@ -19,7 +19,7 @@ namespace DaanV2 {
     ///DOLATER <summary> add description for interface: ICopyable</summary>
     public interface ICopyable<T> {
         ///DOLATER <summary>Add Description</summary>
-        ///DOLATER <returns>Add return description</returns>
+        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
         T Copy();
     }
 }

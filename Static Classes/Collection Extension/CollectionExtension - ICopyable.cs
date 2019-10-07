@@ -22,7 +22,7 @@ namespace DaanV2 {
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Add return description</returns>
+        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
         public static List<T> Copy<T>(this List<T> values)
             where T : ICopyable<T> {
             List<T> Out = new List<T>(values.Count);
@@ -38,7 +38,7 @@ namespace DaanV2 {
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Add return description</returns>
+        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
         public static T[] Copy<T>(this T[] values)
             where T : ICopyable<T> {
             T[] Out = new T[values.Length];

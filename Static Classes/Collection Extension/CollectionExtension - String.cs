@@ -23,7 +23,7 @@ namespace DaanV2 {
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Add return description</returns>
+        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
         public static List<String> Copy(this List<String> values) {
             List<String> Out = new List<String>(values.Count);
             Int32 Max = values.Count;
@@ -36,7 +36,7 @@ namespace DaanV2 {
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Add return description</returns>
+        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
         public static String[] Copy(this String[] values) {
             String[] Out = new String[values.Length];
             Int32 Max = values.Length;
