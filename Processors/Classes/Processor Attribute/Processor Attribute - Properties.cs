@@ -19,11 +19,11 @@ using System.Runtime.Serialization;
 
 namespace DaanV2.Processors {
     public partial class ProcessorAttribute {
-        ///DOLATER <summary> Add Description</summary>
+        /// <summary>The definition if this processor belongs to a pre/post-processor or both</summary>
         [DataMember]
         public ProcessorType Type { get => this._Type; set => this._Type = value; }
 
-        ///DOLATER <summary> Add Description</summary>
+        /// <summary>The priority of the object, higher priority means that the processor must come before lower processors</summary>
         [DataMember]
         public Int32 Priority { get => this._Priority; set => this._Priority = value; }
     }
