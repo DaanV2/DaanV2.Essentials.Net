@@ -1,4 +1,5 @@
 ﻿namespace DaanV2.Compilers {
+
     ///DOLATER <summary> add description for interface: IDecompilerInto</summary>
     public interface IDecompilerInto<TReceiver, ContextType> {
         ///DOLATER <summary>Add Description</summary>
