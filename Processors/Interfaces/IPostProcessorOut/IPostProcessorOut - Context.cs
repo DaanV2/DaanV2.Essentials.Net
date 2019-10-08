@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DaanV2.Processors {
     ///DOLATER <summary> add description for interface: IPostProcessor</summary>
-    public interface IPostProcessor<T, TypeContext> {
+    public interface IPostProcessorOut<TIn, TOut, TypeContext> {
         /// <summary>
         /// 
         /// </summary>
         /// <param name="Process"></param>
         /// <param name="Context"></param>
-        void Postprocess(T Process, TypeContext Context);
+        TOut Postprocess(TIn Process, TypeContext Context);
     }
 }
