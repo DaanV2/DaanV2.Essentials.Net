@@ -20,10 +20,10 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public static partial class CollectionExtension {
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Returns a copy of a list</summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
+        /// <param name="values">The list of values to copy</param>
+        /// <returns>Returns a <see cref="List{String}"/></returns>
         public static List<String> Copy(this List<String> values) {
             List<String> Out = new List<String>(values.Count);
             Int32 Max = values.Count;
@@ -33,10 +33,10 @@ namespace DaanV2 {
             return Out;
         }
 
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>Returns a copy of a array</summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
+        /// <param name="values">The array of values to copy</param>
+        /// <returns>Returns a <see cref="String[]"/></returns>
         public static String[] Copy(this String[] values) {
             String[] Out = new String[values.Length];
             Int32 Max = values.Length;

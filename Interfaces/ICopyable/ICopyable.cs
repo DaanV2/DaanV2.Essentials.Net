@@ -16,10 +16,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for interface: ICopyable</summary>
+    /// <summary>The interface responisble for forming on how a object needs to be copied</summary>
     public interface ICopyable<T> {
-        ///DOLATER <summary>Add Description</summary>
-        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
+        /// <summary>Return a new instance of this object</summary>
+        /// <returns>Returns a <see cref="T"/></returns>
         T Copy();
     }
 }

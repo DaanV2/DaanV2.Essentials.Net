@@ -23,9 +23,9 @@ namespace DaanV2 {
 
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="Params">FILL_ME_IN</param
-        /// <param name="Old">FILL_ME_IN</param
-        /// <param name="New">FILL_ME_IN</param
+        /// <param name="Params">FILL_ME_IN</param>
+        /// <param name="Old">FILL_ME_IN</param>
+        /// <param name="New">FILL_ME_IN</param>
         public static void Replace<TCollection, TParameter>(this TCollection[] Values, TParameter Old, TParameter New)
             where TCollection : IReplaceable<TParameter> {
             Int32 Max = Values.Length;
@@ -37,9 +37,9 @@ namespace DaanV2 {
 
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="Values">FILL_ME_IN</param
-        /// <param name="Old">FILL_ME_IN</param
-        /// <param name="New">FILL_ME_IN</param
+        /// <param name="Values">FILL_ME_IN</param>
+        /// <param name="Old">FILL_ME_IN</param>
+        /// <param name="New">FILL_ME_IN</param>
         public static void Replace<TCollection, TParameter>(this List<TCollection> Values, TParameter Old, TParameter New)
             where TCollection : IReplaceable<TParameter> {
             Int32 Max = Values.Count;

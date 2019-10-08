@@ -20,8 +20,8 @@ namespace DaanV2 {
     /// <typeparam name="T"></typeparam>
     public interface IReplaceable<T> {
         ///DOLATER <summary>Add Description</summary>
-        /// <param name="Old">FILL_ME_IN</param
-        /// <param name="NewValue">FILL_ME_IN</param
+        /// <param name="Old">FILL_ME_IN</param>
+        /// <param name="NewValue">FILL_ME_IN</param>
         void Replace(T OldValue, T NewValue);
     }
 }

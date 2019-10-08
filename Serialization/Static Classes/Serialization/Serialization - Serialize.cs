@@ -22,9 +22,9 @@ namespace DaanV2.Serialization {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="O">FILL_ME_IN</param
-        /// <param name="FactoryName">FILL_ME_IN</param
-        /// <param name="Filepath">FILL_ME_IN</param
+        /// <param name="O">FILL_ME_IN</param>
+        /// <param name="FactoryName">FILL_ME_IN</param>
+        /// <param name="Filepath">FILL_ME_IN</param>
         public static void Serialize<T>(T O, String FactoryName, String Filepath) {
             ISerializer<T, Stream> Serializer = GetSerializer<T>(FactoryName);
             FileStream Writer = new FileStream(Filepath, FileMode.Create);
@@ -37,8 +37,8 @@ namespace DaanV2.Serialization {
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="FactoryName">FILL_ME_IN</param
-        /// <param name="Filepath">FILL_ME_IN</param
+        /// <param name="FactoryName">FILL_ME_IN</param>
+        /// <param name="Filepath">FILL_ME_IN</param>
         /// <returns></returns>
         public static T Deserialize<T>(String FactoryName, String Filepath) {
             IDeserializer<T, Stream> deserializer = GetDeserializer<T>(FactoryName);

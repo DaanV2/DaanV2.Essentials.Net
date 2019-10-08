@@ -19,10 +19,10 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public static partial class CollectionExtension {
-        ///DOLATER <summary>Add Description</summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
+        /// <summary>Returns a copy of the whole list</summary>
+        /// <typeparam name="T">The type of element in the list that implements <see cref="ICopyable{T}"/></typeparam>
+        /// <param name="values">the list of values to be copied</param>
+        /// <returns>Returns a <see cref="List{T}"/></returns>
         public static List<T> Copy<T>(this List<T> values)
             where T : ICopyable<T> {
             List<T> Out = new List<T>(values.Count);
@@ -35,10 +35,10 @@ namespace DaanV2 {
             return Out;
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="values">FILL_ME_IN</param
-        ///DOLATER <returns>Returns a <see cref="FILLIN"/></returns>
+        /// <summary>Returns a copy of the whole array</summary>
+        /// <typeparam name="T">The type of element in the array that implements <see cref="T[]"/></typeparam>
+        /// <param name="values">the array of values to be copied</param>
+        /// <returns>Returns a <see cref="T[]"/></returns>
         public static T[] Copy<T>(this T[] values)
             where T : ICopyable<T> {
             T[] Out = new T[values.Length];
