@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
+#if NETCORE
+using System.Text.Json;
+#else
+using System.Runtime.Serialization.Json;
+#endif
 
 namespace DaanV2.Serialization {
     /// <summary>A class that contects the build in JSON serializer from .Net into the <see cref="Serialization"/></summary>
@@ -10,7 +15,17 @@ namespace DaanV2.Serialization {
 
         /// <summary>Creates a new instance of <see cref="JSONSerializer"/></summary>
         public JSONSerializer() {
-            this.serializer = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(TypeSerialize));
+#if NETCORE
+            this._Options = new JsonSerializerOptions {
+                AllowTrailingCommas = false,
+                IgnoreNullValues = true,
+                IgnoreReadOnlyProperties = true,
+                ReadCommentHandling = JsonCommentHandling.Skip,
+                WriteIndented = true
+            };
+#else
+            this.serializer = new DataContractJsonSerializer(typeof(TypeSerialize));
+#endif
         }
     }
 }
