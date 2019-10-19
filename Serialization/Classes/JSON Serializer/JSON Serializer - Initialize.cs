@@ -24,7 +24,7 @@ namespace DaanV2.Serialization {
                 WriteIndented = true
             };
 #else
-            this.serializer = new DataContractJsonSerializer(typeof(TypeSerialize));
+            this._Serializer = new DataContractJsonSerializer(typeof(TypeSerialize));
 #endif
         }
     }
