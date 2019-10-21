@@ -14,9 +14,9 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-
-namespace DaanV2 {
-    public static partial class CollectionExtension {
-        ///DOLATER Remove this file
+namespace DaanV2.Compilers {
+    public partial class CompilerContext<TypeIn> {
+        /// <summary>The object to compile</summary>
+        private TypeIn _ObjectToProcess;
     }
 }
