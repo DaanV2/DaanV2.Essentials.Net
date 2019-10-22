@@ -9,10 +9,6 @@
     <Import_RootNamespace>DaanV2</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)LICENSE.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)README.md" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilderAdd\IBuilderAdd - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilderAdd\IBuilderAdd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />
@@ -102,6 +98,5 @@
     <None Include="$(MSBuildThisFileDirectory)Documentation\Interfaces.md" />
     <None Include="$(MSBuildThisFileDirectory)Documentation\Overview_Essentials.md" />
     <None Include="$(MSBuildThisFileDirectory)Documentation\Static_Classes.md" />
-    <None Include="$(MSBuildThisFileDirectory)Overview.dgml" />
   </ItemGroup>
 </Project>
