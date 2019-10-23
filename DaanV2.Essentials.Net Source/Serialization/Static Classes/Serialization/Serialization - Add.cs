@@ -23,7 +23,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Add the given factory into the internal list</summary>
         /// <param name="Factory">The factory to add</param>
-        public static void Add(ISerializerFactory<Stream> Factory) {                    
+        public static void Add(ISerializerFactory<Stream> Factory) {
             //If an older factory exists
             if (Serialization._Factories.ContainsKey(Factory.Name)) {
                 //Transfer info
@@ -37,7 +37,7 @@ namespace DaanV2.Serialization {
         }
 
         /// <summary>Add the contents of a assembly to the internal list of factories</summary>
-        /// <param name="assembly">FILL_ME_IN</param>
+        /// <param name="assembly">The assembly to look through</param>
         public static void Add(Assembly assembly) {
             Type Current;
             SerializerAttribute SAttribute;
