@@ -9,7 +9,7 @@ namespace DaanV2.Serialization {
     public partial class JSONSerializer<TypeSerialize> {
 #if NETCORE
 
-        /// <summary></summary>
+        ///DOLATER <summary>Add Description</summary>
         [NonSerialized]
         private protected JsonSerializerOptions _Options;
 #else
