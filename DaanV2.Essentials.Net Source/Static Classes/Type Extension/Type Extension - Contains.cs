@@ -20,39 +20,6 @@ namespace DaanV2 {
     /// <summary>The class that extends op on the existing type code</summary>
     public static partial class TypeExtension {
 
-        /// <summary>Returns the given attribute</summary>
-        /// <param name="Object">The object to retrieve attributes from</param>
-        /// <param name="Value">The type of the attribute to return</param>
-        /// <returns><see cref="Object"/></returns>
-        public static Object GetAttribute(this Type Object, Type Value) {
-            Object[] Attributes = Object.GetCustomAttributes(Value, true);
-
-            for (Int32 I = 0; I < Attributes.Length; I++) {
-                if (Attributes[I].GetType() == Value) {
-                    return Attributes[I];
-                }
-            }
-
-            return default;
-        }
-
-        /// <summary>Returns the given attribute</summary>
-        /// <param name="Object">The object to retrieve attributes from</param>
-        /// <typeparam name="T">The type of the attribute to return</typeparam>
-        /// <returns><see cref="T"/></returns>
-        public static T GetAttribute<T>(this Type Object) {
-            Type Find = typeof(T);
-            Object[] Attributes = Object.GetCustomAttributes(Find, true);
-
-            for (Int32 I = 0; I < Attributes.Length; I++) {
-                if (Attributes[I].GetType() == Find) {
-                    return (T)Attributes[I];
-                }
-            }
-
-            return default;
-        }
-
         /// <summary>Checks if the given type implement the given interface type</summary>
         /// <param name="Object">The object to look through</param>
         /// <param name="Contains">The interface type to find</param>
@@ -74,6 +41,25 @@ namespace DaanV2 {
                     if (Interfaces[I] == Contains) {
                         return true;
                     }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Object"></param>
+        /// <param name="Contains"></param>
+        /// <returns></returns>
+        public static Boolean ContainsAttribute(this Type Object, Type Contains, Boolean Inherit = true) {
+            Object[] attributes = Object.GetCustomAttributes(Inherit);
+            Int32 Length = attributes.Length;
+
+            for (Int32 I = 0; I < Length; I++) {
+                if (attributes[I].GetType() == Contains) {
+                    return true;
                 }
             }
 

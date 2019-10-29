@@ -17,6 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Overrides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute Comparer\Priority Attribute Comparer - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute Comparer\Priority Attribute Comparer - IComparer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Compiler Context\Compiler Context - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Compiler Context\Compiler Context - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compilers\Classes\Compiler Context\Compiler Context - Variables.cs" />
