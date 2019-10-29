@@ -70,7 +70,14 @@ namespace DaanV2.Serialization {
         /// <param name="right"></param>
         ///DOLATER <returns></returns>
         public static Boolean operator ==(DeserializerAttribute left, DeserializerAttribute right) {
-            return left._FactoryName == right._FactoryName;
+            Boolean L = left is Object;
+            Boolean R = right is Object;
+
+            if (L == R) {
+                return L ? left.FactoryName == right.FactoryName : true;
+            }
+
+            return false;
         }
 
         ///DOLATER <summary>Add Description</summary>
@@ -78,7 +85,14 @@ namespace DaanV2.Serialization {
         /// <param name="right"></param>
         ///DOLATER <returns></returns>
         public static Boolean operator !=(DeserializerAttribute left, DeserializerAttribute right) {
-            return left._FactoryName != right._FactoryName;
+            Boolean L = left is Object;
+            Boolean R = right is Object;
+
+            if (L == R) {
+                return L ? left.FactoryName != right.FactoryName : false;
+            }
+
+            return true;
         }
     }
 }

@@ -36,6 +36,16 @@ namespace DaanV2.Serialization {
             Serialization._Factories[Factory.Name] = Factory;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="assemblies"></param>
+        public static void Add(Assembly[] assemblies) {
+            for (Int32 I = 0; I < assemblies.Length; I++) {
+                Add(assemblies[I]);
+            }
+        }
+
         /// <summary>Add the contents of a assembly to the internal list of factories</summary>
         /// <param name="assembly">The assembly to look through</param>
         public static void Add(Assembly assembly) {

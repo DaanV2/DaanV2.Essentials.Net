@@ -24,7 +24,7 @@ namespace DaanV2.Serialization {
         /// <summary>Creates a new instance of <see cref="Serialization"/></summary>
         static Serialization() {
             Serialization._Factories = new Dictionary<String, ISerializerFactory<System.IO.Stream>>();
-            Serialization.Add(Assembly.GetExecutingAssembly());
+            Serialization.Add(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }
