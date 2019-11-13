@@ -29,8 +29,9 @@ namespace DaanV2 {
             }
 
             Type Base = Value.BaseType;
-            if (Base == null)
+            if (Base == null) {
                 return false;
+            }
 
             return Base == Contains ? true : Base.Implements(Contains);
         }

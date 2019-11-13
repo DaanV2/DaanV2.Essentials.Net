@@ -16,7 +16,6 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace DaanV2.Serialization {
     /// <summary>The class that holds all the serializer factories</summary>

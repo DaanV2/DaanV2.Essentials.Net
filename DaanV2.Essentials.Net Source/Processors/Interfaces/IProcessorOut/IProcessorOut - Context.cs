@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Processors {
     ///DOLATER <summary> add description for interface: IProcessor</summary>
-    public interface IProcessorOut<T,TypeOut, TypeContext> {
+    public interface IProcessorOut<T, TypeOut, TypeContext> {
         ///DOLATER <summary>Add description</summary>
         /// <param name="Process"></param>
         /// <param name="Context"></param>
