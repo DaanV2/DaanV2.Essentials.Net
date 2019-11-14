@@ -14,21 +14,14 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for interface: IReplaceable</summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IReplaceable<T> : IReplaceable<T, T> {
-    }
-
-    ///DOLATER <summary> add description for interface: IReplaceable</summary>
-    /// <typeparam name="TypeOld"></typeparam>
-    /// <typeparam name="TypeNew"></typeparam>
-    public interface IReplaceable<TypeOld, TypeNew>
-    {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Old">FILL_ME_IN</param>
-        /// <param name="NewValue">FILL_ME_IN</param>
-        void Replace(TypeOld OldValue, TypeNew NewValue);
+    public static partial class ArrayExtension {
+        //DOLATER add variables to class ArrayExtension
     }
 }

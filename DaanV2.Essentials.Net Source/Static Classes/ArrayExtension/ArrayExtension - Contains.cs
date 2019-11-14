@@ -14,21 +14,27 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
+using System;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for interface: IReplaceable</summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IReplaceable<T> : IReplaceable<T, T> {
-    }
+    public static partial class ArrayExtension {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Values"></param>
+        /// <param name="Contains"></param>
+        /// <returns></returns>
+        public static Boolean Contains<T>(this T[] Values, T Contains) {
+            Int32 Max = Values.Length;
 
-    ///DOLATER <summary> add description for interface: IReplaceable</summary>
-    /// <typeparam name="TypeOld"></typeparam>
-    /// <typeparam name="TypeNew"></typeparam>
-    public interface IReplaceable<TypeOld, TypeNew>
-    {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Old">FILL_ME_IN</param>
-        /// <param name="NewValue">FILL_ME_IN</param>
-        void Replace(TypeOld OldValue, TypeNew NewValue);
+            for (Int32 I = 0; I < Max; I++) {
+                if (Values[I].Equals(Contains)) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

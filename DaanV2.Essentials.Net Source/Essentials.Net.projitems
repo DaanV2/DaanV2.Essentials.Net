@@ -83,11 +83,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Functions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Serialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Contains.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - String.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Attributes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Objects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Types.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Implements.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Contains.cs" />
   </ItemGroup>
