@@ -48,7 +48,7 @@ namespace DaanV2 {
             Int32 Length = Types.Count;
 
             for (Int32 I = 0; I < Length; I++) {
-                Objects[I] = (T)Activator.CreateInstance(Types[I]);
+                Objects.Add((T)Activator.CreateInstance(Types[I]));
             }
 
             return Objects;
