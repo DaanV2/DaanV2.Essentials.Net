@@ -20,7 +20,7 @@ using System.Reflection;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary></summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Implements"></param>
         /// <returns></returns>
         public static List<Type> GetTypesWhichImplements(Type Implements) {
@@ -35,9 +35,7 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Implements"></param>
         /// <param name="asm"></param>
         /// <returns></returns>

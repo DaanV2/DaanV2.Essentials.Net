@@ -19,9 +19,7 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public partial class PriorityAttributeComparer : IComparer<Object> {
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>

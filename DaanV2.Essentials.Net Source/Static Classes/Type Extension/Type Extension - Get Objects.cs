@@ -20,9 +20,7 @@ using System.Reflection;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Contains"></param>
         /// <returns></returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains) {
@@ -37,9 +35,7 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Contains"></param>
         /// <returns></returns>
         public static List<T> GetObjectsWhichImplements<T>() {
@@ -54,9 +50,7 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Contains"></param>
         /// <returns></returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains, Assembly asm) {
@@ -71,9 +65,7 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Contains"></param>
         /// <returns></returns>
         public static List<T> GetObjectsWhichImplements<T>(Assembly asm) {

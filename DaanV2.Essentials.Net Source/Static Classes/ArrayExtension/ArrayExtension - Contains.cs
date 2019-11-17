@@ -18,9 +18,7 @@ using System;
 
 namespace DaanV2 {
     public static partial class ArrayExtension {
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="Values"></param>
         /// <param name="Contains"></param>

@@ -18,9 +18,7 @@ using System;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>
-        /// 
-        /// </summary>
+        ///DOLATER <summary>Add Description</summary>
         /// <param name="Base"></param>
         /// <returns></returns>
         public static Boolean Implements(this Type Value, Type Contains) {
