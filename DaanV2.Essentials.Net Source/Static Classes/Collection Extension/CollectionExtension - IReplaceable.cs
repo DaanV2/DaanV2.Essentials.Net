@@ -37,6 +37,19 @@ namespace DaanV2 {
 
         ///DOLATER <summary>Add Description</summary>
         /// <typeparam name="T"></typeparam>
+        /// <param name="Params">FILL_ME_IN</param>
+        /// <param name="Old">FILL_ME_IN</param>
+        /// <param name="New">FILL_ME_IN</param>
+        public static void Replace(this String[] Values, String Old, String New) {
+            Int32 Max = Values.Length;
+
+            for (Int32 I = 0; I < Max; I++) {
+                Values[I] = Values[I].Replace(Old, New);
+            }
+        }
+
+        ///DOLATER <summary>Add Description</summary>
+        /// <typeparam name="T"></typeparam>
         /// <param name="Values">FILL_ME_IN</param>
         /// <param name="Old">FILL_ME_IN</param>
         /// <param name="New">FILL_ME_IN</param>
@@ -46,6 +59,19 @@ namespace DaanV2 {
 
             for (Int32 I = 0; I < Max; I++) {
                 Values[I].Replace(Old, New);
+            }
+        }
+
+        ///DOLATER <summary>Add Description</summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="Values">FILL_ME_IN</param>
+        /// <param name="Old">FILL_ME_IN</param>
+        /// <param name="New">FILL_ME_IN</param>
+        public static void Replace(this List<String> Values, String Old, String New) {
+            Int32 Max = Values.Count;
+
+            for (Int32 I = 0; I < Max; I++) {
+                Values[I] = Values[I].Replace(Old, New);
             }
         }
     }
