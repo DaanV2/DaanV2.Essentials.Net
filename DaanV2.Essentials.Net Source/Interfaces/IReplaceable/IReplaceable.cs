@@ -24,8 +24,7 @@ namespace DaanV2 {
     ///DOLATER <summary> add description for interface: IReplaceable</summary>
     /// <typeparam name="TypeOld"></typeparam>
     /// <typeparam name="TypeNew"></typeparam>
-    public interface IReplaceable<TypeOld, TypeNew>
-    {
+    public interface IReplaceable<TypeOld, TypeNew> {
         ///DOLATER <summary>Add Description</summary>
         /// <param name="Old">FILL_ME_IN</param>
         /// <param name="NewValue">FILL_ME_IN</param>

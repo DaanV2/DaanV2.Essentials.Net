@@ -20,7 +20,7 @@ namespace DaanV2 {
     public partial class PriorityAttributeComparer {
         /// <summary>Creates a new instance of <see cref="PriorityAttributeComparer"/></summary>
         public PriorityAttributeComparer() {
-            
+
         }
     }
 }
