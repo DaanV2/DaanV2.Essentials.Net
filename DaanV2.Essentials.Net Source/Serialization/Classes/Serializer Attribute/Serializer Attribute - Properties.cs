@@ -21,6 +21,9 @@ namespace DaanV2.Serialization {
     public partial class SerializerAttribute {
         /// <summary>The name of the factory that this class belongs to</summary>
         [DataMember]
-        public String FactoryName { get => this._FactoryName; set => this._FactoryName = value; }
+        public String FactoryName {
+            get => this._FactoryName;
+            set => this._FactoryName = value;
+        }
     }
 }
