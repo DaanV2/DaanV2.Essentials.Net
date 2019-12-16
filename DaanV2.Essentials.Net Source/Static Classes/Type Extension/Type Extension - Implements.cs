@@ -18,9 +18,10 @@ using System;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Base"></param>
-        /// <returns></returns>
+        /// <summary>Check if the given type implements the other type</summary>
+        /// <param name="Value">The value to check if it implements another type</param>
+        /// <param name="Contains">The type to find</param>
+        /// <returns>Check if the given type implements the other type</returns>
         public static Boolean Implements(this Type Value, Type Contains) {
             if (Contains.IsInterface && Value.ContainsInterface(Contains)) {
                 return true;

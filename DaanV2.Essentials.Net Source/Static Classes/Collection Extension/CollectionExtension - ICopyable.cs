@@ -50,5 +50,21 @@ namespace DaanV2 {
 
             return Out;
         }
+
+        /// <summary>Returns a copy of the whole list</summary>
+        /// <typeparam name="T">The type of element in the list that implements <see cref="ICopyable{T}"/></typeparam>
+        /// <param name="values">the list of values to be copied</param>
+        /// <returns>Returns a <see cref="IList{T}"/></returns>
+        public static List<T> Copy<T>(this IList<T> values)
+            where T : ICopyable<T> {
+            List<T> Out = new List<T>(values.Count);
+            Int32 Max = values.Count;
+
+            for (Int32 I = 0; I < Max; I++) {
+                Out.Add(values[I].Copy());
+            }
+
+            return Out;
+        }
     }
 }

@@ -58,8 +58,8 @@ namespace DaanV2 {
         ///DOLATER <returns></returns>
         public override Int32 GetHashCode() {
             Int32 hashCode = -159790080;
-            hashCode = hashCode * -1521134295 + base.GetHashCode();
-            hashCode = hashCode * -1521134295 + this.Value.GetHashCode();
+            hashCode = (hashCode * -1521134295) + base.GetHashCode();
+            hashCode = (hashCode * -1521134295) + this.Value.GetHashCode();
             return hashCode;
         }
 
