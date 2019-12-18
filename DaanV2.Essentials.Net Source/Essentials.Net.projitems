@@ -13,6 +13,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilderAdd\IBuilderAdd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Overrides.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - String.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Attributes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Objects.cs" />
