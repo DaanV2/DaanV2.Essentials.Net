@@ -46,6 +46,8 @@ namespace DaanV2.Serialization {
         Type GetSerializeType();
 
         /// <summary>Gets the name of the serializer factory</summary>
-        String Name { get; }
+        String Name {
+            get;
+        }
     }
 }

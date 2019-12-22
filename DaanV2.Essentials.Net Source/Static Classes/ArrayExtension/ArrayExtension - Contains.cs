@@ -18,18 +18,16 @@ using System;
 
 namespace DaanV2 {
     public static partial class ArrayExtension {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="Values"></param>
-        /// <param name="Contains"></param>
-        /// <returns></returns>
-        public static Boolean Contains<T>(this T[] Values, T Contains) {
-            Int32 Max = Values.Length;
+        /// <summary>Checks if an array contains the specified object</summary>
+        /// <typeparam name="T">The type of object the array exists of</typeparam>
+        /// <param name="Collection">The collection to search through</param>
+        /// <param name="Value">The value to find</param>
+        /// <returns>Checks if an array contains the specified object</returns>
+        public static Boolean Contains<T>(this T[] Collection, T Value) {
+            Int32 Max = Collection.Length;
 
             for (Int32 I = 0; I < Max; I++) {
-                if (Values[I].Equals(Contains)) {
+                if (Collection[I].Equals(Value)) {
                     return true;
                 }
             }

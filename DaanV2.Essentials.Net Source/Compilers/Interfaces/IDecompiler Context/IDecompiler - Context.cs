@@ -21,9 +21,15 @@ namespace DaanV2.Compilers {
     public interface IDecompilerContext {
 
         /// <summary>Get or sets the filepath/folderpath</summary>
-        String Path { get; set; }
+        String Path {
+            get;
+            set;
+        }
 
         /// <summary>Gets or sets the path type</summary>
-        PathType PathType { get; set; }
+        PathType PathType {
+            get;
+            set;
+        }
     }
 }
