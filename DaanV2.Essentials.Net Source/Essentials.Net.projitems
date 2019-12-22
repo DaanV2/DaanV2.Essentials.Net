@@ -9,10 +9,12 @@
     <Import_RootNamespace>DaanV2</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilderAdd\IBuilderAdd - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilderAdd\IBuilderAdd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder Add\IBuilder Add - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder Add\IBuilder Add.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 1.cs" />
@@ -39,21 +41,21 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Enumerators\PathType\PathType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerators\Path Type\Path Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICopyable\ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IReplaceable\IReplaceable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDualProcessorOut\IDualProcessorOut - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDualProcessorOut\IDualProcessorOut.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDualProcessor\IDualProcessor - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDualProcessor\IDualProcessor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPostProcessor\IPostProcessor - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPostProcessor\IPostProcessor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPostProcessorOut\IPostProcessorOut - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPostProcessorOut\IPostProcessorOut.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPreProcessorOut\IPreProcessorOut - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPreProcessor\IPreProcessor - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPreProcessorOut\IPreProcessorOut.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPreProcessor\IPreProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor Out\IDual Processor Out - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor Out\IDual Processor Out.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor\IDual Processor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor\IDual Processor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPost Processor\IPost Processor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPost Processor\IPost Processor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPost Processor Out\IPost Processor Out - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPost Processor Out\IPost Processor Out.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor Out\IPre Processor Out - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor\IPre Processor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor Out\IPre Processor Out.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor\IPre Processor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Initialize.cs" />
@@ -86,12 +88,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Functions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Serialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\ArrayExtension\ArrayExtension - Contains.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - ICopyable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - IReplaceable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\CollectionExtension - String.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Array Extension\Array Extension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Array Extension\Array Extension - Contains.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - ICopyable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Attributes.cs" />
@@ -102,7 +104,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Contains.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPreProcessorOut\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor Out\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Documentation\Classes.md" />
