@@ -11,6 +11,9 @@
     <PackageReleaseNotes />
     <Description>This project is a base for all other projects to make sure they all have the same tools and interfaces, functions. The most important is the contract the interfaces this library gives.</Description>
     <Copyright>Daan Verstraten 2019</Copyright>
+    <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>essentials;interfaces</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
