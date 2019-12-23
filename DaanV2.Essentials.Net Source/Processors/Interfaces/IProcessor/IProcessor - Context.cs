@@ -9,18 +9,18 @@ copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS.IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
 ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    ///DOLATER <summary> add description for interface: IProcessor</summary>
+    /// <summary>The interface responisble for forming on how an Processor should work with context</summary>
     public interface IProcessor<T, TypeContext> {
-        ///DOLATER <summary>Add description</summary>
-        /// <param name="Process"></param>
-        /// <param name="Context"></param>
+        /// <summary>Processes the specified object with the given context</summary>
+        /// <param name="Process">The object to process</param>
+        /// <param name="Context">The context used to process the given object</param>
         void Process(T Process, TypeContext Context);
     }
 }

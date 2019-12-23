@@ -9,17 +9,18 @@ copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS.IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
 ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    ///DOLATER <summary> add description for interface: IPreProcessor</summary>
+    /// <summary>The interface responsible for determining how a Pre processor with output should behave</summary>
     public interface IPreProcessorOut<TIn, TOut> {
-        ///DOLATER <summary>Add description</summary>
-        /// <param name="Process"></param>
+        /// <summary>Pre processes the specified object into the output object</summary>
+        /// <param name="Process">The object to pre processes</param>
+        /// <returns>Pre processes the specified object into the output object</returns>
         TOut Preprocess(TIn Process);
     }
 }

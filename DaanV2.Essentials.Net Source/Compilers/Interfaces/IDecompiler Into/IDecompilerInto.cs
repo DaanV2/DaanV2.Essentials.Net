@@ -9,19 +9,19 @@ copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
 WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS.IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
 ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-
 namespace DaanV2.Compilers {
-
-    ///DOLATER <summary> add description for interface: IDecompilerInto</summary>
+    /// <summary>The interface that responsible for how a decompiler should behave</summary>
+    /// <typeparam name="TReceiver">The object type that can receive the output</typeparam>
+    /// <typeparam name="ContextType">The context type used to tell what to decompile</typeparam>
     public interface IDecompilerInto<TReceiver, ContextType> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="">FILL_ME_IN</param>
-        /// <param name="Receiver">FILL_ME_IN</param>
+        /// <summary>Decompile the specified files into the receiver</summary>
+        /// <param name="Context">The context used to tell what to decompile</param>
+        /// <param name="Receiver">The object to receiver the output</param>
         void DecompileInto(ContextType Context, TReceiver Receiver);
     }
 }
