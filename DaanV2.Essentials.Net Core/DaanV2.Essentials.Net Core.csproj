@@ -55,4 +55,12 @@
 
   <Import Project="..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="copy &quot;$(SolutionDir)LICENSE.txt&quot; &quot;$(TargetDir)LICENSE_Essentials.txt&quot;&#xD;&#xA;copy &quot;$(SolutionDir)README.md&quot; &quot;$(TargetDir)README_Essentials.md&quot;" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\&quot; mkdir &quot;$(SolutionDir)Releases\&quot;&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot; mkdir &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;    copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;)" />
+  </Target>
+
 </Project>

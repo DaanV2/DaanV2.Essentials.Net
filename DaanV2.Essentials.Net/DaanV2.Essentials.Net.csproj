@@ -84,4 +84,15 @@
   </ItemGroup>
   <Import Project="..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy "$(SolutionDir)LICENSE.txt" "$(TargetDir)LICENSE_Essentials.txt"
+copy "$(SolutionDir)README.md" "$(TargetDir)README_Essentials.md"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+    if not exist "$(SolutionDir)Releases\" mkdir "$(SolutionDir)Releases\"
+    if not exist "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\" mkdir "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\"
+    copy "$(TargetDir)*" "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\"
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>
