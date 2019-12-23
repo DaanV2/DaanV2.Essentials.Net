@@ -19,10 +19,10 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public partial class PriorityAttributeComparer : IComparer<Object> {
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns></returns>
+        /// <summary>Compares two object to each other, retrieves the priority attribute from them</summary>
+        /// <param name="x">The first object to compare</param>
+        /// <param name="y">The second object to compare</param>
+        /// <returns>Compares two object to each other, retrieves the priority attribute from them</returns>
         public Int32 Compare(Object x, Object y) {
             Type Tx = x.GetType();
             Type Ty = y.GetType();

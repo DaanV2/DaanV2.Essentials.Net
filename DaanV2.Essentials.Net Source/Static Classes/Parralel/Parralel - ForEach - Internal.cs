@@ -21,7 +21,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for class: Parralel</summary>
     public static partial class Parralel {
         /// <summary>
         /// 

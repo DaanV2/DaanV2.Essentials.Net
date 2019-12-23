@@ -23,7 +23,7 @@ namespace DaanV2 {
         /// <summary>Checks if the given type implement the given interface type</summary>
         /// <param name="Object">The object to look through</param>
         /// <param name="Contains">The interface type to find</param>
-        /// <returns><see cref="Boolean"/></returns>
+        /// <returns>Checks if the given type implement the given interface type</returns>
         public static Boolean ContainsInterface(this Type Object, Type Contains) {
             Type[] Interfaces = Object.GetInterfaces();
 
@@ -47,10 +47,10 @@ namespace DaanV2 {
             return false;
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="Object"></param>
-        /// <param name="Contains"></param>
-        /// <returns></returns>
+        /// <summary>Checks if the specified type contains a type of attribute</summary>
+        /// <param name="Object">The object to look through</param>
+        /// <param name="Contains">The type to find in attributes</param>
+        /// <returns>Checks if the specified type contains a type of attribute</returns>
         public static Boolean ContainsAttribute(this Type Object, Type Contains, Boolean Inherit = true) {
             Object[] attributes = Object.GetCustomAttributes(Inherit);
             Int32 Length = attributes.Length;

@@ -16,6 +16,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Initialize.cs" />

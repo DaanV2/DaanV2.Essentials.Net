@@ -24,8 +24,7 @@ using System.Runtime.Serialization.Json;
 namespace DaanV2.Serialization {
     public partial class JSONSerializer<TypeSerialize> {
 #if NETCORE
-
-        ///DOLATER <summary>Add Description</summary>
+        /// <summary>The options to be used when generating a serializer</summary>
         [NonSerialized]
         private protected JsonSerializerOptions _Options;
 #else

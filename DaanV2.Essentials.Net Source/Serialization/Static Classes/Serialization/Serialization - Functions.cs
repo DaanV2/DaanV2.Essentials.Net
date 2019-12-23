@@ -22,7 +22,7 @@ namespace DaanV2.Serialization {
     public static partial class Serialization {
 
         /// <summary>Returns a list of names of all factories currently in the internal list</summary>
-        ///DOLATER <returns></returns>
+        /// <returns>Returns a list of names of all factories currently in the internal list</returns>
         public static List<String> GetNames() {
             List<String> Out = new List<String>(Serialization._Factories.Count);
 

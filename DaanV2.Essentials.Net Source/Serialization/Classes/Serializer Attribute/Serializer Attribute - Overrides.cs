@@ -30,34 +30,28 @@ namespace DaanV2.Serialization {
             return obj is SerializerAttribute SA ? SA._FactoryName == this._FactoryName : base.Equals(obj);
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        ///DOLATER <returns></returns>
-        public override Boolean IsDefaultAttribute() {
-            return String.IsNullOrEmpty(this._FactoryName);
-        }
-
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="obj"></param>
-        ///DOLATER <returns></returns>
+        /// <summary>Check if this attribute matches the specified <see cref="Object"/></summary>
+        /// <param name="obj">The object to compare to</param>
+        /// <returns>Check if this attribute matches the specified <see cref="Object"/></returns>
         public override Boolean Match(Object obj) {
             return obj is SerializerAttribute SA ? SA._FactoryName == this._FactoryName : base.Match(obj);
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        ///DOLATER <returns></returns>
+        /// <summary>Returns a string that represents this object</summary>
+        /// <returns>Returns a string that represents this object</returns>
         public override String ToString() {
             return $"Deserializer: {this._FactoryName}";
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="other"></param>
-        ///DOLATER <returns></returns>
+        /// <summary>Returns a value that indicates whether this instance is equal to a specified object</summary>
+        /// <param name="other">The object to check against</param>
+        /// <returns>Returns a value that indicates whether this instance is equal to a specified object</returns>
         public Boolean Equals(SerializerAttribute other) {
             return other != null && this._FactoryName == other._FactoryName;
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        ///DOLATER <returns></returns>
+        /// <summary>Returns the hash code for this instance</summary>
+        /// <returns>Returns the hash code for this instance</returns>
         public override Int32 GetHashCode() {
             Int32 hashCode = 1112600100;
             hashCode = (hashCode * -1521134295) + base.GetHashCode();
@@ -65,11 +59,15 @@ namespace DaanV2.Serialization {
             return hashCode;
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        ///DOLATER <returns></returns>
+        /// <summary>Compare two <see cref="SerializableAttribute"/> if they are equal to each other</summary>
+        /// <param name="left">The first <see cref="SerializableAttribute"/> to check</param>
+        /// <param name="right">The second <see cref="SerializableAttribute"/> to check</param>
+        /// <returns>Compare two <see cref="SerializableAttribute"/> if they are equal to each other</returns>
         public static Boolean operator ==(SerializerAttribute left, SerializerAttribute right) {
+            if (Object.ReferenceEquals(left, right)) {
+                return true;
+            }
+
             Boolean L = left is Object;
             Boolean R = right is Object;
 
@@ -80,11 +78,15 @@ namespace DaanV2.Serialization {
             return false;
         }
 
-        ///DOLATER <summary>Add Description</summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        ///DOLATER <returns></returns>
+        /// <summary>Compare two <see cref="SerializableAttribute"/> if they are not equal to each other</summary>
+        /// <param name="left">The first <see cref="SerializableAttribute"/> to check</param>
+        /// <param name="right">The second <see cref="SerializableAttribute"/> to check</param>
+        /// <returns>Compare two <see cref="SerializableAttribute"/> if they are not equal to each other</returns>
         public static Boolean operator !=(SerializerAttribute left, SerializerAttribute right) {
+            if (Object.ReferenceEquals(left, right)) {
+                return false;
+            }
+
             Boolean L = left is Object;
             Boolean R = right is Object;
 

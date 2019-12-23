@@ -21,7 +21,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Deserialize the given stream into the specified object</summary>
         /// <param name="stream">The strean to read the object from</param>
-        ///DOLATER <returns></returns>
+        /// <returns>Deserialize the given stream into the specified object</returns>
         public TypeSerialize Deserialize(Stream stream) {
             return (TypeSerialize)this._Serializer.Deserialize(stream);
         }

@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.Collections.Generic;
 
 namespace DaanV2.Builders {
-    ///DOLATER <summary> add description for interface: IBuilderAdd</summary>
+    /// <summary>A subpart of a <see cref="IBuilder{TypeToBuild, TIn}"/> that specifies if a different object can be added</summary>
     public interface IBuilderAdd<TypeToAdd> {
         /// <summary>Adds the specific object to the build</summary
         /// <param name="O">The object to check if it can be added</param>

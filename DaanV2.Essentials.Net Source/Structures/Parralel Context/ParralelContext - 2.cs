@@ -15,18 +15,16 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DaanV2 {
-    ///DOLATER <summary> add description for class: ParralelContext</summary>
+    /// <summary>The context needed to perform a parralel action over an array of type <typeparamref name="T1"/></summary>
     internal partial struct ParralelContext<T1, T2> {
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary>Creates a new instance of <see cref="ParralelContext{T1, T2}"/></summary>
+        /// <param name="StartIndex">The index to start at</param>
+        /// <param name="EndIndex">The index to stop</param>
+        /// <param name="Items">The array to loop over</param>
+        /// <param name="action">The action to perform on each item</param>
+        /// <param name="Argument1">The context argument to pass along</param>
         public ParralelContext(Int32 StartIndex, Int32 EndIndex, T1[] Items, Action<T1, T2> action, T2 Argument1) {
             this._StartIndex = StartIndex;
             this._EndIndex = EndIndex;
@@ -35,19 +33,19 @@ namespace DaanV2 {
             this._Argument1 = Argument1;
         }
 
-        /// <summary></summary>
+        /// <summary>The index to start from</summary>
         public Int32 _StartIndex;
 
-        /// <summary></summary>
+        /// <summary>The index to stop</summary>
         public Int32 _EndIndex;
 
-        /// <summary></summary>
+        /// <summary>The array to loop through</summary>
         public T1[] _Items;
 
-        /// <summary></summary>
+        /// <summary>The action perform on the array's items</summary>
         public Action<T1, T2> _Action;
 
-        /// <summary></summary>
+        /// <summary>The argument to pass along as context</summary>
         public T2 _Argument1;
     }
 }
