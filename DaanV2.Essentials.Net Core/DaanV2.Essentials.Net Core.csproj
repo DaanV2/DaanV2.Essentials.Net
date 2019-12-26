@@ -14,6 +14,7 @@
     <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>essentials;interfaces</PackageTags>
+    <PackageProjectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

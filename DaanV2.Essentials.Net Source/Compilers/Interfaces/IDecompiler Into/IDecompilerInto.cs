@@ -15,10 +15,12 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Compilers {
-    /// <summary>The interface that responsible for how a decompiler should behave</summary>
+
+    /// <summary>The interface that responsible for how a decompiler should work</summary>
     /// <typeparam name="TReceiver">The object type that can receive the output</typeparam>
     /// <typeparam name="ContextType">The context type used to tell what to decompile</typeparam>
     public interface IDecompilerInto<TReceiver, ContextType> {
+        
         /// <summary>Decompile the specified files into the receiver</summary>
         /// <param name="Context">The context used to tell what to decompile</param>
         /// <param name="Receiver">The object to receiver the output</param>

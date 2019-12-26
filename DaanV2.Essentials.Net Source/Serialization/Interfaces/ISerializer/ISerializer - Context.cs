@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Serialization {
-    /// <summary>The interface that is responsible for forming the contract on how serializers should behave</summary>
+    /// <summary>The interface that is responsible for forming the contract on how serializers should work</summary>
     /// <typeparam name="TypeIn">The type that is being serializied</typeparam>
     /// <typeparam name="TypeStream">The stream type used to write the given type</typeparam>
     /// <typeparam name="TypeContext">The context needed to serialize the given type</typeparam>

@@ -16,13 +16,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Compilers {
-    /// <summary>The inferface responsible for forming the contract on which compilercontext atleast should use</summary>
+    /// <summary>The inferface responsible for forming the contract on how compiler context should be used</summary>
     public interface ICompilerContext<ProcessObjectType> : IDecompilerContext {
 
         /// <summary>Gets or sets the object to process</summary>
-        ProcessObjectType ObjectToProcess {
-            get;
-            set;
-        }
+        ProcessObjectType ObjectToProcess { get; set; }
     }
 }

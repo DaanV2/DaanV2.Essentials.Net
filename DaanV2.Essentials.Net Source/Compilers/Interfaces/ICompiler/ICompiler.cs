@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Compilers {
-    /// <summary>The interface that is responsible for forming the contract on how compilers should behave</summary>
+    /// <summary>The interface that is responsible for forming the contract on how compilers should tranfser data between files and object</summary>
     /// <typeparam name="TypeProcess">The type to be compiled</typeparam>
     public interface ICompiler<TypeProcess> {
 

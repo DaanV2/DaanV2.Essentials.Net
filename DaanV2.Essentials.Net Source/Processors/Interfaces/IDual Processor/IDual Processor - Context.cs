@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for determining how a pre/post processor should behave</summary>
+    /// <summary>The interface responsible for determining how a pre/post processor should work</summary>
     /// <typeparam name="T">The type to process</typeparam>
     /// <typeparam name="TypeContext">The type that is used for the context</typeparam>
     public interface IDualProcessor<T, TypeContext> : 
