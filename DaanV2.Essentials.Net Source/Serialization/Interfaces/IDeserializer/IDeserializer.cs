@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Serialization {
-    /// <summary>The inferface that is responsible for forming the contract on how Deserializer should work</summary>
+    /// <summary>The interfacethat is responsible for forming the contract on how Deserializer should work</summary>
     /// <typeparam name="TypeOut">The type that needs to be returned after deserializing</typeparam>
     public interface IDeserializer<TypeOut, TypeStream> {
 

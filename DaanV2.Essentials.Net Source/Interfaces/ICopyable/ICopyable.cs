@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2 {
-    /// <summary>The interface responisble for forming on how a object needs to be copied</summary>
+    /// <summary>The interface responsible for forming on how an object needs to be copied</summary>
     public interface ICopyable<T> {
         /// <summary>Return a new instance of this object</summary>
         /// <returns>Return a new instance of this object</returns>

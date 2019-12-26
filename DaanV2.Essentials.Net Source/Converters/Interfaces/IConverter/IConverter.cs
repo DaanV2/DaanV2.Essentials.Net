@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Converters {
-    /// <summary>The interface responisble for forming the contract on how Converter should work</summary>
+    /// <summary>The interface responsible for forming the contract on how Converter should work</summary>
     /// <typeparam name="TypeFrom">The object to convert into the specified type</typeparam>
     /// <typeparam name="TypeTo">The type that is returned after conversion</typeparam>
     public interface IConverter<TypeFrom, TypeTo> {

@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Compilers {
-    /// <summary>The interface responisble for forming the contract on how the Decompilers context should work</summary>
+    /// <summary>The interface responsible for forming the contract on how the Decompilers context should work</summary>
     public interface IDecompilerContext {
 
         /// <summary>Get or sets the filepath/folderpath</summary>

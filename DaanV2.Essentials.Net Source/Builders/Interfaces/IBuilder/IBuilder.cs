@@ -16,7 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Builders {
-    /// <summary>The inferface that is responsible for forming the contract between builders and output types</summary>
+    /// <summary>The interfacethat is responsible for forming the contract between builders and output types</summary>
     /// <typeparam name="TypeToBuild">The output type that will be build</typeparam>
     /// <typeparam name="T2">The type that can be added into the build</typeparam>
     public interface IBuilder<TypeToBuild, TIn> : IBuilderAdd<TIn> {

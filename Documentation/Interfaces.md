@@ -18,9 +18,9 @@ These interfaces are just for general use.
 
 |Interface  |Description    |
 |-----------|---------------|
-|ICopyable<T>   |The interface responisble for forming on how a object needs to be copied, comes with extend code for collections   |
-|IReplaceable<T>   |The interface responsible replacing specified value with another, comes with extend code for collections    |
-|IReplaceable<TypeOld, TypeNew> |The interface responsible replacing specified value with another, comes with extend code for collections   |
+|ICopyable<T>   |The interface responsible for forming on how an object needs to be copied, comes with extended code for collections   |
+|IReplaceable<T>   |The interface responsible replacing the specified value with another, comes with extended code for collections    |
+|IReplaceable<TypeOld, TypeNew> |The interface responsible replacing the specified value with another, comes with extended code for collections   |
 
 ### Builders
 
@@ -41,12 +41,12 @@ Such as compile C# to batch code. Decompilers are the opposite. They deconstruct
 
 |Interface  |Description    |
 |-----------|---------------|
-|ICompiler<TypeProcess> |The interface that is responsible for forming the contract on how compilers should tranfser data between files and object  |
-|ICompiler<TypeFrom, TypeContext>   |The interface that is responsible for forming the contract on how compilers should tranfser data between files and object |
-|ICompilerContext<ProcessObjectType>    |The inferface responsible for forming the contract on how compiler context should be used  |
+|ICompiler<TypeProcess> |The interface that is responsible for forming the contract on how compilers should transfer data between files and object  |
+|ICompiler<TypeFrom, TypeContext>   |The interface that is responsible for forming the contract on how compilers should transfer data between files and object |
+|ICompilerContext<ProcessObjectType>    |The interface responsible for forming the contract on how compiler context should be used  |
 |IDecompiler<TypeTo>    |The interface responsible for forming the contract on how Decompilers should work    |
 |IDecompiler<TypeTo, TypeContext>   |The interface responsible for forming the contract on how Decompilers should work    |
-|IDecompilerContext |The interface responisble for forming the contract on how the Decompilers context should work be used    |
+|IDecompilerContext |The interface responsible for forming the contract on how the Decompilers context should work be used    |
 |IDecompilerInto<TReceiver, ContextType> |The interface that responsible for how a decompiler should work    |
 
 ### Converters
@@ -55,10 +55,10 @@ Converters are simply objects that convert from one type of object to another.
 
 |Interface  |Description    |
 |-----------|---------------|
-|IConverter<TypeFrom, TypeTo>   |The interface responisble for forming the contract on how Converter should work  |
+|IConverter<TypeFrom, TypeTo>   |The interface responsible for forming the contract on how Converter should work  |
 |IConverter<TypeFrom, TypeTo, TypeContext>  |The interface that is responsible for forming the contract on how Converters should work with context |
-|IConverterInto<TypeFrom, TypeTo>   |The interface responisble for forming the contract on how converters should work |
-|IConverterInto<TypeFrom, TypeTo, TypeContext>  |The interface responisble for forming the contract on how Converter should work with context |
+|IConverterInto<TypeFrom, TypeTo>   |The interface responsible for forming the contract on how converters should work |
+|IConverterInto<TypeFrom, TypeTo, TypeContext>  |The interface responsible for forming the contract on how Converter should work with context |
 
 ### Processors
 
@@ -86,8 +86,8 @@ Deserializing is the opposite of this process.
 
 |Interface  |Description    |
 |-----------|---------------|
-|IDeserializer<TypeOut, TypeStream> |The inferface that is responsible for forming the contract on how Deserializer should work |
-|IDeserializer<TypeOut, TypeStream, TypeContext>    |The interface that is responisble for forming the contract on how Deserializer should work |
-|ISerializerFactory<TypeStream> |The interface responisble for form the contract on what a SerializerFactory should contain, used by the serialization extension    |
+|IDeserializer<TypeOut, TypeStream> |The interface that is responsible for forming the contract on how Deserializer should work |
+|IDeserializer<TypeOut, TypeStream, TypeContext>    |The interface that is responsible for forming the contract on how Deserializer should work |
+|ISerializerFactory<TypeStream> |The interface responsible for the form the contract on what a SerializerFactory should contain, used by the serialization extension    |
 |ISerializer<TypeIn, TypeStream>    |The interface that is responsible for forming the contract on how serializers should work  |
 |ISerializer<TypeIn, TypeStream, TypeContext>   |The interface that is responsible for forming the contract on how serializers should work  |

@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Serialization {
-    /// <summary>The interface responisble for form the contract on what a SerializerFactory should contain</summary>
+    /// <summary>The interface responsible for form the contract on what a SerializerFactory should contain</summary>
     /// <typeparam name="TypeStream">The type of stream used by the serializers</typeparam>
     public interface ISerializerFactory<TypeStream> {
 
