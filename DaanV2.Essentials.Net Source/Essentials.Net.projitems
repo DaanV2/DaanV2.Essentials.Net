@@ -15,13 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parallel\Parallel - ForEach - Array.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parallel\Parallel - ForEach - ICollection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parallel\Parallel - ForEach - Internal.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parallel Context\ParallelContext - Collection - 2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parallel Context\ParallelContext - Collection - 1.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parallel Context\ParallelContext - 2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parallel Context\ParallelContext - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Overrides.cs" />
@@ -96,6 +89,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Array.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Attributes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Objects.cs" />
@@ -103,6 +99,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Implements.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Contains.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IPre Processor Out\" />
