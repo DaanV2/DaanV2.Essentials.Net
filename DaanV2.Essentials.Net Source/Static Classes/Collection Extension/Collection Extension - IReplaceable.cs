@@ -53,29 +53,5 @@ namespace DaanV2 {
                 Values[I].Replace(Old, New);
             }
         }
-
-        /// <summary>Replaces value inside the array</summary>
-        /// <param name="Values">The values to loop through</param>
-        /// <param name="Old">The value to replace</param>
-        /// <param name="New">The value to add into</param>
-        public static void Replace(this String[] Values, String Old, String New) {
-            Int32 Max = Values.Length;
-
-            for (Int32 I = 0; I < Max; I++) {
-                Values[I] = Values[I].Replace(Old, New);
-            }
-        }
-
-        /// <summary>Replaces value inside the list</summary>
-        /// <param name="Values">The values to loop through</param>
-        /// <param name="Old">The value to replace</param>
-        /// <param name="New">The value to add into</param>
-        public static void Replace(this IList<String> Values, String Old, String New) {
-            Int32 Max = Values.Count;
-
-            for (Int32 I = 0; I < Max; I++) {
-                Values[I] = Values[I].Replace(Old, New);
-            }
-        }
     }
 }

@@ -20,32 +20,58 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public static partial class CollectionExtension {
-        /// <summary>Returns a copy of a list</summary>
+        /// <summary>Returns a copy of the whole list</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">The list of values to copy</param>
         /// <returns>Returns a <see cref="List{String}"/></returns>
         public static List<String> Copy(this List<String> values) {
-            List<String> Out = new List<String>(values.Count);
             Int32 Max = values.Count;
+            List<String> Out = new List<String>(Max);            
 
-            Out.AddRange(values);
+            for (Int32 I = 0; I < Max; I++) {
+                Out[I] = String.Copy(values[I]);
+            }
 
             return Out;
         }
 
-        /// <summary>Returns a copy of a array</summary>
+        /// <summary>Returns a copy of the whole array</summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="values">The array of values to copy</param>
         /// <returns>Returns a <see cref="String[]"/></returns>
         public static String[] Copy(this String[] values) {
-            String[] Out = new String[values.Length];
             Int32 Max = values.Length;
+            String[] Out = new String[Max];
 
             for (Int32 I = 0; I < Max; I++) {
-                Out[I] = values[I];
+                Out[I] = String.Copy(values[I]);
             }
 
             return Out;
+        }
+
+        /// <summary>Replaces value inside the array</summary>
+        /// <param name="Values">The values to loop through</param>
+        /// <param name="Old">The value to replace</param>
+        /// <param name="New">The value to add into</param>
+        public static void Replace(this String[] Values, String Old, String New) {
+            Int32 Max = Values.Length;
+
+            for (Int32 I = 0; I < Max; I++) {
+                Values[I] = Values[I].Replace(Old, New);
+            }
+        }
+
+        /// <summary>Replaces value inside the list</summary>
+        /// <param name="Values">The values to loop through</param>
+        /// <param name="Old">The value to replace</param>
+        /// <param name="New">The value to add into</param>
+        public static void Replace(this IList<String> Values, String Old, String New) {
+            Int32 Max = Values.Count;
+
+            for (Int32 I = 0; I < Max; I++) {
+                Values[I] = Values[I].Replace(Old, New);
+            }
         }
     }
 }

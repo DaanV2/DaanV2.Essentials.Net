@@ -20,7 +20,7 @@ namespace DaanV2 {
     public static partial class CollectionExtension {
         /// <summary>Creates a new instance of <see cref="CollectionExtension"/></summary>
         static CollectionExtension() {
-
+            //Nothing to see here
         }
     }
 }

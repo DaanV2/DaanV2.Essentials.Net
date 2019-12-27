@@ -22,14 +22,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    /// <summary>The context needed to perform a parralel action over an array of type <typeparamref name="T"/></summary>
-    internal partial struct ParralelContext<T> {
-        /// <summary>Creates a new instance of <see cref="ParralelContext{T}"/></summary>
+    /// <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/></summary>
+    internal partial struct ParallelContext<T> {
+        /// <summary>Creates a new instance of <see cref="ParallelContext{T}"/></summary>
         /// <param name="StartIndex">The index to start at</param>
         /// <param name="EndIndex">The index to stop</param>
         /// <param name="Items">The array to loop over</param>
         /// <param name="action">The action to perform on each item</param>
-        public ParralelContext(Int32 StartIndex, Int32 EndIndex, T[] Items, Action<T> action) {
+        public ParallelContext(Int32 StartIndex, Int32 EndIndex, T[] Items, Action<T> action) {
             this._StartIndex = StartIndex;
             this._EndIndex = EndIndex;
             this._Items = Items;

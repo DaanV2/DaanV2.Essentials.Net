@@ -21,7 +21,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    public static partial class Parralel {
+    public static partial class Parallel {
         /// <summary>
         /// 
         /// </summary>
@@ -30,7 +30,7 @@ namespace DaanV2 {
         /// <param name="EndIndex"></param>
         /// <param name="Items"></param>
         /// <param name="action"></param>
-        private static void ForEachInternal<T>(ParralelContext<T> Context) {
+        private static void ForEachInternal<T>(ParallelContext<T> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             T[] Items = Context._Items;
@@ -49,7 +49,7 @@ namespace DaanV2 {
         /// <param name="EndIndex"></param>
         /// <param name="Items"></param>
         /// <param name="action"></param>
-        private static void ForEachInternal<T, T1>(ParralelContext<T, T1> Context) {
+        private static void ForEachInternal<T, T1>(ParallelContext<T, T1> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             T[] Items = Context._Items;

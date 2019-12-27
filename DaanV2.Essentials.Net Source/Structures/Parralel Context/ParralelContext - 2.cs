@@ -17,15 +17,15 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2 {
-    /// <summary>The context needed to perform a parralel action over an array of type <typeparamref name="T1"/></summary>
-    internal partial struct ParralelContext<T1, T2> {
-        /// <summary>Creates a new instance of <see cref="ParralelContext{T1, T2}"/></summary>
+    /// <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/></summary>
+    internal partial struct ParallelContext<T1, T2> {
+        /// <summary>Creates a new instance of <see cref="ParallelContext{T1, T2}"/></summary>
         /// <param name="StartIndex">The index to start at</param>
         /// <param name="EndIndex">The index to stop</param>
         /// <param name="Items">The array to loop over</param>
         /// <param name="action">The action to perform on each item</param>
         /// <param name="Argument1">The context argument to pass along</param>
-        public ParralelContext(Int32 StartIndex, Int32 EndIndex, T1[] Items, Action<T1, T2> action, T2 Argument1) {
+        public ParallelContext(Int32 StartIndex, Int32 EndIndex, T1[] Items, Action<T1, T2> action, T2 Argument1) {
             this._StartIndex = StartIndex;
             this._EndIndex = EndIndex;
             this._Items = Items;

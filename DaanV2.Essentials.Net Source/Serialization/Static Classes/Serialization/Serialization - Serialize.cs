@@ -31,7 +31,7 @@ namespace DaanV2.Serialization {
             Writer.Close();
         }
 
-        /// <summary>Deserializes the given file into the specified object</summary>
+        /// <summary>Deserializes the given file into the specified object using the specified factory</summary>
         /// <typeparam name="T">The object to return to</typeparam>
         /// <param name="FactoryName">The name of the factory, <see cref="Serialization.GetNames"/></param>
         /// <param name="Filepath">The file to read from</param>

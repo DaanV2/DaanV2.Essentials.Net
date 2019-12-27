@@ -22,7 +22,7 @@ namespace DaanV2 {
 
         /// <summary>Creates a new instance of <see cref="TypeExtension"/></summary>
         static TypeExtension() {
-
+            //Nothing to see here
         }
     }
 }

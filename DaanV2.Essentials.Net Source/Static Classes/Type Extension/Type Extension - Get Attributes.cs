@@ -19,7 +19,7 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>Returns the given attribute</summary>
+        /// <summary>Returns the specified attribute</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <param name="Value">The type of the attribute to return</param>
         /// <returns><see cref="Object"/></returns>
@@ -35,7 +35,7 @@ namespace DaanV2 {
             return default;
         }
 
-        /// <summary>Returns the given attribute</summary>
+        /// <summary>Returns the specified attribute</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <typeparam name="T">The type of the attribute to return</typeparam>
         /// <returns><see cref="T"/></returns>
@@ -52,7 +52,7 @@ namespace DaanV2 {
             return default;
         }
 
-        /// <summary>Returns the given attribute</summary>
+        /// <summary>Returns the specified attributes</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <param name="Value">The type of the attribute to return</param>
         /// <returns><see cref="Object"/></returns>
@@ -70,7 +70,7 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Returns the given attribute</summary>
+        /// <summary>Returns the specified attributes</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <typeparam name="T">The type of the attribute to return</typeparam>
         /// <returns><see cref="T"/></returns>

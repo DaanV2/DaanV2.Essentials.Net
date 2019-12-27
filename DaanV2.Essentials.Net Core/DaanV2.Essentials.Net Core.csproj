@@ -9,42 +9,51 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Daan Verstraten</Authors>
     <PackageReleaseNotes />
-    <Description>This project is a base for all other projects to make sure they all have the same tools and interfaces, functions. The most important is the contract the interfaces this library gives.</Description>
+    <Description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</Description>
     <Copyright>Daan Verstraten 2019</Copyright>
     <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>essentials;interfaces</PackageTags>
     <PackageProjectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</PackageProjectUrl>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <OutputPath>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
