@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		Documentation\Interfaces.md = Documentation\Interfaces.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{463D48A9-3C1B-4572-A606-72E42DADEB51}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget\project.nuspec = Nuget\project.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{779eb7e7-16da-425a-8871-a85d00220af4}*SharedItemsImports = 4

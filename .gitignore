@@ -21,7 +21,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-Nuget/lib/
+Nuget/data/
+nuget.exe
 
 # Visual Studio 2015 cache/options directory
 .vs/

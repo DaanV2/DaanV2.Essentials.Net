@@ -92,7 +92,9 @@ copy "$(SolutionDir)README.md" "$(TargetDir)README_Essentials.md"</PreBuildEvent
     <PostBuildEvent>if $(ConfigurationName) == Release (
     if not exist "$(SolutionDir)Releases\" mkdir "$(SolutionDir)Releases\"
     if not exist "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\" mkdir "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\"
+    if not exist "$(SolutionDir)Nuget\data\$(TargetFramework)\$(PlatformName)\" mkdir "$(SolutionDir)Nuget\data\$(TargetFramework)\$(PlatformName)\"
     copy "$(TargetDir)*" "$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\"
+    copy "$(TargetDir)*" "$(SolutionDir)Nuget\data\$(TargetFramework)\$(PlatformName)\"
 )</PostBuildEvent>
   </PropertyGroup>
 </Project>
