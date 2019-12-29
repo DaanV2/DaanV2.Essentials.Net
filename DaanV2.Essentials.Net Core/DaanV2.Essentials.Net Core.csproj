@@ -70,7 +70,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\&quot; mkdir &quot;$(SolutionDir)Releases\&quot;&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot; mkdir &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;    copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;)" />
+    <Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\&quot; mkdir &quot;$(SolutionDir)Releases\&quot;&#xD;&#xA;    if not exist &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot; mkdir &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;    if not exist &quot;$(SolutionDir)Nuget\lib\$(PlatformName)\&quot; mkdir &quot;$(SolutionDir)Nuget\lib\$(PlatformName)\&quot;&#xD;&#xA;    copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Releases\$(ProjectName)-$(PlatformName)\&quot;&#xD;&#xA;    copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\$(PlatformName)\&quot;&#xD;&#xA;)" />
   </Target>
 
 </Project>
