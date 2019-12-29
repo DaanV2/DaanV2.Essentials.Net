@@ -23,7 +23,7 @@ namespace DaanV2.Converters {
 
         /// <summary>Converts the given object into the specified type</summary>
         /// <param name="Process">The object to convert</param>
-        /// <returns><see cref="TypeTo"/></returns>
+        /// <returns>Converts the given object into the specified type</returns>
         TypeTo Convert(TypeFrom Process);
     }
 }

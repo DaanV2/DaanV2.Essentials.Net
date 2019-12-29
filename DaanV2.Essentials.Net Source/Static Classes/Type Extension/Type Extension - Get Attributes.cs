@@ -22,7 +22,7 @@ namespace DaanV2 {
         /// <summary>Returns the specified attribute</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <param name="Value">The type of the attribute to return</param>
-        /// <returns><see cref="Object"/></returns>
+        /// <returns>Returns the specified attribute</returns>
         public static Object GetAttribute(this Type Object, Type Value) {
             Object[] Attributes = Object.GetCustomAttributes(Value, true);
 
@@ -38,7 +38,7 @@ namespace DaanV2 {
         /// <summary>Returns the specified attribute</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <typeparam name="T">The type of the attribute to return</typeparam>
-        /// <returns><see cref="T"/></returns>
+        /// <returns>Returns the specified attribute</returns>
         public static T GetAttribute<T>(this Type Object) {
             Type Find = typeof(T);
             Object[] Attributes = Object.GetCustomAttributes(Find, true);
@@ -55,7 +55,7 @@ namespace DaanV2 {
         /// <summary>Returns the specified attributes</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <param name="Value">The type of the attribute to return</param>
-        /// <returns><see cref="Object"/></returns>
+        /// <returns>Returns the specified attributes</returns>
         public static List<Object> GetAttributes(this Type Object, Type Value) {
             Object[] Attributes = Object.GetCustomAttributes(Value, true);
             Int32 Length = Attributes.Length;
@@ -73,7 +73,7 @@ namespace DaanV2 {
         /// <summary>Returns the specified attributes</summary>
         /// <param name="Object">The object to retrieve attributes from</param>
         /// <typeparam name="T">The type of the attribute to return</typeparam>
-        /// <returns><see cref="T"/></returns>
+        /// <returns>Returns the specified attributes</returns>
         public static List<T> GetAttributes<T>(this Type Object) {
             Type Find = typeof(T);
             Object[] Attributes = Object.GetCustomAttributes(Find, true);

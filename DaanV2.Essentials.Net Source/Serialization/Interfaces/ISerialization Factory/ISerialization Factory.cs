@@ -23,12 +23,12 @@ namespace DaanV2.Serialization {
 
         /// <summary>Returns a serializer that is able to serialize the given type through the given stream</summary>
         /// <typeparam name="TIn">The type to create a serializer for</typeparam>
-        /// <returns><see cref="ISerializer{TIn, TypeStream}"/></returns>
+        /// <returns>Returns a serializer that is able to serialize the given type through the given stream</returns>
         ISerializer<TIn, TypeStream> GetSerializer<TIn>();
 
         /// <summary>Returns a deserializer that is able to deserialize the given type through the given stream</summary>
         /// <typeparam name="TOut">The type to create a deserializer for</typeparam>
-        /// <returns><see cref="IDeserializer{TOut, TypeStream}"/></returns>
+        /// <returns>Returns a deserializer that is able to deserialize the given type through the given stream</returns>
         IDeserializer<TOut, TypeStream> GetDeserializer<TOut>();
 
         /// <summary>Sets the deserializer type</summary>

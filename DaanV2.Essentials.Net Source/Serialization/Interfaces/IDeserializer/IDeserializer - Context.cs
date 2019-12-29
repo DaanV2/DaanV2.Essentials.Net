@@ -25,7 +25,7 @@ namespace DaanV2.Serialization {
         /// <summary>Deserializer the given stream into the specified type</summary>
         /// <param name="stream">The stream to read from</param>
         /// <param name="Context">The context needed to read the stream</param>
-        /// <returns><see cref="TypeOut"/></returns>
+        /// <returns>Deserializer the given stream into the specified type</returns>
         TypeOut Deserialize(TypeStream stream, TypeContext Context);
     }
 }

@@ -22,7 +22,7 @@ namespace DaanV2.Compilers {
 
         /// <summary>Decompiles the given context into the specified object</summary>
         /// <param name="Context">The context that specifies where the information can be found</param>
-        /// <returns><see cref="TypeTo"/></returns>
+        /// <returns>Decompiles the given context into the specified object</returns>
         TypeTo Decompile(TypeContext Context);
     }
 }

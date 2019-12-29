@@ -22,7 +22,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Returns a deserializer that is able to deserializer the given object</summary>
         /// <typeparam name="TOut">The type that needs to be returned after deserializing</typeparam>
-        /// <returns><see cref="IDeserializer{TOut, Stream}"/></returns>
+        /// <returns>Returns a deserializer that is able to deserializer the given object</returns>
         public IDeserializer<TOut, Stream> GetDeserializer<TOut>() {
             if (this.Deserializer == null) {
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
@@ -35,7 +35,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Returns a serializer that is able to serializer the given object</summary>
         /// <typeparam name="TIn">The type that is being inputted for serialization</typeparam>
-        /// <returns><see cref="ISerializer{TypeIn, Stream}"/></returns>
+        /// <returns>Returns a serializer that is able to serializer the given object</returns>
         public ISerializer<TIn, Stream> GetSerializer<TIn>() {
             if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
@@ -48,7 +48,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Returns a serializer that is able to serializer the given object</summary>
         /// <param name="ForType">The type that is being inputted for serialization</typeparam>
-        /// <returns><see cref="ISerializer{Object, Stream}"/></returns>
+        /// <returns>Returns a serializer that is able to serializer the given object</returns>
         public ISerializer<Object, Stream> GetSerializer(Type ForType) {
             if (this.Serializer == null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
@@ -60,13 +60,13 @@ namespace DaanV2.Serialization {
         }
 
         /// <summary>Gets the deserializing base type</summary>
-        /// <returns><see cref="Type"/></returns>
+        /// <returns>Gets the deserializing base type</returns>
         public Type GetDeserializeType() {
             return this.Deserializer;
         }
 
         /// <summary>Gets the serializing base type</summary>
-        /// <returns><see cref="Type"/></returns>
+        /// <returns>Gets the serializing base type</returns>
         public Type GetSerializeType() {
             return this.Serializer;
         }

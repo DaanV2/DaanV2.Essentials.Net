@@ -23,7 +23,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Deserialize the given stream into the specified <see cref="Type"/></summary>
         /// <param name="stream">The stream to read from</param>
-        /// <returns><see cref="TypeOut"/></returns>
+        /// <returns>Deserialize the given stream into the specified <see cref="Type"/></returns>
         TypeOut Deserialize(TypeStream stream);
     }
 }

@@ -23,7 +23,7 @@ namespace DaanV2.Serialization {
         /// <summary>Returns the factory with the specified name
         /// <para>If no factory is found, then one is made.</para></summary>
         /// <param name="Name">The name of the specified name</param>
-        /// <returns><see cref="ISerializerFactory{Stream}"/></returns>
+        /// <returns>Returns the factory with the specified name</returns>
         private static ISerializerFactory<Stream> GetFactory(String Name) {
             if (!Serialization._Factories.ContainsKey(Name)) {
                 Serialization._Factories[Name] = new SerializationFactory();
