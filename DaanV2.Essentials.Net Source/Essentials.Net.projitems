@@ -93,6 +93,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\String Extension\String Extension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Attributes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Objects.cs" />

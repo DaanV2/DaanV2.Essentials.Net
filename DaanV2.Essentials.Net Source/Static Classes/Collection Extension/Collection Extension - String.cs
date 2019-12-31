@@ -14,7 +14,6 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-
 using System;
 using System.Collections.Generic;
 
@@ -29,7 +28,7 @@ namespace DaanV2 {
             List<String> Out = new List<String>(Max);            
 
             for (Int32 I = 0; I < Max; I++) {
-                Out[I] = String.Copy(values[I]);
+                Out[I] = StringExtension.Copy(values[I]);
             }
 
             return Out;
@@ -44,7 +43,7 @@ namespace DaanV2 {
             String[] Out = new String[Max];
 
             for (Int32 I = 0; I < Max; I++) {
-                Out[I] = String.Copy(values[I]);
+                Out[I] = StringExtension.Copy(values[I]);
             }
 
             return Out;
