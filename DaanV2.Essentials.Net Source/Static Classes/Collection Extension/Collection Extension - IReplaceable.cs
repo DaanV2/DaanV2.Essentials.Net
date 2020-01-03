@@ -53,5 +53,20 @@ namespace DaanV2 {
                 Values[I].Replace(Old, New);
             }
         }
+
+        /// <summary>Replaces value inside the list</summary>
+        /// <typeparam name="TCollection"></typeparam>
+        /// <typeparam name="TypeOld"></typeparam>
+        /// <typeparam name="TypeNew"></typeparam>
+        /// <param name="Values">The values to loop through</param>
+        /// <param name="Old">The value to replace</param>
+        /// <param name="New">The value to add into</param>
+        public static void Replace<TKey, TCollection, TypeOld, TypeNew>(this IDictionary<TKey, TCollection> Values, TypeOld Old, TypeNew New)
+            where TCollection : IReplaceable<TypeOld, TypeNew> {
+
+            foreach (KeyValuePair<TKey, TCollection> KVP in Values) {
+                KVP.Value.Replace(Old, New);
+            }
+        }
     }
 }
