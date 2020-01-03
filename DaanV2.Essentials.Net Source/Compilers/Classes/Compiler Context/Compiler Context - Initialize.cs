@@ -16,6 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 using System.Runtime.Serialization;
+using DaanV2;
 
 namespace DaanV2.Compilers {
     /// <summary>A base object containing the basic information needed for a compiling process</summary>
