@@ -33,6 +33,5 @@ namespace DaanV2.Serialization {
         [NonSerialized]
         private protected DataContractJsonSerializer _Serializer;
 #endif
-
     }
 }
