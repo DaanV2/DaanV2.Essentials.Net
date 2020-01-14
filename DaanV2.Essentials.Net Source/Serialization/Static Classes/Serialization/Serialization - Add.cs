@@ -40,7 +40,12 @@ namespace DaanV2.Serialization {
         /// <param name="assemblies">The assemblies to loop through</param>
         public static void Add(Assembly[] assemblies) {
             for (Int32 I = 0; I < assemblies.Length; I++) {
-                Add(assemblies[I]);
+                try {
+                    Add(assemblies[I]);
+                }
+                catch (Exception ex) {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
 

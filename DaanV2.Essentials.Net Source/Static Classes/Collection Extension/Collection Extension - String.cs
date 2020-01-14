@@ -28,7 +28,7 @@ namespace DaanV2 {
             List<String> Out = new List<String>(Max);            
 
             for (Int32 I = 0; I < Max; I++) {
-                Out[I] = StringExtension.Copy(values[I]);
+                Out.Add(StringExtension.Copy(values[I]));
             }
 
             return Out;
