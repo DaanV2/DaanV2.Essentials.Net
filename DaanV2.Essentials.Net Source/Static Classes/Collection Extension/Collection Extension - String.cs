@@ -69,7 +69,7 @@ namespace DaanV2 {
             Int32 Max = Values.Count;
 
             for (Int32 I = 0; I < Max; I++) {
-                Values.Add(Values[I].Replace(Old, New));
+                Values[I] = Values[I].Replace(Old, New);
             }
         }
     }
