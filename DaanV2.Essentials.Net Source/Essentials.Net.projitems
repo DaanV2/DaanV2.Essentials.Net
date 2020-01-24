@@ -85,6 +85,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Serialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Cast.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Contains.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Initialize.cs" />
