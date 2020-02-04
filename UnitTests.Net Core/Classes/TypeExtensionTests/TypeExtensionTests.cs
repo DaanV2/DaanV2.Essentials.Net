@@ -4,6 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTests.Net_Core {
     public interface ITestTemp { }
 
+    public interface IShouldNotError : ITestTemp { }
+
     public class RandomTestClass : ITestTemp { }
 
     ///DOLATER <summary>add description for class: TypeExtensionTests</summary>

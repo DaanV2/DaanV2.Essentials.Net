@@ -42,9 +42,14 @@ namespace DaanV2 {
             List<Type> Types = GetTypesWhichImplements(typeof(T));
             List<T> Objects = new List<T>(Types.Count);
             Int32 Length = Types.Count;
+            Type Current;
 
             for (Int32 I = 0; I < Length; I++) {
-                Objects.Add((T)Activator.CreateInstance(Types[I]));
+                Current = Types[I];
+
+                if (!Current.IsInterface && !Current.IsAbstract) {
+                    Objects.Add((T)Activator.CreateInstance(Types[I]));
+                }
             }
 
             return Objects;
