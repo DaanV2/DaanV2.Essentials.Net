@@ -40,14 +40,20 @@ namespace DaanV2 {
         /// <param name="asm">the assemblies to look through</param>
         /// <returns>Returns a list of types that implement the specified implement</returns>
         public static List<Type> GetTypesWhichImplements(Type Implements, Assembly asm) {
-            Type[] Types = asm.GetTypes();
             List<Type> Out = new List<Type>(100);
-            Int32 Length = Types.Length;
+            try {
+                Type[] Types = asm.GetTypes();
 
-            for (Int32 I = 0; I < Length; I++) {
-                if (Types[I].Implements(Implements)) {
-                    Out.Add(Types[I]);
+                Int32 Length = Types.Length;
+
+                for (Int32 I = 0; I < Length; I++) {
+                    if (Types[I].Implements(Implements)) {
+                        Out.Add(Types[I]);
+                    }
                 }
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
             }
 
             return Out;
