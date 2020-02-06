@@ -55,6 +55,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor Out\IProcessor Out.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IPostProcessor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IPostProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IPreProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IPreProcessor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IProcessor - Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\ProcessorExtension\ProcessorExtension - IProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Binary Serializer\Binary Serializer - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Binary Serializer\Binary Serializer - Interfaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Binary Serializer\Binary Serializer - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Overrides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Deserializer Attribute\Deserializer Attribute - Properties.cs" />

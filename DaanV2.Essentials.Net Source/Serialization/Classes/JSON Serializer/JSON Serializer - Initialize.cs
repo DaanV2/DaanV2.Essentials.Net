@@ -25,7 +25,6 @@ using System.Runtime.Serialization.Json;
 namespace DaanV2.Serialization {
     /// <summary>A class that contects the build in JSON serializer from .Net into the <see cref="Serialization"/></summary>
     /// <typeparam name="TypeSerialize">The type to serializer/deserialize</typeparam>
-	[Serializable, DataContract]
     [Serializer("json"), Deserializer("json")]
     public partial class JSONSerializer<TypeSerialize> {
 

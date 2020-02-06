@@ -4,7 +4,6 @@ using DaanV2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.Net_Core {
-    ///DOLATER <summary>add description for class: IReplaceable</summary>
     [TestClass]
     public partial class IReplaceable {
         [TestMethod]

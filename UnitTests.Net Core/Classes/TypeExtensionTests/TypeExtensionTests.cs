@@ -8,7 +8,6 @@ namespace UnitTests.Net_Core {
 
     public class RandomTestClass : ITestTemp { }
 
-    ///DOLATER <summary>add description for class: TypeExtensionTests</summary>
     [TestClass]
     public partial class TypeExtensionTests {
         [TestMethod]
