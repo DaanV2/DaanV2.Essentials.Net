@@ -16,9 +16,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Builders {
-    /// <summary>The interface that responsible for building a specified class with/without context</summary>
-    /// <typeparam name="TypeBuild">The type to build to</typeparam>
-    /// <typeparam name="ContextType">The context type</typeparam>
+    /// <summary>The interface that responsible for building a specified class with/without context.</summary>
+    /// <typeparam name="TypeToBuild">The type to build to.</typeparam>
+    /// <typeparam name="TIn">The object type in.</typeparam>
+    /// <typeparam name="ContextType">The context type.</typeparam>
     public interface IBuilderContext<TypeToBuild, TIn, ContextType> :
         IBuilder<TypeToBuild, TIn>,
         IBuilderAddContext<TIn, ContextType> {

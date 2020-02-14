@@ -8,7 +8,7 @@ namespace UnitTests.Net_Core {
     public partial class ICopyableTest {
         /// <summary>
         /// 
-        /// </summary>
+        ///.</summary>
         [TestMethod]
         public void CopyString() {
             String DataHolder = "I am so piece of text with copyable values";
@@ -32,7 +32,7 @@ namespace UnitTests.Net_Core {
 
         /// <summary>
         /// 
-        /// </summary>
+        ///.</summary>
         [TestMethod]
         public void CopyStringArrayTest() {
             String[] Values = new String[] { "Something to test", "", "I am a longer piece of text" };
@@ -68,7 +68,7 @@ namespace UnitTests.Net_Core {
 
         /// <summary>
         /// 
-        /// </summary>
+        ///.</summary>
         [TestMethod]
         public void CopyStringListTest() {
             List<String> Values = new List<String> { "Something to test", "", "I am a longer piece of text" };

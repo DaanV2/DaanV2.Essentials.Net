@@ -16,9 +16,9 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for determining how a pre/post processor should work</summary>
-    /// <typeparam name="TIn">The type to process</typeparam>
-    /// <typeparam name="TOut">The type that gets outputted</typeparam>
+    /// <summary>The interface responsible for determining how a pre/post processor should work.</summary>
+    /// <typeparam name="TIn">The type to process.</typeparam>
+    /// <typeparam name="TOut">The type that gets outputted.</typeparam>
     public interface IDualProcessorOut<TIn, TOut> :
         IPreProcessorOut<TIn, TOut>,
         IPostProcessorOut<TIn, TOut> {

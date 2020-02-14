@@ -10,7 +10,7 @@ namespace UnitTests.Serialization {
     public class SerializationClassTest {
         /// <summary>
         /// 
-        /// </summary>
+        ///.</summary>
         [DataMember]
         public String Text { get; set; }
     }

@@ -21,8 +21,8 @@ using System.Reflection;
 namespace DaanV2.Serialization {
     public static partial class Serialization {
 
-        /// <summary>Add the given factory into the internal list</summary>
-        /// <param name="Factory">The factory to add</param>
+        /// <summary>Add the given factory into the internal list.</summary>
+        /// <param name="Factory">The factory to add.</param>
         public static void Add(ISerializerFactory<Stream> Factory) {
             //If an older factory exists
             if (Serialization._Factories.ContainsKey(Factory.Name)) {
@@ -36,8 +36,8 @@ namespace DaanV2.Serialization {
             Serialization._Factories[Factory.Name] = Factory;
         }
 
-        /// <summary>Add the contents of assemblies to the internal list of factories</summary>
-        /// <param name="assemblies">The assemblies to loop through</param>
+        /// <summary>Add the contents of assemblies to the internal list of factories.</summary>
+        /// <param name="assemblies">The assemblies to loop through.</param>
         public static void Add(Assembly[] assemblies) {
             for (Int32 I = 0; I < assemblies.Length; I++) {
                 try {
@@ -49,8 +49,8 @@ namespace DaanV2.Serialization {
             }
         }
 
-        /// <summary>Add the contents of a assembly to the internal list of factories</summary>
-        /// <param name="assembly">The assembly to look through</param>
+        /// <summary>Add the contents of a assembly to the internal list of factories.</summary>
+        /// <param name="assembly">The assembly to look through.</param>
         public static void Add(Assembly assembly) {
             Type Current;
             SerializerAttribute SAttribute;

@@ -18,7 +18,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DaanV2.Serialization {
     public partial class BinarySerializer<TypeSerialize> {
-        /// <summary>The serializer used in the background</summary>
+        /// <summary>The serializer used in the background.</summary>
         private BinaryFormatter _Serializer;
     }
 }

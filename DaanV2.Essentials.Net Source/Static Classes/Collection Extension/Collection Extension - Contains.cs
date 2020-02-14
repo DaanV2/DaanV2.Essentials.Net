@@ -19,11 +19,11 @@ using System.Collections.Generic;
 
 namespace DaanV2 {
     public static partial class CollectionExtension {
-        /// <summary>Checks if an array contains the specified object</summary>
-        /// <typeparam name="T">The type of object the array exists of</typeparam>
-        /// <param name="Collection">The collection to search through</param>
-        /// <param name="Value">The value to find</param>
-        /// <returns>Checks if an array contains the specified object</returns>
+        /// <summary>Checks if an array contains the specified object.</summary>
+        /// <typeparam name="T">The type of object the array exists of.</typeparam>
+        /// <param name="Collection">The collection to search through.</param>
+        /// <param name="Value">The value to find.</param>
+        /// <returns>Checks if an array contains the specified object.</returns>
         public static Boolean Contains<T>(this T[] Collection, T Value) {
             Int32 Max = Collection.Length;
 
@@ -47,11 +47,11 @@ namespace DaanV2 {
             return false;
         }
 
-        /// <summary>Checks if an list contains the specified object</summary>
-        /// <typeparam name="T">The type of object the array exists of</typeparam>
-        /// <param name="Collection">The collection to search through</param>
-        /// <param name="Value">The value to find</param>
-        /// <returns>Checks if an list contains the specified object</returns>
+        /// <summary>Checks if an list contains the specified object.</summary>
+        /// <typeparam name="T">The type of object the array exists of.</typeparam>
+        /// <param name="Collection">The collection to search through.</param>
+        /// <param name="Value">The value to find.</param>
+        /// <returns>Checks if an list contains the specified object.</returns>
         public static Boolean Contains<T>(this IList<T> Collection, T Value) {
             Int32 Max = Collection.Count;
 

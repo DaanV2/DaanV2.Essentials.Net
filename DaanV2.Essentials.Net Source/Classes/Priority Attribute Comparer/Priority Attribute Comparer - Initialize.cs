@@ -16,9 +16,9 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2 {
-    /// <summary>A comparer of objects that implements the <see cref="PriorityAttribute"/> and by it</summary>
+    /// <summary>A comparer of objects that implements the <see cref="PriorityAttribute"/> and by it.</summary>
     public partial class PriorityAttributeComparer {
-        /// <summary>Creates a new instance of <see cref="PriorityAttributeComparer"/></summary>
+        /// <summary>Creates a new instance of <see cref="PriorityAttributeComparer"/>.</summary>
         public PriorityAttributeComparer() {
 
         }

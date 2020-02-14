@@ -20,9 +20,9 @@ using System.Reflection;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>Returns a list of object that implements a specified type</summary>
-        /// <param name="Contains">The type to search for</param>
-        /// <returns>Returns a list of object that implements a specified type</returns>
+        /// <summary>Returns a list of object that implements a specified type.</summary>
+        /// <param name="Contains">The type to search for.</param>
+        /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains) {
             List<Type> Types = GetTypesWhichImplements(Contains);
             List<Object> Objects = new List<Object>(Types.Count);
@@ -35,9 +35,8 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>Returns a list of object that implements a specified type</summary>
-        /// <param name="Contains">The type to search for</param>
-        /// <returns>Returns a list of object that implements a specified type</returns>
+        /// <summary>Returns a list of object that implements a specified type.</summary>
+        /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<T> GetObjectsWhichImplements<T>() {
             List<Type> Types = GetTypesWhichImplements(typeof(T));
             List<T> Objects = new List<T>(Types.Count);
@@ -55,10 +54,10 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>Returns a list of object that implements a specified type</summary>
-        /// <param name="Contains">The type to search for</param>
-        /// <param name="asm">The assemblies to look through</param>
-        /// <returns>Returns a list of object that implements a specified type</returns>
+        /// <summary>Returns a list of object that implements a specified type.</summary>
+        /// <param name="Contains">The type to search for.</param>
+        /// <param name="asm">The assemblies to look through.</param>
+        /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains, Assembly asm) {
             List<Type> Types = GetTypesWhichImplements(Contains, asm);
             List<Object> Objects = new List<Object>(Types.Count);
@@ -71,10 +70,10 @@ namespace DaanV2 {
             return Objects;
         }
 
-        /// <summary>Returns a list of object that implements a specified type</summary>
-        /// <param name="asm">The assemblies to look through</param>
-        /// <typeparam name="T">The type to find</typeparam>
-        /// <returns>Returns a list of object that implements a specified type</returns>
+        /// <summary>Returns a list of object that implements a specified type.</summary>
+        /// <param name="asm">The assemblies to look through.</param>
+        /// <typeparam name="T">The type to find.</typeparam>
+        /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<T> GetObjectsWhichImplements<T>(Assembly asm) {
             List<Type> Types = GetTypesWhichImplements(typeof(T), asm);
             List<T> Objects = new List<T>(Types.Count);

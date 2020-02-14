@@ -19,13 +19,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    /// <summary>The class that creates Parallel tasks</summary>
+    /// <summary>The class that creates Parallel tasks.</summary>
     public static partial class Parallel {
-        /// <summary>Loops over each item in the specified <see also="ICollection{T}" /></summary>
-        /// <typeparam name="T">The type inside the <see also="ICollection{T}" /></typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <returns>Loops over each item in the specified <see also="ICollection{T}" /></returns>
+        /// <summary>Loops over each item in the specified <see cref="ICollection{T}" />.</summary>
+        /// <typeparam name="T">The type inside the <see cref="ICollection{T}" />.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <returns>Loops over each item in the specified <see cref="ICollection{T}" />.</returns>
         public static Task[] ForEach<T>(ICollection<T> Items, Action<T> action) {
             Task[] Out = new Task[Environment.ProcessorCount];
 
@@ -46,12 +46,12 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified <see also="ICollection{T}" /></summary>
-        /// <typeparam name="T">The type inside the <see also="ICollection{T}" /></typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <param name="TaskCount">The amount of tasks that should process over this <see also="ICollection{T}" /></param>
-        /// <returns>Loops over each item in the specified <see also="ICollection{T}" /></returns>
+        /// <summary>Loops over each item in the specified <see cref="ICollection{T}" />.</summary>
+        /// <typeparam name="T">The type inside the <see cref="ICollection{T}" />.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="TaskCount">The amount of tasks that should process over this <see cref="ICollection{T}" />.</param>
+        /// <returns>Loops over each item in the specified <see cref="ICollection{T}" />.</returns>
         public static Task[] ForEach<T>(ICollection<T> Items, Action<T> action, Int32 TaskCount) {
             if (TaskCount < 1)
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
@@ -75,11 +75,13 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified <see also="ICollection{T}" /></summary>
-        /// <typeparam name="T">The type inside the <see also="ICollection{T}" /></typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <returns>Loops over each item in the specified <see also="ICollection{T}" /></returns>
+        /// <summary>Loops over each item in the specified <see cref="ICollection{T}"/>.</summary>
+        /// <typeparam name="T">The type inside the <see cref="ICollection{T}"/>.</typeparam>
+        /// <typeparam name="T1">The additional argument type.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="Argument">The additional argument needed to process the item.</param>
+        /// <returns>Loops over each item in the specified <see cref="ICollection{T}" />.</returns>
         public static Task[] ForEach<T, T1>(ICollection<T> Items, Action<T, T1> action, T1 Argument) {
             Task[] Out = new Task[Environment.ProcessorCount];
 
@@ -100,12 +102,14 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified <see also="ICollection{T}" /></summary>
-        /// <typeparam name="T">The type inside the <see also="ICollection{T}" /></typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <param name="TaskCount">The amount of tasks that should process over this <see also="ICollection{T}" /></param>
-        /// <returns>Loops over each item in the specified <see also="ICollection{T}" /></returns>
+        /// <summary>Loops over each item in the specified <see cref="ICollection{T}" />.</summary>
+        /// <typeparam name="T">The type inside the <see cref="ICollection{T}" />.</typeparam>
+        /// <typeparam name="T1">The additional argument type.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="TaskCount">The amount of tasks that should process over this <see cref="ICollection{T}" />.</param>
+        /// <param name="Argument">The additional argument needed to process the item.</param>
+        /// <returns>Loops over each item in the specified <see cref="ICollection{T}" />.</returns>
         public static Task[] ForEach<T, T1>(ICollection<T> Items, Action<T, T1> action, T1 Argument, Int32 TaskCount) {
             if (TaskCount < 1)
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));

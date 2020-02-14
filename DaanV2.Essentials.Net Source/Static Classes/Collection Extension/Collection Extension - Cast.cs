@@ -20,8 +20,8 @@ using System.Collections.Generic;
 namespace DaanV2 {
     public static partial class CollectionExtension {
         /// <summary>Casts the given array to a list.</summary>
-        /// <typeparam name="T">The item type</typeparam>
-        /// <param name="Values">The array to cast</param>
+        /// <typeparam name="T">The item type.</typeparam>
+        /// <param name="Values">The array to cast.</param>
         /// <returns>Casts the given array to a list.</returns>
         public static List<T> ToList<T>(T[] Values) {
             Int32 Count = Values.Length;
@@ -35,8 +35,8 @@ namespace DaanV2 {
         }
 
         /// <summary>Casts the given array to a list.</summary>
-        /// <typeparam name="T">The item type</typeparam>
-        /// <param name="Values">The array to cast</param>
+        /// <typeparam name="T">The item type.</typeparam>
+        /// <param name="Values">The array to cast.</param>
         /// <returns>Casts the given array to a list.</returns>
         public static List<T> ToList<T>(IList<T> Values) {
             Int32 Count = Values.Count;
