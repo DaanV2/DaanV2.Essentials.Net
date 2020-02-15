@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaanV2.Essentials.Net Core", "DaanV2.Essentials.Net Core\DaanV2.Essentials.Net Core.csproj", "{126F6C4D-89DE-4F34-88F7-1241B5157EA7}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DaanV2.Essentials.Net Source", "DaanV2.Essentials.Net Source\DaanV2.Essentials.Net Source.shproj", "{B1F153D9-F47C-4FE9-BD9F-FFACB81FB3F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{37CDB440-3ADF-4599-97D5-B9A46BB29D44}"
@@ -17,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaanV2.Essentials.Net", "DaanV2.Essentials.Net\DaanV2.Essentials.Net.csproj", "{779EB7E7-16DA-425A-8871-A85D00220AF4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{C770F9FC-0538-4F79-B325-234082396C67}"
 	ProjectSection(SolutionItems) = preProject
 		Documentation\Code_Extensions.md = Documentation\Code_Extensions.md
@@ -27,11 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net Core", "UnitTests.Net Core\UnitTests.Net Core.csproj", "{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.Net Core", "UnitTests.Net Core\UnitTests.Net Core.csproj", "{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{779eb7e7-16da-425a-8871-a85d00220af4}*SharedItemsImports = 4
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{b1f153d9-f47c-4fe9-bd9f-ffacb81fb3f9}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,30 +38,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|x64.ActiveCfg = Debug|x64
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|x64.Build.0 = Debug|x64
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|x86.ActiveCfg = Debug|x86
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Debug|x86.Build.0 = Debug|x86
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|x64.ActiveCfg = Release|x64
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|x64.Build.0 = Release|x64
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|x86.ActiveCfg = Release|x86
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7}.Release|x86.Build.0 = Release|x86
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|x64.ActiveCfg = Debug|x64
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|x64.Build.0 = Debug|x64
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|x86.ActiveCfg = Debug|x86
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Debug|x86.Build.0 = Debug|x86
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|x64.ActiveCfg = Release|x64
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|x64.Build.0 = Release|x64
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|x86.ActiveCfg = Release|x86
-		{779EB7E7-16DA-425A-8871-A85D00220AF4}.Release|x86.Build.0 = Release|x86
 		{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C}.Debug|x64.ActiveCfg = Debug|x64
@@ -84,9 +55,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{126F6C4D-89DE-4F34-88F7-1241B5157EA7} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
 		{B1F153D9-F47C-4FE9-BD9F-FFACB81FB3F9} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
-		{779EB7E7-16DA-425A-8871-A85D00220AF4} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
 		{54F6B5BD-98C6-4A44-BBBB-74863FC7BE3C} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
