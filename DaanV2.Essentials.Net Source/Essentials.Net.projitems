@@ -58,16 +58,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IProcessor\IProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPostProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPostProcessor.cs" />
-<<<<<<< HEAD
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPreProcessor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPreProcessor - Context.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IProcessor - Context.cs" />
-=======
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPreProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IPreProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IProcessor - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - Initialize.cs" />
->>>>>>> fe2a50e3f739fae8a3a2eb151b5fab561630353b
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Static Classes\Processor Extension\Processor Extension - IProcessor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Binary Serializer\Binary Serializer - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\Binary Serializer\Binary Serializer - Interfaces.cs" />
