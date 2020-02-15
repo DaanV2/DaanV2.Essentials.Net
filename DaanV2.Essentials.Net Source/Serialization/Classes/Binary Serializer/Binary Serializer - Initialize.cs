@@ -17,10 +17,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DaanV2.Serialization {
-    ///DOLATER <summary>add description for class: BinarySerializer</summary>
+    /// <summary>The serializer class that is responsible for serializing to a binary format</summary>
     [Serializer("binary"), Deserializer("binary")]
     public partial class BinarySerializer<TypeSerialize> {
-        /// <summary>Creates a new instance of <see cref="BinarySerializer"/></summary>
+        /// <summary>Creates a new instance of <see cref="BinarySerializer{TypeSerialize}"/>.</summary>
         public BinarySerializer() {
             this._Serializer = new BinaryFormatter();
         }

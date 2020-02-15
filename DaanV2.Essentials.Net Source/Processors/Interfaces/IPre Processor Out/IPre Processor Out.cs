@@ -16,11 +16,11 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for determining how a Pre processor with output should work</summary>
+    /// <summary>The interface responsible for determining how a Pre processor with output should work.</summary>
     public interface IPreProcessorOut<TIn, TOut> {
-        /// <summary>Pre processes the specified object into the output object</summary>
-        /// <param name="Process">The object to pre processes</param>
-        /// <returns>Pre processes the specified object into the output object</returns>
+        /// <summary>Pre processes the specified object into the output object.</summary>
+        /// <param name="Process">The object to pre processes.</param>
+        /// <returns>Pre processes the specified object into the output object.</returns>
         TOut Preprocess(TIn Process);
     }
 }

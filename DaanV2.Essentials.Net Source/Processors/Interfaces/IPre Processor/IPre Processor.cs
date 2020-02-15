@@ -16,10 +16,10 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for determing how pre processor should work</summary>
+    /// <summary>The interface responsible for determing how pre processor should work.</summary>
     public interface IPreProcessor<T> {
-        /// <summary>Pre processes the given object</summary>
-        /// <param name="Process">The object to preprocess</param>
+        /// <summary>Pre processes the given object.</summary>
+        /// <param name="Process">The object to preprocess.</param>
         void Preprocess(T Process);
     }
 }

@@ -15,11 +15,11 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for processing the given object to the output</summary>
+    /// <summary>The interface responsible for processing the given object to the output.</summary>
     public interface IProcessorOut<T, TypeOut> {
-        /// <summary>Processes the given object into the outputted type</summary>
-        /// <param name="Process">The object to process</param>
-        /// <returns>Processes the given object into the outputted type</returns>
+        /// <summary>Processes the given object into the outputted type.</summary>
+        /// <param name="Process">The object to process.</param>
+        /// <returns>Processes the given object into the outputted type.</returns>
         TypeOut Process(T Process);
     }
 }

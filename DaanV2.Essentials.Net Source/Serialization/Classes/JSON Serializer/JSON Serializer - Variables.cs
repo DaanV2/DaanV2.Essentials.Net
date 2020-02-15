@@ -24,12 +24,12 @@ using System.Runtime.Serialization.Json;
 namespace DaanV2.Serialization {
     public partial class JSONSerializer<TypeSerialize> {
 #if NETCORE
-        /// <summary>The options to be used when generating a serializer</summary>
+        /// <summary>The options to be used when generating a serializer.</summary>
         [NonSerialized]
         private protected JsonSerializerOptions _Options;
 #else
 
-        /// <summary>The underlying serializer that is being connected to the interface</summary>
+        /// <summary>The underlying serializer that is being connected to the interface.</summary>
         [NonSerialized]
         private protected DataContractJsonSerializer _Serializer;
 #endif

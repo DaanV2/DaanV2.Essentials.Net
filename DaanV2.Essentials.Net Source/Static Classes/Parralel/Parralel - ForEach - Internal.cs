@@ -15,21 +15,12 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DaanV2 {
     public static partial class Parallel {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="StartIndex"></param>
-        /// <param name="EndIndex"></param>
-        /// <param name="Items"></param>
-        /// <param name="action"></param>
+        /// <summary>The internal method used for the foreach loop.</summary>
+        /// <typeparam name="T">The object to process.</typeparam>
+        /// <param name="Context">The context needed to process.</param>
         private static void ForEachInternal<T>(ParallelContext<T> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
@@ -41,14 +32,10 @@ namespace DaanV2 {
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="StartIndex"></param>
-        /// <param name="EndIndex"></param>
-        /// <param name="Items"></param>
-        /// <param name="action"></param>
+        /// <summary>The internal method used for the foreach loop.</summary>
+        /// <typeparam name="T">The object to process.</typeparam>
+        /// <typeparam name="T1">The additional type to process.</typeparam>
+        /// <param name="Context">The context needed to process.</param>
         private static void ForEachInternal<T, T1>(ParallelContext<T, T1> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;

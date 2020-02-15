@@ -16,9 +16,9 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2 {
-    /// <summary>Extens different collection code</summary>
+    /// <summary>Extens different collection code.</summary>
     public static partial class CollectionExtension {
-        /// <summary>Creates a new instance of <see cref="CollectionExtension"/></summary>
+        /// <summary>Creates a new instance of <see cref="CollectionExtension"/>.</summary>
         static CollectionExtension() {
             //Nothing to see here
         }

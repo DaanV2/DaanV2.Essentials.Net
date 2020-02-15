@@ -16,11 +16,11 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Processors {
-    /// <summary>The interface responsible for detereming how a post processor should work</summary>
+    /// <summary>The interface responsible for detereming how a post processor should work.</summary>
     public interface IPostProcessorOut<TIn, TOut, TypeContext> {
-        /// <summary>Post processes the given object with the context</summary>
-        /// <param name="Process">The object to process</param>
-        /// <param name="Context">The context needed to process</param>
+        /// <summary>Post processes the given object with the context.</summary>
+        /// <param name="Process">The object to process.</param>
+        /// <param name="Context">The context needed to process.</param>
         TOut Postprocess(TIn Process, TypeContext Context);
     }
 }

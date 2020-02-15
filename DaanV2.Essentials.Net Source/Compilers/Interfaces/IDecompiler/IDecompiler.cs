@@ -16,8 +16,8 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Compilers {
-    /// <summary>The interface responsible for forming the contract on how Decompilers should work</summary>
-    /// <typeparam name="TypeTo">The type that needs to be returned</typeparam>
+    /// <summary>The interface responsible for forming the contract on how Decompilers should work.</summary>
+    /// <typeparam name="TypeTo">The type that needs to be returned.</typeparam>
     public interface IDecompiler<TypeTo> : IDecompiler<TypeTo, IDecompilerContext> {
     }
 }

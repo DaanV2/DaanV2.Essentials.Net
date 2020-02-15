@@ -19,11 +19,11 @@ using System.Collections.Generic;
 
 namespace DaanV2.Processors {
     public static partial class ProcessorExtension {
-        /// <summary>Puts a collection of given items through the postprocessor</summary>
-        /// <typeparam name="T">The type of object to process</typeparam>
-        /// <param name="Processor">The processor to use</param>
-        /// <param name="Items">The items to process</param>
-        /// <returns>Puts a collection of given items through the processor</returns>
+        /// <summary>Puts a collection of given items through the postprocessor.</summary>
+        /// <typeparam name="T">The type of object to process.</typeparam>
+        /// <param name="Processor">The processor to use.</param>
+        /// <param name="Items">The items to process.</param>
+        /// <returns>Puts a collection of given items through the processor.</returns>
         public static void Postprocess<T>(this IPostProcessor<T> Processor, T[] Items) {
             Int32 Count = Items.Length;
 
@@ -32,11 +32,11 @@ namespace DaanV2.Processors {
             }
         }
 
-        /// <summary>Puts a collection of given items through the postprocessor</summary>
-        /// <typeparam name="T">The type of object to process</typeparam>
-        /// <param name="Processor">The processor to use</param>
-        /// <param name="Items">The items to process</param>
-        /// <returns>Puts a collection of given items through the processor</returns>
+        /// <summary>Puts a collection of given items through the postprocessor.</summary>
+        /// <typeparam name="T">The type of object to process.</typeparam>
+        /// <param name="Processor">The processor to use.</param>
+        /// <param name="Items">The items to process.</param>
+        /// <returns>Puts a collection of given items through the processor.</returns>
         public static void Postprocess<T>(this IPostProcessor<T> Processor, IList<T> Items) {
             Int32 Count = Items.Count;
 
@@ -45,11 +45,11 @@ namespace DaanV2.Processors {
             }
         }
 
-        /// <summary>Puts a collection of given items through the postprocessor</summary>
-        /// <typeparam name="T">The type of object to process</typeparam>
-        /// <param name="Processor">The processor to use</param>
-        /// <param name="Items">The items to process</param>
-        /// <returns>Puts a collection of given items through the processor</returns>
+        /// <summary>Puts a collection of given items through the postprocessor.</summary>
+        /// <typeparam name="T">The type of object to process.</typeparam>
+        /// <param name="Processor">The processor to use.</param>
+        /// <param name="Items">The items to process.</param>
+        /// <returns>Puts a collection of given items through the processor.</returns>
         public static void Postprocess<T>(this IPostProcessor<T> Processor, IEnumerable<T> Items) {
             foreach (T Item in Items) {
                 Processor.Postprocess(Item);

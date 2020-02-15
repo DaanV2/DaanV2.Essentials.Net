@@ -23,9 +23,9 @@ namespace DaanV2.Serialization {
         IDeserializer<TypeSerialize, Stream> {
 
 #if NETCORE
-        /// <summary>Deserialize the given stream into the specified <see cref="Type"/></summary>
-        /// <param name="stream">The stream to read from</param>
-        /// <returns>Deserialize the given stream into the specified <see cref="Type"/></returns>
+        /// <summary>Deserialize the given stream into the specified <see cref="Type"/>.</summary>
+        /// <param name="stream">The stream to read from.</param>
+        /// <returns>Deserialize the given stream into the specified <see cref="Type"/>.</returns>
         public TypeSerialize Deserialize(Stream stream) {
             System.Threading.Tasks.ValueTask<TypeSerialize> Out =
                 System.Text.Json.JsonSerializer.DeserializeAsync<TypeSerialize>(stream, this._Options);
@@ -34,25 +34,25 @@ namespace DaanV2.Serialization {
             return Out.Result;
         }
 
-        /// <summary>Serializes the given object into the given stream</summary>
-        /// <param name="O">The object to serialize</param>
-        /// <param name="stream">The stream to write to</param>
+        /// <summary>Serializes the given object into the given stream.</summary>
+        /// <param name="O">The object to serialize.</param>
+        /// <param name="stream">The stream to write to.</param>
         public void Serialize(TypeSerialize O, Stream stream) {
             System.Threading.Tasks.Task Out =
                 System.Text.Json.JsonSerializer.SerializeAsync(stream, O, this._Options);
             Out.Wait();
         }
 #else
-        /// <summary>Deserialize the given stream into the specified <see cref="Type"/></summary>
-        /// <param name="stream">The stream to read from</param>
-        /// <returns>Deserialize the given stream into the specified <see cref="Type"/></returns>
+        /// <summary>Deserialize the given stream into the specified <see cref="Type"/>.</summary>
+        /// <param name="stream">The stream to read from.</param>
+        /// <returns>Deserialize the given stream into the specified <see cref="Type"/>.</returns>
         public TypeSerialize Deserialize(Stream stream) {
             return (TypeSerialize)this._Serializer.ReadObject(stream);
         }
 
-        /// <summary>Serializes the given object into the given stream</summary>
-        /// <param name="O">The object to serialize</param>
-        /// <param name="stream">The stream to write to</param>
+        /// <summary>Serializes the given object into the given stream.</summary>
+        /// <param name="O">The object to serialize.</param>
+        /// <param name="stream">The stream to write to.</param>
         public void Serialize(TypeSerialize O, Stream stream) {
             this._Serializer.WriteObject(stream, O);
         }

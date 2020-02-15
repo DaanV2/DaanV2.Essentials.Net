@@ -4,7 +4,7 @@ using DaanV2.Processors;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.Processors {
-    ///DOLATER <summary>add description for class: ProcessorExtensionTest</summary>
+    ///DOLATER <summary>add description for class: ProcessorExtensionTest.</summary>
     public class ProcessClass :
         IProcessor<String>, IPreProcessor<String>, IPostProcessor<String>,
         IProcessor<String, Int32>, IPreProcessor<String, Int32>, IPostProcessor<String, Int32> {

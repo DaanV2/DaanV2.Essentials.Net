@@ -20,9 +20,9 @@ using System.Reflection;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
-        /// <summary>Returns a list of types that implement the specified implement</summary>
-        /// <param name="Implements">The type that should be implemented</param>
-        /// <returns>Returns a list of types that implement the specified implement</returns>
+        /// <summary>Returns a list of types that implement the specified implement.</summary>
+        /// <param name="Implements">The type that should be implemented.</param>
+        /// <returns>Returns a list of types that implement the specified implement.</returns>
         public static List<Type> GetTypesWhichImplements(Type Implements) {
             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
             Int32 Length = assemblies.Length;
@@ -35,10 +35,10 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Returns a list of types that implement the specified implement</summary>
-        /// <param name="Implements">The type that should be implemented</param>
-        /// <param name="asm">the assemblies to look through</param>
-        /// <returns>Returns a list of types that implement the specified implement</returns>
+        /// <summary>Returns a list of types that implement the specified implement.</summary>
+        /// <param name="Implements">The type that should be implemented.</param>
+        /// <param name="asm">the assemblies to look through.</param>
+        /// <returns>Returns a list of types that implement the specified implement.</returns>
         public static List<Type> GetTypesWhichImplements(Type Implements, Assembly asm) {
             List<Type> Out = new List<Type>(100);
             try {

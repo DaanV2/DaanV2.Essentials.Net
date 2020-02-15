@@ -18,13 +18,13 @@ using System;
 using System.Threading.Tasks;
 
 namespace DaanV2 {
-    /// <summary>The class that creates Parallel tasks</summary>
+    /// <summary>The class that creates Parallel tasks.</summary>
     public static partial class Parallel {
-        /// <summary>Loops over each item in the specified array</summary>
-        /// <typeparam name="T">The type inside the array</typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <returns>Loops over each item in the specified array</returns>
+        /// <summary>Loops over each item in the specified array.</summary>
+        /// <typeparam name="T">The type inside the array.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T>(T[] Items, Action<T> action) {
             Task[] Out = new Task[Environment.ProcessorCount];
 
@@ -45,12 +45,12 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified array</summary>
-        /// <typeparam name="T">The type inside the array</typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <param name="TaskCount">The amount of tasks that should process over this array</param>
-        /// <returns>Loops over each item in the specified array</returns>
+        /// <summary>Loops over each item in the specified array.</summary>
+        /// <typeparam name="T">The type inside the array.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
+        /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T>(T[] Items, Action<T> action, Int32 TaskCount) {
             if (TaskCount < 1)
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
@@ -74,11 +74,13 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified array</summary>
-        /// <typeparam name="T">The type inside the array</typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <returns>Loops over each item in the specified array</returns>
+        /// <summary>Loops over each item in the specified array.</summary>
+        /// <typeparam name="T">The type inside the array.</typeparam>
+        /// <typeparam name="T1">The type used for the additional information.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="Argument">The object needed to process each other object.</param>
+        /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T, T1>(T[] Items, Action<T, T1> action, T1 Argument) {
             Task[] Out = new Task[Environment.ProcessorCount];
 
@@ -99,12 +101,14 @@ namespace DaanV2 {
             return Out;
         }
 
-        /// <summary>Loops over each item in the specified array</summary>
-        /// <typeparam name="T">The type inside the array</typeparam>
-        /// <param name="Items">The items to loop over</param>
-        /// <param name="action">The action to preform on each item</param>
-        /// <param name="TaskCount">The amount of tasks that should process over this array</param>
-        /// <returns>Loops over each item in the specified array</returns>
+        /// <summary>Loops over each item in the specified array.</summary>
+        /// <typeparam name="T">The type inside the array.</typeparam>
+        /// <typeparam name="T1">The type used for the additional information.</typeparam>
+        /// <param name="Items">The items to loop over.</param>
+        /// <param name="action">The action to preform on each item.</param>
+        /// <param name="Argument">The object needed to process each other object.</param>
+        /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
+        /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T, T1>(T[] Items, Action<T, T1> action, T1 Argument, Int32 TaskCount) {
             if (TaskCount < 1)
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
