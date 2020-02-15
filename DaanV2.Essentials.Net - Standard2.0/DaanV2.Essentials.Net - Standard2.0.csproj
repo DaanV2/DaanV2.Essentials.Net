@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>DaanV2</RootNamespace>
+    <AssemblyName>DaanV2.Essentials.Net</AssemblyName>
+
+    <Authors>Daan Verstraten</Authors>
+    <Description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</Description>
+    <Copyright>Daan Verstraten 2019</Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>essentials;interfaces</PackageTags>
+    <AssemblyVersion>1.0.9.0</AssemblyVersion>
+    <FileVersion>1.0.9.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DocumentationFile>D:\Mijn Projecten\Software\Nuget\DaanV2.Essentials.Net\DaanV2.Essentials.Net - Standard2.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Mijn Projecten\Software\Nuget\DaanV2.Essentials.Net\DaanV2.Essentials.Net - Standard2.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Source\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Import Project="..\Source\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="set Framework=netstandard2.0&#xD;&#xA;if '$(ConfigurationName)' == 'Release' (&#xD;&#xA;    if '$(PlatformName)' == 'AnyCPU' (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;    ) ELSE (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\lib\%25Framework%25\&quot;&#xD;&#xA;     )&#xD;&#xA;)" />
+  </Target>
+
+</Project>

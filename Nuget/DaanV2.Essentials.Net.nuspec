@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>DaanV2.Essentials.Net</id>
+        <version>1.0.9</version>
+        <description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</description>
+        <authors>Daan Verstraten</authors>
+
+        <!-- Optional elements -->
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="file">LICENSE.txt</license>
+        <projectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</projectUrl>
+        <copyright>Daan Verstraten 2019</copyright>
+        <tags>essentials interfaces</tags>
+        <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
+		<icon>images\icon.png</icon>
+		<releaseNotes>Add xml documentation, so descriptions get filled out</releaseNotes>
+        <dependencies>
+            <group targetFramework=".NETCoreApp3.1" />
+            <group targetFramework=".NETFramework4.8" />
+            <group targetFramework=".NETStandard2.0" />
+            <group targetFramework=".NETStandard2.1" />
+        </dependencies>
+
+        <!-- ... -->
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="..\Nuget\images\icon.png" target="images\" />
+        <file src="..\Source\LICENSE.txt" target="" />
+
+        <!-- Any CPU -->
+        <file src="lib\net48\*.dll" target="lib\net48\" />
+        <file src="lib\netcoreapp3.1\*.dll" target="lib\netcoreapp3.1\" />
+        <file src="lib\netstandard2.0\*.dll" target="lib\netstandard2.0\" />
+        <file src="lib\netstandard2.1\*.dll" target="lib\netstandard2.1\" />
+    </files>
+</package>
