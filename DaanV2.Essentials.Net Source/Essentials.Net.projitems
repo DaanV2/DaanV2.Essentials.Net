@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\Path Type\Path Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICopyable\ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IReplaceable\IReplaceable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Little.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Big.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor Out\IDual Processor Out - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor Out\IDual Processor Out.cs" />

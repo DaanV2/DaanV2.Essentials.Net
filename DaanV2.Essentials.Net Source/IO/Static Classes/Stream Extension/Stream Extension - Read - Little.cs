@@ -9,7 +9,7 @@ namespace DaanV2.IO {
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static Int32 ReadBigEndian(this Stream stream) {
+        public static Int32 ReadLittleEndian(this Stream stream) {
             Int32 Out = 0;
             Int32 Length = sizeof(Int32);
             Byte[] Data = new Byte[Length];
@@ -17,17 +17,19 @@ namespace DaanV2.IO {
             stream.Read(Data, 0, Length);
 
 #if UNSAFE
+            Int32 J = Length;
+
             unsafe {
                 Byte* p = (Byte*)&Out;
 
-                *p = Data[0];
+                *p = Data[J--];
 
                 for (Int32 I = 1; I < Length; I++) {
-                    *(p + I) = Data[I];
+                    *(p + I) = Data[J--];
                 }
             }
 #else
-            if (BitConverter.IsLittleEndian) {
+            if (!BitConverter.IsLittleEndian) {
                 Array.Reverse(Data);
             }
 
