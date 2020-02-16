@@ -20,10 +20,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
+    <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Standard2.1\DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\Mijn Projecten\Software\Nuget\DaanV2.Essentials.Net\DaanV2.Essentials.Net - Standard2.1\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Standard2.1\DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,7 +34,7 @@
     </None>
   </ItemGroup>
 
-  <Import Project="..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
+  <Import Project="..\..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="set Framework=netstandard2.1&#xD;&#xA;if '$(ConfigurationName)' == 'Release' (&#xD;&#xA;    if '$(PlatformName)' == 'AnyCPU' (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;    ) ELSE (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\lib\%25Framework%25\&quot;&#xD;&#xA;     )&#xD;&#xA;)" />

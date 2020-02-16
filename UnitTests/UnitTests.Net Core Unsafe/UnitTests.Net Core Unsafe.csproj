@@ -24,8 +24,8 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
 
-  <Import Project="..\Test Source\Test Source.projitems" Label="Shared" />
+  <Import Project="..\..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
 
-  <Import Project="..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
+  <Import Project="..\..\Test Source\Test Source.projitems" Label="Shared" />
 
 </Project>

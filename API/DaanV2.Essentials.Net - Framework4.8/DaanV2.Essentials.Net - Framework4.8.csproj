@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
+  <Import Project="..\..\DaanV2.Essentials.Net Source\Essentials.Net.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>set Framework=net48

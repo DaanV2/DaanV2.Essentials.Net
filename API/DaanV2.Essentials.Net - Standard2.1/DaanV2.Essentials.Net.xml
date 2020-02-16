@@ -4,6 +4,176 @@
         <name>DaanV2.Essentials.Net</name>
     </assembly>
     <members>
+        <member name="T:DaanV2.Binary.BitConverter">
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+        </member>
+        <member name="T:DaanV2.Binary.BitConverter.BigEndian">
+            <summary>Provides support to convert byte array to integer types, using big endian formats</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="T:DaanV2.Binary.BitConverter.LittleEndian">
+            <summary>Provides support to convert byte array to integer types, using little endian formats</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
         <member name="T:DaanV2.Builders.IBuilderAddContext`2">
             <summary>A subpart of a <see cref="T:DaanV2.Builders.IBuilder`2"/> that specifies if a different object can be added with context.</summary>
         </member>
@@ -272,6 +442,94 @@
             <summary>Replaces the old value with the new value.</summary>
             <param name="OldValue">The old value to replace.</param>
             <param name="NewValue">The new value to insert.</param>
+        </member>
+        <member name="T:DaanV2.IO.StreamExtension">
+            DOLATER <summary>add description for class: StreamExtension</summary>
+            DOLATER <summary>add description for class: StreamExtension</summary>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt16(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt32(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt64(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt16(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt32(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt64(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt16(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt32(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt64(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt16(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt32(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt64(System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
         </member>
         <member name="T:DaanV2.Processors.IDualProcessorOut`3">
             <summary>The interface responsible for determining how a pre/post processor should work.</summary>
@@ -615,8 +873,8 @@
             <param name="O">The object to serialize.</param>
             <param name="stream">The stream to write to.</param>
         </member>
-        <member name="F:DaanV2.Serialization.JSONSerializer`1._Options">
-            <summary>The options to be used when generating a serializer.</summary>
+        <member name="F:DaanV2.Serialization.JSONSerializer`1._Serializer">
+            <summary>The underlying serializer that is being connected to the interface.</summary>
         </member>
         <member name="T:DaanV2.Serialization.SerializationFactory">
             <summary>The basic serialization factory that allows for creation of (de)serializer of a generic type.</summary>

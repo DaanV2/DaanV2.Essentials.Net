@@ -9,10 +9,14 @@
     <Import_RootNamespace>UnitTests</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Big Endian.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Little Endian.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\ICopyableTest\ICopyableTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\IReplaceable\IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TypeExtensionTests\TypeExtensionTests.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest - Endians.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest - Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Classes\ProcessorExtensionTest\ProcessorExtensionTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\SerializationTests\SerializationTests.cs" />
   </ItemGroup>
