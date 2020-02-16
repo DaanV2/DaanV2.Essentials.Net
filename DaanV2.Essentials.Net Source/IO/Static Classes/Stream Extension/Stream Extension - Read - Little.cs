@@ -9,34 +9,65 @@ namespace DaanV2.IO {
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public static Int32 ReadLittleEndian(this Stream stream) {
-            Int32 Out = 0;
-            Int32 Length = sizeof(Int32);
-            Byte[] Data = new Byte[Length];
+        public static Int16 LittleEndian_ReadInt16(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(Int16)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToInt16(Data);
+        }
 
-            stream.Read(Data, 0, Length);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static Int32 LittleEndian_ReadInt32(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(Int32)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToInt32(Data);
+        }
 
-#if UNSAFE
-            Int32 J = Length;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static Int64 LittleEndian_ReadInt64(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(Int64)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToInt64(Data);
+        }
 
-            unsafe {
-                Byte* p = (Byte*)&Out;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static UInt16 LittleEndian_ReadUInt16(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(UInt16)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToUInt16(Data);
+        }
 
-                *p = Data[J--];
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static UInt32 LittleEndian_ReadUInt32(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(UInt32)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToUInt32(Data);
+        }
 
-                for (Int32 I = 1; I < Length; I++) {
-                    *(p + I) = Data[J--];
-                }
-            }
-#else
-            if (!BitConverter.IsLittleEndian) {
-                Array.Reverse(Data);
-            }
-
-            Out = BitConverter.ToInt32(Data, 0);
-#endif
-
-            return Out;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static UInt64 LittleEndian_ReadUInt64(this Stream stream) {
+            Byte[] Data = new Byte[sizeof(UInt64)];
+            stream.Read(Data, 0, Data.Length);
+            return Binary.BitConverter.LittleEndian.ToUInt64(Data);
         }
     }
 }
