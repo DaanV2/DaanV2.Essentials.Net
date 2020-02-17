@@ -97,7 +97,12 @@
             <param name="endianness">marks which endianness should be used</param>
             <returns>Converts the given value into a byte arrays</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)" -->
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)">
+            <summary>Converts the given value into a byte array</summary>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -503,18 +508,14 @@
             <returns>Writes a <see cref="T:System.Int64"/> varint to stream</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.UInt32)">
-            <summary>
-            
-            </summary>
-            <param name="Value">The object to convert</param>
-            <returns></returns>
+            <summary>Check the amount of bytes that are needed to store the given value</summary>
+            <param name="Value">The object to check</param>
+            <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.UInt64)">
-            <summary>
-            
-            </summary>
-            <param name=""></param>
-            <returns></returns>
+            <summary>Check the amount of bytes that are needed to store the given value</summary>
+            <param name="Value">The object to check</param>
+            <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int32)">
             <summary></summary>
@@ -851,11 +852,13 @@
         <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
             <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
             <param name="stream">The stream to read from</param>
+            <param name="Value">The variable to write into the stream</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int64)">
             <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
             <param name="stream">The stream to read from</param>
+            <param name="Value">The variable to write into the stream</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
@@ -1247,9 +1250,9 @@
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.BinarySerializer`1"/>.</summary>
         </member>
         <member name="M:DaanV2.Serialization.BinarySerializer`1.Deserialize(System.IO.Stream)">
-            <summary>Deserialize the given stream into the specified <see cref="!:TypeSerialize"/>.</summary>
+            <summary>Deserialize the given stream into the specified type.</summary>
             <param name="stream">The stream to read from.</param>
-            <returns>Deserialize the given stream into the specified <see cref="!:TypeSerialize"/>.</returns>
+            <returns>Deserialize the given stream into the specified type.</returns>
         </member>
         <member name="M:DaanV2.Serialization.BinarySerializer`1.Serialize(`0,System.IO.Stream)">
             <summary>Serializes the given object into the given stream.</summary>
