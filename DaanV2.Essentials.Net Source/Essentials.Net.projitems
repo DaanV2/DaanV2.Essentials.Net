@@ -11,7 +11,9 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Enumerators\Endianness\Endianness.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - To - Bytes.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LitteEndian - To - Bytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - Onto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LittleEndian - Onto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LittleEndian - To - Bytes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - To - Bytes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - To - UInt.cs" />

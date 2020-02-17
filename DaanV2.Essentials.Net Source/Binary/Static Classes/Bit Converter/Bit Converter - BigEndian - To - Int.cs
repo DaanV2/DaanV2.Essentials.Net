@@ -17,13 +17,12 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class BigEndian {
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
+            /// <summary>Converts the given byte array to an <see cref="Int16"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array to an <see cref="Int16"/></returns>
             public static Int16 ToInt16(Byte[] Data) {
                 Int16 Out;
 
@@ -49,12 +48,11 @@ namespace DaanV2.Binary {
 
                 return Out;
             }
-
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            
+            /// <summary>Converts the given byte array to an <see cref="Int16"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array to an <see cref="Int16"/></returns>
             public static Int16 ToInt16(Byte[] Data, Int32 StartIndex) {
                 Int16 Out;
 
@@ -63,7 +61,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(Int16) + StartIndex) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE
@@ -81,10 +79,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
+            /// <summary>Converts the given byte array to an <see cref="Int32"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array to an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data) {
                 Int32 Out;
 
@@ -93,7 +90,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(Int32)) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE
@@ -115,11 +112,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            /// <summary>Converts the given byte array to an <see cref="Int32"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array to an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data, Int32 StartIndex) {
                 Int32 Out;
 
@@ -150,10 +146,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
+            /// <summary>Converts the given byte array to an <see cref="Int64"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array to an <see cref="Int64"/></returns>
             public static Int64 ToInt64(Byte[] Data) {
                 Int64 Out;
 
@@ -193,11 +188,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            /// <summary>Converts the given byte array to an <see cref="Int64"/></summary>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array to an <see cref="Int64"/></returns>
             public static Int64 ToInt64(Byte[] Data, Int32 StartIndex) {
                 Int64 Out;
 
@@ -206,7 +200,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(Int64) + StartIndex) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE

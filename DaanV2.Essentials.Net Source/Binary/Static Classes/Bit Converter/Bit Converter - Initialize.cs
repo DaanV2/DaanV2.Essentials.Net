@@ -14,17 +14,10 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
-using System;
 
 namespace DaanV2.Binary {
-    
+    /// <summary>The static class that helps with converting value types to byte arrays and back</summary>
     public static partial class BitConverter {
-#if UNSAFE
-        /// <summary>Provides support to convert byte array to Varint, compiled with /unsafe</summary>
-        public static partial class Varint { }
-#else
-        /// <summary>Provides support to convert byte array to Varint</summary>
-        public static partial class Varint { }
-#endif
+
     }
 }

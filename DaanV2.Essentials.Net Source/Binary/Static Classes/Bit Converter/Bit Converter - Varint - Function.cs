@@ -17,13 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             /// <returns></returns>
             public static Int32 ByteCount(UInt32 Value) {
                 if (Value < 0b1000_0000) {

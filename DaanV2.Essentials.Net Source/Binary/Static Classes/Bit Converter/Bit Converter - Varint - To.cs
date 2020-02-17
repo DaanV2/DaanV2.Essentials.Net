@@ -17,16 +17,16 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class Varint {
 
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             /// <param name="Count"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="StartIndex">The startindex for the data</param>
             /// <returns></returns>
             public static Int32 ToInt32(Byte[] Data, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
@@ -56,9 +56,9 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             /// <param name="Count"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="StartIndex">The startindex for the data</param>
             /// <returns></returns>
             public static Int32 ToInt32(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
@@ -90,9 +90,9 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             /// <param name="Count"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="StartIndex">The startindex for the data</param>
             /// <returns></returns>
             public static Int64 ToInt64(Byte[] Data, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
@@ -122,9 +122,9 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             /// <param name="Count"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="StartIndex">The startindex for the data</param>
             /// <returns></returns>
             public static Int64 ToInt64(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;

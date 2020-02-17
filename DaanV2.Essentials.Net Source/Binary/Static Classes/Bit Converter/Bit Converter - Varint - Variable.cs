@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary></summary>

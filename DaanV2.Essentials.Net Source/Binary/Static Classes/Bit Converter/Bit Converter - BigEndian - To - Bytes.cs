@@ -17,16 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class BigEndian {
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(Int16 Value) {
-
-
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(Int16)];
 
@@ -51,10 +48,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(Int32 Value) {
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(Int32)];
@@ -82,10 +78,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(Int64 Value) {
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(Int64)];
@@ -117,13 +112,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(UInt16 Value) {
-
-
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(UInt16)];
 
@@ -148,10 +140,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(UInt32 Value) {
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(UInt32)];
@@ -179,10 +170,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value"></param>
+            /// <summary>Converts the specified object into a byte array</summary>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the specified object into a byte array</returns>
             public static Byte[] ToBytes(UInt64 Value) {
 #if UNSAFE
                 Byte[] Out = new Byte[sizeof(UInt64)];

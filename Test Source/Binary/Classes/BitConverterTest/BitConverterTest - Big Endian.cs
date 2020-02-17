@@ -220,6 +220,78 @@ namespace UnitTests.Binary {
                     Assert.IsTrue(TestValue == V, "Big endian is not big endian");
                 }
             }
+
+            [TestMethod]
+            public void TestOntoInt16() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((Int16)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (Int16)25);
+                TestArray(Data, Source);
+            }
+
+            [TestMethod]
+            public void TestOntoInt32() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((Int32)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (Int32)25);
+                TestArray(Data, Source);
+            }
+
+            [TestMethod]
+            public void TestOntoInt64() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((Int64)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (Int64)25);
+                TestArray(Data, Source);
+            }
+
+            [TestMethod]
+            public void TestOntoUInt16() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((UInt16)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (UInt16)25);
+                TestArray(Data, Source);
+            }
+
+            [TestMethod]
+            public void TestOntoUInt32() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((UInt32)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (UInt32)25);
+                TestArray(Data, Source);
+            }
+
+            [TestMethod]
+            public void TestOntoUInt64() {
+                Byte[] Data;
+                Byte[] Source;
+
+                Data = BitConverter.GetBytes((UInt64)25);
+                Array.Reverse(Data);
+                Source = new Byte[Data.Length];
+                DaanV2.Binary.BitConverter.BigEndian.OntoBytes(Source, (UInt64)25);
+                TestArray(Data, Source);
+            }
         }
     }
 }

@@ -17,13 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class LittleEndian {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             public static UInt16 ToUInt16(Byte[] Data) {
                 UInt16 Out;
 
@@ -53,8 +53,8 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
             public static UInt16 ToUInt16(Byte[] Data, Int32 StartIndex) {
                 UInt16 Out;
 
@@ -63,7 +63,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(UInt16) + StartIndex) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE
@@ -84,7 +84,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             public static UInt32 ToUInt32(Byte[] Data) {
                 UInt32 Out;
 
@@ -93,7 +93,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(UInt32)) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE
@@ -118,8 +118,8 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
             public static UInt32 ToUInt32(Byte[] Data, Int32 StartIndex) {
                 UInt32 Out;
 
@@ -153,7 +153,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
+            /// <param name="Data">The byte array to convert</param>
             public static UInt64 ToUInt64(Byte[] Data) {
                 UInt64 Out;
 
@@ -195,8 +195,8 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Data"></param>
-            /// <param name="StartIndex"></param>
+            /// <param name="Data">The byte array to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
             public static UInt64 ToUInt64(Byte[] Data, Int32 StartIndex) {
                 UInt64 Out;
 
@@ -205,7 +205,7 @@ namespace DaanV2.Binary {
                 }
 
                 if (Data.Length < sizeof(UInt64) + StartIndex) {
-                    throw new ArgumentException($"{nameof(Data)} is not of appropriate length atleast");
+                    throw new ArgumentException($"{nameof(Data)} is not of proper length atleast");
                 }
 
 #if UNSAFE

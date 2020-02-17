@@ -17,13 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class Endian {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(Int16 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :
@@ -33,7 +33,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(Int32 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :
@@ -43,7 +43,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(Int64 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :
@@ -53,7 +53,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(UInt16 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :
@@ -63,7 +63,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(UInt32 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :
@@ -73,7 +73,7 @@ namespace DaanV2.Binary {
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             public static Byte[] ToBytes(UInt64 Value, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
                     BitConverter.BigEndian.ToBytes(Value) :

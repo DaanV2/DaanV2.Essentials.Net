@@ -17,11 +17,11 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for class: BitConverter</summary>
+    
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary></summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             /// <returns></returns>
             public static Byte[] ToBytes(Int32 Value) {
                 Int32 Count = Varint.ByteCount((UInt32)Value);
@@ -41,7 +41,7 @@ namespace DaanV2.Binary {
             }
 
             /// <summary></summary>
-            /// <param name="Value"></param>
+            /// <param name="Value">The object to convert</param>
             /// <returns></returns>
             public static Byte[] ToBytes(Int64 Value) {
                 Int32 Count = Varint.ByteCount((UInt64)Value);
@@ -58,6 +58,64 @@ namespace DaanV2.Binary {
                 Out[Mark] = (Byte)(Value & Varint._NonSignalMask);
 
                 return Out;
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="Receiver">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns></returns>
+            public static Int32 OntoBytes(Byte[] Receiver, Int32 Value, Int32 StartIndex = 0) {
+                if (Receiver is null) {
+                    throw new ArgumentNullException(nameof(Receiver));
+                }
+
+                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Mark = Count - 1 + StartIndex;
+                
+                if (Mark >= Receiver.Length) {
+                    throw new ArgumentException($"Receiving byte array is not of an proper length");
+                }
+
+                for (Int32 I = StartIndex; I < Mark; I++) {
+                    Receiver[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+
+                    Value >>= 7;
+                }
+
+                Receiver[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                return Count;
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="Receiver">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns></returns>
+            public static Int32 OntoBytes(Byte[] Receiver, Int64 Value, Int32 StartIndex = 0) {
+                if (Receiver is null) {
+                    throw new ArgumentNullException(nameof(Receiver));
+                }
+
+                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Mark = Count - 1 + StartIndex;
+
+                if (Mark >= Receiver.Length) {
+                    throw new ArgumentException($"Receiving byte array is not of an proper length");
+                }
+
+                for (Int32 I = StartIndex; I < Mark; I++) {
+                    Receiver[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+
+                    Value >>= 7;
+                }
+
+                Receiver[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                return Count;
             }
         }
     }

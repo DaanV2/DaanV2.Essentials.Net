@@ -31,6 +31,8 @@
             DOLATER <summary>add description for class: BitConverter</summary>
             DOLATER <summary>add description for class: BitConverter</summary>
             DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
+            DOLATER <summary>add description for class: BitConverter</summary>
         </member>
         <member name="T:DaanV2.Binary.BitConverter.Endian">
             <summary>Provides support to convert byte array to integer types, using big/little endian formats, compiled with /unsafe</summary>
@@ -173,8 +175,233 @@
             <param name="endianness"></param>
             <returns></returns>
         </member>
+        <member name="T:DaanV2.Binary.BitConverter.BigEndian">
+            <summary>Provides support to convert byte array to integer types, using big endian formats, compiled with /unsafe</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt16)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Data"></param>
+            <param name="StartIndex"></param>
+        </member>
         <member name="T:DaanV2.Binary.BitConverter.LittleEndian">
             <summary>Provides support to convert byte array to integer types, using little endian formats, compiled with /unsafe</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int16)">
             <summary>
@@ -295,123 +522,6 @@
             
             </summary>
         </member>
-        <member name="T:DaanV2.Binary.BitConverter.BigEndian">
-            <summary>Provides support to convert byte array to integer types, using big endian formats, compiled with /unsafe</summary>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int16)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int64)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt16)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt32)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt64)">
-            <summary>
-            
-            </summary>
-            <param name="Value"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[])">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-        </member>
-        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[],System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="Data"></param>
-            <param name="StartIndex"></param>
-        </member>
         <member name="T:DaanV2.Binary.BitConverter.Varint">
             <summary>Provides support to convert byte array to Varint, compiled with /unsafe</summary>
         </member>
@@ -437,6 +547,24 @@
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int64)">
             <summary></summary>
             <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int64,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Receiver"></param>
+            <param name="Value"></param>
+            <param name="StartIndex"></param>
             <returns></returns>
         </member>
         <member name="F:DaanV2.Binary.BitConverter.Varint._NonSignalMask">
