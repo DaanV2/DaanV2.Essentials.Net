@@ -5,13 +5,13 @@
     </assembly>
     <members>
         <member name="T:DaanV2.Binary.Endianness">
-            DOLATER <summary>add description for enumerator: Endianness</summary>
+            <summary>The enumerator that marks how data is saved, or should be saved</summary>
         </member>
         <member name="F:DaanV2.Binary.Endianness.LittleEndian">
-            <summary></summary>
+            <summary>Marks that the ordering places the most significant byte last and the least significant byte first</summary>
         </member>
         <member name="F:DaanV2.Binary.Endianness.BigEndian">
-            <summary></summary>
+            <summary>Marks that the ordering places the most significant byte first and the least significant byte last</summary>
         </member>
         <member name="T:DaanV2.Binary.BitConverter">
             <summary>The static class that helps with converting value types to byte arrays and back</summary>
@@ -849,16 +849,14 @@
         <member name="T:DaanV2.IO.StreamExtension">
             <summary>Extends default stream object with additional reading/writing operations</summary>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream)">
             <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
             <param name="stream">The stream to read from</param>
-            <param name="Value">The variable to write into the stream</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int64)">
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream)">
             <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
             <param name="stream">The stream to read from</param>
-            <param name="Value">The variable to write into the stream</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
@@ -921,16 +919,6 @@
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream)">
-            <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream)">
-            <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
-        </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
@@ -990,6 +978,18 @@
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
+            <summary>Writes an varint to stream, returns the amount of bytes written</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The variable to write into the stream</param>
+            <returns>Writes an varint from stream, returns the amount of bytes written</returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int64)">
+            <summary>Writes an varint from stream, returns the amount of bytes written</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The variable to write into the stream</param>
+            <returns>Writes an varint from stream, returns the amount of bytes written</returns>
         </member>
         <member name="T:DaanV2.Processors.IDualProcessorOut`3">
             <summary>The interface responsible for determining how a pre/post processor should work.</summary>
