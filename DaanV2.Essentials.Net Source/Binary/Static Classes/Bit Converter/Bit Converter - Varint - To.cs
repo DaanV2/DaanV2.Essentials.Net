@@ -20,14 +20,10 @@ namespace DaanV2.Binary {
     
     public static partial class BitConverter {
         public static partial class Varint {
-
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into an <see cref="Int32"/></summary>
             /// <param name="Data">The byte array to convert</param>
-            /// <param name="Count"></param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
                 Int32 Out = 0;
@@ -53,13 +49,11 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into an <see cref="Int32"/></summary>
             /// <param name="Data">The byte array to convert</param>
-            /// <param name="Count"></param>
+            /// <param name="Count">The amount of bytes that have been read</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
                 Int32 Out = 0;
@@ -87,13 +81,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into an <see cref="Int32"/></summary>
             /// <param name="Data">The byte array to convert</param>
-            /// <param name="Count"></param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int64 ToInt64(Byte[] Data, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
                 Int64 Out = 0;
@@ -119,13 +110,11 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into an <see cref="Int64"/></summary>
             /// <param name="Data">The byte array to convert</param>
-            /// <param name="Count"></param>
+            /// <param name="Count">The amount of bytes that have been read</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given byte array into an <see cref="Int64"/></returns>
             public static Int64 ToInt64(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
                 Int32 BitShift = 0;
                 Int64 Out = 0;
