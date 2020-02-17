@@ -16,11 +16,11 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 
 namespace DaanV2.Binary {
-    ///DOLATER <summary>add description for enumerator: Endianness</summary>
+    /// <summary>The enumerator that marks how data is saved, or should be saved</summary>
     public enum Endianness {
-        /// <summary></summary>
+        /// <summary>Marks that the ordering places the most significant byte last and the least significant byte first</summary>
         LittleEndian,
-        /// <summary></summary>
+        /// <summary>Marks that the ordering places the most significant byte first and the least significant byte last</summary>
         BigEndian
     }
 }

@@ -2,7 +2,10 @@
 
 This library provides a set of default interfaces and code extensions upon .Net to ease up programming.
 
-[An overview of the contents of this API](./Documentation/Overview.md)
+- [Essentials](#essentials)
+  - [Features Summary](#features-summary)
+  - [Overview Essentials](#overview-essentials)
+  - [Compiling](#compiling)
 
 ## Features Summary
 
@@ -11,8 +14,11 @@ This library provides a set of default interfaces and code extensions upon .Net 
   * Copy
   * Replace
   * Contains
+* Bit Converter for Big/Little Endian
+* Bit Converter for Varint
 * [Parralel Multi-Threading](./Documentation/Code_Extensions.md##parallel)
 * [Easy Serialization](./Documentation/Code_Extensions.md##serialization)
+* [Stream extension](./Documentation/Code_Extensions.md##stream-extension)
 * [Task Extension](./Documentation/Code_Extensions.md##task-extension)
 * [Type Extension](./Documentation/Code_Extensions.md##type-extension)
 
@@ -29,3 +35,4 @@ This library provides a set of default interfaces and code extensions upon .Net 
 
 If compiling for .Net core when added the source code directly, then add NETCORE to 'Conditional compilation symbols'. this can be found under 'Properties' -> 'Build'.
 
+There is also an option to use faster but unsafe code. turn on allow safe code in the project and add UNSAFE to the 'Conditional compilation symbols'.

@@ -6,6 +6,7 @@ Within this library, there are a couple of code extension on Interfaces and .Net
   - [Collection Extension](#collection-extension)
   - [Parallel](#parallel)
   - [Serialization](#serialization)
+  - [Stream Extension](#stream-extension)
   - [Task Extension](#task-extension)
   - [Type Extension](#type-extension)
 
@@ -62,6 +63,42 @@ The factory name uses specifies which factory to lookup from the internal dictio
 
 * xml
 * json
+* binary
+
+## Stream Extension
+
+|Methods    |Description|
+|-----------|-----------|
+|BigEndian_ReadInt16(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_ReadInt32(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_ReadInt64(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_ReadUInt16(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_ReadUInt32(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_ReadUInt64(this Stream stream) |Reads an Int16 from stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, Int16 Value) |Writes an Int16 to stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, Int32 Value) |Writes an Int32 to stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, Int64 Value) |Writes an Int64 to stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, UInt16 Value) |Writes an UInt16 to stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, UInt32 Value) |Writes an UInt32 to stream, using the big endian format  |
+|BigEndian_Write(this Stream stream, UInt64 Value) |Writes an UInt64 to stream, using the big endian format  |
+|||
+|LittleEndian_ReadInt16(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_ReadInt32(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_ReadInt64(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_ReadUInt16(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_ReadUInt32(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_ReadUInt64(this Stream stream) |Reads an Int16 from stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, Int16 Value) |Writes an Int16 to stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, Int32 Value) |Writes an Int32 to stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, Int64 Value) |Writes an Int64 to stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, UInt16 Value) |Writes an UInt16 to stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, UInt32 Value) |Writes an UInt32 to stream, using the little endian format  |
+|LittleEndian_Write(this Stream stream, UInt64 Value) |Writes an UInt64 to stream, using the little endian format  |
+|||
+|Varint_ReadInt32(this Stream stream) |Read an varint from stream into a Int32 |
+|Varint_ReadInt64(this Stream stream) |Read an varint from stream into a Int64 |
+|Varint_Write(this Stream stream, Int32 Value)  |Writes an varint to stream, returns the amount of bytes written  |
+|Varint_Write(this Stream stream, Int64 Value)  ||Writes an varint to stream, returns the amount of bytes written 
 
 ## Task Extension
 
