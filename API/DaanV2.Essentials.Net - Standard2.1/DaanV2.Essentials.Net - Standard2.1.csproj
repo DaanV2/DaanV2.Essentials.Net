@@ -21,10 +21,14 @@
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Standard2.1\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;UNSAFE</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Standard2.1\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;UNSAFE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

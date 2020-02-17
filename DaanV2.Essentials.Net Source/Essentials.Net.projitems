@@ -9,12 +9,25 @@
     <Import_RootNamespace>DaanV2</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - BigEndian - To - UInt.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - LittleEndian - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - BigEndian - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - LittleEndian - To - UInt.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - LittleEndian - To - Int.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\BitConverter\BitConverter - BigEndian - To - Int.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Enumerators\Endianness\Endianness.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - To - Bytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LitteEndian - To - Bytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - To - Bytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - To - UInt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - To - Int.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Endian - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Varint - Function.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Varint - To - Bytes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Varint - Variable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Varint - To.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - Varint - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - To - UInt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LittleEndian - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LittleEndian - To - UInt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - LittleEndian - To - Int.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Static Classes\Bit Converter\Bit Converter - BigEndian - To - Int.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder Add\IBuilder Add - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder Add\IBuilder Add.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />

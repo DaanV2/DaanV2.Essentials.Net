@@ -18,14 +18,17 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE; NETCORE</DefineConstants>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - NetCore3.1\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>D:\Mijn Projecten\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - NetCore3.1\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DefineConstants>TRACE;UNSAFE; NETCORE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>

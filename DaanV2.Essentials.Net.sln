@@ -41,10 +41,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaanV2.Essentials.Net - Fra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net", "UnitTests\UnitTests.Net\UnitTests.Net.csproj", "{C5D48D0B-AF03-4FB6-A360-67DA5856B1BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net Unsafe", "UnitTests\UnitTests.Net Unsafe\UnitTests.Net Unsafe.csproj", "{656528FE-7361-4036-82A0-AF32155D72D3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{09ce9804-8092-4a28-980a-2efafedd8721}*SharedItemsImports = 4
 		Test Source\Test Source.projitems*{19896aac-3813-4378-a24e-60449b07149b}*SharedItemsImports = 13
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{656528fe-7361-4036-82a0-af32155d72d3}*SharedItemsImports = 4
+		Test Source\Test Source.projitems*{656528fe-7361-4036-82a0-af32155d72d3}*SharedItemsImports = 4
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{b1f153d9-f47c-4fe9-bd9f-ffacb81fb3f9}*SharedItemsImports = 13
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{c5d48d0b-af03-4fb6-a360-67da5856b1be}*SharedItemsImports = 4
 		Test Source\Test Source.projitems*{c5d48d0b-af03-4fb6-a360-67da5856b1be}*SharedItemsImports = 4
@@ -154,6 +158,18 @@ Global
 		{C5D48D0B-AF03-4FB6-A360-67DA5856B1BE}.Release|x64.Build.0 = Release|Any CPU
 		{C5D48D0B-AF03-4FB6-A360-67DA5856B1BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{C5D48D0B-AF03-4FB6-A360-67DA5856B1BE}.Release|x86.Build.0 = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|x64.Build.0 = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Debug|x86.Build.0 = Debug|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|x64.ActiveCfg = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|x64.Build.0 = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{656528FE-7361-4036-82A0-AF32155D72D3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +185,7 @@ Global
 		{6415E614-1AC1-486F-9D1C-EAF80622EC6C} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
 		{09CE9804-8092-4A28-980A-2EFAFEDD8721} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
 		{C5D48D0B-AF03-4FB6-A360-67DA5856B1BE} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
+		{656528FE-7361-4036-82A0-AF32155D72D3} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {262C672F-8FAF-425E-8002-8DA2DF481D1A}

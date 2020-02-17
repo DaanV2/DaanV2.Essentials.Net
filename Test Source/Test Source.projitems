@@ -9,6 +9,8 @@
     <Import_RootNamespace>UnitTests</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Endian.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Varint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Big Endian.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Little Endian.cs" />
