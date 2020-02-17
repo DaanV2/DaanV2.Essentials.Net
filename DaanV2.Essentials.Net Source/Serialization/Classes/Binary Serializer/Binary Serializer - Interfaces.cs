@@ -21,9 +21,9 @@ namespace DaanV2.Serialization {
         ISerializer<TypeSerialize, Stream>,
         IDeserializer<TypeSerialize, Stream> {
 
-        /// <summary>Deserialize the given stream into the specified <see cref="TypeSerialize"/>.</summary>
+        /// <summary>Deserialize the given stream into the specified type.</summary>
         /// <param name="stream">The stream to read from.</param>
-        /// <returns>Deserialize the given stream into the specified <see cref="TypeSerialize"/>.</returns>
+        /// <returns>Deserialize the given stream into the specified type.</returns>
         public TypeSerialize Deserialize(Stream stream) {
             return (TypeSerialize)this._Serializer.Deserialize(stream);
         }

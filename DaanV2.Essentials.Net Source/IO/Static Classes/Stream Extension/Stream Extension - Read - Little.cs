@@ -2,7 +2,6 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    ///DOLATER <summary>add description for class: StreamExtension</summary>
     public static partial class StreamExtension {
         /// <summary>Reads an <see cref="Int16"/> from stream using little endian encoding</summary>
         /// <param name="stream">The stream to read from</param>

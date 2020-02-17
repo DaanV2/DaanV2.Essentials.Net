@@ -68,41 +68,36 @@
             <returns>Converts the given object into a byte array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int16,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
+            <summary>Converts the given value into a byte array</summary>
             <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int32,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
+            <summary>Converts the given value into a byte array</summary>
             <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int64,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
+            <summary>Converts the given value into a byte array</summary>
             <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt16,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
+            <summary>Converts the given value into a byte array</summary>
             <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt32,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
+            <summary>Converts the given value into a byte array</summary>
             <param name="Value">The object to convert</param>
+            <param name="endianness">marks which endianness should be used</param>
+            <returns>Converts the given value into a byte arrays</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)">
-            <summary>
-            
-            </summary>
-            <param name="Value">The object to convert</param>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)" -->
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -851,92 +846,147 @@
             <param name="NewValue">The new value to insert.</param>
         </member>
         <member name="T:DaanV2.IO.StreamExtension">
-            DOLATER <summary>add description for class: StreamExtension</summary>
-            DOLATER <summary>add description for class: StreamExtension</summary>
+            <summary>Extends default stream object with additional reading/writing operations</summary>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int64)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt16(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt32(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt64(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt16(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt32(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt64(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt16(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt32(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt64(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt16(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt32(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt64(System.IO.Stream)">
-            <summary>
-            
-            </summary>
-            <param name="stream"></param>
-            <returns></returns>
+            <summary>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</returns>
         </member>
         <member name="T:DaanV2.Processors.IDualProcessorOut`3">
             <summary>The interface responsible for determining how a pre/post processor should work.</summary>

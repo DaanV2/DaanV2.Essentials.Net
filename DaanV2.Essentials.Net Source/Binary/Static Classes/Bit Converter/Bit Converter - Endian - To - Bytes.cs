@@ -70,7 +70,6 @@ namespace DaanV2.Binary {
                     BitConverter.LittleEndian.ToBytes(Value);
             }
 
-            /// <summary>
             /// <summary>Converts the given value into a byte array</summary>
             /// <param name="Value">The object to convert</param>
             /// <param name="endianness">marks which endianness should be used</param>

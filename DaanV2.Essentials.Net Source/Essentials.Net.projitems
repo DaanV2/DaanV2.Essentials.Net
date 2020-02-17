@@ -63,6 +63,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\Path Type\Path Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICopyable\ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IReplaceable\IReplaceable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Write - Variant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Write - Little.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Write - Big.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Variant.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Little.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Big.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Interfaces\IDual Processor Out\IDual Processor Out - Context.cs" />

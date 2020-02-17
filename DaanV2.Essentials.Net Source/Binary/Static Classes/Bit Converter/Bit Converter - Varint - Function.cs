@@ -20,11 +20,9 @@ namespace DaanV2.Binary {
     
     public static partial class BitConverter {
         public static partial class Varint {
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="Value">The object to convert</param>
-            /// <returns></returns>
+            /// <summary>Check the amount of bytes that are needed to store the given value</summary>
+            /// <param name="Value">The object to check</param>
+            /// <returns>Check the amount of bytes that are needed to store the given value</returns>
             public static Int32 ByteCount(UInt32 Value) {
                 if (Value < 0b1000_0000) {
                     return 1;
@@ -42,11 +40,9 @@ namespace DaanV2.Binary {
                 return 5;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name=""></param>
-            /// <returns></returns>
+            /// <summary>Check the amount of bytes that are needed to store the given value</summary>
+            /// <param name="Value">The object to check</param>
+            /// <returns>Check the amount of bytes that are needed to store the given value</returns>
             public static Int32 ByteCount(UInt64 Value) {
                 if (Value < 0b0000_0100_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000) {
                     if (Value < 0b1000_0000) {
