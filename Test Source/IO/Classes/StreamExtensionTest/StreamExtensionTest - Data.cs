@@ -4,7 +4,6 @@ using DaanV2.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.IO {
-    ///DOLATER <summary>add description for class: StreamExtensionTest</summary>
     [TestClass]
     public partial class StreamExtensionTest {
         /// <summary>Data template</summary>

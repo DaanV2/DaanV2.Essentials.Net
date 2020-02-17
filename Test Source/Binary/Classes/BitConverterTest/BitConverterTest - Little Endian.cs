@@ -2,7 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.Binary {
-    ///DOLATER <summary>add description for class: BitConverterTest</summary>
     [TestClass]
     public partial class BitConverterTest {
         [TestClass]

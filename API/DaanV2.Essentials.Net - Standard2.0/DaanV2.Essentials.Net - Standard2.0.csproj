@@ -13,8 +13,8 @@
     <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>essentials;interfaces</PackageTags>
-    <AssemblyVersion>1.0.9.0</AssemblyVersion>
-    <FileVersion>1.0.9.0</FileVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
