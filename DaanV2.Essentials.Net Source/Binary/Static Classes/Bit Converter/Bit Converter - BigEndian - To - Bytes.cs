@@ -38,7 +38,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)Value;
                     Value >>= 8;
                 }
 
@@ -68,7 +68,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)Value;
                     Value >>= 8;
                 }
 
@@ -102,7 +102,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)(Value);
                     Value >>= 8;
                 }
 
@@ -130,7 +130,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)(Value);
                     Value >>= 8;
                 }
 
@@ -160,7 +160,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)(Value);
                     Value >>= 8;
                 }
 
@@ -194,7 +194,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Out[I] = (Byte)(Value);
                     Value >>= 8;
                 }
 

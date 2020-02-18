@@ -36,11 +36,11 @@ namespace DaanV2.Binary {
                 }
 
 #if UNSAFE
-                unsafe {                    
-                    Byte* d = (Byte*)&Out;
-
-                    *d = Data[0];
-                    *(d + 1) = Data[1];
+                unsafe {
+                    fixed (Byte* s = Data) {
+                        UInt16* d = &Out;
+                        *d = *(UInt16*)s;
+                    }
                 }
 #else
                 Out = Data[0];
@@ -97,13 +97,11 @@ namespace DaanV2.Binary {
                 }
 
 #if UNSAFE
-                unsafe {                    
-                    Byte* d = (Byte*)&Out;
-
-                    *d = Data[0];
-                    *(d + 1) = Data[1];
-                    *(d + 2) = Data[2];
-                    *(d + 3) = Data[3];
+                unsafe {
+                    fixed (Byte* s = Data) {
+                        UInt32* d = &Out;
+                        *d = *(UInt32*)s;
+                    }
                 }
 #else
                 Out = Data[0];
@@ -166,17 +164,11 @@ namespace DaanV2.Binary {
                 }
 
 #if UNSAFE
-                unsafe {                    
-                    Byte* d = (Byte*)&Out;
-
-                    *d = Data[0];
-                    *(d + 1) = Data[1];
-                    *(d + 2) = Data[2];
-                    *(d + 3) = Data[3];
-                    *(d + 4) = Data[4];
-                    *(d + 5) = Data[5];
-                    *(d + 6) = Data[6];
-                    *(d + 7) = Data[7];
+                unsafe {
+                    fixed (Byte* s = Data) {
+                        UInt64* d = &Out;
+                        *d = *(UInt64*)s;
+                    }
                 }
 #else
                 Out = Data[0];

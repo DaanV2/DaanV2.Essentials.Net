@@ -18,9 +18,5 @@ using System;
 
 namespace DaanV2.Binary {
     public static partial class BitConverter {
-        /// <summary>
-        /// 
-        /// </summary>
-        private const Byte _ByteOnlyMask = 0b1111_1111;
     }
 }

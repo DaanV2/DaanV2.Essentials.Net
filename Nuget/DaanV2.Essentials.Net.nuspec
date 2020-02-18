@@ -12,7 +12,7 @@
         <license type="file">LICENSE.txt</license>
         <projectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</projectUrl>
         <copyright>Daan Verstraten 2019</copyright>
-        <tags>essentials interfaces</tags>
+        <tags>essentials interfaces code-extensions</tags>
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
 		<icon>images\icon.png</icon>
 		<releaseNotes>Added BigEndian/LittleEndian stream extensions.</releaseNotes>
@@ -28,7 +28,7 @@
     <!-- Optional 'files' node -->
     <files>
         <file src="..\Nuget\images\icon.png" target="images\" />
-        <file src="..\Source\LICENSE.txt" target="" />
+        <file src="..\LICENSE.txt" target="" />
 
         <!-- Any CPU -->
         <file src="lib\net48\*.dll" target="lib\net48\" />
