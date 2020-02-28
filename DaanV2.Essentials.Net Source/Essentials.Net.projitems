@@ -60,6 +60,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\ConverterExtension\ConverterExtension - IConverterInto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\ConverterExtension\ConverterExtension - IConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\Path Type\Path Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICopyable\ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IReplaceable\IReplaceable.cs" />

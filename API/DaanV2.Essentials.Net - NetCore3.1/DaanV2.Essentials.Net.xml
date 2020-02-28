@@ -475,11 +475,6 @@
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
         </member>
-        <member name="F:DaanV2.Binary.BitConverter._ByteOnlyMask">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:DaanV2.Binary.BitConverter.Varint">
             <summary>Provides support to convert byte array to Varint, compiled with /unsafe</summary>
         </member>
@@ -813,6 +808,180 @@
         </member>
         <member name="M:DaanV2.Converters.IConverter`2.Convert(`0)">
             <summary>Converts the given object into the specified type.</summary>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="T:DaanV2.Converters.ConverterExtension">
+            <summary>The static class that extends basic converter behaviour</summary>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverterInto{``0,``1},``0[],``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverterInto{``0,``1},System.Collections.Generic.List{``0},``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverterInto{``0,``1},System.Collections.Generic.IList{``0},``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},``0[],``2,``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},System.Collections.Generic.List{``0},``2,``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},System.Collections.Generic.IList{``0},``2,``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},System.ValueTuple{``0,``2}[],``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},System.Collections.Generic.List{System.ValueTuple{``0,``2}},``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverterInto{``0,``1,``2},System.Collections.Generic.IList{System.ValueTuple{``0,``2}},``1)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Receiver">The object to receive the converted object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},``0[])">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.List{``0})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.IList{``0})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},``0[],``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{``0},``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{``0},``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.ValueTuple{``0,``2}[])">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{System.ValueTuple{``0,``2}})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{System.ValueTuple{``0,``2}})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
             <param name="Process">The object to convert.</param>
             <returns>Converts the given object into the specified type.</returns>
         </member>

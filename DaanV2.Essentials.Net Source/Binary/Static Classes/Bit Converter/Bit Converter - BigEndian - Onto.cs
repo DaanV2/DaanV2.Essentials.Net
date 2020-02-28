@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class BigEndian {
             /// <summary>Converts the given object into a byte array</summary>
@@ -43,8 +43,8 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 1);
                 }
 #else
-                Receiver[1 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
+                Receiver[1 + StartIndex] = (Byte)(Value);
+                Receiver[StartIndex] = (Byte)(Value >> 8);
 #endif
 
                 return Count;
@@ -75,10 +75,13 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 3);
                 }
 #else
-                Receiver[3 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[2 + StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
-                Receiver[1 + StartIndex] = (Byte)((Value >> 16) & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 24) & BitConverter._ByteOnlyMask);
+                Receiver[3 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[2 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[1 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[StartIndex] = (Byte)(Value);
 #endif
 
                 return Count;
@@ -113,14 +116,21 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 7);
                 }
 #else
-                Receiver[7 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[6 + StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
-                Receiver[5 + StartIndex] = (Byte)((Value >> 16) & BitConverter._ByteOnlyMask);
-                Receiver[4 + StartIndex] = (Byte)((Value >> 24) & BitConverter._ByteOnlyMask);
-                Receiver[3 + StartIndex] = (Byte)((Value >> 32) & BitConverter._ByteOnlyMask);
-                Receiver[2 + StartIndex] = (Byte)((Value >> 40) & BitConverter._ByteOnlyMask);
-                Receiver[1 + StartIndex] = (Byte)((Value >> 48) & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 56) & BitConverter._ByteOnlyMask);
+                Receiver[7 + StartIndex] = (Byte)Value;
+                Value >>= 8;
+                Receiver[6 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[5 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[4 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[3 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[2 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[1 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[StartIndex] = (Byte)(Value);
 #endif
 
                 return Count;
@@ -149,8 +159,8 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 1);
                 }
 #else
-                Receiver[1 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
+                Receiver[1 + StartIndex] = (Byte)(Value);
+                Receiver[StartIndex] = (Byte)((Value >> 8));
 #endif
 
                 return Count;
@@ -181,10 +191,13 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 3);
                 }
 #else
-                Receiver[3 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[2 + StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
-                Receiver[1 + StartIndex] = (Byte)((Value >> 16) & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 24) & BitConverter._ByteOnlyMask);
+                Receiver[3 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[2 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[1 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[StartIndex] = (Byte)((Value));
 #endif
 
                 return Count;
@@ -219,14 +232,21 @@ namespace DaanV2.Binary {
                     Receiver[StartIndex] = *(s + 7);
                 }
 #else
-                Receiver[7 + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
-                Receiver[6 + StartIndex] = (Byte)((Value >> 8) & BitConverter._ByteOnlyMask);
-                Receiver[5 + StartIndex] = (Byte)((Value >> 16) & BitConverter._ByteOnlyMask);
-                Receiver[4 + StartIndex] = (Byte)((Value >> 24) & BitConverter._ByteOnlyMask);
-                Receiver[3 + StartIndex] = (Byte)((Value >> 32) & BitConverter._ByteOnlyMask);
-                Receiver[2 + StartIndex] = (Byte)((Value >> 40) & BitConverter._ByteOnlyMask);
-                Receiver[1 + StartIndex] = (Byte)((Value >> 48) & BitConverter._ByteOnlyMask);
-                Receiver[StartIndex] = (Byte)((Value >> 56) & BitConverter._ByteOnlyMask);
+                Receiver[7 + StartIndex] = (Byte)(Value);
+                Value >>= 8;
+                Receiver[6 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[5 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[4 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[3 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[2 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[1 + StartIndex] = (Byte)((Value));
+                Value >>= 8;
+                Receiver[StartIndex] = (Byte)((Value));
 #endif
 
                 return Count;

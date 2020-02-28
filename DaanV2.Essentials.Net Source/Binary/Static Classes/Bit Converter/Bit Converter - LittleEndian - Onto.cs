@@ -44,7 +44,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
@@ -78,7 +78,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
@@ -116,7 +116,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
@@ -148,7 +148,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
@@ -182,7 +182,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
@@ -220,7 +220,7 @@ namespace DaanV2.Binary {
                 }
 #else
                 for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value & BitConverter._ByteOnlyMask);
+                    Receiver[I + StartIndex] = (Byte)(Value);
                     Value >>= 8;
                 }
 #endif
