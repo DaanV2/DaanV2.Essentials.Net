@@ -15,7 +15,7 @@
         <tags>essentials interfaces code-extensions</tags>
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
 		<icon>images\icon.png</icon>
-		<releaseNotes>Added BigEndian/LittleEndian stream extensions.</releaseNotes>
+		<releaseNotes>Updated the bitconverter, add really added XML documentation</releaseNotes>
         <dependencies>
             <group targetFramework=".NETCoreApp3.1" />
             <group targetFramework=".NETFramework4.8" />
