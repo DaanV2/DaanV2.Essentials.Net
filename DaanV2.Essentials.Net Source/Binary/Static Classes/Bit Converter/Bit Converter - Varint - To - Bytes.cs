@@ -20,9 +20,9 @@ namespace DaanV2.Binary {
     
     public static partial class BitConverter {
         public static partial class Varint {
-            /// <summary></summary>
+            /// <summary>Converts the given value into a byte array</summary>
             /// <param name="Value">The object to convert</param>
-            /// <returns></returns>
+            /// <returns>Converts the given value into a byte array</returns>
             public static Byte[] ToBytes(Int32 Value) {
                 Int32 Count = Varint.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1;
@@ -30,7 +30,7 @@ namespace DaanV2.Binary {
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Mark; I++) {
-                    Out[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+                    Out[I] = (Byte)(Value | Varint._SignalMask);
 
                     Value >>= 7;
                 }
@@ -40,17 +40,17 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary></summary>
+            /// <summary>Converts the given value into a byte array</summary>
             /// <param name="Value">The object to convert</param>
-            /// <returns></returns>
+            /// <returns>Converts the given value into a byte array</returns>
             public static Byte[] ToBytes(Int64 Value) {
-                Int32 Count = Varint.ByteCount((UInt64)Value);
+                Int32 Count = Varint.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1;
 
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Mark; I++) {
-                    Out[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+                    Out[I] = (Byte)(Value | Varint._SignalMask);
 
                     Value >>= 7;
                 }
@@ -60,13 +60,11 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given value into a byte array</summary>
             /// <param name="Receiver">The array that receives the final data.</param>
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given value into a byte array</returns>
             public static Int32 OntoBytes(Byte[] Receiver, Int32 Value, Int32 StartIndex = 0) {
                 if (Receiver is null) {
                     throw new ArgumentNullException(nameof(Receiver));
@@ -80,7 +78,7 @@ namespace DaanV2.Binary {
                 }
 
                 for (Int32 I = StartIndex; I < Mark; I++) {
-                    Receiver[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+                    Receiver[I] = (Byte)(Value | Varint._SignalMask);
 
                     Value >>= 7;
                 }
@@ -89,13 +87,11 @@ namespace DaanV2.Binary {
                 return Count;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given value into a byte array</summary>
             /// <param name="Receiver">The array that receives the final data.</param>
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns></returns>
+            /// <returns>Converts the given value into a byte array</returns>
             public static Int32 OntoBytes(Byte[] Receiver, Int64 Value, Int32 StartIndex = 0) {
                 if (Receiver is null) {
                     throw new ArgumentNullException(nameof(Receiver));

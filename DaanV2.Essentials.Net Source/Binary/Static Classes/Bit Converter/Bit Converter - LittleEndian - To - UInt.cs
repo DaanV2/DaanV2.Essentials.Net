@@ -20,10 +20,9 @@ namespace DaanV2.Binary {
     
     public static partial class BitConverter {
         public static partial class LittleEndian {
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt16"/></summary>
             /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt16"/></returns>
             public static UInt16 ToUInt16(Byte[] Data) {
                 UInt16 Out;
 
@@ -50,11 +49,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt16"/></summary>
             /// <param name="Data">The byte array to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt16"/></returns>
             public static UInt16 ToUInt16(Byte[] Data, Int32 StartIndex) {
                 UInt16 Out;
 
@@ -81,10 +79,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt32"/></summary>
             /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt32"/></returns>
             public static UInt32 ToUInt32(Byte[] Data) {
                 UInt32 Out;
 
@@ -113,11 +110,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt32"/></summary>
             /// <param name="Data">The byte array to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt32"/></returns>
             public static UInt32 ToUInt32(Byte[] Data, Int32 StartIndex) {
                 UInt32 Out;
 
@@ -148,10 +144,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt64"/></summary>
             /// <param name="Data">The byte array to convert</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt64"/></returns>
             public static UInt64 ToUInt64(Byte[] Data) {
                 UInt64 Out;
 
@@ -184,11 +179,10 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
+            /// <summary>Converts the given byte array into a <see cref="UInt64"/></summary>
             /// <param name="Data">The byte array to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
+            /// <returns>Converts the given byte array into a <see cref="UInt64"/></returns>
             public static UInt64 ToUInt64(Byte[] Data, Int32 StartIndex) {
                 UInt64 Out;
 

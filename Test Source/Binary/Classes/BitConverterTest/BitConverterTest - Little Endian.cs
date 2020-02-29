@@ -6,9 +6,6 @@ namespace UnitTests.Binary {
     public partial class BitConverterTest {
         [TestClass]
         public partial class LittleEndian {
-            /// <summary>
-            /// 
-            /// </summary>
             [TestMethod]
             public void IsActuallyLittleEndian() {
                 if (BitConverter.IsLittleEndian) {

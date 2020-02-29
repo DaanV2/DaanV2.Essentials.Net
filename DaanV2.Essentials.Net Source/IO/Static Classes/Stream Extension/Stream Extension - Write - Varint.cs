@@ -7,16 +7,16 @@ namespace DaanV2.IO {
         /// <param name="stream">The stream to write to</param>
         /// <param name="Value">The variable to write into the stream</param>
         /// <returns>Writes an varint from stream, returns the amount of bytes written</returns>
-        public static Int32 Varint_Write(this Stream stream, Int32 Value) {
-            return Binary.BitConverter.Varint.Write(stream, Value);
+        public static void Varint_Write(this Stream stream, Int32 Value) {
+            Binary.BitConverter.Varint.Write(stream, Value);
         }
 
         /// <summary>Writes an varint from stream, returns the amount of bytes written</summary>
         /// <param name="stream">The stream to write to</param>
         /// <param name="Value">The variable to write into the stream</param>
         /// <returns>Writes an varint from stream, returns the amount of bytes written</returns>
-        public static Int32 Varint_Write(this Stream stream, Int64 Value) {
-            return Binary.BitConverter.Varint.Write(stream, Value);
+        public static void Varint_Write(this Stream stream, Int64 Value) {
+            Binary.BitConverter.Varint.Write(stream, Value);
         }
     }
 }

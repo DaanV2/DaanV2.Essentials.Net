@@ -43,6 +43,13 @@ namespace DaanV2.Binary {
             /// <summary>Check the amount of bytes that are needed to store the given value</summary>
             /// <param name="Value">The object to check</param>
             /// <returns>Check the amount of bytes that are needed to store the given value</returns>
+            public static Int32 ByteCount(Int32 Value) {
+                return ByteCount((UInt32)Value);
+            }
+
+            /// <summary>Check the amount of bytes that are needed to store the given value</summary>
+            /// <param name="Value">The object to check</param>
+            /// <returns>Check the amount of bytes that are needed to store the given value</returns>
             public static Int32 ByteCount(UInt64 Value) {
                 if (Value < 0b0000_0100_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000) {
                     if (Value < 0b1000_0000) {
@@ -77,6 +84,13 @@ namespace DaanV2.Binary {
                 }
 
                 return 10;
+            }
+
+            /// <summary>Check the amount of bytes that are needed to store the given value</summary>
+            /// <param name="Value">The object to check</param>
+            /// <returns>Check the amount of bytes that are needed to store the given value</returns>
+            public static Int32 ByteCount(Int64 Value) {
+                return ByteCount((UInt64)Value);
             }
         }
     }

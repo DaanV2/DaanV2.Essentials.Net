@@ -26,27 +26,17 @@ namespace DaanV2.Binary {
             /// <param name="Count">The amount of bytes that have been read</param>
             /// <returns>Read an <see cref="Int32"/> varint from stream</returns>
             public static Int32 ReadInt32(Stream stream, out Int32 Count) {
-                Int32 BitShift = 0;
                 Int32 Out = 0;
-                Int32 Index = 0;
-                Boolean Read = true;
+                Int32 BitShift = 0;
                 Byte Current;
+                Count = 0;
 
-                if (stream == null) {
-                    throw new ArgumentNullException(nameof(stream));
-                }
-
-                //TODO write unsafe version of Varint converter
-
-                while (Read) {
+                do {
                     Current = (Byte)stream.ReadByte();
-                    Read = (BitConverter.Varint._SignalMask & Current) > 0;
-                    Out |= (Current & BitConverter.Varint._NonSignalMask) << BitShift;
+                    Out |= (Current & _NonSignalMask) << BitShift;
                     BitShift += 7;
-                    Index++;
-                }
-
-                Count = Index;
+                    Count++;
+                } while (Current >= _SignalMask);
 
                 return Out;
             }
@@ -56,27 +46,51 @@ namespace DaanV2.Binary {
             /// <param name="Count">The amount of bytes that have been read</param>
             /// <returns>Read an <see cref="Int64"/> varint from stream</returns>
             public static Int64 ReadInt64(Stream stream, out Int32 Count) {
-                Int32 BitShift = 0;
                 Int64 Out = 0;
-                Int32 Index = 0;
-                Boolean Read = true;
+                Int32 BitShift = 0;
+                Count = 0;
                 Byte Current;
 
-                if (stream == null) {
-                    throw new ArgumentNullException(nameof(stream));
-                }
-
-                //TODO write unsafe version of Varint converter
-
-                while (Read) {
+                do {
                     Current = (Byte)stream.ReadByte();
-                    Read = (BitConverter.Varint._SignalMask & Current) > 0;
-                    Out |= (Int64)((Current & BitConverter.Varint._NonSignalMask) << BitShift);
+                    Out |= (Int64)(((Int64)Current & _NonSignalMask) << BitShift);
                     BitShift += 7;
-                    Index++;
-                }
+                    Count++;
+                } while (Current >= _SignalMask);
 
-                Count = Index;
+                return Out;
+            }
+
+            /// <summary>Read an <see cref="Int32"/> varint from stream</summary>
+            /// <param name="stream">The stream to read from</param>
+            /// <returns>Read an <see cref="Int32"/> varint from stream</returns>
+            public static Int32 ReadInt32(Stream stream) {
+                Int32 Out = 0;
+                Int32 BitShift = 0;
+                Byte Current;
+
+                do {
+                    Current = (Byte)stream.ReadByte();
+                    Out |= (Current & _NonSignalMask) << BitShift;
+                    BitShift += 7;
+                } while (Current >= _SignalMask);
+
+                return Out;
+            }
+
+            /// <summary>Read an <see cref="Int64"/> varint from stream</summary>
+            /// <param name="stream">The stream to read from</param>
+            /// <returns>Read an <see cref="Int64"/> varint from stream</returns>
+            public static Int64 ReadInt64(Stream stream) {
+                Int64 Out = 0;
+                Int32 BitShift = 0;
+                Byte Current;
+
+                do {
+                    Current = (Byte)stream.ReadByte();
+                    Out |= (Int64)((Current & _NonSignalMask) << BitShift);
+                    BitShift += 7;
+                } while (Current >= _SignalMask);
 
                 return Out;
             }
@@ -85,39 +99,56 @@ namespace DaanV2.Binary {
             /// <param name="stream">The stream to write to</param>
             /// <param name="Value">The value to be written</param>
             /// <returns>Writes a <see cref="Int32"/> varint to stream</returns>
-            public static Int32 Write(Stream stream, Int32 Value) {
-                Int32 Count = Varint.ByteCount((UInt32)Value);
-                Int32 Mark = Count - 1;
+            public static void Write(Stream stream, Int32 Value) {
+                UInt32 v = (UInt32)Value;
 
-                for (Int32 I = 0; I < Mark; I++) {
-                    stream.WriteByte((Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask));
+                while (v >= _SignalMask) {
+                    stream.WriteByte((Byte)(v | _SignalMask));
+                    v >>= 7;
+                }
 
+                stream.WriteByte((Byte)v);
+            }
+
+            /// <summary>Writes a <see cref="Int32"/> varint to stream</summary>
+            /// <param name="stream">The stream to write to</param>
+            /// <param name="Value">The value to be written</param>
+            /// <returns>Writes a <see cref="Int32"/> varint to stream</returns>
+            public static void Write(Stream stream, UInt32 Value) {
+                while (Value >= _SignalMask) {
+                    stream.WriteByte((Byte)(Value | _SignalMask));
                     Value >>= 7;
                 }
 
-                stream.WriteByte((Byte)(Value & Varint._NonSignalMask));
-
-                return Count;
+                stream.WriteByte((Byte)Value);
             }
-
 
             /// <summary>Writes a <see cref="Int64"/> varint to stream</summary>
             /// <param name="stream">The stream to write to</param>
             /// <param name="Value">The value to be written</param>
             /// <returns>Writes a <see cref="Int64"/> varint to stream</returns>
-            public static Int32 Write(Stream stream, Int64 Value) {
-                Int32 Count = Varint.ByteCount((UInt64)Value);
-                Int32 Mark = Count - 1;
+            public static void Write(Stream stream, Int64 Value) {
+                UInt64 v = (UInt64)Value;
 
-                for (Int32 I = 0; I < Mark; I++) {
-                    stream.WriteByte((Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask));
+                while (v >= _SignalMask) {
+                    stream.WriteByte((Byte)(v | _SignalMask));
+                    v >>= 7;
+                }
 
+                stream.WriteByte((Byte)v);
+            }
+
+            /// <summary>Writes a <see cref="Int64"/> varint to stream</summary>
+            /// <param name="stream">The stream to write to</param>
+            /// <param name="Value">The value to be written</param>
+            /// <returns>Writes a <see cref="Int64"/> varint to stream</returns>
+            public static void Write(Stream stream, UInt64 Value) {
+                while (Value >= _SignalMask) {
+                    stream.WriteByte((Byte)(Value | _SignalMask));
                     Value >>= 7;
                 }
 
-                stream.WriteByte((Byte)(Value & Varint._NonSignalMask));
-
-                return Count;
+                stream.WriteByte((Byte)Value);
             }
         }
     }

@@ -21,9 +21,6 @@ namespace UnitTests.Binary {
 
         [TestClass]
         public partial class Endian {
-            /// <summary>
-            /// 
-            /// </summary>
             [TestMethod]
             public void LittleEndianTest() {
                 Assert.IsTrue(BitConverter.LittleEndian.ToInt16(Data) == BitConverter.Endian.ToInt16(Data, Endianness.LittleEndian));
@@ -42,9 +39,6 @@ namespace UnitTests.Binary {
                 TestArray(BitConverter.LittleEndian.ToBytes((System.UInt64)0), BitConverter.Endian.ToBytes((System.UInt64)0, Endianness.LittleEndian));
             }
 
-            /// <summary>
-            /// 
-            /// </summary>
             [TestMethod]
             public void BigEndianTest() {
                 Assert.IsTrue(BitConverter.BigEndian.ToInt16(Data) == BitConverter.Endian.ToInt16(Data, Endianness.BigEndian));
