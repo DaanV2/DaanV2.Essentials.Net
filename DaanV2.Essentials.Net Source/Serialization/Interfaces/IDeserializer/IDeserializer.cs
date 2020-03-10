@@ -17,13 +17,13 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 
 namespace DaanV2.Serialization {
-    /// <summary>The interfacethat is responsible for forming the contract on how Deserializer should work.</summary>
+    /// <summary>The interface that is responsible for forming the contract on how Deserializer should work.</summary>
     /// <typeparam name="TypeOut">The type that needs to be returned after deserializing.</typeparam>
     /// <typeparam name="TypeStream">The type that is used as the data stream.</typeparam>
     public interface IDeserializer<TypeOut, TypeStream> {
         /// <summary>Deserialize the given stream into the specified <see cref="Type"/>.</summary>
-        /// <param name="stream">The stream to read from.</param>
+        /// <param name="Reader">The stream to read from.</param>
         /// <returns>Deserialize the given stream into the specified <see cref="Type"/>.</returns>
-        TypeOut Deserialize(TypeStream stream);
+        TypeOut Deserialize(TypeStream Reader);
     }
 }

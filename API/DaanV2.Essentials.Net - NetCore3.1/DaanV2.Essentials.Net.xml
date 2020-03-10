@@ -614,7 +614,7 @@
             <typeparam name="ContextType">The context type.</typeparam>
         </member>
         <member name="T:DaanV2.Builders.IBuilder`2">
-            <summary>The interfacethat is responsible for forming the contract between builders and output types.</summary>
+            <summary>The interface that is responsible for forming the contract between builders and output types.</summary>
             <typeparam name="TypeToBuild">The output type that will be build.</typeparam>
             <typeparam name="TIn">The type that can be added into the build.</typeparam>
         </member>
@@ -1667,7 +1667,7 @@
             <returns>Deserializer the given stream into the specified type.</returns>
         </member>
         <member name="T:DaanV2.Serialization.IDeserializer`2">
-            <summary>The interfacethat is responsible for forming the contract on how Deserializer should work.</summary>
+            <summary>The interface that is responsible for forming the contract on how Deserializer should work.</summary>
             <typeparam name="TypeOut">The type that needs to be returned after deserializing.</typeparam>
             <typeparam name="TypeStream">The type that is used as the data stream.</typeparam>
         </member>
@@ -1802,7 +1802,7 @@
             <summary>The internal list of factories.</summary>
         </member>
         <member name="T:DaanV2.CollectionExtension">
-            <summary>Extens different collection code.</summary>
+            <summary>Extends different collection code.</summary>
         </member>
         <member name="M:DaanV2.CollectionExtension.ToList``1(``0[])">
             <summary>Casts the given array to a list.</summary>
@@ -1900,6 +1900,25 @@
             <param name="Values">The values to loop through.</param>
             <param name="Old">The value to replace.</param>
             <param name="New">The value to add into.</param>
+        </member>
+        <member name="T:DaanV2.EnumeratorExtension">
+            DOLATER <summary>add description for class: EnumeratorExtension</summary>
+        </member>
+        <member name="M:DaanV2.EnumeratorExtension.Replace``1(``0,System.String,System.String)">
+            <summary>Replaces the value with the new specified value, might not work with flagged enumerator</summary>
+            <typeparam name="T"></typeparam>
+            <param name="Value"></param>
+            <param name="OldName"></param>
+            <param name="NewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.EnumeratorExtension.GetName``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Value"></param>
+            <returns></returns>
         </member>
         <member name="T:DaanV2.Parallel">
             <summary>The class that creates Parallel tasks.</summary>

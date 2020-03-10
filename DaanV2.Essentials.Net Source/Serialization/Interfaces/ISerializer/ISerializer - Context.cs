@@ -24,8 +24,8 @@ namespace DaanV2.Serialization {
 
         /// <summary>Serializes the given object into the given stream along with the context needed to serialize.</summary>
         /// <param name="O">The object to serialize.</param>
-        /// <param name="stream">The stream to write the given object into.</param>
+        /// <param name="Writer">The stream to write the given object into.</param>
         /// <param name="Context">The context that is needed to the serialize the given object.</param>
-        void Serialize(TypeIn O, TypeStream stream, TypeContext Context);
+        void Serialize(TypeIn O, TypeStream Writer, TypeContext Context);
     }
 }

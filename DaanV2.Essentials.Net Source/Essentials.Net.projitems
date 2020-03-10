@@ -60,8 +60,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter Into.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Interfaces\IConverter\IConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\ConverterExtension\ConverterExtension - IConverterInto.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\ConverterExtension\ConverterExtension - IConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\Converter Extension\Converter Extension - IConverterInto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Static Classes\Converter Extension\Converter Extension - IConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Enumerators\Path Type\Path Type.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICopyable\ICopyable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IReplaceable\IReplaceable.cs" />
@@ -134,6 +134,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Enumerator Extension\Enumerator Extension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />

@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Big Endian.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Binary\Classes\BitConverterTest\BitConverterTest - Little Endian.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\EnumeratorExtensionTest\EnumeratorExtensionTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\ICopyableTest\ICopyableTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\IReplaceable\IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TypeExtensionTests\TypeExtensionTests.cs" />

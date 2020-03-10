@@ -23,7 +23,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Serializes the given object into the given stream.</summary>
         /// <param name="O">The object to serialize.</param>
-        /// <param name="stream">The stream to write the object into.</param>
-        void Serialize(TypeIn O, TypeStream stream);
+        /// <param name="Writer">The stream to write the object into.</param>
+        void Serialize(TypeIn O, TypeStream Writer);
     }
 }
