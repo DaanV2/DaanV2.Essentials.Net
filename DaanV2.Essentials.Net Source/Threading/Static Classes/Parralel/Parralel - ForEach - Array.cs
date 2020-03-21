@@ -17,8 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 using System.Threading.Tasks;
 
-namespace DaanV2 {
-    /// <summary>The class that creates Parallel tasks.</summary>
+namespace DaanV2.Threading {
     public static partial class Parallel {
         /// <summary>Loops over each item in the specified array.</summary>
         /// <typeparam name="T">The type inside the array.</typeparam>
@@ -26,23 +25,7 @@ namespace DaanV2 {
         /// <param name="action">The action to preform on each item.</param>
         /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T>(T[] Items, Action<T> action) {
-            Task[] Out = new Task[Environment.ProcessorCount];
-
-            Int32 Step = Items.Length / Out.Length;
-            Int32 Max = Out.Length - 1;
-            Action<Object> InternalAction = (x) => {
-                Parallel.ForEachInternal((ParallelContext<T>)x);
-            };
-
-            for (Int32 I = 0; I < Max; I++) {
-                ParallelContext<T> Context = new ParallelContext<T>(I * Step, (I + 1) * Step, Items, action);
-                Out[I] = Task.Factory.StartNew(InternalAction, Context);
-            }
-
-            ParallelContext<T> Context1 = new ParallelContext<T>(Max * Step, Items.Length, Items, action);
-            Out[Max] = Task.Factory.StartNew(InternalAction, Context1);
-
-            return Out;
+            return ForEach(Items, action, Environment.ProcessorCount);
         }
 
         /// <summary>Loops over each item in the specified array.</summary>
@@ -52,8 +35,9 @@ namespace DaanV2 {
         /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
         /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T>(T[] Items, Action<T> action, Int32 TaskCount) {
-            if (TaskCount < 1)
+            if (TaskCount < 1) {
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
+            }
 
             Task[] Out = new Task[TaskCount];
 
@@ -82,23 +66,7 @@ namespace DaanV2 {
         /// <param name="Argument">The object needed to process each other object.</param>
         /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T, T1>(T[] Items, Action<T, T1> action, T1 Argument) {
-            Task[] Out = new Task[Environment.ProcessorCount];
-
-            Int32 Step = Items.Length / Out.Length;
-            Int32 Max = Out.Length - 1;
-            Action<Object> InternalAction = (x) => {
-                Parallel.ForEachInternal((ParallelContext<T, T1>)x);
-            };
-
-            for (Int32 I = 0; I < Max; I++) {
-                ParallelContext<T, T1> Context = new ParallelContext<T, T1>(I * Step, (I + 1) * Step, Items, action, Argument);
-                Out[I] = Task.Factory.StartNew(InternalAction, Context);
-            }
-
-            ParallelContext<T, T1> Context1 = new ParallelContext<T, T1>(Max * Step, Items.Length, Items, action, Argument);
-            Out[Max] = Task.Factory.StartNew(InternalAction, Context1);
-
-            return Out;
+            return ForEach(Items, action, Argument, Environment.ProcessorCount);
         }
 
         /// <summary>Loops over each item in the specified array.</summary>
@@ -110,8 +78,9 @@ namespace DaanV2 {
         /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
         /// <returns>Loops over each item in the specified array.</returns>
         public static Task[] ForEach<T, T1>(T[] Items, Action<T, T1> action, T1 Argument, Int32 TaskCount) {
-            if (TaskCount < 1)
+            if (TaskCount < 1) {
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
+            }
 
             Task[] Out = new Task[TaskCount];
 

@@ -26,7 +26,7 @@ namespace DaanV2 {
         /// <param name="Items">The array to loop over.</param>
         /// <param name="action">The action to perform on each item.</param>
         /// <param name="Argument1">The context argument to pass along.</param>
-        public ParallelContextCollection(Int32 StartIndex, Int32 EndIndex, ICollection<T1> Items, Action<T1, T2> action, T2 Argument1) {
+        public ParallelContextCollection(Int32 StartIndex, Int32 EndIndex, IList<T1> Items, Action<T1, T2> action, T2 Argument1) {
             this._StartIndex = StartIndex;
             this._EndIndex = EndIndex;
             this._Items = Items;
@@ -41,7 +41,7 @@ namespace DaanV2 {
         public Int32 _EndIndex;
 
         /// <summary>The array to loop through.</summary>
-        public ICollection<T1> _Items;
+        public IList<T1> _Items;
 
         /// <summary>The action perform on the array's items.</summary>
         public Action<T1, T2> _Action;

@@ -25,7 +25,7 @@ namespace DaanV2 {
         /// <param name="EndIndex">The index to stop.</param>
         /// <param name="Items">The array to loop over.</param>
         /// <param name="action">The action to perform on each item.</param>
-        public ParallelContextCollection(Int32 StartIndex, Int32 EndIndex, ICollection<T> Items, Action<T> action) {
+        public ParallelContextCollection(Int32 StartIndex, Int32 EndIndex, IList<T> Items, Action<T> action) {
             this._StartIndex = StartIndex;
             this._EndIndex = EndIndex;
             this._Items = Items;
@@ -39,7 +39,7 @@ namespace DaanV2 {
         public Int32 _EndIndex;
 
         /// <summary>The action perform on the array's items.</summary>
-        public ICollection<T> _Items;
+        public IList<T> _Items;
 
         /// <summary>The argument to pass along as context.</summary>
         public Action<T> _Action;

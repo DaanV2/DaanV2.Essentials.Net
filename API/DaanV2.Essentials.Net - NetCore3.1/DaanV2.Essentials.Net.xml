@@ -1662,7 +1662,7 @@
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`3.Deserialize(`1,`2)">
             <summary>Deserializer the given stream into the specified type.</summary>
-            <param name="stream">The stream to read from.</param>
+            <param name="Reader">The stream to read from.</param>
             <param name="Context">The context needed to read the stream.</param>
             <returns>Deserializer the given stream into the specified type.</returns>
         </member>
@@ -1673,7 +1673,7 @@
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`2.Deserialize(`1)">
             <summary>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</summary>
-            <param name="stream">The stream to read from.</param>
+            <param name="Reader">The stream to read from.</param>
             <returns>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</returns>
         </member>
         <member name="T:DaanV2.Serialization.ISerializerFactory`1">
@@ -1716,7 +1716,7 @@
         <member name="M:DaanV2.Serialization.ISerializer`3.Serialize(`0,`1,`2)">
             <summary>Serializes the given object into the given stream along with the context needed to serialize.</summary>
             <param name="O">The object to serialize.</param>
-            <param name="stream">The stream to write the given object into.</param>
+            <param name="Writer">The stream to write the given object into.</param>
             <param name="Context">The context that is needed to the serialize the given object.</param>
         </member>
         <member name="T:DaanV2.Serialization.ISerializer`2">
@@ -1727,7 +1727,7 @@
         <member name="M:DaanV2.Serialization.ISerializer`2.Serialize(`0,`1)">
             <summary>Serializes the given object into the given stream.</summary>
             <param name="O">The object to serialize.</param>
-            <param name="stream">The stream to write the object into.</param>
+            <param name="Writer">The stream to write the object into.</param>
         </member>
         <member name="T:DaanV2.Serialization.Serialization">
             <summary>The class that holds all the serializer factories.</summary>
@@ -1902,7 +1902,7 @@
             <param name="New">The value to add into.</param>
         </member>
         <member name="T:DaanV2.EnumeratorExtension">
-            DOLATER <summary>add description for class: EnumeratorExtension</summary>
+            <summary>The static class that extends upon existing enumerator code</summary>
         </member>
         <member name="M:DaanV2.EnumeratorExtension.Replace``1(``0,System.String,System.String)">
             <summary>Replaces the value with the new specified value, might not work with flagged enumerator</summary>
@@ -1920,18 +1920,17 @@
             <param name="Value"></param>
             <returns></returns>
         </member>
-        <member name="T:DaanV2.Parallel">
-            <summary>The class that creates Parallel tasks.</summary>
+        <member name="T:DaanV2.Threading.Parallel">
             <summary>The class that creates Parallel tasks.</summary>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``1(``0[],System.Action{``0})">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0})">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``1(``0[],System.Action{``0},System.Int32)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0},System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
             <param name="Items">The items to loop over.</param>
@@ -1939,7 +1938,7 @@
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1)">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
             <typeparam name="T1">The type used for the additional information.</typeparam>
@@ -1948,7 +1947,7 @@
             <param name="Argument">The object needed to process each other object.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1,System.Int32)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1,System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
             <typeparam name="T1">The type used for the additional information.</typeparam>
@@ -1958,14 +1957,14 @@
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``1(System.Collections.Generic.ICollection{``0},System.Action{``0})">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0})">
             <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
             <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``1(System.Collections.Generic.ICollection{``0},System.Action{``0},System.Int32)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0},System.Int32)">
             <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
             <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
             <param name="Items">The items to loop over.</param>
@@ -1973,7 +1972,7 @@
             <param name="TaskCount">The amount of tasks that should process over this <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
             <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``2(System.Collections.Generic.ICollection{``0},System.Action{``0,``1},``1)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1)">
             <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1"/>.</summary>
             <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1"/>.</typeparam>
             <typeparam name="T1">The additional argument type.</typeparam>
@@ -1982,7 +1981,7 @@
             <param name="Argument">The additional argument needed to process the item.</param>
             <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEach``2(System.Collections.Generic.ICollection{``0},System.Action{``0,``1},``1,System.Int32)">
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1,System.Int32)">
             <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
             <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
             <typeparam name="T1">The additional argument type.</typeparam>
@@ -1992,12 +1991,23 @@
             <param name="Argument">The additional argument needed to process the item.</param>
             <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
         </member>
-        <member name="M:DaanV2.Parallel.ForEachInternal``1(DaanV2.ParallelContext{``0})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.ParallelContext{``0})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
-        <member name="M:DaanV2.Parallel.ForEachInternal``2(DaanV2.ParallelContext{``0,``1})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.ParallelContext{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.ParallelContextCollection{``0})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.ParallelContextCollection{``0,``1})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
@@ -2155,7 +2165,7 @@
         <member name="T:DaanV2.ParallelContextCollection`1">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
         </member>
-        <member name="M:DaanV2.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.ICollection{`0},System.Action{`0})">
+        <member name="M:DaanV2.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0})">
             <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`1"/>.</summary>
             <param name="StartIndex">The index to start at.</param>
             <param name="EndIndex">The index to stop.</param>
@@ -2177,7 +2187,7 @@
         <member name="T:DaanV2.ParallelContextCollection`2">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
         </member>
-        <member name="M:DaanV2.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.ICollection{`0},System.Action{`0,`1},`1)">
+        <member name="M:DaanV2.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0,`1},`1)">
             <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`2"/>.</summary>
             <param name="StartIndex">The index to start at.</param>
             <param name="EndIndex">The index to stop.</param>

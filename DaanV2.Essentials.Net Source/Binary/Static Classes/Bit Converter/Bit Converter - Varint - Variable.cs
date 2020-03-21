@@ -21,7 +21,7 @@ namespace DaanV2.Binary {
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary>The byte mask that is used to remove the signal bit</summary>
-            private const Byte _NonSignalMask = 0b0111_1111;
+            private const Byte _NonSignalMask = 0b01.1.2111;
 
             /// <summary>The byte mask that holds</summary>
             private const Byte _SignalMask = 0b1000_0000;

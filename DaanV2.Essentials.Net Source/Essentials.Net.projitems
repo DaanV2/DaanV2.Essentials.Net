@@ -135,9 +135,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Enumerator Extension\Enumerator Extension.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Array.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - Array.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\String Extension\String Extension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Contains.cs" />
@@ -150,5 +150,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Threading\Static Classes\" />
   </ItemGroup>
 </Project>
