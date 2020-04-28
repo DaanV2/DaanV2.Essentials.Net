@@ -9,12 +9,12 @@ namespace UnitTests.Binary {
             private (Int64 Value, Byte[] ExpectedResult)[] _DataSetsInt64 = new (Int64 Value, Byte[] ExpectedResult)[]{
                     DataSet(300, 0b1010_1100, 0b0000_0010), //Googles own examples
                     DataSet(0, 0b0000_0000), //Wiki examples
-                    DataSet(127, 0b01.1.211), //Wiki examples
+                    DataSet(127, 0b01111111), //Wiki examples
                     DataSet(128, 0b10000000, 0b00000001), //Wiki examples
                     DataSet(1048, 0b10011000, 0b00001000), //Wiki examples
-                    DataSet(2_147_483_647, 0b1.1.2111, 0b1.1.2111, 0b1.1.2111, 0b1.1.2111, 0b00000111),
+                    DataSet(2_147_483_647, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b00000111),
                     DataSet(2_147_483_648, 0b10000000, 0b10000000, 0b10000000, 0b10000000, 0b00001000),
-                    DataSet(4147483648, 0b10000000, 0b1.1.2000, 0b11.1.210, 0b1.1.2001, 0b00001111),
+                    DataSet(4147483648, 0b10000000, 0b10101000, 0b11010110, 0b10111001, 0b00001111),
                     DataSet(300),
                     DataSet(127),
                     DataSet(128),
@@ -36,10 +36,10 @@ namespace UnitTests.Binary {
             private (Int32 Value, Byte[] ExpectedResult)[] _DataSetsInt32 = new (Int32 Value, Byte[] ExpectedResult)[]{
                     DataSet(300, 0b1010_1100, 0b0000_0010), //Googles own examples
                     DataSet(0, 0b0000_0000), //Wiki examples
-                    DataSet(127, 0b01.1.211), //Wiki examples
+                    DataSet(127, 0b01111111), //Wiki examples
                     DataSet(128, 0b10000000, 0b00000001), //Wiki examples
                     DataSet(1048, 0b10011000, 0b00001000), //Wiki examples
-                    DataSet(2_147_483_647, 0b1.1.2111, 0b1.1.2111, 0b1.1.2111, 0b1.1.2111, 0b00000111),
+                    DataSet(2_147_483_647, 0b11111111, 0b11111111, 0b11111111, 0b11111111, 0b00000111),
                     DataSet(300),
                     DataSet(127),
                     DataSet(128),

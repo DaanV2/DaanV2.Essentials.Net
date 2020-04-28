@@ -13,5 +13,33 @@ namespace DaanV2 {
             Array.Copy(Source, Destination, Destination.Length);
             return new String(Destination);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <param name="StartsWith"></param>
+        /// <returns></returns>
+        public static Boolean StartWith(this String Value, Char StartsWith) {
+            return Value[0] == StartsWith;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <param name="StartsWith"></param>
+        /// <returns></returns>
+        public static Boolean StartWith(this String Value, Char[] StartsWith) {
+            Char C = Value[0];
+
+            for (Int32 I = 0; I < StartsWith.Length; I++) {
+                if (C == StartsWith[I]) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
