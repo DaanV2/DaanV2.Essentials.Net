@@ -44,7 +44,7 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <returns>Converts the given value into a byte array</returns>
             public static Byte[] ToBytes(Int64 Value) {
-                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Count = Varint.ByteCount((UInt64)Value);
                 Int32 Mark = Count - 1;
 
                 Byte[] Out = new Byte[Count];

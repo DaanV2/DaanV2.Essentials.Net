@@ -47,11 +47,18 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{09ce9804-8092-4a28-980a-2efafedd8721}*SharedItemsImports = 4
 		Test Source\Test Source.projitems*{19896aac-3813-4378-a24e-60449b07149b}*SharedItemsImports = 13
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{210c6c12-81e2-43ce-a410-c489b8e9ada6}*SharedItemsImports = 5
+		Test Source\Test Source.projitems*{210c6c12-81e2-43ce-a410-c489b8e9ada6}*SharedItemsImports = 5
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{41586dd4-4e5b-4da1-aeaf-959d2067681b}*SharedItemsImports = 5
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{54f6b5bd-98c6-4a44-bbbb-74863fc7be3c}*SharedItemsImports = 5
+		Test Source\Test Source.projitems*{54f6b5bd-98c6-4a44-bbbb-74863fc7be3c}*SharedItemsImports = 5
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{6415e614-1ac1-486f-9d1c-eaf80622ec6c}*SharedItemsImports = 5
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{656528fe-7361-4036-82a0-af32155d72d3}*SharedItemsImports = 4
 		Test Source\Test Source.projitems*{656528fe-7361-4036-82a0-af32155d72d3}*SharedItemsImports = 4
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{b1f153d9-f47c-4fe9-bd9f-ffacb81fb3f9}*SharedItemsImports = 13
 		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{c5d48d0b-af03-4fb6-a360-67da5856b1be}*SharedItemsImports = 4
 		Test Source\Test Source.projitems*{c5d48d0b-af03-4fb6-a360-67da5856b1be}*SharedItemsImports = 4
+		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{dadc9ffe-46c6-476f-bdc9-5b98ff60c459}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
