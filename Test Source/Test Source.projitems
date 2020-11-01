@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Classes\ICopyableTest\ICopyableTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\IReplaceable\IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\TypeExtensionTests\TypeExtensionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\Classes\AddRangeTest\AddRangeTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ICopyable\ICopyableTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest - Endians.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest - Data.cs" />
