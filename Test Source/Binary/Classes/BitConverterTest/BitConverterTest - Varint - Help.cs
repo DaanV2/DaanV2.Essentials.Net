@@ -90,8 +90,9 @@ namespace UnitTests.Binary {
             public static Byte ToBytes7(Boolean[] Data, Int32 Index) {
                 Byte Out = 0;
                 Int32 Max = (Index + 7);
-                if (Max > Data.Length)
+                if (Max > Data.Length) {
                     Max = Data.Length;
+                }
 
                 for (Int32 I = Index; I < Max; I++) {
                     Out |= (Byte)((Data[I] ? 1 : 0) << (I - Index));

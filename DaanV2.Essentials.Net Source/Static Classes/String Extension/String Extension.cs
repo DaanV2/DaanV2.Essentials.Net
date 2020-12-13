@@ -7,10 +7,13 @@ namespace DaanV2 {
         /// <param name="Value">The string to copy.</param>
         /// <returns>Creates a copy of the specified string.</returns>
         public static String Copy(this String Value) {
-            Char[] Source = Value.ToCharArray();
-            Char[] Destination = new Char[Source.Length];
+            Int32 Length = Value.Length;
+            Char[] Destination = new Char[Length];
 
-            Array.Copy(Source, Destination, Destination.Length);
+            for (Int32 I = 0; I < Length; I++) {
+                Destination[I] = Value[I];
+            }
+
             return new String(Destination);
         }
 

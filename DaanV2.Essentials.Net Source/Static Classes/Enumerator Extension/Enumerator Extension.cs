@@ -15,10 +15,11 @@ namespace DaanV2 {
             String[] Names = Enum.GetNames(TypeEnum);
 
             if (Names.Contains(OldName) && Names.Contains(NewName)) {
-                T ShouldValue = (T)Enum.Parse(TypeEnum, OldName);
+                var ShouldValue = (T)Enum.Parse(TypeEnum, OldName);
 
-                if (Value.Equals(ShouldValue))
+                if (Value.Equals(ShouldValue)) {
                     return (T)Enum.Parse(TypeEnum, NewName);
+                }
             }
 
             return Value;

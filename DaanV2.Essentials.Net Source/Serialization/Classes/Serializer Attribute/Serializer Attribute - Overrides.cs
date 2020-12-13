@@ -53,10 +53,14 @@ namespace DaanV2.Serialization {
         /// <summary>Returns the hash code for this instance.</summary>
         /// <returns>Returns the hash code for this instance.</returns>
         public override Int32 GetHashCode() {
+#if NETCORE
+            return HashCode.Combine(base.GetHashCode(), this.FactoryName);
+#else
             Int32 hashCode = 1112600100;
             hashCode = (hashCode * -1521134295) + base.GetHashCode();
             hashCode = (hashCode * -1521134295) + EqualityComparer<String>.Default.GetHashCode(this.FactoryName);
             return hashCode;
+#endif
         }
 
         /// <summary>Compare two <see cref="SerializableAttribute"/> if they are equal to each other.</summary>
