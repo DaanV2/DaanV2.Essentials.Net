@@ -17,8 +17,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DaanV2.Serialization {
+#if !NET5
     public partial class BinarySerializer<TypeSerialize> {
         /// <summary>The serializer used in the background.</summary>
         private readonly BinaryFormatter _Serializer;
     }
+#endif
 }

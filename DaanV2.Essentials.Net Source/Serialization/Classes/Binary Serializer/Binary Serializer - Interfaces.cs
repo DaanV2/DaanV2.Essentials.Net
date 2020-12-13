@@ -17,6 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.IO;
 
 namespace DaanV2.Serialization {
+#if !NET5
     public partial class BinarySerializer<TypeSerialize> :
         ISerializer<TypeSerialize, Stream>,
         IDeserializer<TypeSerialize, Stream> {
@@ -35,4 +36,5 @@ namespace DaanV2.Serialization {
             this._Serializer.Serialize(stream, O);
         }
     }
+#endif
 }
