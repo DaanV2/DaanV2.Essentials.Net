@@ -1428,25 +1428,6 @@
             <param name="Processor">The processor to use.</param>
             <param name="Items">The items to process.</param>
         </member>
-        <member name="T:DaanV2.Serialization.BinarySerializer`1">
-            <summary>The serializer class that is responsible for serializing to a binary format</summary>
-        </member>
-        <member name="M:DaanV2.Serialization.BinarySerializer`1.#ctor">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.BinarySerializer`1"/>.</summary>
-        </member>
-        <member name="M:DaanV2.Serialization.BinarySerializer`1.Deserialize(System.IO.Stream)">
-            <summary>Deserialize the given stream into the specified type.</summary>
-            <param name="stream">The stream to read from.</param>
-            <returns>Deserialize the given stream into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Serialization.BinarySerializer`1.Serialize(`0,System.IO.Stream)">
-            <summary>Serializes the given object into the given stream.</summary>
-            <param name="O">The object to serialize.</param>
-            <param name="stream">The stream to write to.</param>
-        </member>
-        <member name="F:DaanV2.Serialization.BinarySerializer`1._Serializer">
-            <summary>The serializer used in the background.</summary>
-        </member>
         <member name="T:DaanV2.Serialization.DeserializerAttribute">
             <summary>The attribute that marks a class that it is a deserializer and what factory it belongs to.</summary>
         </member>
