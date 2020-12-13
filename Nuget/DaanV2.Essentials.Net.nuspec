@@ -32,18 +32,11 @@
         <file src="..\LICENSE.txt" target="" />
 
         <!-- Any CPU -->
-		<file src="lib\net48\*.xml" target="lib\net48\" />
-        <file src="lib\net48\*.dll" target="lib\net48\" />
-        <file src="lib\netcoreapp3.1\*.xml" target="lib\netcoreapp3.1\" />
-        <file src="lib\netcoreapp3.1\*.json" target="lib\netcoreapp3.1\" />
-        <file src="lib\netcoreapp3.1\*.dll" target="lib\netcoreapp3.1\" />
-        <file src="lib\netcore50\*.json" target="lib\netcore50\" />
-        <file src="lib\netcore50\*.xml" target="lib\netcore50\" />
-        <file src="lib\netcore50\*.dll" target="lib\netcore50\" />
+        <file src="lib\net48\*.*" target="lib\net48\" exluce="*.tmp;*.pdb" />
+        <file src="lib\netcoreapp3.1\*.*" target="lib\netcoreapp3.1\" exluce="*.tmp;*.pdb" />
+        <file src="lib\netcore50\*.*" target="lib\netcore50\" exluce="*.tmp;*.pdb"/>
 
-        <file src="lib\netstandard2.0\*.xml" target="lib\netstandard2.0\" />
-        <file src="lib\netstandard2.0\*.dll" target="lib\netstandard2.0\" />
-        <file src="lib\netstandard2.1\*.xml" target="lib\netstandard2.1\" />
-        <file src="lib\netstandard2.1\*.dll" target="lib\netstandard2.1\" />
+        <file src="lib\netstandard2.0\*.*" target="lib\netstandard2.0\" exluce="*.tmp;*.pdb" />
+        <file src="lib\netstandard2.1\*.*" target="lib\netstandard2.1\" exluce="*.tmp;*.pdb" />
     </files>
 </package>
