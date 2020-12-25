@@ -39,21 +39,20 @@ namespace DaanV2.Threading {
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
             }
 
-            Task[] Out = new Task[TaskCount];
+            var Out = new Task[TaskCount];
 
-            Int32 Step = Items.Length / Out.Length;
-            Int32 Max = Out.Length - 1;
-            Action<Object> InternalAction = (x) => {
-                Parallel.ForEachInternal((ParallelContext<T>)x);
-            };
+            Int32 Step = Items.Length / TaskCount;
+            Int32 Max = TaskCount - 1;
 
+            //Creates sections and start
             for (Int32 I = 0; I < Max; I++) {
-                ParallelContext<T> Context = new ParallelContext<T>(I * Step, (I + 1) * Step, Items, action);
-                Out[I] = Task.Factory.StartNew(InternalAction, Context);
+                var Context = new ParallelContext<T>(I * Step, (I + 1) * Step, Items, action);
+                Out[I] = Task.Factory.StartNew(Context.Invoke);
             }
 
-            ParallelContext<T> Context1 = new ParallelContext<T>(Max * Step, Items.Length, Items, action);
-            Out[Max] = Task.Factory.StartNew(InternalAction, Context1);
+            //Creates the last
+            var Context1 = new ParallelContext<T>(Max * Step, Items.Length, Items, action);
+            Out[Max] = Task.Factory.StartNew(Context1.Invoke);
 
             return Out;
         }
@@ -82,21 +81,18 @@ namespace DaanV2.Threading {
                 throw new ArgumentOutOfRangeException(nameof(TaskCount));
             }
 
-            Task[] Out = new Task[TaskCount];
+            var Out = new Task[TaskCount];
 
             Int32 Step = Items.Length / Out.Length;
             Int32 Max = Out.Length - 1;
-            Action<Object> InternalAction = (x) => {
-                Parallel.ForEachInternal((ParallelContext<T, T1>)x);
-            };
 
             for (Int32 I = 0; I < Max; I++) {
-                ParallelContext<T, T1> Context = new ParallelContext<T, T1>(I * Step, (I + 1) * Step, Items, action, Argument);
-                Out[I] = Task.Factory.StartNew(InternalAction, Context);
+                var Context = new ParallelContext<T, T1>(I * Step, (I + 1) * Step, Items, action, Argument);
+                Out[I] = Task.Factory.StartNew(Context.Invoke);
             }
 
-            ParallelContext<T, T1> Context1 = new ParallelContext<T, T1>(Max * Step, Items.Length, Items, action, Argument);
-            Out[Max] = Task.Factory.StartNew(InternalAction, Context1);
+            var Context1 = new ParallelContext<T, T1>(Max * Step, Items.Length, Items, action, Argument);
+            Out[Max] = Task.Factory.StartNew(Context1.Invoke);
 
             return Out;
         }

@@ -17,21 +17,9 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 using System.Collections.Generic;
 
-namespace DaanV2 {
+namespace DaanV2.Threading {
     /// <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-    internal partial struct ParallelContextCollection<T> {
-        /// <summary>Creates a new instance of <see cref="ParallelContext{T}"/>.</summary>
-        /// <param name="StartIndex">The index to start at.</param>
-        /// <param name="EndIndex">The index to stop.</param>
-        /// <param name="Items">The array to loop over.</param>
-        /// <param name="action">The action to perform on each item.</param>
-        public ParallelContextCollection(Int32 StartIndex, Int32 EndIndex, IList<T> Items, Action<T> action) {
-            this._StartIndex = StartIndex;
-            this._EndIndex = EndIndex;
-            this._Items = Items;
-            this._Action = action;
-        }
-
+    internal partial struct ParallelFuncContextCollection<T, U> {
         /// <summary>The index to start from.</summary>
         public Int32 _StartIndex;
 
@@ -41,7 +29,16 @@ namespace DaanV2 {
         /// <summary>The action perform on the array's items.</summary>
         public IList<T> _Items;
 
-        /// <summary>The argument to pass along as context.</summary>
-        public Action<T> _Action;
+        /// <summary>The action to perform on each item.</summary>
+        public Func<T, U> _Action;
+
+        /// <summary></summary>
+        public U[] _Receiver;
+
+        /// <summary>Very backwards but <see cref="System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        public void Invoke() {
+            //Run action
+            Parallel.Func.ForEachInternal(this);
+        }
     }
 }

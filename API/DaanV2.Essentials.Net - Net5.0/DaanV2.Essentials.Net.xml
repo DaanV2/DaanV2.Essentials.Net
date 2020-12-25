@@ -2029,6 +2029,92 @@
         </member>
         <member name="T:DaanV2.Threading.Parallel">
             <summary>The class that creates Parallel tasks.</summary>
+            <summary>The class that creates Parallel tasks.</summary>
+        </member>
+        <member name="T:DaanV2.Threading.Parallel.Func">
+            <summary>The class that deals with parralel functions tasks</summary>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContext{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContext{``0,``1,``2})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContextCollection{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContextCollection{``0,``1,``2})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
         </member>
         <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0})">
             <summary>Loops over each item in the specified array.</summary>
@@ -2098,27 +2184,233 @@
             <param name="Argument">The additional argument needed to process the item.</param>
             <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
         </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.ParallelContext{``0})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContext{``0})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.ParallelContext{``0,``1})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContext{``0,``1})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.ParallelContextCollection{``0})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContextCollection{``0})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.ParallelContextCollection{``0,``1})">
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContextCollection{``0,``1})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
             <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContext`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Receiver">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContext`2.Invoke">
+            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContext`3">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Receiver">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContext`3.Invoke">
+            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Items">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Receiver">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`2.Invoke">
+            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`3">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Receiver">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`3.Invoke">
+            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContext`1">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`1.#ctor(System.Int32,System.Int32,`0[],System.Action{`0})">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`1.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContext`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`2.#ctor(System.Int32,System.Int32,`0[],System.Action{`0,`1},`1)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+            <param name="Argument1">The context argument to pass along.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Action">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`2.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContextCollection`1">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0})">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Items">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Action">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`1.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContextCollection`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0,`1},`1)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+            <param name="Argument1">The context argument to pass along.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Action">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`2.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.FuncResult`1">
+            DOLATER <summary>add description for struct: FuncResult</summary>
+        </member>
+        <member name="M:DaanV2.Threading.FuncResult`1.#ctor(System.Threading.Tasks.Task[],`0[])">
+            <summary>Creates a new instance of <see cref="!:FuncResult"/></summary>
+            <param name="tasks"></param>
+            <param name="output"></param>
         </member>
         <member name="T:DaanV2.StringExtension">
             <summary>The static class that add upon existing code.</summary>
@@ -2236,102 +2528,6 @@
         </member>
         <member name="M:DaanV2.TypeExtension.#cctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.TypeExtension"/>.</summary>
-        </member>
-        <member name="T:DaanV2.ParallelContext`1">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="M:DaanV2.ParallelContext`1.#ctor(System.Int32,System.Int32,`0[],System.Action{`0})">
-            <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`1"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-        </member>
-        <member name="F:DaanV2.ParallelContext`1._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`1._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`1._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`1._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="T:DaanV2.ParallelContext`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="M:DaanV2.ParallelContext`2.#ctor(System.Int32,System.Int32,`0[],System.Action{`0,`1},`1)">
-            <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`2"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-            <param name="Argument1">The context argument to pass along.</param>
-        </member>
-        <member name="F:DaanV2.ParallelContext`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`2._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`2._Action">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContext`2._Argument1">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="T:DaanV2.ParallelContextCollection`1">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="M:DaanV2.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0})">
-            <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`1"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`1._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`1._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`1._Items">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`1._Action">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="T:DaanV2.ParallelContextCollection`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="M:DaanV2.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0,`1},`1)">
-            <summary>Creates a new instance of <see cref="T:DaanV2.ParallelContext`2"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-            <param name="Argument1">The context argument to pass along.</param>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`2._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`2._Action">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.ParallelContextCollection`2._Argument1">
-            <summary>The argument to pass along as context.</summary>
         </member>
     </members>
 </doc>

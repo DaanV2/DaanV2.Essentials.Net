@@ -16,13 +16,15 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace DaanV2.Threading {
     public static partial class Parallel {
         /// <summary>The internal method used for the foreach loop.</summary>
         /// <typeparam name="T">The object to process.</typeparam>
         /// <param name="Context">The context needed to process.</param>
-        private static void ForEachInternal<T>(ParallelContext<T> Context) {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static void ForEachInternal<T>(ParallelContext<T> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             T[] Items = Context._Items;
@@ -37,7 +39,8 @@ namespace DaanV2.Threading {
         /// <typeparam name="T">The object to process.</typeparam>
         /// <typeparam name="T1">The additional type to process.</typeparam>
         /// <param name="Context">The context needed to process.</param>
-        private static void ForEachInternal<T, T1>(ParallelContext<T, T1> Context) {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static void ForEachInternal<T, T1>(ParallelContext<T, T1> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             T[] Items = Context._Items;
@@ -52,7 +55,8 @@ namespace DaanV2.Threading {
         /// <summary>The internal method used for the foreach loop.</summary>
         /// <typeparam name="T">The object to process.</typeparam>
         /// <param name="Context">The context needed to process.</param>
-        private static void ForEachInternal<T>(ParallelContextCollection<T> Context) {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static void ForEachInternal<T>(ParallelContextCollection<T> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             IList<T> Items = Context._Items;
@@ -67,7 +71,8 @@ namespace DaanV2.Threading {
         /// <typeparam name="T">The object to process.</typeparam>
         /// <typeparam name="T1">The additional type to process.</typeparam>
         /// <param name="Context">The context needed to process.</param>
-        private static void ForEachInternal<T, T1>(ParallelContextCollection<T, T1> Context) {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static void ForEachInternal<T, T1>(ParallelContextCollection<T, T1> Context) {
             Int32 StartIndex = Context._StartIndex;
             Int32 EndIndex = Context._EndIndex;
             IList<T> Items = Context._Items;

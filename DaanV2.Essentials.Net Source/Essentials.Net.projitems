@@ -136,8 +136,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Enumerator Extension\Enumerator Extension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Func ForEach - Internal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Func ForEach - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - Array.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - ICollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Func ForEach - IList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - IList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - Internal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\String Extension\String Extension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Task Extension\Task Extension - Array.cs" />
@@ -147,12 +151,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Types.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Implements.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 1.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - 2.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 1.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Structures\Parralel Context\ParralelContext - Collection - 2.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Threading\Static Classes\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - Collection - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - Collection - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Context\Parralel Context - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Context\Parralel Context - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Context\Parralel Context - Collection - 1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Context\Parralel Context - Collection - 2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\FuncResult\FuncResult.cs" />
   </ItemGroup>
 </Project>
