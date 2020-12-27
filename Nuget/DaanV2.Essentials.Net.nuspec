@@ -3,7 +3,7 @@
     <metadata>
         <!-- Required elements-->
         <id>DaanV2.Essentials.Net</id>
-        <version>1.1.4</version>
+        <version>1.1.5</version>
         <description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</description>
         <authors>Daan Verstraten</authors>
 
@@ -15,7 +15,7 @@
         <tags>essentials interfaces code-extensions</tags>
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
 		<icon>images\icon.png</icon>
-		<releaseNotes>Updated the parralel code</releaseNotes>
+		<releaseNotes>Added parralel code for Func<T, U></releaseNotes>
         <dependencies>
             <group targetFramework=".NETCoreApp3.1" />
             <group targetFramework=".NETCore5.0" />
