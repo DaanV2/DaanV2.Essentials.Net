@@ -49,7 +49,9 @@ namespace UnitTests.ICopyable {
             Assert.IsFalse(Object.ReferenceEquals(Original.Name, Copy.Name), "A copy name was not created");
             Assert.IsFalse(Object.ReferenceEquals(Original.Data, Copy.Data), "A copy data was not created");
             Assert.IsFalse(Object.ReferenceEquals(Original.Data.Name, Copy.Data.Name), "A copy data name was not created");
-            Assert.IsFalse(Object.ReferenceEquals(Original.Data.Test, Copy.Data.Test), "A copy data test was not created");
+            
+            //Result is always false
+            //Assert.IsFalse(Object.ReferenceEquals(Original.Data.Test, Copy.Data.Test), "A copy data test was not created");
         }
 
 

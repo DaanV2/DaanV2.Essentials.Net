@@ -44,22 +44,25 @@ namespace UnitTests.Serialization {
 
         [TestMethod]
         public void XmlTest() {
-            TestSerialization("xml");
+            this.TestSerialization("xml");
         }
 
         [TestMethod]
         public void JsonTest() {
-            TestSerialization("json");
+            this.TestSerialization("json");
         }
 
+        //Binary has been removed for .net 5.0
+#if !NET5
         [TestMethod]
         public void BinaryTest() {
-            TestSerialization("binary");
+            this.TestSerialization("binary");
         }
+#endif
 
         private void TestSerialization(String FactoryName) {
-            MemoryStream Stream = new MemoryStream();
-            SerializationClassTest SCT = new SerializationClassTest() {
+            var Stream = new MemoryStream();
+            var SCT = new SerializationClassTest() {
                 Text = $"This is a test text for {FactoryName}"
             };
 
