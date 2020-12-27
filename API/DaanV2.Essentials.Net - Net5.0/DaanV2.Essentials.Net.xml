@@ -2059,6 +2059,7 @@
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1})">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
@@ -2066,6 +2067,7 @@
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1},System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
@@ -2073,14 +2075,18 @@
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2})">
             <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2},System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
@@ -2089,6 +2095,7 @@
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
@@ -2096,6 +2103,7 @@
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
             <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
@@ -2103,14 +2111,18 @@
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2})">
             <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2},System.Int32)">
             <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
@@ -2205,6 +2217,25 @@
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
             <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="T:DaanV2.Threading.TaskExtension">
+            DOLATER <summary>add description for class: TaskExtension</summary>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAll(System.Threading.Tasks.Task[])">
+            <summary>Waits for all of the provided <see cref="T:System.Threading.Tasks.Task"/> objects to complete execution.</summary>
+            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAll``1(DaanV2.Threading.FuncResult{``0})">
+            <summary>Waits for all of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
+            <param name="Result"></param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAny(System.Threading.Tasks.Task[])">
+            <summary>Waits for any of the provided System.Threading.Tasks.Task objects to complete execution.</summary>
+            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAny``1(DaanV2.Threading.FuncResult{``0})">
+            <summary>Waits for any of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
+            <param name="Result"></param>
         </member>
         <member name="T:DaanV2.Threading.ParallelFuncContext`2">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
@@ -2405,12 +2436,19 @@
             <summary>Invokes the foreach to be performend on this instance</summary>
         </member>
         <member name="T:DaanV2.Threading.FuncResult`1">
-            DOLATER <summary>add description for struct: FuncResult</summary>
+            <summary>The struct that represents the output of a parralel <see cref="T:System.Func`2"/> process</summary>
+            <typeparam name="U">The list of items to be returned</typeparam>
         </member>
         <member name="M:DaanV2.Threading.FuncResult`1.#ctor(System.Threading.Tasks.Task[],`0[])">
-            <summary>Creates a new instance of <see cref="!:FuncResult"/></summary>
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FuncResult`1"/></summary>
             <param name="tasks"></param>
             <param name="output"></param>
+        </member>
+        <member name="F:DaanV2.Threading.FuncResult`1.Tasks">
+            <summary>The array of <see cref="T:System.Threading.Tasks.Task"/> that is returned so that the programmer can wait for this tasks to be completed</summary>
+        </member>
+        <member name="F:DaanV2.Threading.FuncResult`1.Output">
+            <summary>The array of output items to be returned, must be the same size as the inputted collection</summary>
         </member>
         <member name="T:DaanV2.StringExtension">
             <summary>The static class that add upon existing code.</summary>

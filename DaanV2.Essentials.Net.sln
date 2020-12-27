@@ -43,9 +43,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net", "UnitTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net Unsafe", "UnitTests\UnitTests.Net Unsafe\UnitTests.Net Unsafe.csproj", "{656528FE-7361-4036-82A0-AF32155D72D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaanV2.Essentials.Net - Net5.0", "API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net - Net5.0.csproj", "{0DD28690-7D83-48E2-8547-CE1D88FDC762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaanV2.Essentials.Net - Net5.0", "API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net - Net5.0.csproj", "{0DD28690-7D83-48E2-8547-CE1D88FDC762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Net Core 5.0", "UnitTests\UnitTests.Net Core 5.0\UnitTests.Net Core 5.0.csproj", "{F4D6E986-7875-40E5-9F71-928AB9416C99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.Net Core 5.0", "UnitTests\UnitTests.Net Core 5.0\UnitTests.Net Core 5.0.csproj", "{F4D6E986-7875-40E5-9F71-928AB9416C99}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -197,16 +197,16 @@ Global
 		{0DD28690-7D83-48E2-8547-CE1D88FDC762}.Release|x86.Build.0 = Release|x86
 		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x64.Build.0 = Debug|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x86.Build.0 = Debug|Any CPU
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x64.ActiveCfg = Debug|x64
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x64.Build.0 = Debug|x64
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x86.ActiveCfg = Debug|x86
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Debug|x86.Build.0 = Debug|x86
 		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x64.ActiveCfg = Release|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x64.Build.0 = Release|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x86.ActiveCfg = Release|Any CPU
-		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x86.Build.0 = Release|Any CPU
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x64.ActiveCfg = Release|x64
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x64.Build.0 = Release|x64
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x86.ActiveCfg = Release|x86
+		{F4D6E986-7875-40E5-9F71-928AB9416C99}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
