@@ -151,6 +151,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Get Types.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Implements.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Type Extension\Type Extension - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\TaskExtension\TaskExtension - Wait.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - 1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - 2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Structures\Parralel Func Context\Parralel Func Context - Collection - 1.cs" />
