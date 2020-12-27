@@ -23,6 +23,7 @@ namespace DaanV2.Threading {
         public static partial class Func {
             /// <summary>Loops over each item in the specified array.</summary>
             /// <typeparam name="T">The type inside the array.</typeparam>
+            /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <returns>Loops over each item in the specified array.</returns>
@@ -32,6 +33,7 @@ namespace DaanV2.Threading {
 
             /// <summary>Loops over each item in the specified array.</summary>
             /// <typeparam name="T">The type inside the array.</typeparam>
+            /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
@@ -78,7 +80,9 @@ namespace DaanV2.Threading {
             }
 
             /// <summary>Loops over each item in the specified array.</summary>
-            /// <typeparam name="T">The type inside the array.</typeparam>
+            /// <typeparam name="T1">The type inside the array.</typeparam>
+            /// <typeparam name="T2">The type used for the additional information.</typeparam>
+            /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <returns>Loops over each item in the specified array.</returns>
@@ -87,7 +91,9 @@ namespace DaanV2.Threading {
             }
 
             /// <summary>Loops over each item in the specified array.</summary>
-            /// <typeparam name="T">The type inside the array.</typeparam>
+            /// <typeparam name="T1">The type inside the array.</typeparam>
+            /// <typeparam name="T2">The type used for the additional information.</typeparam>
+            /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
