@@ -1,5 +1,12 @@
 ﻿# Essentials
 
+<p align="center">
+  <a href="https://www.nuget.org/packages/DaanV2.Essentials.Net/">
+    <img alt="Nuget" src="https://img.shields.io/nuget/v/DaanV2.Essentials.Net?style=for-the-badge">
+    <img alt="Nuget" src="https://img.shields.io/nuget/dt/DaanV2.Essentials.Net?style=for-the-badge">
+  </a>
+</p>
+
 This library provides a set of default interfaces and code extensions upon .Net to ease up programming.
 
 - [Essentials](#essentials)
