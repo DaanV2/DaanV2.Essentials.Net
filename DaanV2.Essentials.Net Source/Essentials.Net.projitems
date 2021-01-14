@@ -136,6 +136,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - IReplaceable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Collection Extension\Collection Extension - String.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Static Classes\Enumerator Extension\Enumerator Extension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockInstance\LockInstance - Function.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockInstance\LockInstance - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockInstance\LockInstance - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockInstance\LockInstance - Create.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockInstance\LockInstance - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockPool\LockPool - Initialize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockPool\LockPool - Function.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockPool\LockPool - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Func ForEach - Internal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - Func ForEach - Array.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Static Classes\Parralel\Parralel - ForEach - Array.cs" />
