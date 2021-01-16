@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 
 namespace DaanV2.Threading {
     ///DOLATER <summary>add description for interface: ILockPool</summary>
@@ -14,19 +9,5 @@ namespace DaanV2.Threading {
         /// <param name="Index"></param>
         /// <returns></returns>
         public EventWaitHandle GetHandle(T Index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Index"></param>
-        /// <returns></returns>
-        public LockInstance GetInstance(T Index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Index"></param>
-        /// <returns></returns>
-        public LockInstance GetInstanceWait(T Index);
     }
 }

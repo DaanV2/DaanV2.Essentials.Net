@@ -30,7 +30,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, T[] values, Int32 StartIndex) {
-            AddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex);
+            InternalAddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -41,7 +41,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, T[] values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex, Count);
+            InternalAddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex, Count);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -51,7 +51,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, T[] values, Int32 StartIndex) {
-            AddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex);
+            AddRange<T[], T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -62,7 +62,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, T[] values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, T[], T>(Receiver, values, StartIndex, Count);
+            AddRange<T[], T>(Receiver, values, StartIndex, Count);
         }
 
         #endregion
@@ -76,7 +76,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, List<T> values, Int32 StartIndex) {
-            AddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex);
+            InternalAddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -87,7 +87,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, List<T> values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex, Count);
+            InternalAddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex, Count);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -97,7 +97,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, List<T> values, Int32 StartIndex) {
-            AddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex);
+            AddRange<List<T>, T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -108,7 +108,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, List<T> values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, List<T>, T>(Receiver, values, StartIndex, Count);
+            AddRange<List<T>, T>(Receiver, values, StartIndex, Count);
         }
 
         #endregion
@@ -122,7 +122,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, IList<T> values, Int32 StartIndex) {
-            AddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex);
+            InternalAddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -133,7 +133,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this ICollection<T> Receiver, IList<T> values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex, Count);
+            InternalAddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex, Count);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -143,7 +143,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, IList<T> values, Int32 StartIndex) {
-            AddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex);
+            AddRange<IList<T>, T>(Receiver, values, StartIndex);
         }
 
         /// <summary>Adds the given items onto the collection, from the specified range</summary>
@@ -154,7 +154,7 @@ namespace DaanV2 {
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void AddRange<T>(this List<T> Receiver, IList<T> values, Int32 StartIndex, Int32 Count) {
-            AddRange<ICollection<T>, IList<T>, T>(Receiver, values, StartIndex, Count);
+            AddRange<IList<T>, T>(Receiver, values, StartIndex, Count);
         }
 
         #endregion
@@ -167,7 +167,7 @@ namespace DaanV2 {
         /// <param name="values">The source to retrieve the items from</param>
         /// <param name="StartIndex">The start index of where to get items from</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void AddRange<T, K, V>(this T Receiver, K values, Int32 StartIndex)
+        internal static void InternalAddRange<T, K, V>(T Receiver, K values, Int32 StartIndex)
             where T : ICollection<V>
             where K : IList<V> {
 
@@ -186,7 +186,7 @@ namespace DaanV2 {
         /// <param name="StartIndex">The start index of where to get items from</param>
         /// <param name="Count">The amount of items to add</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void AddRange<T, K, V>(this T Receiver, K values, Int32 StartIndex, Int32 Count)
+        internal static void InternalAddRange<T, K, V>(T Receiver, K values, Int32 StartIndex, Int32 Count)
             where T : ICollection<V>
             where K : IList<V> {
 

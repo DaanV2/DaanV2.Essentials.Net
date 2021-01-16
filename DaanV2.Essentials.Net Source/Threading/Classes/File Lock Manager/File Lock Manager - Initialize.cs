@@ -5,14 +5,21 @@ namespace DaanV2.Threading {
     ///DOLATER <summary>add description for class: FileLockManager</summary>
     public sealed partial class FileLockManager {
         /// <summary>Creates a new instance of <see cref="FileLockManager"/></summary>
+        /// <param name="LockPerRoot"></param>
         public FileLockManager(Int32 LockPerRoot) {
             this.CreateLocks(DriveInfo.GetDrives().Length, LockPerRoot);
         }
 
+        /// <summary>Creates a new instance of <see cref="FileLockManager"/></summary>
+        /// <param name="RootCount"></param>
+        /// <param name="LockPerRoot"></param>
         public FileLockManager(Int32 RootCount, Int32 LockPerRoot) {
             this.CreateLocks(RootCount, LockPerRoot);
         }
 
+        /// <summary>Creates a new instance of <see cref="FileLockManager"/></summary>
+        /// <param name="RootCount"></param>
+        /// <param name="LockPerRoot"></param>
         private void CreateLocks(Int32 RootCount, Int32 LockPerRoot) {
             if (RootCount < 1) {
                 RootCount = 3;

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace DaanV2.Threading {
     ///DOLATER <summary>add description for class: LookPoolExtension</summary>
@@ -15,7 +11,7 @@ namespace DaanV2.Threading {
         /// <param name="Index"></param>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static EventWaitHandle GetHandle<T>(this ILockPool<Int32> Pool, T value) {
+        public static EventWaitHandle GetHandle<U>(this ILockPool<Int32> Pool, U value) {
             return Pool.GetHandle(value.GetHashCode());
         }
 
@@ -25,18 +21,8 @@ namespace DaanV2.Threading {
         /// <param name="Index"></param>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LockInstance GetInstance<T>(this ILockPool<Int32> Pool, T value) {
-            return Pool.GetInstance(value.GetHashCode());
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Index"></param>
-        /// <returns></returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static LockInstance GetInstanceWait<T>(this ILockPool<Int32> Pool, T value) {
-            return Pool.GetInstanceWait(value.GetHashCode());
+        public static EventWaitHandle GetHandle(this ILockPool<Int32> Pool, String value) {
+            return GetHandle<String>(Pool, value);
         }
     }
 }

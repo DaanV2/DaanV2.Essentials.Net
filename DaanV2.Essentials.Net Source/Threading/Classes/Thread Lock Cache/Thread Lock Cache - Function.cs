@@ -1,5 +1,6 @@
 ﻿namespace DaanV2.Threading {
-    public sealed partial class ThreadLockCache<T> {
+    public sealed partial class ThreadLockCache<T, U>
+        where T : ILockPool<U> {
         /// <summary>
         /// 
         /// </summary>
@@ -15,6 +16,11 @@
             return Lock;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Index"></param>
+        /// <returns></returns>
         public LockInstance GetInstanceWait(T Index) {
             LockInstance Lock = this.GetInstance(Index);
             Lock.Lock();
