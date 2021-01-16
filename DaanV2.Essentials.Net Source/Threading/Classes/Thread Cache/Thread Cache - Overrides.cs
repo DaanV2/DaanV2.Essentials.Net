@@ -15,36 +15,37 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace DaanV2.Threading {
-    public sealed partial class ThreadLockCache<T, U> : IEquatable<ThreadLockCache<T, U>> 
-        where T : ILockPool<U> {
+    public sealed partial class ThreadCache<T> : IEquatable<ThreadCache<T>> {
         /// <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
         /// <param name="obj">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
         public override Boolean Equals(Object obj) {
-            return this.Equals(obj as ThreadLockCache<T, U>);
+            return this.Equals(obj as ThreadCache<T>);
         }
 
         /// <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
         /// <param name="other">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
-        public Boolean Equals(ThreadLockCache<T, U> other) {
+        public Boolean Equals(ThreadCache<T> other) {
             return other != null &&
-                   EqualityComparer<T>.Default.Equals(this._Pool, other._Pool) &&
-                   EqualityComparer<Dictionary<U, LockInstance>>.Default.Equals(this._Locks, other._Locks);
+                   EqualityComparer<ConcurrentDictionary<Int32, T>>.Default.Equals(this._Cache, other._Cache) &&
+                   EqualityComparer<Func<Int32, T>>.Default.Equals(this._ValueFactory, other._ValueFactory);
         }
 
         /// <summary>Returns the hash code for this instance.</summary>
         /// <returns>Returns the hash code for this instance.</returns>
         public override Int32 GetHashCode() {
 #if NETCORE
-            return HashCode.Combine(this._Pool, this._Locks);
+            return HashCode.Combine(this._Cache, this._ValueFactory);
 #else
-            Int32 hashCode = -481962414;
-            hashCode = hashCode * -1521134295 + EqualityComparer<T>.Default.GetHashCode(this._Pool);
-            hashCode = hashCode * -1521134295 + EqualityComparer<Dictionary<U, LockInstance>>.Default.GetHashCode(this._Locks);
+            Int32 hashCode = -35590233;
+            hashCode = hashCode * -1521134295 + EqualityComparer<ConcurrentDictionary<Int32, T>>.Default.GetHashCode(this._Cache);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Func<Int32, T>>.Default.GetHashCode(this._ValueFactory);
             return hashCode;
 #endif
         }
@@ -53,15 +54,15 @@ namespace DaanV2.Threading {
         /// <param name="left">The first <see cref="PriorityAttribute"/> to check.</param>
         /// <param name="right">The second <see cref="PriorityAttribute"/> to check.</param>
         /// <returns>Compare two <see cref="PriorityAttribute"/> if they are equal to each other.</returns>
-        public static Boolean operator ==(ThreadLockCache<T, U> left, ThreadLockCache<T, U> right) {
-            return EqualityComparer<ThreadLockCache<T, U>>.Default.Equals(left, right);
+        public static Boolean operator ==(ThreadCache<T> left, ThreadCache<T> right) {
+            return EqualityComparer<ThreadCache<T>>.Default.Equals(left, right);
         }
 
         /// <summary>Compare two <see cref="PriorityAttribute"/> if they are not equal to each other.</summary>
         /// <param name="left">The first <see cref="PriorityAttribute"/> to check.</param>
         /// <param name="right">The second <see cref="PriorityAttribute"/> to check.</param>
         /// <returns>Compare two <see cref="PriorityAttribute"/> if they are not equal to each other.</returns>
-        public static Boolean operator !=(ThreadLockCache<T, U> left, ThreadLockCache<T, U> right) {
+        public static Boolean operator !=(ThreadCache<T> left, ThreadCache<T> right) {
             return !(left == right);
         }
     }

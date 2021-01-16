@@ -149,6 +149,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Lock Pool\Lock Pool - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Lock Pool\Lock Pool - Function.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Lock Pool\Lock Pool - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Thread Cache\Thread Cache - Overrides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Thread Cache\Thread Cache - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Thread Cache\Thread Cache - Set.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\Thread Cache\Thread Cache - DisposeResource.cs" />

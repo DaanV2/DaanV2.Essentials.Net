@@ -84,6 +84,7 @@ namespace DaanV2.Threading {
             /// <typeparam name="T2">The type used for the additional information.</typeparam>
             /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
+            /// <param name="Argument1">The first argument1</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <returns>Loops over each item in the specified array.</returns>
             public static FuncResult<U> ForEach<T1, T2, U>(T1[] Items, T2 Argument1, Func<T1, T2, U> action) {
@@ -95,6 +96,7 @@ namespace DaanV2.Threading {
             /// <typeparam name="T2">The type used for the additional information.</typeparam>
             /// <typeparam name="U">The type to be outputted</typeparam>
             /// <param name="Items">The items to loop over.</param>
+            /// <param name="Argument1">The first argument1</param>
             /// <param name="action">The action to preform on each item.</param>
             /// <param name="TaskCount">The amount of tasks that should process over this array.</param>
             /// <returns>Loops over each item in the specified array.</returns>

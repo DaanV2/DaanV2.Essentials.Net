@@ -1875,7 +1875,7 @@
             <param name="StartIndex">The start index of where to get items from</param>
             <param name="Count">The amount of items to add</param>
         </member>
-        <member name="M:DaanV2.CollectionExtension.AddRange``3(``0,``1,System.Int32)">
+        <member name="M:DaanV2.CollectionExtension.InternalAddRange``3(``0,``1,System.Int32)">
             <summary>Adds the given items onto the collection, from the specified range</summary>
             <typeparam name="T">The type of collection that receives items</typeparam>
             <typeparam name="K">The type of collection that gives item</typeparam>
@@ -1884,7 +1884,7 @@
             <param name="values">The source to retrieve the items from</param>
             <param name="StartIndex">The start index of where to get items from</param>
         </member>
-        <member name="M:DaanV2.CollectionExtension.AddRange``3(``0,``1,System.Int32,System.Int32)">
+        <member name="M:DaanV2.CollectionExtension.InternalAddRange``3(``0,``1,System.Int32,System.Int32)">
             <summary>Adds the given items onto the collection, from the specified range</summary>
             <typeparam name="T">The type of collection that receives items</typeparam>
             <typeparam name="K">The type of collection that gives item</typeparam>
@@ -2027,6 +2027,407 @@
             <param name="Value"></param>
             <returns></returns>
         </member>
+        <member name="T:DaanV2.Threading.FileLockManager">
+            DOLATER <summary>add description for class: FileLockManager</summary>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.Equals(System.Object)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="obj">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.Equals(DaanV2.Threading.FileLockManager)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="other">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+            <returns>Returns the hash code for this instance.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.op_Equality(DaanV2.Threading.FileLockManager,DaanV2.Threading.FileLockManager)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.op_Inequality(DaanV2.Threading.FileLockManager,DaanV2.Threading.FileLockManager)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.#ctor(System.Int32)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FileLockManager"/></summary>
+            <param name="LockPerRoot"></param>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.#ctor(System.Int32,System.Int32)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FileLockManager"/></summary>
+            <param name="RootCount"></param>
+            <param name="LockPerRoot"></param>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.CreateLocks(System.Int32,System.Int32)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FileLockManager"/></summary>
+            <param name="RootCount"></param>
+            <param name="LockPerRoot"></param>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.GetHandle(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.GetInstance(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.FileLockManager.GetInstanceWait(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DaanV2.Threading.FileLockManager._DriveLocks">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.FileLockManager._RootCount">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.FileLockManager._LockPerRootCount">
+            <summary></summary>
+        </member>
+        <member name="T:DaanV2.Threading.LockInstance">
+            <summary>
+            A class that wraps around a global lock to make a instance,
+            to be only used for 1 thread, giving thread safety by unlocking on auto, 
+            is this instance is garbage collected
+            </summary>
+            <example>var Lock = LockInstance.CreateWait(Handle);</example>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.Equals(System.Object)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="obj">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.Equals(DaanV2.Threading.LockInstance)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="other">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+            <returns>Returns the hash code for this instance.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.op_Equality(DaanV2.Threading.LockInstance,DaanV2.Threading.LockInstance)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.op_Inequality(DaanV2.Threading.LockInstance,DaanV2.Threading.LockInstance)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.Lock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.UnLock">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.#ctor(System.Threading.EventWaitHandle)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.LockInstance"/></summary>
+            <param name="Lock">The lock to wrap around</param>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.Finalize">
+            <summary>Disposes of this instance, if still locked then unlock</summary>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.Create(System.Threading.EventWaitHandle)">
+            <summary>Creates a lock but does NOT lock it automaticly, only give this object to 1 thread</summary>
+            <param name="Lock"></param>
+            <returns>Creates a instance of the lock that can only be used by 1 thread</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockInstance.CreateWait(System.Threading.EventWaitHandle)">
+            <summary>Creates a lock but does lock it automaticly, only give this object to 1 thread</summary>
+            <param name="Lock">The lock to wrap around</param>
+            <returns>Creates a instance of the lock that can only be used by 1 thread</returns>
+        </member>
+        <member name="F:DaanV2.Threading.LockInstance._Locked">
+            <summary>The field that stores if this instance has been locked</summary>
+        </member>
+        <member name="F:DaanV2.Threading.LockInstance._Lock">
+            <summary>The field that stores the wait handle</summary>
+        </member>
+        <member name="T:DaanV2.Threading.LockPool">
+            <summary>A pool of event wait handle for global use</summary>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.Equals(System.Object)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="obj">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.Equals(DaanV2.Threading.LockPool)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="other">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+            <returns>Returns the hash code for this instance.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.op_Equality(DaanV2.Threading.LockPool,DaanV2.Threading.LockPool)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.op_Inequality(DaanV2.Threading.LockPool,DaanV2.Threading.LockPool)">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.#ctor(System.Int32,System.Boolean,System.Threading.EventResetMode)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.LockPool"/></summary>
+            <param name="LockCount"></param>
+            <param name="initialState"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:DaanV2.Threading.LockPool.GetHandle(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DaanV2.Threading.LockPool._Locks">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.LockPool._Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaanV2.Threading.ThreadCache`1">
+            DOLATER <summary>add description for class: ThreadCache</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.Equals(System.Object)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="obj">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.Equals(DaanV2.Threading.ThreadCache{`0})">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="other">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+            <returns>Returns the hash code for this instance.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.op_Equality(DaanV2.Threading.ThreadCache{`0},DaanV2.Threading.ThreadCache{`0})">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.op_Inequality(DaanV2.Threading.ThreadCache{`0},DaanV2.Threading.ThreadCache{`0})">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</returns>
+        </member>
+        <member name="P:DaanV2.Threading.ThreadCache`1.Cache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.Set(`0)">
+            <summary>
+            
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.Set(System.Threading.Thread,`0)">
+            <summary>
+            
+            </summary>
+            <param name="thread"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.DisposeThreadResource">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.DisposeThreadResource(System.Threading.Thread)">
+            <summary>
+            
+            </summary>
+            <param name="Thread"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.DisposeThreadResource(`0@)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.DisposeThreadResource(System.Threading.Thread,`0@)">
+            <summary>
+            
+            </summary>
+            <param name="Thread"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ThreadCache`1"/></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.#ctor(System.Int32,System.Int32)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ThreadCache`1"/></summary>
+            <param name="ConcurrencyLevel"></param>
+            <param name="Capacity"></param>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.#ctor(System.Func{System.Int32,`0})">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ThreadCache`1"/></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.#ctor(System.Func{System.Int32,`0},System.Int32,System.Int32)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ThreadCache`1"/></summary>
+            <param name="ConcurrencyLevel"></param>
+            <param name="Capacity"></param>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.GetCache">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.GetCache(System.Func{System.Int32,`0})">
+            <summary>
+            
+            </summary>
+            <param name="ValueFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.GetCache(System.Threading.Thread)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadCache`1.GetCache(System.Threading.Thread,System.Func{System.Int32,`0})">
+            <summary>
+            
+            </summary>
+            <param name="ValueFactory"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DaanV2.Threading.ThreadCache`1._Cache">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.ThreadCache`1._ValueFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaanV2.Threading.ThreadLockCache`2">
+            DOLATER <summary>add description for class: <see cref="T:DaanV2.Threading.ThreadLockCache`2"/></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.Equals(System.Object)">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="obj">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.Equals(DaanV2.Threading.ThreadLockCache{`0,`1})">
+            <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
+            <param name="other">The object to check against.</param>
+            <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+            <returns>Returns the hash code for this instance.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.op_Equality(DaanV2.Threading.ThreadLockCache{`0,`1},DaanV2.Threading.ThreadLockCache{`0,`1})">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.op_Inequality(DaanV2.Threading.ThreadLockCache{`0,`1},DaanV2.Threading.ThreadLockCache{`0,`1})">
+            <summary>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</summary>
+            <param name="left">The first <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <param name="right">The second <see cref="T:DaanV2.PriorityAttribute"/> to check.</param>
+            <returns>Compare two <see cref="T:DaanV2.PriorityAttribute"/> if they are not equal to each other.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.#ctor(`0)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ThreadLockCache`2"/></summary>
+            <param name="GlobalPool"></param>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.GetInstance(`1)">
+            <summary>
+            
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Threading.ThreadLockCache`2.GetInstanceWait(`1)">
+            <summary>
+            
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DaanV2.Threading.ThreadLockCache`2._Pool">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaanV2.Threading.ThreadLockCache`2._Locks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaanV2.Threading.ILockPool`1">
+            DOLATER <summary>add description for interface: ILockPool</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ILockPool`1.GetHandle(`0)">
+            <summary>
+            
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaanV2.Threading.LookPoolExtension">
+            <summary>The static class that extends <see cref="T:DaanV2.Threading.ILockPool`1"/></summary>
+        </member>
+        <member name="M:DaanV2.Threading.LookPoolExtension.GetHandle``1(DaanV2.Threading.ILockPool{System.Int32},``0)">
+            <summary>Returns the <see cref="T:System.Threading.EventWaitHandle"/> that is associated to the given key</summary>
+            <typeparam name="U">The object to calculate a hashcode of and uses it as a key</typeparam>
+            <param name="Pool">The pool to retrieve from</param>
+            <param name="value">The key to be used</param>
+            <returns>The  <see cref="T:System.Threading.EventWaitHandle"/> that is associated to the given key</returns>
+        </member>
+        <member name="M:DaanV2.Threading.LookPoolExtension.GetHandle(DaanV2.Threading.ILockPool{System.Int32},System.String)">
+            <summary>Returns the <see cref="T:System.Threading.EventWaitHandle"/> that is associated to the given key</summary>
+            <param name="Pool">The pool to retrieve from</param>
+            <param name="value">The key to be used</param>
+            <returns>The  <see cref="T:System.Threading.EventWaitHandle"/> that is associated to the given key</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DaanV2.Threading.LookPoolExtension.GetInstance``1(DaanV2.Threading.ILockPool{``0},``0)" -->
+        <!-- Badly formed XML comment ignored for member "M:DaanV2.Threading.LookPoolExtension.GetInstanceWait``1(DaanV2.Threading.ILockPool{``0},``0)" -->
+        <!-- Badly formed XML comment ignored for member "M:DaanV2.Threading.LookPoolExtension.GetInstance(DaanV2.Threading.ILockPool{System.Int32},System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:DaanV2.Threading.LookPoolExtension.GetInstanceWait``1(DaanV2.Threading.ILockPool{System.Int32},System.String)" -->
         <member name="T:DaanV2.Threading.Parallel">
             <summary>The class that creates Parallel tasks.</summary>
             <summary>The class that creates Parallel tasks.</summary>
@@ -2079,6 +2480,7 @@
             <typeparam name="T2">The type used for the additional information.</typeparam>
             <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
@@ -2088,6 +2490,7 @@
             <typeparam name="T2">The type used for the additional information.</typeparam>
             <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
             <returns>Loops over each item in the specified array.</returns>
@@ -2115,6 +2518,7 @@
             <typeparam name="T2">The type used for the additional information.</typeparam>
             <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
             <param name="action">The action to preform on each item.</param>
             <returns>Loops over each item in the specified array.</returns>
         </member>
@@ -2124,6 +2528,7 @@
             <typeparam name="T2">The type used for the additional information.</typeparam>
             <typeparam name="U">The type to be outputted</typeparam>
             <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
             <param name="action">The action to preform on each item.</param>
             <param name="TaskCount">The amount of tasks that should process over this array.</param>
             <returns>Loops over each item in the specified array.</returns>

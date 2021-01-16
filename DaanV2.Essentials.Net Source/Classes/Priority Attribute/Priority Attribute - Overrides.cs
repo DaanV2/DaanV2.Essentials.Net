@@ -68,6 +68,7 @@ namespace DaanV2 {
         public static Boolean operator ==(PriorityAttribute left, PriorityAttribute right) {
             return left._Value == right._Value;
         }
+
         /// <summary>Compare two <see cref="PriorityAttribute"/> if they are not equal to each other.</summary>
         /// <param name="left">The first <see cref="PriorityAttribute"/> to check.</param>
         /// <param name="right">The second <see cref="PriorityAttribute"/> to check.</param>
