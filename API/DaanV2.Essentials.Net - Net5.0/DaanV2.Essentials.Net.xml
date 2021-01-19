@@ -1710,6 +1710,44 @@
             <param name="O">The object to serialize.</param>
             <param name="Writer">The stream to write the object into.</param>
         </member>
+        <member name="M:DaanV2.Serialization.Extension.Deserialize``2(DaanV2.Serialization.IDeserializer{``0,``1},System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TypeOut"></typeparam>
+            <typeparam name="TypeStream"></typeparam>
+            <param name="Serializer"></param>
+            <param name="Filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Serialization.Extension.Deserialize``3(DaanV2.Serialization.IDeserializer{``0,``1,``2},``2,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TypeOut"></typeparam>
+            <typeparam name="TypeStream"></typeparam>
+            <typeparam name="TypeContext"></typeparam>
+            <param name="Serializer"></param>
+            <param name="Context"></param>
+            <param name="Filepath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Serialization.Extension.Serialize``2(DaanV2.Serialization.ISerializer{``0,``1},``0,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TypeIn"></typeparam>
+            <typeparam name="TypeStream"></typeparam>
+            <param name="Serializer"></param>
+        </member>
+        <member name="M:DaanV2.Serialization.Extension.Serialize``3(DaanV2.Serialization.ISerializer{``0,``1,``2},``0,``2,System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TypeIn"></typeparam>
+            <typeparam name="TypeStream"></typeparam>
+            <param name="Serializer"></param>
+        </member>
         <member name="T:DaanV2.Serialization.Serialization">
             <summary>The class that holds all the serializer factories.</summary>
         </member>
