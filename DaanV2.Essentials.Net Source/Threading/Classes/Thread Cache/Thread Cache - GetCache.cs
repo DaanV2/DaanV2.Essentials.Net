@@ -40,8 +40,7 @@ namespace DaanV2.Threading {
         /// 
         /// </summary>
         /// <returns></returns>
-        public T GetCache(Thread thread) {
-        
+        public T GetCache(Thread thread) {        
             Int32 ID = thread.ManagedThreadId;
 
             if (this._ValueFactory == null) {

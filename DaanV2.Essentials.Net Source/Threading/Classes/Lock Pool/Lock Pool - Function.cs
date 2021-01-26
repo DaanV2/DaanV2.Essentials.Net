@@ -29,6 +29,8 @@ namespace DaanV2.Threading {
                 Index = Index % this._Count;
             }
 
+            
+
             return this._Locks[Index];
         }
     }

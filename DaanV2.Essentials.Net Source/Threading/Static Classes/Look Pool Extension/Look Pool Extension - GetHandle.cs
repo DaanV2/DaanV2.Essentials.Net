@@ -28,7 +28,13 @@ namespace DaanV2.Threading {
         /// <returns>The  <see cref="EventWaitHandle"/> that is associated to the given key</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static EventWaitHandle GetHandle<U>(this ILockPool<Int32> Pool, U value) {
-            return Pool.GetHandle(value.GetHashCode());
+            Int32 HashCode = value.GetHashCode();
+
+            if (HashCode < 0) {
+                HashCode *= -1;
+            }
+
+            return Pool.GetHandle(HashCode);
         }
 
         /// <summary>Returns the <see cref="EventWaitHandle"/> that is associated to the given key</summary>
