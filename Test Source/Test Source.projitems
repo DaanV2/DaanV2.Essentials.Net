@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\StreamExtensionTest\StreamExtensionTest - Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Processors\Classes\ProcessorExtensionTest\ProcessorExtensionTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Classes\SerializationTests\SerializationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\LockPoolTest\LockPoolTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\ParralelTest\ParralelTest - Func.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\ParralelTest\ParralelTest - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Threading\Classes\ParralelTest\ParralelTest - Data.cs" />
