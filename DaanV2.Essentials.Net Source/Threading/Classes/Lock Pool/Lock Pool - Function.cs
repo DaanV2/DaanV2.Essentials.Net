@@ -26,10 +26,8 @@ namespace DaanV2.Threading {
         /// <returns></returns>
         public EventWaitHandle GetHandle(Int32 Index) {
             if (Index >= this._Count) {
-                Index = Index % this._Count;
+                Index %= this._Count;
             }
-
-            
 
             return this._Locks[Index];
         }

@@ -17,7 +17,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.*/
 using System.Collections.Generic;
 
 namespace DaanV2.Threading {
-    ///DOLATER <summary>add description for class: <see cref="ThreadLockCache{T, U}"/></summary>
+    /// <summary>A for locks per thread</summary>
     public sealed partial class ThreadLockCache<T,  U>
         where T : ILockPool<U> {
         /// <summary>Creates a new instance of <see cref="ThreadLockCache{T, U}"/></summary>

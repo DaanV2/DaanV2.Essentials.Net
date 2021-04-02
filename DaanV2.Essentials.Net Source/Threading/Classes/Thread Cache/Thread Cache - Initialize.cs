@@ -18,7 +18,7 @@ using System;
 using System.Collections.Concurrent;
 
 namespace DaanV2.Threading {
-    ///DOLATER <summary>add description for class: ThreadCache</summary>
+    /// <summary>A cache to store per thread</summary>
     public sealed partial class ThreadCache<T> {
         /// <summary>Creates a new instance of <see cref="ThreadCache{T}"/></summary>
         public ThreadCache() {

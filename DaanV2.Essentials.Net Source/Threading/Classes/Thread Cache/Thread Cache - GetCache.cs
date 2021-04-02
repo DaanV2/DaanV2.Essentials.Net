@@ -51,7 +51,6 @@ namespace DaanV2.Threading {
                 return default;
             }
 
-
             return this._Cache.GetOrAdd(ID, this._ValueFactory);
         }
 
