@@ -624,6 +624,7 @@
         </member>
         <member name="T:DaanV2.Builders.BuilderExtension">
             DOLATER <summary>add description for class: BuilderExtension</summary>
+            DOLATER <summary>add description for class: BuilderExtension</summary>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``1(DaanV2.Builders.IBuilderAdd{``0},``0[])">
             <summary>
@@ -642,6 +643,30 @@
             <param name="Items"></param>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``1(DaanV2.Builders.IBuilderAdd{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Builder"></param>
+            <param name="Items"></param>
+        </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},``0[],``1)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Builder"></param>
+            <param name="Items"></param>
+        </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.List{``0},``1)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Builder"></param>
+            <param name="Items"></param>
+        </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.IEnumerable{``0},``1)">
             <summary>
             
             </summary>

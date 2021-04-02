@@ -37,7 +37,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder Add\IBuilder Add.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Builders\Interfaces\IBuilder\IBuilder.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Builders\Static Classes\BuilderExtension\BuilderExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Static Classes\BuilderExtension\BuilderExtension - IBuilderAddContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Builders\Static Classes\BuilderExtension\BuilderExtension - IBuilderAdd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute Comparer\Priority Attribute Comparer - IComparer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute Comparer\Priority Attribute Comparer - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Classes\Priority Attribute\Priority Attribute - Initialize.cs" />
