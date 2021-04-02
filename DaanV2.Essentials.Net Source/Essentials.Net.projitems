@@ -122,6 +122,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerialization Factory\ISerialization Factory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer - Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Interfaces\ISerializer\ISerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Extension\Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Extension\Extension - Deserialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Extension\Extension - Serialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Static Classes\Serialization\Serialization - Add.cs" />

@@ -2,7 +2,6 @@
 using System.IO;
 
 namespace DaanV2.Serialization {
-
     public static partial class Extension {
         /// <summary>
         /// 
@@ -10,6 +9,8 @@ namespace DaanV2.Serialization {
         /// <typeparam name="TypeIn"></typeparam>
         /// <typeparam name="TypeStream"></typeparam>
         /// <param name="Serializer"></param>
+        /// <param name="O"></param>
+        /// <param name="Filepath"></param>
         public static void Serialize<TypeIn, TypeStream>(this ISerializer<TypeIn, TypeStream> Serializer, TypeIn O, String Filepath)
             where TypeStream : Stream {
 
@@ -24,7 +25,11 @@ namespace DaanV2.Serialization {
         /// </summary>
         /// <typeparam name="TypeIn"></typeparam>
         /// <typeparam name="TypeStream"></typeparam>
+        /// <typeparam name="TypeContext"></typeparam>
         /// <param name="Serializer"></param>
+        /// <param name="O"></param>
+        /// <param name="Context"></param>
+        /// <param name="Filepath"></param>
         public static void Serialize<TypeIn, TypeStream, TypeContext>(this ISerializer<TypeIn, TypeStream, TypeContext> Serializer, TypeIn O, TypeContext Context, String Filepath)
             where TypeStream : Stream {
 
