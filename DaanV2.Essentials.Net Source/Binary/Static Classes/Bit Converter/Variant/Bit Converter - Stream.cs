@@ -29,10 +29,14 @@ namespace DaanV2.Binary {
                 Int32 Out = 0;
                 Int32 BitShift = 0;
                 Byte Current;
+                Int32 Temp;
                 Count = 0;
 
                 do {
-                    Current = (Byte)stream.ReadByte();
+                    Temp = stream.ReadByte();
+                    if (Temp < 0) break;
+
+                    Current = (Byte)Temp;
                     Out |= (Current & _NonSignalMask) << BitShift;
                     BitShift += 7;
                     Count++;
@@ -48,11 +52,15 @@ namespace DaanV2.Binary {
             public static Int64 ReadInt64(Stream stream, out Int32 Count) {
                 Int64 Out = 0;
                 Int32 BitShift = 0;
-                Count = 0;
                 Byte Current;
+                Int32 Temp;
+                Count = 0;
 
                 do {
-                    Current = (Byte)stream.ReadByte();
+                    Temp = stream.ReadByte();
+                    if (Temp < 0) break;
+
+                    Current = (Byte)Temp;
                     Out |= (Int64)(((Int64)Current & _NonSignalMask) << BitShift);
                     BitShift += 7;
                     Count++;
