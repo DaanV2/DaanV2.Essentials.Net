@@ -34,7 +34,7 @@ namespace DaanV2.IO {
         /// <param name="Base"></param>
         /// <param name="endianess"></param>
         /// <returns></returns>
-        public static IEndianWriter CreateWRiter(Stream Base, Endianness endianess) {
+        public static IEndianWriter CreateWriter(Stream Base, Endianness endianess) {
             switch (endianess) {
                 case Endianness.BigEndian:
                     return new BigEndianWriter(Base);
