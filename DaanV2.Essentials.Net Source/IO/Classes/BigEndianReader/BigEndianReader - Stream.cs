@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    public partial class LittleEndianWriter : Stream {
+    public partial class BigEndianReader : Stream {
         public override Boolean CanRead => this._BaseStream.CanRead;
         public override Boolean CanSeek => this._BaseStream.CanSeek;
         public override Boolean CanWrite => this._BaseStream.CanWrite;

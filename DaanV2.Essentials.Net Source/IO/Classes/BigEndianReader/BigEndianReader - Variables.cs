@@ -1,7 +1,7 @@
 ﻿using System.IO;
 
 namespace DaanV2.IO {
-    public partial class LittleEndianWriter {
+    public partial class BigEndianReader {
         /// <summary>
         /// 
         /// </summary>

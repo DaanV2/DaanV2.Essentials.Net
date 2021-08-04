@@ -5,6 +5,6 @@ namespace DaanV2.IO {
         /// <summary>
         /// 
         /// </summary>
-        private Stream _BaseStream;
+        private readonly Stream _BaseStream;
     }
 }
