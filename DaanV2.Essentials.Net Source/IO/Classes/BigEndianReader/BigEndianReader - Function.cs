@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    public partial class BigEndianReader : Stream {
+    public partial class BigEndianReader : IEndianReader {
         /// <summary>Reads an <see cref="Int16"/> from stream using little endian encoding</summary>        
         /// <returns>Reads an <see cref="Int16"/> from stream using little endian encoding</returns>
         public Int16 ReadInt16() {
