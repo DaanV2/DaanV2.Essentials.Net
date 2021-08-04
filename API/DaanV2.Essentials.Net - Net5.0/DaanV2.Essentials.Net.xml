@@ -1114,36 +1114,6 @@
             
             </summary>
         </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
         <member name="T:DaanV2.IO.LittleEndianReader">
             DOLATER <summary>add description for class: LittleEndianReader</summary>
         </member>
@@ -1179,38 +1149,32 @@
             
             </summary>
         </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
         <member name="T:DaanV2.IO.BigEndianWriter">
             DOLATER <summary>add description for class: BigEndianWriter</summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>        
+            <param name="Value">The value to write to stream</param>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
@@ -1223,6 +1187,30 @@
         <member name="T:DaanV2.IO.LittleEndianWriter">
             DOLATER <summary>add description for class: LittleEndianWriter</summary>
         </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
         </member>
@@ -1230,6 +1218,79 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="T:DaanV2.IO.IEndianWriter">
+            DOLATER <summary>add description for interface: IEndianReader</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="T:DaanV2.IO.IEndianReader">
+            DOLATER <summary>add description for interface: IEndianReader</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadInt16">
+            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadInt32">
+            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadInt64">
+            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadUInt16">
+            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadUInt32">
+            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.ReadUInt64">
+            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="T:DaanV2.IO.EndianStream">
+            DOLATER <summary>add description for class: EndianStream</summary>
+        </member>
+        <member name="M:DaanV2.IO.EndianStream.CreateReader(System.IO.Stream,DaanV2.Binary.Endianness)">
+            <summary>
+            
+            </summary>
+            <param name="Base"></param>
+            <param name="endianess"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.EndianStream.CreateWriter(System.IO.Stream,DaanV2.Binary.Endianness)">
+            <summary>
+            
+            </summary>
+            <param name="Base"></param>
+            <param name="endianess"></param>
+            <returns></returns>
         </member>
         <member name="T:DaanV2.IO.StreamExtension">
             <summary>Extends default stream object with additional reading/writing operations</summary>

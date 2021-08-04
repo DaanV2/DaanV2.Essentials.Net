@@ -15,7 +15,7 @@
         <tags>essentials interfaces code-extensions</tags>
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
 		<icon>images\icon.png</icon>
-		<releaseNotes>Added Builder extensions</releaseNotes>
+		<releaseNotes>Added endian stream writer/reader</releaseNotes>
         <dependencies>
             <group targetFramework=".NETCoreApp3.1" />
             <group targetFramework=".NETCore5.0" />

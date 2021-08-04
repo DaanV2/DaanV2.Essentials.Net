@@ -82,6 +82,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Properties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Variables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IEndianWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IEndianReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\EndianStream\EndianStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Initialize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Read - Varint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Static Classes\Stream Extension\Stream Extension - Write - Little.cs" />
