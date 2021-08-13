@@ -25,7 +25,7 @@ namespace DaanV2.Threading {
         /// <summary>The argument to pass along as context.</summary>
         public T2 _Argument1;
 
-        /// <summary>Very backwards but <see cref="System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        /// <summary>Very backwards but <see cref="System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         public void Invoke() {
             //Run action
             Parallel.Func.ForEachInternal(this);

@@ -76,11 +76,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianReader\LittleEndianReader - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\BigEndianWriter\BigEndianWriter - Function.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\BigEndianWriter\BigEndianWriter - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\BigEndianWriter\BigEndianWriter - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\BigEndianWriter\BigEndianWriter - Stream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\BigEndianWriter\BigEndianWriter - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Function.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Initialize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Properties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Stream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Classes\LittleEndianWriter\LittleEndianWriter - Variables.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IEndianWriter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\Interfaces\IEndianReader.cs" />

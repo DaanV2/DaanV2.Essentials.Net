@@ -10,6 +10,7 @@ namespace DaanV2.Threading {
         public static partial class Func {
             /// <summary>The internal method used for the foreach loop.</summary>
             /// <typeparam name="T">The object to process.</typeparam>
+            /// <typeparam name="U">The output of the func</typeparam>
             /// <param name="Context">The context needed to process.</param>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             internal static void ForEachInternal<T, U>(ParallelFuncContext<T, U> Context) {
@@ -27,6 +28,7 @@ namespace DaanV2.Threading {
             /// <summary>The internal method used for the foreach loop.</summary>
             /// <typeparam name="T">The object to process.</typeparam>
             /// <typeparam name="T1">The additional type to process.</typeparam>
+            /// <typeparam name="U">The output of the func</typeparam>
             /// <param name="Context">The context needed to process.</param>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             internal static void ForEachInternal<T, T1, U>(ParallelFuncContext<T, T1, U> Context) {
@@ -44,6 +46,7 @@ namespace DaanV2.Threading {
 
             /// <summary>The internal method used for the foreach loop.</summary>
             /// <typeparam name="T">The object to process.</typeparam>
+            /// <typeparam name="U">The output of the func</typeparam>
             /// <param name="Context">The context needed to process.</param>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             internal static void ForEachInternal<T, U>(ParallelFuncContextCollection<T, U> Context) {
@@ -61,6 +64,7 @@ namespace DaanV2.Threading {
             /// <summary>The internal method used for the foreach loop.</summary>
             /// <typeparam name="T">The object to process.</typeparam>
             /// <typeparam name="T1">The additional type to process.</typeparam>
+            /// <typeparam name="U">The output of the func</typeparam>
             /// <param name="Context">The context needed to process.</param>
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             internal static void ForEachInternal<T, T1, U>(ParallelFuncContextCollection<T, T1, U> Context) {

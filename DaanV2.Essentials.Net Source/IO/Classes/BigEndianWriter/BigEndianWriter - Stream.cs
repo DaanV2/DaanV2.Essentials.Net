@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    public partial class BigEndianReader : Stream {
+    public partial class BigEndianWriter : Stream {
         /// <summary>Gets a value indicating whether the current stream supports reading.</summary>
         public override Boolean CanRead => this._BaseStream.CanRead;
 

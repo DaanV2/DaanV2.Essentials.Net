@@ -651,28 +651,28 @@
             <param name="Items"></param>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},``0[],``1)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.List{``0},``1)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.IEnumerable{``0},``1)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
         </member>
         <member name="T:DaanV2.PriorityAttributeComparer">
             <summary>A comparer of objects that implements the <see cref="T:DaanV2.PriorityAttribute"/> and by it.</summary>
@@ -1109,6 +1109,66 @@
         <member name="M:DaanV2.IO.BigEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianReader"/></summary>
         </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.BigEndianReader._BaseStream">
             <summary>
             
@@ -1143,6 +1203,66 @@
         <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt64">
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         </member>
         <member name="F:DaanV2.IO.LittleEndianReader._BaseStream">
             <summary>
@@ -1179,6 +1299,66 @@
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
         </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.BigEndianWriter._BaseStream">
             <summary>
             
@@ -1214,6 +1394,66 @@
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
         </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
             <summary>
             
@@ -1246,6 +1486,47 @@
             <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
             <param name="Value">The value to write to stream</param>
         </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
         <member name="T:DaanV2.IO.IEndianReader">
             DOLATER <summary>add description for interface: IEndianReader</summary>
         </member>
@@ -1272,6 +1553,47 @@
         <member name="M:DaanV2.IO.IEndianReader.ReadUInt64">
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
         </member>
         <member name="T:DaanV2.IO.EndianStream">
             DOLATER <summary>add description for class: EndianStream</summary>
@@ -2357,23 +2679,27 @@
         <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContext{``0,``1})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContext{``0,``1,``2})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContextCollection{``0,``1})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContextCollection{``0,``1,``2})">
             <summary>The internal method used for the foreach loop.</summary>
             <typeparam name="T">The object to process.</typeparam>
             <typeparam name="T1">The additional type to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
             <param name="Context">The context needed to process.</param>
         </member>
         <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1})">
@@ -2580,7 +2906,7 @@
             <summary></summary>
         </member>
         <member name="M:DaanV2.Threading.ParallelFuncContext`2.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         </member>
         <member name="T:DaanV2.Threading.ParallelFuncContext`3">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
@@ -2604,7 +2930,7 @@
             <summary>The argument to pass along as context.</summary>
         </member>
         <member name="M:DaanV2.Threading.ParallelFuncContext`3.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         </member>
         <member name="T:DaanV2.Threading.ParallelFuncContextCollection`2">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
@@ -2625,7 +2951,7 @@
             <summary></summary>
         </member>
         <member name="M:DaanV2.Threading.ParallelFuncContextCollection`2.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         </member>
         <member name="T:DaanV2.Threading.ParallelFuncContextCollection`3">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
@@ -2649,7 +2975,7 @@
             <summary>The argument to pass along as context.</summary>
         </member>
         <member name="M:DaanV2.Threading.ParallelFuncContextCollection`3.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         </member>
         <member name="T:DaanV2.Threading.ParallelContext`1">
             <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
