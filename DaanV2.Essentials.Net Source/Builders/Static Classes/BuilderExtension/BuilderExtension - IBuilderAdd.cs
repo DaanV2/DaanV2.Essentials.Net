@@ -25,8 +25,10 @@ namespace DaanV2.Builders {
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="CT"></typeparam>
         /// <param name="Builder"></param>
         /// <param name="Items"></param>
+        /// <param name="Context"></param>
         public static void Add<T, CT>(this IBuilderAddContext<T, CT> Builder, T[] Items, CT Context) {
             Int32 Count = Items.Length;
 
