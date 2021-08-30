@@ -1288,6 +1288,66 @@
             <param name="OldValue">The old value to replace.</param>
             <param name="NewValue">The new value to insert.</param>
         </member>
+        <member name="T:DaanV2.IO.BufferedStream">
+            DOLATER <summary>add description for abstract class: BufferedStream</summary>
+            DOLATER <summary>add description for abstract class: BufferedStream</summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt16_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int16_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt32_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int32_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt64_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int64_Index">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt16Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int16Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt32Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int32Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt64Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int64Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DaanV2.IO.BigEndianReader">
             DOLATER <summary>add description for class: LittleEndianReader</summary>
         </member>
@@ -1317,6 +1377,11 @@
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianReader"/></summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Finalize">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:DaanV2.IO.BigEndianReader.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
@@ -1383,6 +1448,11 @@
             
             </summary>
         </member>
+        <member name="F:DaanV2.IO.BigEndianReader._Buffer">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DaanV2.IO.BigEndianWriter">
             DOLATER <summary>add description for class: BigEndianWriter</summary>
         </member>
@@ -1412,6 +1482,11 @@
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Finalize">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:DaanV2.IO.BigEndianWriter.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
@@ -1478,6 +1553,11 @@
             
             </summary>
         </member>
+        <member name="F:DaanV2.IO.BigEndianWriter._Buffer">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DaanV2.IO.LittleEndianReader">
             DOLATER <summary>add description for class: LittleEndianReader</summary>
         </member>
@@ -1507,6 +1587,11 @@
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianReader"/></summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Finalize">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:DaanV2.IO.LittleEndianReader.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
@@ -1573,6 +1658,11 @@
             
             </summary>
         </member>
+        <member name="F:DaanV2.IO.LittleEndianReader._Buffer">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DaanV2.IO.LittleEndianWriter">
             DOLATER <summary>add description for class: LittleEndianWriter</summary>
         </member>
@@ -1602,6 +1692,11 @@
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Finalize">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:DaanV2.IO.LittleEndianWriter.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
@@ -1664,6 +1759,11 @@
             <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         </member>
         <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaanV2.IO.LittleEndianWriter._Buffer">
             <summary>
             
             </summary>
