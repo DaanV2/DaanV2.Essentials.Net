@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2.IO {
-    public partial class LittleEndianReader : Stream {
+    public partial class LittleEndianReader  {
         /// <summary>Gets a value indicating whether the current stream supports reading.</summary>
         public override Boolean CanRead => this._BaseStream.CanRead;
 

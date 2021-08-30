@@ -2,18 +2,26 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    public partial class LittleEndianWriter : Stream {
+    public partial class LittleEndianWriter {
         /// <summary>Gets a value indicating whether the current stream supports reading.</summary>
-        public override Boolean CanRead => this._BaseStream.CanRead;
+        public override Boolean CanRead {
+            get => this._BaseStream.CanRead;
+        }
 
         /// <summary>Gets a value indicating whether the current stream supports seeking.</summary>
-        public override Boolean CanSeek => this._BaseStream.CanSeek;
+        public override Boolean CanSeek {
+            get => this._BaseStream.CanSeek;
+        }
 
         /// <summary>Gets a value indicating whether the current stream supports Writing.</summary>
-        public override Boolean CanWrite => this._BaseStream.CanWrite;
+        public override Boolean CanWrite {
+            get => this._BaseStream.CanWrite;
+        }
 
         /// <summary>Gets the length in bytes of the stream.</summary>
-        public override Int64 Length => this._BaseStream.Length;
+        public override Int64 Length {
+            get => this._BaseStream.Length;
+        }
 
         /// <summary>Gets or sets the position within the current stream.</summary>
         public override Int64 Position { get => this._BaseStream.Position; set => this._BaseStream.Position = value; }
@@ -71,6 +79,18 @@ namespace DaanV2.IO {
         /// <exception cref="System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         public override void Write(Byte[] buffer, Int32 offset, Int32 count) {
             this._BaseStream.Write(buffer, offset, count);
+        }
+
+        /// <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+        /// <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+        /// <exception cref="System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+        /// <exception cref="System.ArgumentNullException">buffer is null.</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+        /// <exception cref="System.NotSupportedException">The stream does not support writing.</exception>
+        /// <exception cref="System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        public override void Write(ReadOnlySpan<Byte> buffer) {
+            this._BaseStream.Write(buffer);
         }
     }
 }

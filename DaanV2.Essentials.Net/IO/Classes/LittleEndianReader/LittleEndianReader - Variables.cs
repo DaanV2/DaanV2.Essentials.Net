@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 
 namespace DaanV2.IO {
     public partial class LittleEndianReader {
@@ -6,5 +7,10 @@ namespace DaanV2.IO {
         /// 
         /// </summary>
         private readonly Stream _BaseStream;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly Byte[] _Buffer;
     }
 }

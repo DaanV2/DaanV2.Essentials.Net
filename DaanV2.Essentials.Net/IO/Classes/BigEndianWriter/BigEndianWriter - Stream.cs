@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace DaanV2.IO {
-    public partial class BigEndianWriter : Stream {
+    public partial class BigEndianWriter {
         /// <summary>Gets a value indicating whether the current stream supports reading.</summary>
         public override Boolean CanRead => this._BaseStream.CanRead;
 
@@ -71,6 +71,18 @@ namespace DaanV2.IO {
         /// <exception cref="System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         public override void Write(Byte[] buffer, Int32 offset, Int32 count) {
             this._BaseStream.Write(buffer, offset, count);
+        }
+
+        /// <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+        /// <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+        /// <exception cref="System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+        /// <exception cref="System.ArgumentNullException">buffer is null.</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+        /// <exception cref="System.NotSupportedException">The stream does not support writing.</exception>
+        /// <exception cref="System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        public override void Write(ReadOnlySpan<Byte> buffer) {
+            this._BaseStream.Write(buffer);
         }
     }
 }
