@@ -20,13 +20,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
@@ -34,25 +34,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>F:\Projects\Software\Git Hub\DaanV2.Essentials.Net\API\DaanV2.Essentials.Net - Net5.0\DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
