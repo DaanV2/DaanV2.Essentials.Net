@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text.Json;
 
 namespace UnitTests.Serialization {
 
@@ -11,7 +12,16 @@ namespace UnitTests.Serialization {
         /// <summary>
         /// 
         ///.</summary>
-        [DataMember]
+        [DataMember, System.Text.Json.JsonProperty("text")]
+        public String Text { get; set; }
+    }
+
+    [DataContract, Serializable]
+    public struct SerializationStructTest {
+        /// <summary>
+        /// 
+        ///.</summary>
+        [DataMember, System.Text.Json.JsonProperty("text")]
         public String Text { get; set; }
     }
 
@@ -43,26 +53,43 @@ namespace UnitTests.Serialization {
         }
 
         [TestMethod]
-        public void XmlTest() {
-            this.TestSerialization("xml");
+        public void ClassXmlTest() {
+            TestClassSerialization("xml");
         }
 
         [TestMethod]
-        public void JsonTest() {
-            this.TestSerialization("json");
+        public void ClassJsonTest() {
+            TestClassSerialization("json");
+        }
+
+        [TestMethod]
+        public void StructXmlTest() {
+            TestStructSerialization("xml");
+        }
+
+        [TestMethod]
+        public void StructJsonTest() {
+            TestStructSerialization("json");
         }
 
         //Binary has been removed for .net 5.0
-#if !NET5
-        [TestMethod]
-        public void BinaryTest() {
-            this.TestSerialization("binary");
-        }
-#endif
-
-        private void TestSerialization(String FactoryName) {
+        private static void TestClassSerialization(String FactoryName) {
             var Stream = new MemoryStream();
             var SCT = new SerializationClassTest() {
+                Text = $"This is a test text for {FactoryName}"
+            };
+
+            DaanV2.Serialization.Serialization.Serialize(SCT, FactoryName, Stream);
+            Stream.Position = 0;
+            SerializationClassTest Copy = DaanV2.Serialization.Serialization.Deserialize<SerializationClassTest>(FactoryName, Stream);
+
+            Assert.IsTrue(Copy.Text == SCT.Text, $"{FactoryName} serialization failed");
+        }
+
+        //Binary has been removed for .net 5.0
+        private static void TestStructSerialization(String FactoryName) {
+            var Stream = new MemoryStream();
+            var SCT = new SerializationStructTest() {
                 Text = $"This is a test text for {FactoryName}"
             };
 

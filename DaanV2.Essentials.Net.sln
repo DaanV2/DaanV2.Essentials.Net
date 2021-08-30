@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DaanV2.Essentials.Net Source", "DaanV2.Essentials.Net Source\DaanV2.Essentials.Net Source.shproj", "{B1F153D9-F47C-4FE9-BD9F-FFACB81FB3F9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{37CDB440-3ADF-4599-97D5-B9A46BB29D44}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{316548F4-3421-43EE-9C26-8D0D450CADD0}"
@@ -27,17 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugger", "Debugger\Debugg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaanV2.Essentials.Net", "DaanV2.Essentials.Net\DaanV2.Essentials.Net.csproj", "{2E11EA58-757A-46C9-AFA2-F36C043043A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.Net", "UnitTests\UnitTests.Net\UnitTests.Net.csproj", "{176011E5-8268-4F88-8CE9-5B8E707D4CC7}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Test Source", "UnitTests\Test Source\Test Source.shproj", "{19896AAC-3813-4378-A24E-60449B07149B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaanV2.Essentials.Net-Test", "DaanV2.Essentials.Net-Test\DaanV2.Essentials.Net-Test.csproj", "{0678F1B2-A636-4B4A-8D09-A91A55E01595}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		UnitTests\Test Source\Test Source.projitems*{176011e5-8268-4f88-8ce9-5b8e707d4cc7}*SharedItemsImports = 5
-		UnitTests\Test Source\Test Source.projitems*{19896aac-3813-4378-a24e-60449b07149b}*SharedItemsImports = 13
-		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{2e11ea58-757a-46c9-afa2-f36c043043a9}*SharedItemsImports = 5
-		DaanV2.Essentials.Net Source\Essentials.Net.projitems*{b1f153d9-f47c-4fe9-bd9f-ffacb81fb3f9}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -71,28 +61,26 @@ Global
 		{2E11EA58-757A-46C9-AFA2-F36C043043A9}.Release|x64.Build.0 = Release|x64
 		{2E11EA58-757A-46C9-AFA2-F36C043043A9}.Release|x86.ActiveCfg = Release|x86
 		{2E11EA58-757A-46C9-AFA2-F36C043043A9}.Release|x86.Build.0 = Release|x86
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|x64.ActiveCfg = Debug|x64
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|x64.Build.0 = Debug|x64
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|x86.ActiveCfg = Debug|x86
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Debug|x86.Build.0 = Debug|x86
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|x64.ActiveCfg = Release|x64
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|x64.Build.0 = Release|x64
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|x86.ActiveCfg = Release|x86
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7}.Release|x86.Build.0 = Release|x86
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|x64.Build.0 = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Debug|x86.Build.0 = Debug|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|x64.ActiveCfg = Release|x64
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|x64.Build.0 = Release|x64
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|x86.ActiveCfg = Release|x86
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B1F153D9-F47C-4FE9-BD9F-FFACB81FB3F9} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
 		{F2D4F5F6-AFEE-4B61-BFD1-F9E47B735C25} = {316548F4-3421-43EE-9C26-8D0D450CADD0}
 		{2E11EA58-757A-46C9-AFA2-F36C043043A9} = {37CDB440-3ADF-4599-97D5-B9A46BB29D44}
-		{176011E5-8268-4F88-8CE9-5B8E707D4CC7} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
-		{19896AAC-3813-4378-A24E-60449B07149B} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
+		{0678F1B2-A636-4B4A-8D09-A91A55E01595} = {A858FADB-3D12-4EDA-98EF-FA0EA9E0DA18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {262C672F-8FAF-425E-8002-8DA2DF481D1A}
