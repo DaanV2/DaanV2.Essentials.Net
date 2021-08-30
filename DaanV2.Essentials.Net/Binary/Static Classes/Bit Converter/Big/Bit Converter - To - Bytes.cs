@@ -2,6 +2,7 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
+using System.Runtime.CompilerServices;
 
 namespace DaanV2.Binary {
     
@@ -10,27 +11,10 @@ namespace DaanV2.Binary {
             /// <summary>Converts the specified object into a byte array</summary>
             /// <param name="Value">The object to convert</param>
             /// <returns>Converts the specified object into a byte array</returns>
+            [MethodImpl(MethodImplOptions.AggressiveOptimization)]
             public static Byte[] ToBytes(Int16 Value) {
-#if UNSAFE
                 Byte[] Out = new Byte[sizeof(Int16)];
-
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Out[1] = *s;
-                    Out[0] = *(s + 1);
-                }
-#else
-                Int32 Count = sizeof(Int16);
-                Byte[] Out = new Byte[Count];
-
-                for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)Value;
-                    Value >>= 8;
-                }
-
-                Array.Reverse(Out);
-#endif
+                OntoBytes(Out.AsSpan(), Value);
 
                 return Out;
             }
@@ -38,29 +22,10 @@ namespace DaanV2.Binary {
             /// <summary>Converts the specified object into a byte array</summary>
             /// <param name="Value">The object to convert</param>
             /// <returns>Converts the specified object into a byte array</returns>
+            [MethodImpl(MethodImplOptions.AggressiveOptimization)]
             public static Byte[] ToBytes(Int32 Value) {
-#if UNSAFE
                 Byte[] Out = new Byte[sizeof(Int32)];
-
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Out[3] = *s;
-                    Out[2] = *(s + 1);
-                    Out[1] = *(s + 2);
-                    Out[0] = *(s + 3);
-                }
-#else
-                Int32 Count = sizeof(Int32);
-                Byte[] Out = new Byte[Count];
-
-                for (Int32 I = 0; I < Count; I++) {
-                    Out[I] = (Byte)Value;
-                    Value >>= 8;
-                }
-
-                Array.Reverse(Out);
-#endif
+                OntoBytes(Out.AsSpan(), Value);
 
                 return Out;
             }

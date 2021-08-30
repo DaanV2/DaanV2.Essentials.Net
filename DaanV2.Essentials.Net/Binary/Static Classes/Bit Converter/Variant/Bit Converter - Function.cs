@@ -46,6 +46,7 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to check</param>
             /// <returns>Check the amount of bytes that are needed to store the given value</returns>
             public static Int32 ByteCount(UInt64 Value) {
+                //Binary tree functionallity, if below then it must be 1 to 5 bytes, if above, then it must be 6 to 10 bytes
                 if (Value < 0b0000_0100_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000ul) {
                     if (Value < 0b1000_0000ul) {
                         return 1;

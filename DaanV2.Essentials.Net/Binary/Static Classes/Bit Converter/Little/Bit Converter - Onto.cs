@@ -2,9 +2,10 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class LittleEndian {
             /// <summary>Converts the given object into a byte array</summary>
@@ -12,31 +13,16 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, Int16 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, Int16 Value, Int32 StartIndex = 0) {
+                OntoBytes(Receiver, (UInt16)Value, StartIndex);
+            }
 
-                Int32 Count = sizeof(Int16);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
-
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Receiver">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Receiver, Int16 Value) {
+                OntoBytes(Receiver, (UInt16)Value);
             }
 
             /// <summary>Converts the given object into a byte array</summary>
@@ -44,33 +30,16 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, Int32 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, Int32 Value, Int32 StartIndex = 0) {
+                OntoBytes(Receiver, (UInt32)Value, StartIndex);
+            }
 
-                Int32 Count = sizeof(Int32);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
-
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                    Receiver[2 + StartIndex] = *(s + 2);
-                    Receiver[3 + StartIndex] = *(s + 3);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Receiver">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Receiver, Int32 Value) {
+                OntoBytes(Receiver, (UInt32)Value);
             }
 
             /// <summary>Converts the given object into a byte array</summary>
@@ -78,37 +47,16 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, Int64 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, Int64 Value, Int32 StartIndex = 0) {
+                OntoBytes(Receiver, (UInt64)Value, StartIndex);
+            }
 
-                Int32 Count = sizeof(Int64);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
-
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                    Receiver[2 + StartIndex] = *(s + 2);
-                    Receiver[3 + StartIndex] = *(s + 3);
-                    Receiver[4 + StartIndex] = *(s + 4);
-                    Receiver[5 + StartIndex] = *(s + 5);
-                    Receiver[6 + StartIndex] = *(s + 6);
-                    Receiver[7 + StartIndex] = *(s + 7);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Receiver">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Receiver, Int64 Value) {
+                OntoBytes(Receiver, (UInt64)Value);
             }
 
             /// <summary>Converts the given object into a byte array</summary>
@@ -116,31 +64,20 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, UInt16 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, UInt16 Value, Int32 StartIndex = 0) {
+                Span<Byte> Slice = Receiver.AsSpan(StartIndex, sizeof(UInt16));
 
-                Int32 Count = sizeof(UInt16);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
+                OntoBytes(Slice, Value);
+            }
 
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Span">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Span, UInt16 Value) {
+                Span[0] = (Byte)Value;
+                Value >>= 8;
+                Span[1] = (Byte)Value;
             }
 
             /// <summary>Converts the given object into a byte array</summary>
@@ -148,33 +85,24 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, UInt32 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, UInt32 Value, Int32 StartIndex = 0) {
+                Span<Byte> Slice = Receiver.AsSpan(StartIndex, sizeof(UInt32));
 
-                Int32 Count = sizeof(UInt32);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
+                OntoBytes(Slice, Value);
+            }
 
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                    Receiver[2 + StartIndex] = *(s + 2);
-                    Receiver[3 + StartIndex] = *(s + 3);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Span">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Span, UInt32 Value) {
+                Span[0] = (Byte)Value;
+                Value >>= 8;
+                Span[1] = (Byte)Value;
+                Value >>= 8;
+                Span[2] = (Byte)Value;
+                Value >>= 8;
+                Span[3] = (Byte)Value;
             }
 
             /// <summary>Converts the given object into a byte array</summary>
@@ -182,37 +110,32 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given object into a byte array</returns>
-            public static Int32 OntoBytes(Byte[] Receiver, UInt64 Value, Int32 StartIndex = 0) {
-                if (Receiver is null) {
-                    throw new ArgumentNullException(nameof(Receiver));
-                }
+            public static void OntoBytes([NotNull] Byte[] Receiver, UInt64 Value, Int32 StartIndex = 0) {
+                Span<Byte> Slice = Receiver.AsSpan(StartIndex, sizeof(UInt64));
 
-                Int32 Count = sizeof(UInt64);
-                if (StartIndex + Count > Receiver.Length) {
-                    throw new ArgumentException("Receiver is not of proper length");
-                }
+                OntoBytes(Slice, Value);
+            }
 
-#if UNSAFE
-                unsafe {
-                    Byte* s = (Byte*)&Value;
-
-                    Receiver[StartIndex] = *s;
-                    Receiver[1 + StartIndex] = *(s + 1);
-                    Receiver[2 + StartIndex] = *(s + 2);
-                    Receiver[3 + StartIndex] = *(s + 3);
-                    Receiver[4 + StartIndex] = *(s + 4);
-                    Receiver[5 + StartIndex] = *(s + 5);
-                    Receiver[6 + StartIndex] = *(s + 6);
-                    Receiver[7 + StartIndex] = *(s + 7);
-                }
-#else
-                for (Int32 I = 0; I < Count; I++) {
-                    Receiver[I + StartIndex] = (Byte)(Value);
-                    Value >>= 8;
-                }
-#endif
-
-                return Count;
+            /// <summary>Converts the given object into a byte array</summary>
+            /// <param name="Span">The array that receives the final data.</param>
+            /// <param name="Value">The object to convert</param>
+            /// <returns>Converts the given object into a byte array</returns>
+            public static void OntoBytes(Span<Byte> Span, UInt64 Value) {
+                Span[0] = (Byte)Value;
+                Value >>= 8;
+                Span[1] = (Byte)Value;
+                Value >>= 8;
+                Span[2] = (Byte)Value;
+                Value >>= 8;
+                Span[3] = (Byte)Value;
+                Value >>= 8;
+                Span[4] = (Byte)Value;
+                Value >>= 8;
+                Span[5] = (Byte)Value;
+                Value >>= 8;
+                Span[6] = (Byte)Value;
+                Value >>= 8;
+                Span[7] = (Byte)Value;
             }
         }
     }
