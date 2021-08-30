@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*ISC License
+
+Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
+using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DaanV2.Serialization {
@@ -11,7 +15,9 @@ namespace DaanV2.Serialization {
         /// <param name="Serializer"></param>
         /// <param name="Filepath"></param>
         /// <returns></returns>
-        public static TypeOut Deserialize<TypeOut, TypeStream>(this IDeserializer<TypeOut, TypeStream> Serializer, String Filepath)
+        public static TypeOut Deserialize<TypeOut, TypeStream>(
+            [NotNull] this IDeserializer<TypeOut, TypeStream> Serializer,
+            [NotNull] String Filepath)
             where TypeStream : Stream {
 
             Stream stream = new FileStream(Filepath, FileMode.Open, FileAccess.ReadWrite);
@@ -31,7 +37,10 @@ namespace DaanV2.Serialization {
         /// <param name="Context"></param>
         /// <param name="Filepath"></param>
         /// <returns></returns>
-        public static TypeOut Deserialize<TypeOut, TypeStream, TypeContext>(this IDeserializer<TypeOut, TypeStream, TypeContext> Serializer, TypeContext Context, String Filepath)
+        public static TypeOut Deserialize<TypeOut, TypeStream, TypeContext>(
+            [NotNull] this IDeserializer<TypeOut, TypeStream, TypeContext> Serializer,
+            [NotNull] TypeContext Context, 
+            [NotNull] String Filepath)
             where TypeStream : Stream {
 
             Stream stream = new FileStream(Filepath, FileMode.Open, FileAccess.ReadWrite);

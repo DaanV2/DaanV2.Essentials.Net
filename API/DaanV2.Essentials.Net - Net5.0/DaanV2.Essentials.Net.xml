@@ -17,79 +17,114 @@
             <summary>The static class that helps with converting value types to byte arrays and back</summary>
         </member>
         <member name="T:DaanV2.Binary.BitConverter.BigEndian">
-            <summary>Provides support to convert byte array to integer types, using big endian formats, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to integer types, using big endian formats</summary>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
-            <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <param name="StartIndex">The startindex for the data</param>            
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
@@ -100,6 +135,11 @@
             <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[])">
@@ -113,6 +153,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -124,15 +169,25 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int64"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
             <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[],System.Int32)">
-            <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
+            <summary>Converts the given byte array to an <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[])">
@@ -146,6 +201,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.UInt64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -157,92 +217,157 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt64"/></returns>
+        </member>
         <member name="T:DaanV2.Binary.BitConverter.Endian">
-            <summary>Provides support to convert byte array to integer types, using big/little endian formats, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to integer types, using big/little endian formats</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int16,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int32,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int64,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt16,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt32,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt64,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int16,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int32,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int64,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt16,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt32,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt64,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int16,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int32,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int64,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt16,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt32,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt16(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt32(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt64(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
@@ -282,6 +407,24 @@
             <param name="StartIndex">The startindex for the data</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt32(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt64(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
@@ -326,76 +469,112 @@
             <summary>Provides support to convert byte array to integer types, using little endian formats, compiled with /unsafe</summary>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/></summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
@@ -406,6 +585,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.Byte[])">
@@ -419,6 +603,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -428,6 +617,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.Byte[])">
@@ -441,6 +635,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -450,6 +649,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt32"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.Byte[])">
@@ -463,8 +667,13 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt64"/></returns>
+        </member>
         <member name="T:DaanV2.Binary.BitConverter.Varint">
-            <summary>Provides support to convert byte array to Varint, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to Varint</summary>
         </member>
         <member name="F:DaanV2.Binary.BitConverter.Varint._NonSignalMask">
             <summary>The byte mask that is used to remove the signal bit</summary>
@@ -539,28 +748,28 @@
             <returns>Writes a <see cref="T:System.Int64"/> varint to stream</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int64)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt32(System.Byte[],System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int32"/></summary>
@@ -2101,16 +2310,19 @@
             <summary>Returns a deserializer that is able to deserializer the given object.</summary>
             <typeparam name="TOut">The type that needs to be returned after deserializing.</typeparam>
             <returns>Returns a deserializer that is able to deserializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetSerializer``1">
             <summary>Returns a serializer that is able to serializer the given object.</summary>
             <typeparam name="TIn">The type that is being inputted for serialization.</typeparam>
             <returns>Returns a serializer that is able to serializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetSerializer(System.Type)">
             <summary>Returns a serializer that is able to serializer the given object.</summary>
             <param name="ForType">The type that is being inputted for serialization.</param>
             <returns>Returns a serializer that is able to serializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetDeserializeType">
             <summary>Gets the deserializing base type.</summary>
@@ -2122,7 +2334,7 @@
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.SetDeserializeType(System.Type)">
             <summary>Sets the deserializing base type.</summary>
-            <param name="Deserialize">The type to set as the base for deserializers.</param>
+            <param name="Deserializer">The type to set as the base for deserializers.</param>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.SetSerializeType(System.Type)">
             <summary>Sets the serializing base type.</summary>
@@ -2227,10 +2439,10 @@
             <typeparam name="TypeContext">The context needed for deserializing.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`3.Deserialize(`1,`2)">
-            <summary>Deserializer the given stream into the specified type.</summary>
+            <summary>Deserializer the given stream into <typeparamref name="TypeOut"/>.</summary>
             <param name="Reader">The stream to read from.</param>
             <param name="Context">The context needed to read the stream.</param>
-            <returns>Deserializer the given stream into the specified type.</returns>
+            <returns>Deserializer the given stream into the <typeparamref name="TypeOut"/>.</returns>
         </member>
         <member name="T:DaanV2.Serialization.IDeserializer`2">
             <summary>The interface that is responsible for forming the contract on how Deserializer should work.</summary>
@@ -2238,9 +2450,9 @@
             <typeparam name="TypeStream">The type that is used as the data stream.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`2.Deserialize(`1)">
-            <summary>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</summary>
+            <summary>Deserialize the given stream into <typeparamref name="TypeOut"/>.</summary>
             <param name="Reader">The stream to read from.</param>
-            <returns>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</returns>
+            <returns>Deserialize the given stream into the specified <typeparamref name="TypeOut"/>.</returns>
         </member>
         <member name="T:DaanV2.Serialization.ISerializerFactory`1">
             <summary>The interface responsible for form the contract on what a SerializerFactory should contain.</summary>
@@ -2271,7 +2483,7 @@
             <summary>Gets the serializer type.</summary>
         </member>
         <member name="P:DaanV2.Serialization.ISerializerFactory`1.Name">
-            <summary>Gets the name of the serializer factory.</summary>
+            <summary>Gets the name of the serializer factory.</summary>        
         </member>
         <member name="T:DaanV2.Serialization.ISerializer`3">
             <summary>The interface that is responsible for forming the contract on how serializers should work.</summary>
@@ -2372,12 +2584,14 @@
             <typeparam name="TypeOut">The type to deserializer.</typeparam>
             <param name="FactoryName">The name of the factory to usee.</param>
             <returns>A deserializer of type <see cref="T:DaanV2.Serialization.IDeserializer`2"/>.</returns>
+            <exception cref="T:System.Exception">Thrown when nothing is found</exception>
         </member>
         <member name="M:DaanV2.Serialization.Serialization.GetSerializer``1(System.String)">
             <summary>Returns a serializer from the specified factory.</summary>
             <typeparam name="TypeIn">The type to serializer.</typeparam>
             <param name="FactoryName">The name of the factory to usee.</param>
             <returns>A serializer of type <see cref="T:DaanV2.Serialization.ISerializer`2"/>.</returns>
+            <exception cref="T:System.Exception">Thrown when nothing is found</exception>
         </member>
         <member name="M:DaanV2.Serialization.Serialization.#cctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>

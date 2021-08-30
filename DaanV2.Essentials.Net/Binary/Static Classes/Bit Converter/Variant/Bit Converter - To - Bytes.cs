@@ -7,9 +7,9 @@ namespace DaanV2.Binary {
     
     public static partial class BitConverter {
         public static partial class Varint {
-            /// <summary>Converts the given value into a byte array</summary>
+            /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
             /// <param name="Value">The object to convert</param>
-            /// <returns>Converts the given value into a byte array</returns>
+            /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Byte[] ToBytes(Int32 Value) {
                 Int32 Count = Varint.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1;
@@ -27,9 +27,9 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>Converts the given value into a byte array</summary>
+            /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
             /// <param name="Value">The object to convert</param>
-            /// <returns>Converts the given value into a byte array</returns>
+            /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Byte[] ToBytes(Int64 Value) {
                 Int32 Count = Varint.ByteCount((UInt64)Value);
                 Int32 Mark = Count - 1;
@@ -47,11 +47,11 @@ namespace DaanV2.Binary {
                 return Out;
             }
 
-            /// <summary>Converts the given value into a byte array</summary>
+            /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
             /// <param name="Receiver">The array that receives the final data.</param>
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns>Converts the given value into a byte array</returns>
+            /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Int32 OntoBytes(Byte[] Receiver, Int32 Value, Int32 StartIndex = 0) {
                 if (Receiver is null) {
                     throw new ArgumentNullException(nameof(Receiver));
@@ -74,11 +74,11 @@ namespace DaanV2.Binary {
                 return Count;
             }
 
-            /// <summary>Converts the given value into a byte array</summary>
+            /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
             /// <param name="Receiver">The array that receives the final data.</param>
             /// <param name="Value">The object to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
-            /// <returns>Converts the given value into a byte array</returns>
+            /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Int32 OntoBytes(Byte[] Receiver, Int64 Value, Int32 StartIndex = 0) {
                 if (Receiver is null) {
                     throw new ArgumentNullException(nameof(Receiver));

@@ -1,6 +1,7 @@
 ﻿/*ISC License
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
+using System.Diagnostics.CodeAnalysis;
 
 namespace DaanV2.Serialization {
     /// <summary>The interface that is responsible for forming the contract on how serializers should work.</summary>
@@ -13,6 +14,6 @@ namespace DaanV2.Serialization {
         /// <param name="O">The object to serialize.</param>
         /// <param name="Writer">The stream to write the given object into.</param>
         /// <param name="Context">The context that is needed to the serialize the given object.</param>
-        void Serialize(TypeIn O, TypeStream Writer, TypeContext Context);
+        void Serialize([NotNull] TypeIn O, [NotNull] TypeStream Writer, [NotNull] TypeContext Context);
     }
 }

@@ -3,13 +3,14 @@
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DaanV2.Serialization {
     public static partial class Serialization {
-
         /// <summary>Returns a list of names of all factories currently in the internal list.</summary>
         /// <returns>Returns a list of names of all factories currently in the internal list.</returns>
+        [return: NotNull]
         public static List<String> GetFactoryNames() {
             List<String> Out = new List<String>(Serialization._Factories.Count);
 

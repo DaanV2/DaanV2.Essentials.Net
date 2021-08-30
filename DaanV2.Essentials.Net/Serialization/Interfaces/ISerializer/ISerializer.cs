@@ -1,7 +1,6 @@
 ﻿/*ISC License
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
 using System.Diagnostics.CodeAnalysis;
 
 namespace DaanV2.Serialization {

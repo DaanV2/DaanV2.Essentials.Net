@@ -1,7 +1,6 @@
 ﻿/*ISC License
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DaanV2.Serialization {
@@ -9,9 +8,9 @@ namespace DaanV2.Serialization {
     /// <typeparam name="TypeOut">The type that needs to be returned after deserializing.</typeparam>
     /// <typeparam name="TypeStream">The type that is used as the data stream.</typeparam>
     public interface IDeserializer<TypeOut, TypeStream> {
-        /// <summary>Deserialize the given stream into the specified <see cref="Type"/>.</summary>
+        /// <summary>Deserialize the given stream into <typeparamref name="TypeOut"/>.</summary>
         /// <param name="Reader">The stream to read from.</param>
-        /// <returns>Deserialize the given stream into the specified <see cref="Type"/>.</returns>
+        /// <returns>Deserialize the given stream into the specified <typeparamref name="TypeOut"/>.</returns>
         [return: MaybeNull]
         TypeOut Deserialize([NotNull] TypeStream Reader);
     }

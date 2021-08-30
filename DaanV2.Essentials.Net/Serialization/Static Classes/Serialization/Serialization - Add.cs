@@ -2,6 +2,7 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
 
@@ -10,7 +11,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Add the given factory into the internal list.</summary>
         /// <param name="Factory">The factory to add.</param>
-        public static void Add(ISerializerFactory<Stream> Factory) {
+        public static void Add([NotNull] ISerializerFactory<Stream> Factory) {
             //If an older factory exists
             if (Serialization._Factories.ContainsKey(Factory.Name)) {
                 //Transfer info
@@ -25,7 +26,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Add the contents of assemblies to the internal list of factories.</summary>
         /// <param name="assemblies">The assemblies to loop through.</param>
-        public static void Add(Assembly[] assemblies) {
+        public static void Add([NotNull] Assembly[] assemblies) {
             for (Int32 I = 0; I < assemblies.Length; I++) {
                 try {
                     Add(assemblies[I]);
@@ -38,7 +39,7 @@ namespace DaanV2.Serialization {
 
         /// <summary>Add the contents of a assembly to the internal list of factories.</summary>
         /// <param name="assembly">The assembly to look through.</param>
-        public static void Add(Assembly assembly) {
+        public static void Add([NotNull] Assembly assembly) {
             Type Current;
             SerializerAttribute SAttribute;
             DeserializerAttribute DAttribute;
