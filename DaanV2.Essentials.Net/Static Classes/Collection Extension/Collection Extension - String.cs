@@ -11,7 +11,7 @@ namespace DaanV2 {
         /// <returns>Returns a copy of the whole list.</returns>
         public static List<String> Copy(this List<String> values) {
             Int32 Max = values.Count;
-            List<String> Out = new List<String>(Max);            
+            var Out = new List<String>(Max);
 
             for (Int32 I = 0; I < Max; I++) {
                 Out.Add(StringExtension.Copy(values[I]));

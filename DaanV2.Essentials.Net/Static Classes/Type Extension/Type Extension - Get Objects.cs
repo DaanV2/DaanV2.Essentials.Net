@@ -12,7 +12,7 @@ namespace DaanV2 {
         /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains) {
             List<Type> Types = GetTypesWhichImplements(Contains);
-            List<Object> Objects = new List<Object>(Types.Count);
+            var Objects = new List<Object>(Types.Count);
             Int32 Length = Types.Count;
 
             for (Int32 I = 0; I < Length; I++) {
@@ -26,7 +26,7 @@ namespace DaanV2 {
         /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<T> GetObjectsWhichImplements<T>() {
             List<Type> Types = GetTypesWhichImplements(typeof(T));
-            List<T> Objects = new List<T>(Types.Count);
+            var Objects = new List<T>(Types.Count);
             Int32 Length = Types.Count;
             Type Current;
 
@@ -47,7 +47,7 @@ namespace DaanV2 {
         /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<Object> GetObjectsWhichImplements(Type Contains, Assembly asm) {
             List<Type> Types = GetTypesWhichImplements(Contains, asm);
-            List<Object> Objects = new List<Object>(Types.Count);
+            var Objects = new List<Object>(Types.Count);
             Int32 Length = Types.Count;
 
             for (Int32 I = 0; I < Length; I++) {
@@ -63,7 +63,7 @@ namespace DaanV2 {
         /// <returns>Returns a list of object that implements a specified type.</returns>
         public static List<T> GetObjectsWhichImplements<T>(Assembly asm) {
             List<Type> Types = GetTypesWhichImplements(typeof(T), asm);
-            List<T> Objects = new List<T>(Types.Count);
+            var Objects = new List<T>(Types.Count);
             Int32 Length = Types.Count;
 
             for (Int32 I = 0; I < Length; I++) {

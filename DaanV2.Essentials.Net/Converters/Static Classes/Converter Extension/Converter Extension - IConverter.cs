@@ -6,7 +6,7 @@ namespace DaanV2.Converters {
     public static partial class ConverterExtension {
 
         #region Normal
-        
+
         /// <summary>Converts the given object into the specified type.</summary>
         /// <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
         /// <typeparam name="TypeTo">The returning type after conversion.</typeparam>
@@ -15,7 +15,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo>(this IConverter<TypeFrom, TypeTo> Converter, TypeFrom[] Process) {
             Int32 Length = Process.Length;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I]);
@@ -32,7 +32,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo>(this IConverter<TypeFrom, TypeTo> Converter, List<TypeFrom> Process) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I]);
@@ -49,7 +49,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo>(this IConverter<TypeFrom, TypeTo> Converter, IList<TypeFrom> Process) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I]);
@@ -72,7 +72,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, TypeFrom[] Process, TypeContext Context) {
             Int32 Length = Process.Length;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I], Context);
@@ -91,7 +91,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, List<TypeFrom> Process, TypeContext Context) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I], Context);
@@ -110,7 +110,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, IList<TypeFrom> Process, TypeContext Context) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I], Context);
@@ -132,7 +132,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, (TypeFrom, TypeContext)[] Process) {
             Int32 Length = Process.Length;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I].Item1, Process[I].Item2);
@@ -150,7 +150,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, List<(TypeFrom, TypeContext)> Process) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I].Item1, Process[I].Item2);
@@ -168,7 +168,7 @@ namespace DaanV2.Converters {
         /// <returns>Converts the given object into the specified type.</returns>
         public static TypeTo[] Convert<TypeFrom, TypeTo, TypeContext>(this IConverter<TypeFrom, TypeTo, TypeContext> Converter, IList<(TypeFrom, TypeContext)> Process) {
             Int32 Length = Process.Count;
-            TypeTo[] Out = new TypeTo[Length];
+            var Out = new TypeTo[Length];
 
             for (Int32 I = 0; I < Length; I++) {
                 Out[I] = Converter.Convert(Process[I].Item1, Process[I].Item2);

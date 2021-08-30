@@ -46,7 +46,7 @@ namespace DaanV2 {
         public static List<Object> GetAttributes(this Type Object, Type Value) {
             Object[] Attributes = Object.GetCustomAttributes(Value, true);
             Int32 Length = Attributes.Length;
-            List<Object> Out = new List<Object>(Length);
+            var Out = new List<Object>(Length);
 
             for (Int32 I = 0; I < Length; I++) {
                 if (Attributes[I].GetType() == Value) {
@@ -65,7 +65,7 @@ namespace DaanV2 {
             Type Find = typeof(T);
             Object[] Attributes = Object.GetCustomAttributes(Find, true);
             Int32 Length = Attributes.Length;
-            List<T> Out = new List<T>(Length);
+            var Out = new List<T>(Length);
 
             for (Int32 I = 0; I < Length; I++) {
                 if (Attributes[I].GetType() == Find) {

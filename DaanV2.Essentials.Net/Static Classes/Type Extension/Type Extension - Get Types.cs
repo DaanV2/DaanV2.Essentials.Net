@@ -13,7 +13,7 @@ namespace DaanV2 {
         public static List<Type> GetTypesWhichImplements(Type Implements) {
             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
             Int32 Length = assemblies.Length;
-            List<Type> Out = new List<Type>(100);
+            var Out = new List<Type>(100);
 
             for (Int32 I = 0; I < Length; I++) {
                 Out.AddRange(GetTypesWhichImplements(Implements, assemblies[I]));
@@ -27,7 +27,7 @@ namespace DaanV2 {
         /// <param name="asm">the assemblies to look through.</param>
         /// <returns>Returns a list of types that implement the specified implement.</returns>
         public static List<Type> GetTypesWhichImplements(Type Implements, Assembly asm) {
-            List<Type> Out = new List<Type>(100);
+            var Out = new List<Type>(100);
             try {
                 Type[] Types = asm.GetTypes();
 

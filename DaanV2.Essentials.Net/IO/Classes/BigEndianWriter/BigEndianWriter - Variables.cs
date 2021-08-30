@@ -7,10 +7,5 @@ namespace DaanV2.IO {
         /// 
         /// </summary>
         private readonly Stream _BaseStream;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private readonly Byte[] _Buffer;
     }
 }

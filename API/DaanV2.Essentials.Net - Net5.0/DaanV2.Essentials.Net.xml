@@ -1378,11 +1378,6 @@
         <member name="M:DaanV2.IO.BigEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianReader"/></summary>
         </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Finalize">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="P:DaanV2.IO.BigEndianReader.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
         </member>
@@ -1483,11 +1478,6 @@
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
         </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Finalize">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="P:DaanV2.IO.BigEndianWriter.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
         </member>
@@ -1541,6 +1531,16 @@
             <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
             <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
             <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
             <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
             <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
@@ -1693,11 +1693,6 @@
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
         </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Finalize">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="P:DaanV2.IO.LittleEndianWriter.CanRead">
             <summary>Gets a value indicating whether the current stream supports reading.</summary>
         </member>
@@ -1758,12 +1753,17 @@
             <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
             <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         </member>
-        <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
-            <summary>
-            
-            </summary>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
         </member>
-        <member name="F:DaanV2.IO.LittleEndianWriter._Buffer">
+        <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
             <summary>
             
             </summary>

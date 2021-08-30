@@ -12,7 +12,7 @@ namespace DaanV2.Serialization {
         /// <param name="FactoryName">The name of the factory, <see cref="Serialization.GetFactoryNames"/>.</param>
         /// <param name="Filepath">The file to write.</param>
         public static void Serialize<T>([NotNull] T O, [NotNull] String FactoryName, [NotNull] String Filepath) {
-            FileStream Writer = new FileStream(Filepath, FileMode.Create);
+            var Writer = new FileStream(Filepath, FileMode.Create);
             Serialize(O, FactoryName, Writer);
             Writer.Close();
         }
@@ -32,7 +32,7 @@ namespace DaanV2.Serialization {
         /// <param name="Filepath">The file to read from.</param>
         /// <returns>Deserializes the given file into the specified object using the specified factory.</returns>
         public static T Deserialize<T>([NotNull] String FactoryName, [NotNull] String Filepath) {
-            FileStream Reader = new FileStream(Filepath, FileMode.Open);
+            var Reader = new FileStream(Filepath, FileMode.Open);
             T Out = Deserialize<T>(FactoryName, Reader);
             Reader.Close();
 

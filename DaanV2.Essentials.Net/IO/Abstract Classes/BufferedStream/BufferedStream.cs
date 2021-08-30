@@ -6,7 +6,7 @@ namespace DaanV2.IO {
     ///DOLATER <summary>add description for abstract class: BufferedStream</summary>
     public abstract partial class BufferedStream : Stream {
         private const Int32 BufferSize = sizeof(UInt16) + sizeof(Int16) + sizeof(UInt32) + sizeof(Int32) + sizeof(UInt64) + sizeof(Int64);
-        private Byte[] _Buffer;
+        private readonly Byte[] _Buffer;
 
 
         /// <summary>

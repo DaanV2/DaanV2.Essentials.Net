@@ -12,7 +12,7 @@ namespace DaanV2 {
         /// <returns>Casts the given array to a list.</returns>
         public static List<T> ToList<T>(T[] Values) {
             Int32 Count = Values.Length;
-            List<T> Out = new List<T>(Count);
+            var Out = new List<T>(Count);
 
             for (Int32 I = 0; I < Count; I++) {
                 Out.Add(Values[I]);
@@ -27,7 +27,7 @@ namespace DaanV2 {
         /// <returns>Casts the given array to a list.</returns>
         public static List<T> ToList<T>(IList<T> Values) {
             Int32 Count = Values.Count;
-            List<T> Out = new List<T>(Count);
+            var Out = new List<T>(Count);
 
             for (Int32 I = 0; I < Count; I++) {
                 Out.Add(Values[I]);

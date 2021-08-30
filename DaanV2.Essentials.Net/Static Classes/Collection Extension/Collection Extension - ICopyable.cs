@@ -13,7 +13,7 @@ namespace DaanV2 {
         public static List<T> Copy<T>(this List<T> values)
             where T : ICopyable<T> {
             Int32 Max = values.Count;
-            List<T> Out = new List<T>(Max);
+            var Out = new List<T>(Max);
 
             for (Int32 I = 0; I < Max; I++) {
                 Out.Add(values[I].Copy());
@@ -29,7 +29,7 @@ namespace DaanV2 {
         public static T[] Copy<T>(this T[] values)
             where T : ICopyable<T> {
             Int32 Max = values.Length;
-            T[] Out = new T[Max];
+            var Out = new T[Max];
 
             for (Int32 I = 0; I < Max; I++) {
                 Out[I] = values[I].Copy();
@@ -45,7 +45,7 @@ namespace DaanV2 {
         public static List<T> Copy<T>(this IList<T> values)
             where T : ICopyable<T> {
             Int32 Max = values.Count;
-            List<T> Out = new List<T>(Max);
+            var Out = new List<T>(Max);
 
             for (Int32 I = 0; I < Max; I++) {
                 Out.Add(values[I].Copy());
