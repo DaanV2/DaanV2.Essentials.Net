@@ -17,79 +17,114 @@
             <summary>The static class that helps with converting value types to byte arrays and back</summary>
         </member>
         <member name="T:DaanV2.Binary.BitConverter.BigEndian">
-            <summary>Provides support to convert byte array to integer types, using big endian formats, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to integer types, using big endian formats</summary>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
-            <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <param name="StartIndex">The startindex for the data</param>            
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.Int64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.OntoBytes(System.Span{System.Byte},System.UInt64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.Int64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToBytes(System.UInt64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
@@ -100,6 +135,11 @@
             <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.Byte[])">
@@ -113,6 +153,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -124,15 +169,25 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.Int64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.Int64"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
             <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.Byte[],System.Int32)">
-            <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
+            <summary>Converts the given byte array to an <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.Byte[])">
@@ -146,6 +201,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.Byte[])">
             <summary>Converts the given byte array to an <see cref="T:System.UInt64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -157,92 +217,157 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array to an <see cref="T:System.UInt64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.BigEndian.ToUInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array to an <see cref="T:System.UInt64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array to an <see cref="T:System.UInt64"/></returns>
+        </member>
         <member name="T:DaanV2.Binary.BitConverter.Endian">
-            <summary>Provides support to convert byte array to integer types, using big/little endian formats, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to integer types, using big/little endian formats</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int16,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int32,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.Int64,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt16,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt32,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Span{System.Byte},System.UInt64,DaanV2.Binary.Endianness)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int16,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int32,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.Int64,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt16,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt32,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.OntoBytes(System.Byte[],System.UInt64,DaanV2.Binary.Endianness,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int16,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int32,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.Int64,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt16,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt32,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToBytes(System.UInt64,DaanV2.Binary.Endianness)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <param name="endianness">marks which endianness should be used</param>
-            <returns>Converts the given value into a byte arrays</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> arrays</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt16(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt32(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt64(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
@@ -282,6 +407,24 @@
             <param name="StartIndex">The startindex for the data</param>
             <param name="endianness">Marks if little or big endian should be used</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt32(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt64(System.ReadOnlySpan{System.Byte},DaanV2.Binary.Endianness)">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <param name="endianness">Marks if little or big endian should be used</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Endian.ToUInt16(System.Byte[],DaanV2.Binary.Endianness)">
             <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
@@ -326,76 +469,112 @@
             <summary>Provides support to convert byte array to integer types, using little endian formats, compiled with /unsafe</summary>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.Int64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Receiver">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt16,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt16)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt32,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt32)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Byte[],System.UInt64,System.Int32)">
-            <summary>Converts the given object into a byte array</summary>
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given object into a byte array</returns>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.OntoBytes(System.Span{System.Byte},System.UInt64)">
+            <summary>Converts the given object into a <see cref="T:System.Byte"/> array</summary>
+            <param name="Span">The array that receives the final data.</param>
+            <param name="Value">The object to convert</param>
+            <returns>Converts the given object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.Int64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt16)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt32)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/></summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToBytes(System.UInt64)">
-            <summary>Converts the specified object into a byte array</summary>
+            <summary>Converts the specified object into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the specified object into a byte array</returns>
+            <returns>Converts the specified object into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
@@ -406,6 +585,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int16"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int16"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.Byte[])">
@@ -419,6 +603,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int32"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int32"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -428,6 +617,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.Int64"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.Int64"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.Byte[])">
@@ -441,6 +635,11 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt16"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt16"/></returns>
+        </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.Byte[])">
             <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
@@ -450,6 +649,11 @@
             <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt32"/></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt32"/></summary>
+            <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt32"/></returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.Byte[])">
@@ -463,8 +667,13 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt64"/></returns>
         </member>
+        <member name="M:DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(System.ReadOnlySpan{System.Byte})">
+            <summary>Converts the given byte array into a <see cref="T:System.UInt64"/></summary>
+            <param name="Data">The byte array to convert</param>
+            <returns>Converts the given byte array into a <see cref="T:System.UInt64"/></returns>
+        </member>
         <member name="T:DaanV2.Binary.BitConverter.Varint">
-            <summary>Provides support to convert byte array to Varint, compiled with /unsafe</summary>
+            <summary>Provides support to convert byte array to Varint</summary>
         </member>
         <member name="F:DaanV2.Binary.BitConverter.Varint._NonSignalMask">
             <summary>The byte mask that is used to remove the signal bit</summary>
@@ -539,28 +748,28 @@
             <returns>Writes a <see cref="T:System.Int64"/> varint to stream</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int64)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int32,System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int64,System.Int32)">
-            <summary>Converts the given value into a byte array</summary>
+            <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
-            <returns>Converts the given value into a byte array</returns>
+            <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt32(System.Byte[],System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int32"/></summary>
@@ -626,6 +835,30 @@
             DOLATER <summary>add description for class: BuilderExtension</summary>
             DOLATER <summary>add description for class: BuilderExtension</summary>
         </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},``0[],``1)">
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
+        </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.List{``0},``1)">
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
+        </member>
+        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.IEnumerable{``0},``1)">
+            <summary>Adds the given collection to the builder</summary>
+            <typeparam name="T">The items to add</typeparam>
+            <typeparam name="CT">The context needed to add these items</typeparam>
+            <param name="Builder">The builder to receive the items</param>
+            <param name="Items">The items to add</param>
+            <param name="Context">The context needed to add the items</param>
+        </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``1(DaanV2.Builders.IBuilderAdd{``0},``0[])">
             <summary>
             
@@ -643,30 +876,6 @@
             <param name="Items"></param>
         </member>
         <member name="M:DaanV2.Builders.BuilderExtension.Add``1(DaanV2.Builders.IBuilderAdd{``0},System.Collections.Generic.IEnumerable{``0})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
-        </member>
-        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},``0[],``1)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
-        </member>
-        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.List{``0},``1)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="Builder"></param>
-            <param name="Items"></param>
-        </member>
-        <member name="M:DaanV2.Builders.BuilderExtension.Add``2(DaanV2.Builders.IBuilderAddContext{``0,``1},System.Collections.Generic.IEnumerable{``0},``1)">
             <summary>
             
             </summary>
@@ -878,6 +1087,87 @@
         <member name="T:DaanV2.Converters.ConverterExtension">
             <summary>The static class that extends basic converter behaviour</summary>
         </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},``0[])">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.List{``0})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.IList{``0})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},``0[],``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{``0},``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{``0},``2)">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <param name="Context">The context needed to convert  the object.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.ValueTuple{``0,``2}[])">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{System.ValueTuple{``0,``2}})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
+        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{System.ValueTuple{``0,``2}})">
+            <summary>Converts the given object into the specified type.</summary>
+            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
+            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
+            <typeparam name="TypeContext">The context needed to convert.</typeparam>
+            <param name="Converter">The converter to be used.</param>
+            <param name="Process">The object to convert.</param>
+            <returns>Converts the given object into the specified type.</returns>
+        </member>
         <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverterInto{``0,``1},``0[],``1)">
             <summary>Converts the given object into the specified type.</summary>
             <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
@@ -968,87 +1258,6 @@
             <param name="Receiver">The object to receive the converted object.</param>
             <returns>Converts the given object into the specified type.</returns>
         </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},``0[])">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.List{``0})">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``2(DaanV2.Converters.IConverter{``0,``1},System.Collections.Generic.IList{``0})">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},``0[],``2)">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <param name="Context">The context needed to convert  the object.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{``0},``2)">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <param name="Context">The context needed to convert  the object.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{``0},``2)">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <param name="Context">The context needed to convert  the object.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.ValueTuple{``0,``2}[])">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.List{System.ValueTuple{``0,``2}})">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
-        <member name="M:DaanV2.Converters.ConverterExtension.Convert``3(DaanV2.Converters.IConverter{``0,``1,``2},System.Collections.Generic.IList{System.ValueTuple{``0,``2}})">
-            <summary>Converts the given object into the specified type.</summary>
-            <typeparam name="TypeFrom">The type that is going to be converted.</typeparam>
-            <typeparam name="TypeTo">The returning type after conversion.</typeparam>
-            <typeparam name="TypeContext">The context needed to convert.</typeparam>
-            <param name="Converter">The converter to be used.</param>
-            <param name="Process">The object to convert.</param>
-            <returns>Converts the given object into the specified type.</returns>
-        </member>
         <member name="T:DaanV2.PathType">
             <summary>A enumerator that helps indentifing what kind of path has been filled in.</summary>
         </member>
@@ -1078,6 +1287,66 @@
             <summary>Replaces the old value with the new value.</summary>
             <param name="OldValue">The old value to replace.</param>
             <param name="NewValue">The new value to insert.</param>
+        </member>
+        <member name="T:DaanV2.IO.BufferedStream">
+            DOLATER <summary>add description for abstract class: BufferedStream</summary>
+            DOLATER <summary>add description for abstract class: BufferedStream</summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt16_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int16_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt32_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int32_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.UInt64_Index">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.IO.BufferedStream.Int64_Index">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt16Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int16Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt32Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int32Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.UInt64Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Int64Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Buffer">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DaanV2.IO.BufferedStream.Finalize">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:DaanV2.IO.BigEndianReader">
             DOLATER <summary>add description for class: LittleEndianReader</summary>
@@ -1109,42 +1378,67 @@
         <member name="M:DaanV2.IO.BigEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianReader"/></summary>
         </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.BigEndianReader._BaseStream">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:DaanV2.IO.LittleEndianReader">
-            DOLATER <summary>add description for class: LittleEndianReader</summary>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.#ctor(System.IO.Stream)">
-            <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianReader"/></summary>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt16">
-            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt32">
-            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt64">
-            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt16">
-            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt32">
-            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt64">
-            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
-        </member>
-        <member name="F:DaanV2.IO.LittleEndianReader._BaseStream">
             <summary>
             
             </summary>
@@ -1179,7 +1473,182 @@
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
         </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.BigEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.BigEndianWriter._BaseStream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaanV2.IO.LittleEndianReader">
+            DOLATER <summary>add description for class: LittleEndianReader</summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt16">
+            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt32">
+            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadInt64">
+            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt16">
+            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt32">
+            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt64">
+            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
+            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.#ctor(System.IO.Stream)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianReader"/></summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
+        <member name="F:DaanV2.IO.LittleEndianReader._BaseStream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:DaanV2.IO.LittleEndianReader._Buffer">
             <summary>
             
             </summary>
@@ -1214,37 +1683,80 @@
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
         </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.LittleEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
+            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
+        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
+            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
+            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
+            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
+            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
+        </member>
         <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
             <summary>
             
             </summary>
-        </member>
-        <member name="T:DaanV2.IO.IEndianWriter">
-            DOLATER <summary>add description for interface: IEndianReader</summary>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
         </member>
         <member name="T:DaanV2.IO.IEndianReader">
             DOLATER <summary>add description for interface: IEndianReader</summary>
@@ -1273,6 +1785,115 @@
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
         </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianReader.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="T:DaanV2.IO.IEndianWriter">
+            DOLATER <summary>add description for interface: IEndianReader</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanRead">
+            <summary>Gets a value indicating whether the current stream supports reading.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanSeek">
+            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.CanWrite">
+            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.Length">
+            <summary>Gets the length in bytes of the stream.</summary>
+        </member>
+        <member name="P:DaanV2.IO.IEndianWriter.Position">
+            <summary>Gets or sets the position within the current stream.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Flush">
+            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
+            <param name="offset">A byte offset relative to the origin parameter.</param>
+            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
+            <returns>The new position within the current stream.</returns>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.SetLength(System.Int64)">
+            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
+            <param name="value">The desired length of the current stream in bytes.</param>
+        </member>
+        <member name="M:DaanV2.IO.IEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
         <member name="T:DaanV2.IO.EndianStream">
             DOLATER <summary>add description for class: EndianStream</summary>
         </member>
@@ -1295,77 +1916,35 @@
         <member name="T:DaanV2.IO.StreamExtension">
             <summary>Extends default stream object with additional reading/writing operations</summary>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream,System.Int32@)">
-            <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt16(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
-            <param name="Count">The amount of bytes read</param>
-            <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
+            <returns>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream,System.Int32@)">
-            <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt32(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
-            <param name="Count">The amount of bytes read</param>
-            <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
+            <returns>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt64(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt16(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt32(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
-        </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
-            <param name="stream">The stream to write to</param>
-            <param name="Value">The value to write to stream</param>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt64(System.IO.Stream)">
+            <summary>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</summary>
+            <param name="stream">The stream to read from</param>
+            <returns>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</returns>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>
@@ -1397,35 +1976,77 @@
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt16(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</summary>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream,System.Int32@)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
             <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</returns>
+            <param name="Count">The amount of bytes read</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt32(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</summary>
+        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream,System.Int32@)">
+            <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
             <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</returns>
+            <param name="Count">The amount of bytes read</param>
+            <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt64(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</returns>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt16(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</returns>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt32(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</returns>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt64(System.IO.Stream)">
-            <summary>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</summary>
-            <param name="stream">The stream to read from</param>
-            <returns>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</returns>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
+            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int32)">
+            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int64)">
+            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt16)">
+            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt32)">
+            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
+        </member>
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt64)">
+            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
+            <param name="stream">The stream to write to</param>
+            <param name="Value">The value to write to stream</param>
         </member>
         <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
             <summary>Writes an varint to stream, returns the amount of bytes written</summary>
@@ -1556,6 +2177,9 @@
         <member name="T:DaanV2.Processors.ProcessorExtension">
             <summary>The static class that extends processors.</summary>
         </member>
+        <member name="M:DaanV2.Processors.ProcessorExtension.#cctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Processors.ProcessorExtension"/>.</summary>
+        </member>
         <member name="M:DaanV2.Processors.ProcessorExtension.Postprocess``2(DaanV2.Processors.IPostProcessor{``0,``1},``0[],``1)">
             <summary>Puts a collection of given items through the postprocessor.</summary>
             <typeparam name="T">The type of object to process.</typeparam>
@@ -1670,9 +2294,6 @@
             <param name="Items">The items to process.</param>
             <param name="Context">The context needed to process.</param>
         </member>
-        <member name="M:DaanV2.Processors.ProcessorExtension.#cctor">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Processors.ProcessorExtension"/>.</summary>
-        </member>
         <member name="M:DaanV2.Processors.ProcessorExtension.Process``1(DaanV2.Processors.IProcessor{``0},``0[])">
             <summary>Puts a collection of given items through the processor.</summary>
             <typeparam name="T">The type of object to process.</typeparam>
@@ -1779,16 +2400,19 @@
             <summary>Returns a deserializer that is able to deserializer the given object.</summary>
             <typeparam name="TOut">The type that needs to be returned after deserializing.</typeparam>
             <returns>Returns a deserializer that is able to deserializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetSerializer``1">
             <summary>Returns a serializer that is able to serializer the given object.</summary>
             <typeparam name="TIn">The type that is being inputted for serialization.</typeparam>
             <returns>Returns a serializer that is able to serializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetSerializer(System.Type)">
             <summary>Returns a serializer that is able to serializer the given object.</summary>
             <param name="ForType">The type that is being inputted for serialization.</param>
             <returns>Returns a serializer that is able to serializer the given object.</returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.GetDeserializeType">
             <summary>Gets the deserializing base type.</summary>
@@ -1800,7 +2424,7 @@
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.SetDeserializeType(System.Type)">
             <summary>Sets the deserializing base type.</summary>
-            <param name="Deserialize">The type to set as the base for deserializers.</param>
+            <param name="Deserializer">The type to set as the base for deserializers.</param>
         </member>
         <member name="M:DaanV2.Serialization.SerializationFactory.SetSerializeType(System.Type)">
             <summary>Sets the serializing base type.</summary>
@@ -1905,10 +2529,10 @@
             <typeparam name="TypeContext">The context needed for deserializing.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`3.Deserialize(`1,`2)">
-            <summary>Deserializer the given stream into the specified type.</summary>
+            <summary>Deserializer the given stream into <typeparamref name="TypeOut"/>.</summary>
             <param name="Reader">The stream to read from.</param>
             <param name="Context">The context needed to read the stream.</param>
-            <returns>Deserializer the given stream into the specified type.</returns>
+            <returns>Deserializer the given stream into the <typeparamref name="TypeOut"/>.</returns>
         </member>
         <member name="T:DaanV2.Serialization.IDeserializer`2">
             <summary>The interface that is responsible for forming the contract on how Deserializer should work.</summary>
@@ -1916,9 +2540,9 @@
             <typeparam name="TypeStream">The type that is used as the data stream.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.IDeserializer`2.Deserialize(`1)">
-            <summary>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</summary>
+            <summary>Deserialize the given stream into <typeparamref name="TypeOut"/>.</summary>
             <param name="Reader">The stream to read from.</param>
-            <returns>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</returns>
+            <returns>Deserialize the given stream into the specified <typeparamref name="TypeOut"/>.</returns>
         </member>
         <member name="T:DaanV2.Serialization.ISerializerFactory`1">
             <summary>The interface responsible for form the contract on what a SerializerFactory should contain.</summary>
@@ -1949,7 +2573,7 @@
             <summary>Gets the serializer type.</summary>
         </member>
         <member name="P:DaanV2.Serialization.ISerializerFactory`1.Name">
-            <summary>Gets the name of the serializer factory.</summary>
+            <summary>Gets the name of the serializer factory.</summary>        
         </member>
         <member name="T:DaanV2.Serialization.ISerializer`3">
             <summary>The interface that is responsible for forming the contract on how serializers should work.</summary>
@@ -2050,12 +2674,14 @@
             <typeparam name="TypeOut">The type to deserializer.</typeparam>
             <param name="FactoryName">The name of the factory to usee.</param>
             <returns>A deserializer of type <see cref="T:DaanV2.Serialization.IDeserializer`2"/>.</returns>
+            <exception cref="T:System.Exception">Thrown when nothing is found</exception>
         </member>
         <member name="M:DaanV2.Serialization.Serialization.GetSerializer``1(System.String)">
             <summary>Returns a serializer from the specified factory.</summary>
             <typeparam name="TypeIn">The type to serializer.</typeparam>
             <param name="FactoryName">The name of the factory to usee.</param>
             <returns>A serializer of type <see cref="T:DaanV2.Serialization.ISerializer`2"/>.</returns>
+            <exception cref="T:System.Exception">Thrown when nothing is found</exception>
         </member>
         <member name="M:DaanV2.Serialization.Serialization.#cctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>
@@ -2337,443 +2963,6 @@
             <param name="Value"></param>
             <returns></returns>
         </member>
-        <member name="T:DaanV2.Threading.ILockPool`1">
-            DOLATER <summary>add description for interface: ILockPool</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ILockPool`1.GetHandle(`0)">
-            <summary>
-            
-            </summary>
-            <param name="Index"></param>
-            <returns></returns>
-        </member>
-        <member name="T:DaanV2.Threading.Parallel">
-            <summary>The class that creates Parallel tasks.</summary>
-            <summary>The class that creates Parallel tasks.</summary>
-        </member>
-        <member name="T:DaanV2.Threading.Parallel.Func">
-            <summary>The class that deals with parralel functions tasks</summary>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContext{``0,``1})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContext{``0,``1,``2})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <typeparam name="T1">The additional type to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContextCollection{``0,``1})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContextCollection{``0,``1,``2})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <typeparam name="T1">The additional type to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1})">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1},System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2})">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T1">The type inside the array.</typeparam>
-            <typeparam name="T2">The type used for the additional information.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="Argument1">The first argument1</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2},System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T1">The type inside the array.</typeparam>
-            <typeparam name="T2">The type used for the additional information.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="Argument1">The first argument1</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2})">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T1">The type inside the array.</typeparam>
-            <typeparam name="T2">The type used for the additional information.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="Argument1">The first argument1</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2},System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T1">The type inside the array.</typeparam>
-            <typeparam name="T2">The type used for the additional information.</typeparam>
-            <typeparam name="U">The type to be outputted</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="Argument1">The first argument1</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0})">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0},System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="T1">The type used for the additional information.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="Argument">The object needed to process each other object.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1,System.Int32)">
-            <summary>Loops over each item in the specified array.</summary>
-            <typeparam name="T">The type inside the array.</typeparam>
-            <typeparam name="T1">The type used for the additional information.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="Argument">The object needed to process each other object.</param>
-            <param name="TaskCount">The amount of tasks that should process over this array.</param>
-            <returns>Loops over each item in the specified array.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0})">
-            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
-            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0},System.Int32)">
-            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
-            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
-            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1)">
-            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1"/>.</summary>
-            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1"/>.</typeparam>
-            <typeparam name="T1">The additional argument type.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="Argument">The additional argument needed to process the item.</param>
-            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1,System.Int32)">
-            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
-            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
-            <typeparam name="T1">The additional argument type.</typeparam>
-            <param name="Items">The items to loop over.</param>
-            <param name="action">The action to preform on each item.</param>
-            <param name="TaskCount">The amount of tasks that should process over this <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
-            <param name="Argument">The additional argument needed to process the item.</param>
-            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContext{``0})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContext{``0,``1})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <typeparam name="T1">The additional type to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContextCollection{``0})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContextCollection{``0,``1})">
-            <summary>The internal method used for the foreach loop.</summary>
-            <typeparam name="T">The object to process.</typeparam>
-            <typeparam name="T1">The additional type to process.</typeparam>
-            <param name="Context">The context needed to process.</param>
-        </member>
-        <member name="T:DaanV2.Threading.TaskExtension">
-            DOLATER <summary>add description for class: TaskExtension</summary>
-        </member>
-        <member name="M:DaanV2.Threading.TaskExtension.WaitAll(System.Threading.Tasks.Task[])">
-            <summary>Waits for all of the provided <see cref="T:System.Threading.Tasks.Task"/> objects to complete execution.</summary>
-            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
-        </member>
-        <member name="M:DaanV2.Threading.TaskExtension.WaitAll``1(DaanV2.Threading.FuncResult{``0})">
-            <summary>Waits for all of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
-            <param name="Result"></param>
-        </member>
-        <member name="M:DaanV2.Threading.TaskExtension.WaitAny(System.Threading.Tasks.Task[])">
-            <summary>Waits for any of the provided System.Threading.Tasks.Task objects to complete execution.</summary>
-            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
-        </member>
-        <member name="M:DaanV2.Threading.TaskExtension.WaitAny``1(DaanV2.Threading.FuncResult{``0})">
-            <summary>Waits for any of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
-            <param name="Result"></param>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelFuncContext`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Receiver">
-            <summary></summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelFuncContext`2.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelFuncContext`3">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Receiver">
-            <summary></summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Argument1">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelFuncContext`3.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Items">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Receiver">
-            <summary></summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`2.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`3">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Receiver">
-            <summary></summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Argument1">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`3.Invoke">
-            <summary>Very backwards but <see cref="!:System.Threading.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelContext`1">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContext`1.#ctor(System.Int32,System.Int32,`0[],System.Action{`0})">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`1._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`1._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`1._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`1._Action">
-            <summary>The action to perform on each item.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContext`1.Invoke">
-            <summary>Invokes the foreach to be performend on this instance</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelContext`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContext`2.#ctor(System.Int32,System.Int32,`0[],System.Action{`0,`1},`1)">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-            <param name="Argument1">The context argument to pass along.</param>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`2._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`2._Action">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContext`2._Argument1">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContext`2.Invoke">
-            <summary>Invokes the foreach to be performend on this instance</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelContextCollection`1">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0})">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`1._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`1._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Items">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Action">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContextCollection`1.Invoke">
-            <summary>Invokes the foreach to be performend on this instance</summary>
-        </member>
-        <member name="T:DaanV2.Threading.ParallelContextCollection`2">
-            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0,`1},`1)">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
-            <param name="StartIndex">The index to start at.</param>
-            <param name="EndIndex">The index to stop.</param>
-            <param name="Items">The array to loop over.</param>
-            <param name="action">The action to perform on each item.</param>
-            <param name="Argument1">The context argument to pass along.</param>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`2._StartIndex">
-            <summary>The index to start from.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`2._EndIndex">
-            <summary>The index to stop.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Items">
-            <summary>The array to loop through.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Action">
-            <summary>The action perform on the array's items.</summary>
-        </member>
-        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Argument1">
-            <summary>The argument to pass along as context.</summary>
-        </member>
-        <member name="M:DaanV2.Threading.ParallelContextCollection`2.Invoke">
-            <summary>Invokes the foreach to be performend on this instance</summary>
-        </member>
-        <member name="T:DaanV2.Threading.FuncResult`1">
-            <summary>The struct that represents the output of a parralel <see cref="T:System.Func`2"/> process</summary>
-            <typeparam name="U">The list of items to be returned</typeparam>
-        </member>
-        <member name="M:DaanV2.Threading.FuncResult`1.#ctor(System.Threading.Tasks.Task[],`0[])">
-            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FuncResult`1"/></summary>
-            <param name="tasks"></param>
-            <param name="output"></param>
-        </member>
-        <member name="F:DaanV2.Threading.FuncResult`1.Tasks">
-            <summary>The array of <see cref="T:System.Threading.Tasks.Task"/> that is returned so that the programmer can wait for this tasks to be completed</summary>
-        </member>
-        <member name="F:DaanV2.Threading.FuncResult`1.Output">
-            <summary>The array of output items to be returned, must be the same size as the inputted collection</summary>
-        </member>
         <member name="T:DaanV2.StringExtension">
             <summary>The static class that add upon existing code.</summary>
         </member>
@@ -2890,6 +3079,447 @@
         </member>
         <member name="M:DaanV2.TypeExtension.#cctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.TypeExtension"/>.</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ILockPool`1">
+            DOLATER <summary>add description for interface: ILockPool</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ILockPool`1.GetHandle(`0)">
+            <summary>
+            
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DaanV2.Threading.Parallel">
+            <summary>The class that creates Parallel tasks.</summary>
+            <summary>The class that creates Parallel tasks.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(``0[],System.Action{``0},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type used for the additional information.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="Argument">The object needed to process each other object.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(``0[],System.Action{``0,``1},``1,System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="T1">The type used for the additional information.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="Argument">The object needed to process each other object.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0})">
+            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0},System.Int32)">
+            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1)">
+            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1"/>.</summary>
+            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1"/>.</typeparam>
+            <typeparam name="T1">The additional argument type.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="Argument">The additional argument needed to process the item.</param>
+            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEach``2(System.Collections.Generic.IList{``0},System.Action{``0,``1},``1,System.Int32)">
+            <summary>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+            <typeparam name="T">The type inside the <see cref="T:System.Collections.Generic.ICollection`1" />.</typeparam>
+            <typeparam name="T1">The additional argument type.</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <param name="Argument">The additional argument needed to process the item.</param>
+            <returns>Loops over each item in the specified <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContext{``0})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContext{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``1(DaanV2.Threading.ParallelContextCollection{``0})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.ForEachInternal``2(DaanV2.Threading.ParallelContextCollection{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="T:DaanV2.Threading.Parallel.Func">
+            <summary>The class that deals with parralel functions tasks</summary>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(``0[],System.Func{``0,``1},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(``0[],``1,System.Func{``0,``1,``2},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T">The type inside the array.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2})">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
+            <param name="action">The action to preform on each item.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEach``3(System.Collections.Generic.IList{``0},``1,System.Func{``0,``1,``2},System.Int32)">
+            <summary>Loops over each item in the specified array.</summary>
+            <typeparam name="T1">The type inside the array.</typeparam>
+            <typeparam name="T2">The type used for the additional information.</typeparam>
+            <typeparam name="U">The type to be outputted</typeparam>
+            <param name="Items">The items to loop over.</param>
+            <param name="Argument1">The first argument1</param>
+            <param name="action">The action to preform on each item.</param>
+            <param name="TaskCount">The amount of tasks that should process over this array.</param>
+            <returns>Loops over each item in the specified array.</returns>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContext{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContext{``0,``1,``2})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``2(DaanV2.Threading.ParallelFuncContextCollection{``0,``1})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="M:DaanV2.Threading.Parallel.Func.ForEachInternal``3(DaanV2.Threading.ParallelFuncContextCollection{``0,``1,``2})">
+            <summary>The internal method used for the foreach loop.</summary>
+            <typeparam name="T">The object to process.</typeparam>
+            <typeparam name="T1">The additional type to process.</typeparam>
+            <typeparam name="U">The output of the func</typeparam>
+            <param name="Context">The context needed to process.</param>
+        </member>
+        <member name="T:DaanV2.Threading.TaskExtension">
+            DOLATER <summary>add description for class: TaskExtension</summary>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAll(System.Threading.Tasks.Task[])">
+            <summary>Waits for all of the provided <see cref="T:System.Threading.Tasks.Task"/> objects to complete execution.</summary>
+            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAll``1(DaanV2.Threading.FuncResult{``0})">
+            <summary>Waits for all of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
+            <param name="Result"></param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAny(System.Threading.Tasks.Task[])">
+            <summary>Waits for any of the provided System.Threading.Tasks.Task objects to complete execution.</summary>
+            <param name="Tasks">An array of <see cref="T:System.Threading.Tasks.Task"/> instances on which to wait.</param>
+        </member>
+        <member name="M:DaanV2.Threading.TaskExtension.WaitAny``1(DaanV2.Threading.FuncResult{``0})">
+            <summary>Waits for any of the provided <see cref="T:DaanV2.Threading.FuncResult`1"/> tasks objects to complete execution.</summary>
+            <param name="Result"></param>
+        </member>
+        <member name="T:DaanV2.Threading.FuncResult`1">
+            <summary>The struct that represents the output of a parralel <see cref="T:System.Func`2"/> process</summary>
+            <typeparam name="U">The list of items to be returned</typeparam>
+        </member>
+        <member name="M:DaanV2.Threading.FuncResult`1.#ctor(System.Threading.Tasks.Task[],`0[])">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.FuncResult`1"/></summary>
+            <param name="tasks"></param>
+            <param name="output"></param>
+        </member>
+        <member name="F:DaanV2.Threading.FuncResult`1.Tasks">
+            <summary>The array of <see cref="T:System.Threading.Tasks.Task"/> that is returned so that the programmer can wait for this tasks to be completed</summary>
+        </member>
+        <member name="F:DaanV2.Threading.FuncResult`1.Output">
+            <summary>The array of output items to be returned, must be the same size as the inputted collection</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContext`1">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`1.#ctor(System.Int32,System.Int32,`0[],System.Action{`0})">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`1._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`1.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContext`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`2.#ctor(System.Int32,System.Int32,`0[],System.Action{`0,`1},`1)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+            <param name="Argument1">The context argument to pass along.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Action">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContext`2._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContext`2.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContextCollection`1">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`1.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0})">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`1"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Items">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`1._Action">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`1.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelContextCollection`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IList{`0},System.Action{`0,`1},`1)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Threading.ParallelContext`2"/>.</summary>
+            <param name="StartIndex">The index to start at.</param>
+            <param name="EndIndex">The index to stop.</param>
+            <param name="Items">The array to loop over.</param>
+            <param name="action">The action to perform on each item.</param>
+            <param name="Argument1">The context argument to pass along.</param>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Action">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelContextCollection`2._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelContextCollection`2.Invoke">
+            <summary>Invokes the foreach to be performend on this instance</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContext`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`2._Receiver">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContext`2.Invoke">
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContext`3">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Receiver">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContext`3._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContext`3.Invoke">
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`2">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Items">
+            <summary>The action perform on the array's items.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`2._Receiver">
+            <summary></summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`2.Invoke">
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
+        </member>
+        <member name="T:DaanV2.Threading.ParallelFuncContextCollection`3">
+            <summary>The context needed to perform a Parallel action over an array of type <typeparamref name="T1"/>.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._StartIndex">
+            <summary>The index to start from.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._EndIndex">
+            <summary>The index to stop.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Items">
+            <summary>The array to loop through.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Action">
+            <summary>The action to perform on each item.</summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Receiver">
+            <summary></summary>
+        </member>
+        <member name="F:DaanV2.Threading.ParallelFuncContextCollection`3._Argument1">
+            <summary>The argument to pass along as context.</summary>
+        </member>
+        <member name="M:DaanV2.Threading.ParallelFuncContextCollection`3.Invoke">
+            <summary>Very backwards but <see cref="T:System.Threading.Tasks.Task"/> does not accept functions with inputs. Possibly because state  like this need to be crated</summary>
         </member>
     </members>
 </doc>

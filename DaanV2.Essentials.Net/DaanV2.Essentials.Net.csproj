@@ -5,7 +5,7 @@
     <RootNamespace>DaanV2</RootNamespace>
     <AssemblyName>DaanV2.Essentials.Net</AssemblyName>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Version>1.4.0</Version>
+    <Version>1.4.1</Version>
     <Authors>Daan Verstraten</Authors>
     <Product>DaanV2.Essentials.Net</Product>
     <Description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</Description>
