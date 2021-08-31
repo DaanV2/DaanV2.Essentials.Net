@@ -35,12 +35,16 @@
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -63,7 +67,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="set Framework=netcore50&#xD;&#xA;if '$(ConfigurationName)' == 'Release' (&#xD;&#xA;    if '$(PlatformName)' == 'AnyCPU' (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;    ) ELSE (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\native\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\native\&quot;&#xD;&#xA;     )&#xD;&#xA;)" />
+    <Exec Command="set Framework=net5.0&#xD;&#xA;if '$(ConfigurationName)' == 'Release' (&#xD;&#xA;    if '$(PlatformName)' == 'AnyCPU' (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;    ) ELSE (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\%25Framework%25\&quot;&#xD;&#xA;     )&#xD;&#xA;)" />
   </Target>
 
 </Project>

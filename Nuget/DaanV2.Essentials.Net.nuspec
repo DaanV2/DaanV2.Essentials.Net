@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="https://raw.githubusercontent.com/NuGet/NuGet.Client/dev/src/NuGet.Core/NuGet.Packaging/compiler/resources/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <!-- Required elements-->
         <id>DaanV2.Essentials.Net</id>
@@ -15,12 +15,18 @@
         <tags>essentials interfaces code-extensions</tags>
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
         <icon>images\icon.png</icon>
-        <readme>docs\readme.md</readme>
+        <readme>docs\README.md</readme>
         <releaseNotes>Fixing package</releaseNotes>
 
         <dependencies>
-            <group targetFramework=".NETCore5.0" />
+            <group targetFramework="net5.0" />
         </dependencies>
+
+        <references>
+            <group targetFramework="net5.0">
+                <reference file="DaanV2.Essentials.Net.dll" />
+            </group>
+        </references>
 
         <!-- ... -->
     </metadata>
@@ -31,6 +37,10 @@
         <file src="..\LICENSE.txt" target="" />
 
         <!-- Any CPU -->
-        <file src="lib\net5.0\*.*" target="lib\net5.0\" exclude="*.tmp;*.pdb"/>
+        <file src="lib\net5.0\*.*" target="lib/net5.0" exclude="*.tmp;*.pdb"/>
+
+        <!-- Frameworks -->
+        <file src="lib\net5.0\*.dll" target="ref/net5.0" exclude="*.tmp;*.pdb"/>
+        <file src="runtimes\**\*.*" target="runtimes" exclude="*.tmp;*.pdb"/>
     </files>
 </package>
