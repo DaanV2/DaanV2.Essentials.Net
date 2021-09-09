@@ -5,7 +5,7 @@
     <RootNamespace>DaanV2</RootNamespace>
     <AssemblyName>DaanV2.Essentials.Net</AssemblyName>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Version>1.4.2</Version>
+    <Version>1.4.3</Version>
     <Authors>Daan Verstraten</Authors>
     <Product>DaanV2.Essentials.Net</Product>
     <Description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</Description>
@@ -48,7 +48,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>

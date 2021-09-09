@@ -11,16 +11,11 @@ namespace DaanV2.IO {
         /// <param name="endianess"></param>
         /// <returns></returns>
         public static IEndianReader CreateReader(Stream Base, Endianness endianess) {
-            switch (endianess) {
-                case Endianness.BigEndian:
-                    return new BigEndianReader(Base);
-
-                case Endianness.LittleEndian:
-                    return new LittleEndianReader(Base);
-
-                default:
-                    return null;
-            }
+            return endianess switch {
+                Endianness.BigEndian => new BigEndianReader(Base),
+                Endianness.LittleEndian => new LittleEndianReader(Base),
+                _ => null,
+            };
         }
 
         /// <summary>
@@ -30,16 +25,11 @@ namespace DaanV2.IO {
         /// <param name="endianess"></param>
         /// <returns></returns>
         public static IEndianWriter CreateWriter(Stream Base, Endianness endianess) {
-            switch (endianess) {
-                case Endianness.BigEndian:
-                    return new BigEndianWriter(Base);
-
-                case Endianness.LittleEndian:
-                    return new LittleEndianWriter(Base);
-
-                default:
-                    return null;
-            }
+            return endianess switch {
+                Endianness.BigEndian => new BigEndianWriter(Base),
+                Endianness.LittleEndian => new LittleEndianWriter(Base),
+                _ => null,
+            };
         }
     }
 }

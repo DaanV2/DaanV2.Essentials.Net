@@ -2,7 +2,6 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
-using System.Collections.Generic;
 
 namespace DaanV2.Serialization {
     public partial class SerializerAttribute : IEquatable<SerializerAttribute> {
@@ -14,14 +13,14 @@ namespace DaanV2.Serialization {
         /// <param name="obj">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
         public override Boolean Equals(Object obj) {
-            return obj is SerializerAttribute SA ? SA._FactoryName == this._FactoryName : base.Equals(obj);
+            return obj is SerializerAttribute SA ? this.Equals(SA) : base.Match(obj);
         }
 
         /// <summary>Check if this attribute matches the specified <see cref="Object"/>.</summary>
         /// <param name="obj">The object to compare to.</param>
         /// <returns>Check if this attribute matches the specified <see cref="Object"/>.</returns>
         public override Boolean Match(Object obj) {
-            return obj is SerializerAttribute SA ? SA._FactoryName == this._FactoryName : base.Match(obj);
+            return obj is SerializerAttribute SA ? this.Equals(SA) : base.Match(obj);
         }
 
         /// <summary>Returns a string that represents this object.</summary>
@@ -34,20 +33,15 @@ namespace DaanV2.Serialization {
         /// <param name="other">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
         public Boolean Equals(SerializerAttribute other) {
-            return other != null && this._FactoryName == other._FactoryName;
+            if (other != null && this._FactoryName == other._FactoryName) return true;
+
+            return false;
         }
 
         /// <summary>Returns the hash code for this instance.</summary>
         /// <returns>Returns the hash code for this instance.</returns>
         public override Int32 GetHashCode() {
-#if NETCORE
             return HashCode.Combine(base.GetHashCode(), this.FactoryName);
-#else
-            Int32 hashCode = 1112600100;
-            hashCode = (hashCode * -1521134295) + base.GetHashCode();
-            hashCode = (hashCode * -1521134295) + EqualityComparer<String>.Default.GetHashCode(this.FactoryName);
-            return hashCode;
-#endif
         }
 
         /// <summary>Compare two <see cref="SerializableAttribute"/> if they are equal to each other.</summary>

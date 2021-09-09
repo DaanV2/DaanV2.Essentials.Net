@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.Binary {
     public partial class BitConverterTest {
         [TestClass]
         public partial class Varint {
-            private (Int64 Value, Byte[] ExpectedResult)[] _DataSetsInt64 = new (Int64 Value, Byte[] ExpectedResult)[]{
+            private readonly (Int64 Value, Byte[] ExpectedResult)[] _DataSetsInt64 = new (Int64 Value, Byte[] ExpectedResult)[]{
                     DataSet(300, 0b1010_1100, 0b0000_0010), //Googles own examples
                     DataSet(0, 0b0000_0000), //Wiki examples
                     DataSet(127, 0b01111111), //Wiki examples
@@ -33,7 +33,7 @@ namespace UnitTests.Binary {
                     DataSet(1 << 43)
                 };
 
-            private (Int32 Value, Byte[] ExpectedResult)[] _DataSetsInt32 = new (Int32 Value, Byte[] ExpectedResult)[]{
+            private readonly (Int32 Value, Byte[] ExpectedResult)[] _DataSetsInt32 = new (Int32 Value, Byte[] ExpectedResult)[]{
                     DataSet(300, 0b1010_1100, 0b0000_0010), //Googles own examples
                     DataSet(0, 0b0000_0000), //Wiki examples
                     DataSet(127, 0b01111111), //Wiki examples
@@ -138,7 +138,7 @@ namespace UnitTests.Binary {
                     Int32 ExpectedValue = this._DataSetsInt32[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt32[I].ExpectedResult;
 
-                    MemoryStream Stream = new MemoryStream(ExpectedResult);
+                    var Stream = new MemoryStream(ExpectedResult);
                     Int32 ResultValue = DaanV2.Binary.BitConverter.Varint.ReadInt32(Stream, out Int32 Count);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
@@ -160,12 +160,12 @@ namespace UnitTests.Binary {
                     Int64 ExpectedValue = this._DataSetsInt64[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt64[I].ExpectedResult;
 
-                    MemoryStream Stream = new MemoryStream(ExpectedResult);
+                    var Stream = new MemoryStream(ExpectedResult);
                     Int64 ResultValue = DaanV2.Binary.BitConverter.Varint.ReadInt64(Stream, out Int32 Count);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(ResultValue == ExpectedValue, $"Varint {ExpectedValue} went wrong, {ResultValue}");
-                    
+
                     Stream = new MemoryStream(new Byte[100]);
                     DaanV2.Binary.BitConverter.Varint.Write(Stream, ResultValue);
 
