@@ -797,6 +797,214 @@
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into an <see cref="T:System.Int64"/></returns>
         </member>
+        <member name="T:DaanV2.Binary.BitFlags">
+            DOLATER <summary>add description for class: BitFlags</summary>
+            DOLATER <summary>add description for class: BitFlags</summary>
+            DOLATER <summary>add description for class: BitFlags</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlag(System.Byte,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlag(System.UInt16,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlag(System.UInt32,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlag(System.UInt64,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlagValue(System.Byte,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlagValue(System.UInt16,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlagValue(System.UInt32,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.GetFlagValue(System.UInt64,System.Int32)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.SetFlag(System.Byte@,System.Int32,System.Boolean)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <param name="Value"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.SetFlag(System.UInt16@,System.Int32,System.Boolean)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <param name="Value"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.SetFlag(System.UInt32@,System.Int32,System.Boolean)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <param name="Value"></param>
+             <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags.SetFlag(System.UInt64@,System.Int32,System.Boolean)">
+             <summary>
+             
+            </summary>
+             <param name="carrier"></param>
+             <param name="Bit"></param>
+             <param name="Value"></param>
+             <returns></returns>
+        </member>
+        <member name="T:DaanV2.Binary.BitFlags8">
+            <summary>add description for struct: BitFlags</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.From(System.Boolean[])">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.From(System.ReadOnlySpan{System.Boolean})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.From(System.Collections.Generic.List{System.Boolean})">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Item(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.op_Explicit(DaanV2.Binary.BitFlags8)~System.Byte">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.op_Explicit(System.Byte)~DaanV2.Binary.BitFlags8">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.Equals(DaanV2.Binary.BitFlags8)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.op_Equality(DaanV2.Binary.BitFlags8,DaanV2.Binary.BitFlags8)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.op_Inequality(DaanV2.Binary.BitFlags8,DaanV2.Binary.BitFlags8)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.ToString">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag1">
+            <summary>Gets or sets the first flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag2">
+            <summary>Gets or sets the second flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag3">
+            <summary>Gets or sets the third flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag4">
+            <summary>Gets or sets the fourth flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag5">
+            <summary>Gets or sets the fifth flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag6">
+            <summary>Gets or sets the sixth flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag7">
+            <summary>Gets or sets the seventh flag</summary>
+        </member>
+        <member name="P:DaanV2.Binary.BitFlags8.Flag8">
+            <summary>Gets or sets the eighth flag</summary>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.ToList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.ToArray">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Binary.BitFlags8.#ctor(System.Byte)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Binary.BitFlags"/></summary>
+        </member>
         <member name="T:DaanV2.Builders.IBuilderAddContext`2">
             <summary>A subpart of a <see cref="T:DaanV2.Builders.IBuilder`2"/> that specifies if a different object can be added with context.</summary>
         </member>

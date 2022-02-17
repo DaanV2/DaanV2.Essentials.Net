@@ -3,7 +3,7 @@
     <metadata>
         <!-- Required elements-->
         <id>DaanV2.Essentials.Net</id>
-        <version>1.4.3</version>
+        <version>1.4.4</version>
         <description> This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</description>
         <authors>DaanVerstraten</authors>
 
@@ -16,7 +16,7 @@
         <repository type="git" url="https://github.com/DaanV2/DaanV2.Essentials.Net" />
         <icon>images\icon.png</icon>
         <readme>docs\README.md</readme>
-        <releaseNotes>Refactoring, and deletion of parralel</releaseNotes>
+        <releaseNotes>Updating bitconverter and adding bitflags</releaseNotes>
 
         <dependencies>
             <group targetFramework="net5.0" />
