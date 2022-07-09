@@ -71,7 +71,7 @@ namespace UnitTests.Net_Core {
         ///.</summary>
         [TestMethod]
         public void CopyStringListTest() {
-            List<String> Values = new List<String> { "Something to test", "", "I am a longer piece of text" };
+            var Values = new List<String> { "Something to test", "", "I am a longer piece of text" };
             List<String> Copy = Values.Copy();
 
             if (Copy.Count != Values.Count) {

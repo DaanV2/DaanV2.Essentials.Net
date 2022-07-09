@@ -10,7 +10,7 @@ namespace UnitTests.Binary {
     public sealed partial class BitFlagsTest {
         [TestMethod]
         public void TestGetFlag() {
-            
+
         }
     }
 }

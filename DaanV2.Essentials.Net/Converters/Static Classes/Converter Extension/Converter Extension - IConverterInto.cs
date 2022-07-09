@@ -29,7 +29,7 @@ namespace DaanV2.Converters {
         /// <param name="Receiver">The object to receive the converted object.</param>
         /// <returns>Converts the given object into the specified type.</returns>
         public static void Convert<TypeFrom, TypeTo>(this IConverterInto<TypeFrom, TypeTo> Converter, List<TypeFrom> Process, TypeTo Receiver) {
-            Int32 Length = Process.Count;            
+            Int32 Length = Process.Count;
 
             for (Int32 I = 0; I < Length; I++) {
                 Converter.Convert(Process[I], Receiver);
@@ -44,7 +44,7 @@ namespace DaanV2.Converters {
         /// <param name="Receiver">The object to receive the converted object.</param>
         /// <returns>Converts the given object into the specified type.</returns>
         public static void Convert<TypeFrom, TypeTo>(this IConverterInto<TypeFrom, TypeTo> Converter, IList<TypeFrom> Process, TypeTo Receiver) {
-            Int32 Length = Process.Count;            
+            Int32 Length = Process.Count;
 
             for (Int32 I = 0; I < Length; I++) {
                 Converter.Convert(Process[I], Receiver);
@@ -65,7 +65,7 @@ namespace DaanV2.Converters {
         /// <param name="Receiver">The object to receive the converted object.</param>
         /// <returns>Converts the given object into the specified type.</returns>
         public static void Convert<TypeFrom, TypeTo, TypeContext>(this IConverterInto<TypeFrom, TypeTo, TypeContext> Converter, TypeFrom[] Process, TypeContext Context, TypeTo Receiver) {
-            Int32 Length = Process.Length;            
+            Int32 Length = Process.Length;
 
             for (Int32 I = 0; I < Length; I++) {
                 Converter.Convert(Process[I], Context, Receiver);
@@ -82,7 +82,7 @@ namespace DaanV2.Converters {
         /// <param name="Receiver">The object to receive the converted object.</param>
         /// <returns>Converts the given object into the specified type.</returns>
         public static void Convert<TypeFrom, TypeTo, TypeContext>(this IConverterInto<TypeFrom, TypeTo, TypeContext> Converter, List<TypeFrom> Process, TypeContext Context, TypeTo Receiver) {
-            Int32 Length = Process.Count;            
+            Int32 Length = Process.Count;
 
             for (Int32 I = 0; I < Length; I++) {
                 Converter.Convert(Process[I], Context, Receiver);
@@ -151,7 +151,7 @@ namespace DaanV2.Converters {
         /// <param name="Receiver">The object to receive the converted object.</param>
         /// <returns>Converts the given object into the specified type.</returns>
         public static void Convert<TypeFrom, TypeTo, TypeContext>(this IConverterInto<TypeFrom, TypeTo, TypeContext> Converter, IList<(TypeFrom, TypeContext)> Process, TypeTo Receiver) {
-            Int32 Length = Process.Count;            
+            Int32 Length = Process.Count;
 
             for (Int32 I = 0; I < Length; I++) {
                 Converter.Convert(Process[I].Item1, Process[I].Item2, Receiver);

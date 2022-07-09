@@ -4,7 +4,7 @@ Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class Varint {
 
@@ -31,7 +31,7 @@ namespace DaanV2.Binary {
                 }
                 else if (Value < 0b0100_0000_0000_0000ul) {
                     return 2;
-                } 
+                }
                 else if (Value < 0b0010_0000_0000_0000_0000_0000ul) {
                     return 3;
                 }

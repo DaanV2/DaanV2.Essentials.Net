@@ -9,7 +9,7 @@ namespace UnitTests.IO {
         public partial class BigEndian {
             [TestMethod]
             public void Int16() {
-                MemoryStream Memory = new MemoryStream(Data);
+                var Memory = new MemoryStream(Data);
                 Byte[] lData = new Byte[sizeof(Int16)];
                 Array.Copy(Data, 0, lData, 0, lData.Length);
 
@@ -26,7 +26,7 @@ namespace UnitTests.IO {
 
             [TestMethod]
             public void Int32() {
-                MemoryStream Memory = new MemoryStream(Data);
+                var Memory = new MemoryStream(Data);
                 Byte[] lData = new Byte[sizeof(Int32)];
                 Array.Copy(Data, 0, lData, 0, lData.Length);
 
@@ -43,7 +43,7 @@ namespace UnitTests.IO {
 
             [TestMethod]
             public void Int64() {
-                MemoryStream Memory = new MemoryStream(Data);
+                var Memory = new MemoryStream(Data);
                 Byte[] lData = new Byte[sizeof(Int64)];
                 Array.Copy(Data, 0, lData, 0, lData.Length);
 

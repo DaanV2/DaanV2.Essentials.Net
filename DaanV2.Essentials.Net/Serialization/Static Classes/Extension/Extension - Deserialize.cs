@@ -39,7 +39,7 @@ namespace DaanV2.Serialization {
         /// <returns></returns>
         public static TypeOut Deserialize<TypeOut, TypeStream, TypeContext>(
             [NotNull] this IDeserializer<TypeOut, TypeStream, TypeContext> Serializer,
-            [NotNull] TypeContext Context, 
+            [NotNull] TypeContext Context,
             [NotNull] String Filepath)
             where TypeStream : Stream {
 

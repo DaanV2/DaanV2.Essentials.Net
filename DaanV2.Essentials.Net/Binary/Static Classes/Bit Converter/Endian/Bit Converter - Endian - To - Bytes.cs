@@ -4,7 +4,7 @@ Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class Endian {
             /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>

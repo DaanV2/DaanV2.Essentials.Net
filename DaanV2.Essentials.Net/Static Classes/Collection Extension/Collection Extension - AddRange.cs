@@ -194,7 +194,7 @@ namespace DaanV2 {
             where K : IList<V> {
 
             Int32 Max = values.Count;
-            Int32 Amount = (Max - StartIndex) + Receiver.Count;
+            Int32 Amount = Max - StartIndex + Receiver.Count;
             if (Receiver.Capacity < Amount) {
                 Receiver.Capacity = Amount;
             }

@@ -67,7 +67,7 @@ namespace DaanV2.IO {
         /// <summary></summary>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected Span<Byte> Buffer() { 
+        protected Span<Byte> Buffer() {
             return this._Buffer.AsSpan();
         }
     }

@@ -11,7 +11,7 @@ namespace DaanV2.Serialization {
         /// <summary>The internal list of factories.</summary>
         public static Dictionary<String, ISerializerFactory<Stream>> Factories {
             [return: NotNull]
-            get => Serialization._Factories;            
+            get => Serialization._Factories;
             set {
                 if (value is null) throw new ArgumentNullException(nameof(Factories));
 

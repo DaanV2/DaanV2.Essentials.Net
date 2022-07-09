@@ -19,7 +19,7 @@ namespace UnitTests.Binary {
                 for (I = 0; I < ByteCount; I++) {
                     BinaryRep(Data[I], Bits, I * 8);
                 }
-                
+
                 Int32 Count = 0;
 
                 for (I = 0; I < Result.Length; I++) {

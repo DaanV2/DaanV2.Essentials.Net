@@ -26,7 +26,7 @@ namespace DaanV2.IO {
 
         /// <summary>Reads an <see cref="UInt64"/> from stream using little endian encoding</summary>        
         /// <returns>Reads an <see cref="UInt64"/> from stream using little endian encoding</returns>
-         UInt64 ReadUInt64();
+        UInt64 ReadUInt64();
 
         /// <summary>Gets a value indicating whether the current stream supports reading.</summary>
         Boolean CanRead { get; }

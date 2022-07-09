@@ -49,7 +49,7 @@ namespace UnitTests.ICopyable {
             Assert.IsFalse(Object.ReferenceEquals(Original.Name, Copy.Name), "A copy name was not created");
             Assert.IsFalse(Object.ReferenceEquals(Original.Data, Copy.Data), "A copy data was not created");
             Assert.IsFalse(Object.ReferenceEquals(Original.Data.Name, Copy.Data.Name), "A copy data name was not created");
-            
+
             //Result is always false
             //Assert.IsFalse(Object.ReferenceEquals(Original.Data.Test, Copy.Data.Test), "A copy data test was not created");
         }
@@ -72,7 +72,7 @@ namespace UnitTests.ICopyable {
 
         [TestMethod]
         public void TestList() {
-            List<CopyableDataClassA> Originals = new List<CopyableDataClassA>();
+            var Originals = new List<CopyableDataClassA>();
 
             for (Int32 I = 0; I < 10; I++) {
                 Originals.Add(this.NewData());
@@ -91,7 +91,7 @@ namespace UnitTests.ICopyable {
 
         [TestMethod]
         public void TestArray() {
-            CopyableDataClassA[] Originals = new CopyableDataClassA[10];
+            var Originals = new CopyableDataClassA[10];
 
             for (Int32 I = 0; I < 10; I++) {
                 Originals[I] = this.NewData();

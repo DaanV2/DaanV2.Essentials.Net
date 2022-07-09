@@ -2,6 +2,7 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace DaanV2.Serialization {
     /// <summary>A class that contects the build in JSON serializer from .Net into the <see cref="Serialization"/>.</summary>
@@ -13,7 +14,7 @@ namespace DaanV2.Serialization {
         public JSONSerializer() {
             this._Options = new JsonSerializerOptions {
                 AllowTrailingCommas = false,
-                IgnoreNullValues = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
                 IgnoreReadOnlyProperties = true,
                 ReadCommentHandling = JsonCommentHandling.Skip,
                 WriteIndented = true

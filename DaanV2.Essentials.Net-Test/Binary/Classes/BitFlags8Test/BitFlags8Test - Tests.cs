@@ -22,8 +22,8 @@ namespace UnitTests.Binary {
         }
 
         [TestMethod]
-        [DataRow(new Boolean[8] { true, true, true, true, true, true, true, true})]
-        [DataRow(new Boolean[8] { false, true, false, true, false, true, false, true})]
+        [DataRow(new Boolean[8] { true, true, true, true, true, true, true, true })]
+        [DataRow(new Boolean[8] { false, true, false, true, false, true, false, true })]
         [DataRow(new Boolean[8] { true, false, true, false, true, false, true, false })]
         [DataRow(new Boolean[8] { false, false, false, false, false, false, false, false })]
         public void SanityTest(Boolean[] Arr) {

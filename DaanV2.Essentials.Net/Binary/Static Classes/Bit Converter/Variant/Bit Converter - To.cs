@@ -4,7 +4,7 @@ Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary>Converts the given byte array into an <see cref="Int32"/></summary>

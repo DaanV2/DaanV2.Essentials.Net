@@ -13,7 +13,7 @@ namespace DaanV2.Binary {
             /// <returns>Converts the given byte array into a <see cref="UInt16"/></returns>
             public static UInt16 ToUInt16(ReadOnlySpan<Byte> Data, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
-                    BitConverter.BigEndian.ToUInt16(Data):
+                    BitConverter.BigEndian.ToUInt16(Data) :
                     BitConverter.LittleEndian.ToUInt16(Data);
             }
 
@@ -23,7 +23,7 @@ namespace DaanV2.Binary {
             /// <returns>Converts the given byte array into a <see cref="UInt16"/></returns>
             public static UInt32 ToUInt32(ReadOnlySpan<Byte> Data, Endianness endianness) {
                 return endianness == Endianness.BigEndian ?
-                    BitConverter.BigEndian.ToUInt32(Data):
+                    BitConverter.BigEndian.ToUInt32(Data) :
                     BitConverter.LittleEndian.ToUInt32(Data);
             }
 
@@ -32,8 +32,8 @@ namespace DaanV2.Binary {
             /// <param name="endianness">Marks if little or big endian should be used</param>
             /// <returns>Converts the given byte array into a <see cref="UInt16"/></returns>
             public static UInt64 ToUInt64(ReadOnlySpan<Byte> Data, Endianness endianness) {
-                return endianness == Endianness.BigEndian ? 
-                    BitConverter.BigEndian.ToUInt64(Data):
+                return endianness == Endianness.BigEndian ?
+                    BitConverter.BigEndian.ToUInt64(Data) :
                     BitConverter.LittleEndian.ToUInt64(Data);
             }
         }

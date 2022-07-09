@@ -8,7 +8,7 @@ namespace UnitTests.Net_Core {
     public partial class IReplaceable {
         [TestMethod]
         public void ListString() {
-            List<String> Values = new List<String> { "Example1", "Example2", "Example3", "Example4" };
+            var Values = new List<String> { "Example1", "Example2", "Example3", "Example4" };
 
             this.TestList(Values, "Example", "NewExample");
             this.TestList(Values, "Something", "AbsolutlyNothing");

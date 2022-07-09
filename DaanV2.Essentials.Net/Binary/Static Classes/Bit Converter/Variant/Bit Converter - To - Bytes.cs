@@ -4,7 +4,7 @@ Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
 
 namespace DaanV2.Binary {
-    
+
     public static partial class BitConverter {
         public static partial class Varint {
             /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
@@ -59,7 +59,7 @@ namespace DaanV2.Binary {
 
                 Int32 Count = Varint.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1 + StartIndex;
-                
+
                 if (Mark >= Receiver.Length) {
                     throw new ArgumentException($"Receiving byte array is not of an proper length");
                 }
