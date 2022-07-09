@@ -1,0 +1,32 @@
+name: .NET Unit test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+
+concurrency: 
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Test
+      continue-on-error: true
+      run: dotnet test --no-restore --verbosity normal
+
+    - name: Report - create issue
+      continue-on-error: true
+      if: ${{ failure() }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue create -t "unit test failed" -a @me -l bug -b "job id ${{ github.job }}"      
