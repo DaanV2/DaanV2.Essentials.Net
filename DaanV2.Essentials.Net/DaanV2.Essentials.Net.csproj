@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>DaanV2</RootNamespace>
     <AssemblyName>DaanV2.Essentials.Net</AssemblyName>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <Version>1.4.5</Version>
+    <Version>1.5.0</Version>
     <Authors>Daan Verstraten</Authors>
     <Product>DaanV2.Essentials.Net</Product>
     <Description>This library provides a set of default interfaces and code extensions upon .Net to ease up programming.</Description>
@@ -21,13 +21,13 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE;NETCORE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE;NETCORE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
     <DebugType>none</DebugType>
@@ -35,7 +35,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE;NETCORE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
     <DebugType>none</DebugType>
@@ -43,7 +43,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE;NETCORE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
     <DebugType>none</DebugType>
@@ -57,7 +57,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-    <DefineConstants>TRACE;UNSAFE; NETCORE;NET5</DefineConstants>
+    <DefineConstants>TRACE;UNSAFE;NETCORE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>DaanV2.Essentials.Net.xml</DocumentationFile>
   </PropertyGroup>
@@ -76,9 +76,5 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="set Framework=net5.0&#xD;&#xA;if '$(ConfigurationName)' == 'Release' (&#xD;&#xA;    if '$(PlatformName)' == 'AnyCPU' (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\lib\%25Framework%25\&quot;&#xD;&#xA;    ) ELSE (&#xD;&#xA;        mkdir &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\%25Framework%25\&quot;&#xD;&#xA;        copy &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)Nuget\runtimes\win10-$(PlatformName)\%25Framework%25\&quot;&#xD;&#xA;     )&#xD;&#xA;)" />
-  </Target>
 
 </Project>
