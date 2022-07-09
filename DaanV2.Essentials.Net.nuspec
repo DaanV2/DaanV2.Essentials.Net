@@ -32,9 +32,9 @@
     </metadata>
     <!-- Optional 'files' node -->
     <files>
-        <file src="..\README.md" target="docs\" />
-        <file src="..\Nuget\images\icon.png" target="images\" />
-        <file src="..\LICENSE.txt" target="" />
+        <file src="README.md" target="docs\" />
+        <file src="Nuget\images\icon.png" target="images\" />
+        <file src="LICENSE.txt" target="" />
 
         <!-- Any CPU -->
         <file src="DaanV2.Essentials.Net\bin\Release\net6.0\*.*" target="lib/net6.0" exclude="*.tmp;*.pdb"/>
