@@ -53,11 +53,11 @@ namespace DaanV2.Serialization {
                 return true;
             }
 
-            Boolean L = left is Object;
-            Boolean R = right is Object;
+            Boolean L = left is not null;
+            Boolean R = right is not null;
 
             if (L == R) {
-                return L ? left.FactoryName == right.FactoryName : true;
+                return !L || left.FactoryName == right.FactoryName;
             }
 
             return false;
@@ -72,11 +72,11 @@ namespace DaanV2.Serialization {
                 return false;
             }
 
-            Boolean L = left is Object;
-            Boolean R = right is Object;
+            Boolean L = left is not null;
+            Boolean R = right is not null;
 
             if (L == R) {
-                return L ? left.FactoryName != right.FactoryName : false;
+                return L && left.FactoryName != right.FactoryName;
             }
 
             return true;
