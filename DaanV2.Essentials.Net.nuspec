@@ -37,7 +37,7 @@
         <file src="..\LICENSE.txt" target="" />
 
         <!-- Any CPU -->
-        <file src="lib\net5.0\*.*" target="lib/net5.0" exclude="*.tmp;*.pdb"/>
+        <file src="DaanV2.Essentials.Net\bin\Release\net6.0\*.*" target="lib/net6.0" exclude="*.tmp;*.pdb"/>
 
     </files>
 </package>
