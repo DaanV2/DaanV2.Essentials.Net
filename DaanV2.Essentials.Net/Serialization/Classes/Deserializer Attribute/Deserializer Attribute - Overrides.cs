@@ -2,7 +2,6 @@
 
 Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
 using System;
-using System.Collections.Generic;
 
 namespace DaanV2.Serialization {
     public partial class DeserializerAttribute : IEquatable<DeserializerAttribute> {
@@ -39,14 +38,7 @@ namespace DaanV2.Serialization {
         /// <summary>Returns the hash code for this instance.</summary>
         /// <returns>Returns the hash code for this instance.</returns>
         public override Int32 GetHashCode() {
-#if NETCORE
             return HashCode.Combine(base.GetHashCode(), this.FactoryName);
-#else
-            Int32 hashCode = 1112600100;
-            hashCode = (hashCode * -1521134295) + base.GetHashCode();
-            hashCode = (hashCode * -1521134295) + EqualityComparer<String>.Default.GetHashCode(this.FactoryName);
-            return hashCode;
-#endif
         }
 
         /// <summary>Compare two <see cref="DeserializerAttribute"/> if they are equal to each other.</summary>
@@ -58,8 +50,8 @@ namespace DaanV2.Serialization {
                 return true;
             }
 
-            Boolean L = left is Object;
-            Boolean R = right is Object;
+            Boolean L = left is not null;
+            Boolean R = right is not null;
 
             if (L == R) {
                 if (L) {
@@ -81,8 +73,8 @@ namespace DaanV2.Serialization {
                 return false;
             }
 
-            Boolean L = left is Object;
-            Boolean R = right is Object;
+            Boolean L = left is not null;
+            Boolean R = right is not null;
 
             if (L == R) {
                 if (L) {

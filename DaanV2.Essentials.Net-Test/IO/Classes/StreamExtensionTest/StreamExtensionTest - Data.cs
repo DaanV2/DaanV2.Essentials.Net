@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using DaanV2.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests.IO {

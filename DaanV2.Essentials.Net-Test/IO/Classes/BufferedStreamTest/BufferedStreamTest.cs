@@ -81,44 +81,25 @@ namespace UnitTests.IO {
         public class TestClass : BufferedStream {
             public TestClass() : base() { }
 
-            public static Int32 UInt16_StartIndex { get => UInt16_Index; }
-            public static Int32 Int16_StartIndex { get => Int16_Index; }
-            public static Int32 UInt32_StartIndex { get => UInt32_Index; }
-            public static Int32 Int32_StartIndex { get => Int32_Index; }
-            public static Int32 UInt64_StartIndex { get => UInt64_Index; }
-            public static Int32 Int64_StartIndex { get => Int64_Index; }
+            public static Int32 UInt16_StartIndex => UInt16_Index;
+            public static Int32 Int16_StartIndex => Int16_Index;
+            public static Int32 UInt32_StartIndex => UInt32_Index;
+            public static Int32 Int32_StartIndex => Int32_Index;
+            public static Int32 UInt64_StartIndex => UInt64_Index;
+            public static Int32 Int64_StartIndex => Int64_Index;
 
-            public Span<Byte> pUInt16Buffer {
-                get => this.UInt16Buffer();
-            }
+            public Span<Byte> pUInt16Buffer => this.UInt16Buffer();
+            public Span<Byte> pInt16Buffer => this.Int16Buffer();
+            public Span<Byte> pUInt32Buffer => this.UInt32Buffer();
+            public Span<Byte> pInt32Buffer => this.Int32Buffer();
+            public Span<Byte> pUInt64Buffer => this.UInt64Buffer();
+            public Span<Byte> pInt64Buffer => this.Int64Buffer();
 
-            public Span<Byte> pInt16Buffer {
-                get => this.Int16Buffer();
-            }
-
-            public Span<Byte> pUInt32Buffer {
-                get => this.UInt32Buffer();
-            }
-
-            public Span<Byte> pInt32Buffer {
-                get => this.Int32Buffer();
-            }
-
-            public Span<Byte> pUInt64Buffer {
-                get => this.UInt64Buffer();
-            }
-
-            public Span<Byte> pInt64Buffer {
-                get => this.Int64Buffer();
-            }
-
-            public Span<Byte> pBuffer {
-                get => this.Buffer();
-            }
-            public override Boolean CanRead { get => throw new NotImplementedException(); }
-            public override Boolean CanSeek { get => throw new NotImplementedException(); }
-            public override Boolean CanWrite { get => throw new NotImplementedException(); }
-            public override Int64 Length { get => throw new NotImplementedException(); }
+            public Span<Byte> pBuffer => this.Buffer();
+            public override Boolean CanRead => throw new NotImplementedException();
+            public override Boolean CanSeek => throw new NotImplementedException();
+            public override Boolean CanWrite => throw new NotImplementedException();
+            public override Int64 Length => throw new NotImplementedException();
             public override Int64 Position { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
             public override void Flush() {
