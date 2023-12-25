@@ -57,7 +57,7 @@ jobs:
       contents: read
     environment:
       name: Nuget Release
-      url: https://www.nuget.org/packages/DaanV2.NBT.Net/
+      url: https://www.nuget.org/packages/DaanV2.Essentials.Net/
     steps:
       - name: 📦 Checkout repository
         uses: actions/checkout@v4
@@ -68,6 +68,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
+            6.0.x
             7.0.x
             8.0.x
 
@@ -81,9 +82,9 @@ jobs:
         run: dotnet test --no-restore --verbosity normal
 
       - name: 📦 Create the package
-        run: dotnet pack --configuration Release Library
+        run: dotnet pack --configuration Release DaanV2.Essentials.Net
 
       - name: 🚚 Publish the package to Nuget
         run: |
-          cd ${{ github.workspace }}/Library/bin/Release/
+          cd ${{ github.workspace }}/DaanV2.Essentials.Net/bin/Release/
           dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
