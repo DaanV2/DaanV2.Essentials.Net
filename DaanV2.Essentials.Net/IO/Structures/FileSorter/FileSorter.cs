@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
 namespace DaanV2.IO {
@@ -15,7 +16,7 @@ namespace DaanV2.IO {
 
         /// <summary>Creates a new instance of <see cref="FileSorter"/></summary>
         /// <param name="BaseFolder">The basefolder all files path have</param>
-        public FileSorter(String BaseFolder) : this(BaseFolder.Length) { }
+        public FileSorter([NotNull] String BaseFolder) : this(BaseFolder.Length) { }
 
         /// <summary>Compare the two given files, assuming they both share the same basefolder</summary>
         /// <param name="FilepathA">The first path to sort</param>
@@ -24,7 +25,7 @@ namespace DaanV2.IO {
         ///     than 0, span precedes than other. - If 0, span equals other. - If greater than
         ///     0, span follows other.</returns>
         [MethodImpl(MethodImplOptions.AggressiveOptimization)]
-        public Int32 Compare(String FilepathA, String FilepathB) {
+        public Int32 Compare([NotNull] String FilepathA, [NotNull] String FilepathB) {
             ReadOnlySpan<Char> SpanA = FilepathA.AsSpan(this._Skip);
             ReadOnlySpan<Char> SpanB = FilepathB.AsSpan(this._Skip);
 

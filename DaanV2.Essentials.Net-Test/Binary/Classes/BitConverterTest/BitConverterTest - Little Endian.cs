@@ -24,9 +24,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void Int16() {
                 Byte[] lData = new Byte[sizeof(Int16)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                Int16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt16(Data);
+                Int16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt16(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -40,11 +40,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void Int16Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(Int16); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(Int16); I++) {
                     Byte[] lData = new Byte[sizeof(Int16)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    Int16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt16(Data, I);
+                    Int16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt16(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {
@@ -60,9 +60,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void Int32() {
                 Byte[] lData = new Byte[sizeof(Int32)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                Int32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt32(Data);
+                Int32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt32(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -76,11 +76,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void Int32Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(Int32); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(Int32); I++) {
                     Byte[] lData = new Byte[sizeof(Int32)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    Int32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt32(Data, I);
+                    Int32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt32(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {
@@ -96,9 +96,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void Int64() {
                 Byte[] lData = new Byte[sizeof(Int64)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                Int64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt64(Data);
+                Int64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt64(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -112,11 +112,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void Int64Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(Int64); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(Int64); I++) {
                     Byte[] lData = new Byte[sizeof(Int64)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    Int64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt64(Data, I);
+                    Int64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToInt64(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {
@@ -132,9 +132,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void UInt16() {
                 Byte[] lData = new Byte[sizeof(UInt16)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                UInt16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(Data);
+                UInt16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -148,11 +148,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void UInt16Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(UInt16); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(UInt16); I++) {
                     Byte[] lData = new Byte[sizeof(UInt16)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    UInt16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(Data, I);
+                    UInt16 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt16(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {
@@ -168,9 +168,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void UInt32() {
                 Byte[] lData = new Byte[sizeof(UInt32)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                UInt32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(Data);
+                UInt32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -184,11 +184,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void UInt32Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(UInt32); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(UInt32); I++) {
                     Byte[] lData = new Byte[sizeof(UInt32)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    UInt32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(Data, I);
+                    UInt32 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt32(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {
@@ -204,9 +204,9 @@ namespace UnitTests.Binary {
             [TestMethod]
             public void UInt64() {
                 Byte[] lData = new Byte[sizeof(UInt64)];
-                Array.Copy(Data, 0, lData, 0, lData.Length);
+                Array.Copy(Original, 0, lData, 0, lData.Length);
 
-                UInt64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(Data);
+                UInt64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(Original);
                 TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                 if (!BitConverter.IsLittleEndian) {
@@ -220,11 +220,11 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void UInt64Start() {
-                for (Int32 I = 0; I < Data.Length - sizeof(UInt64); I++) {
+                for (Int32 I = 0; I < Original.Length - sizeof(UInt64); I++) {
                     Byte[] lData = new Byte[sizeof(UInt64)];
-                    Array.Copy(Data, I, lData, 0, lData.Length);
+                    Array.Copy(Original, I, lData, 0, lData.Length);
 
-                    UInt64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(Data, I);
+                    UInt64 TestValue = DaanV2.Binary.BitConverter.LittleEndian.ToUInt64(Original, I);
                     TestArray(lData, DaanV2.Binary.BitConverter.LittleEndian.ToBytes(TestValue));
 
                     if (!BitConverter.IsLittleEndian) {

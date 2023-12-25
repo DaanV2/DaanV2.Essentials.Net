@@ -34,7 +34,7 @@ namespace UnitTests.ICopyable {
     [TestClass]
     public class ICopyableTest {
 
-        public CopyableDataClassA NewData() {
+        public static CopyableDataClassA NewData() {
             return new CopyableDataClassA() {
                 Name = "I am class A",
                 Data = new CopyableDataClassB() {
@@ -57,7 +57,21 @@ namespace UnitTests.ICopyable {
 
         [TestMethod]
         public void TestSingle() {
+
+/* Unmerged change from project 'UnitTests (net6.0)'
+Before:
             CopyableDataClassA Original = this.NewData();
+After:
+            CopyableDataClassA Original = ICopyableTest.NewData();
+*/
+
+/* Unmerged change from project 'UnitTests (net8.0)'
+Before:
+            CopyableDataClassA Original = this.NewData();
+After:
+            CopyableDataClassA Original = ICopyableTest.NewData();
+*/
+            CopyableDataClassA Original = NewData();
 
             CopyableDataClassA Copy = Original.Copy();
 
@@ -75,7 +89,21 @@ namespace UnitTests.ICopyable {
             var Originals = new List<CopyableDataClassA>();
 
             for (Int32 I = 0; I < 10; I++) {
+
+/* Unmerged change from project 'UnitTests (net6.0)'
+Before:
                 Originals.Add(this.NewData());
+After:
+                Originals.Add(ICopyableTest.NewData());
+*/
+
+/* Unmerged change from project 'UnitTests (net8.0)'
+Before:
+                Originals.Add(this.NewData());
+After:
+                Originals.Add(ICopyableTest.NewData());
+*/
+                Originals.Add(NewData());
             }
 
             List<CopyableDataClassA> Copy = Originals.Copy();
@@ -94,7 +122,21 @@ namespace UnitTests.ICopyable {
             var Originals = new CopyableDataClassA[10];
 
             for (Int32 I = 0; I < 10; I++) {
+
+/* Unmerged change from project 'UnitTests (net6.0)'
+Before:
                 Originals[I] = this.NewData();
+After:
+                Originals[I] = ICopyableTest.NewData();
+*/
+
+/* Unmerged change from project 'UnitTests (net8.0)'
+Before:
+                Originals[I] = this.NewData();
+After:
+                Originals[I] = ICopyableTest.NewData();
+*/
+                Originals[I] = NewData();
             }
 
             CopyableDataClassA[] Copy = Originals.Copy();

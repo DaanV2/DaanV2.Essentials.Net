@@ -5,7 +5,7 @@ namespace DaanV2.Serialization {
     public static partial class Serialization {
         /// <summary>Creates a new instance of <see cref="Serialization"/>.</summary>
         static Serialization() {
-            Serialization._Factories = [];
+            Serialization._Factories = new();
             Serialization.Add(AppDomain.CurrentDomain.GetAssemblies());
         }
     }

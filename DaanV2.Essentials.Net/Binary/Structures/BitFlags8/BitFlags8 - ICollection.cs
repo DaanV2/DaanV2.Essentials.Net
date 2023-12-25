@@ -19,7 +19,7 @@ namespace DaanV2.Binary {
         }
 
         /// <inheritdoc/>
-        public Int32 Count => 8;
+        public readonly Int32 Count => 8;
 
         /// <inheritdoc/>
         public IEnumerator<Boolean> GetEnumerator() {
