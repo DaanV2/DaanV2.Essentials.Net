@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTests.Binary {
     public partial class BitConverterTest {
         public static void TestArray(System.Byte[] DataA, System.Byte[] DataB) {
-            if (DataA == null || DataB == null) {
+            if (DataA is null || DataB is null) {
                 Assert.Fail("Arrays are null");
             }
 

@@ -9,7 +9,7 @@ namespace DaanV2.Binary {
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data, Int32 StartIndex = 0) {
-                if (Data == null) {
+                if (Data is null) {
                     throw new ArgumentNullException(nameof(Data));
                 }
 
@@ -34,7 +34,7 @@ namespace DaanV2.Binary {
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int32 ToInt32(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
-                if (Data == null) {
+                if (Data is null) {
                     throw new ArgumentNullException(nameof(Data));
                 }
 
@@ -60,7 +60,7 @@ namespace DaanV2.Binary {
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given byte array into an <see cref="Int32"/></returns>
             public static Int64 ToInt64(Byte[] Data, Int32 StartIndex = 0) {
-                if (Data == null) {
+                if (Data is null) {
                     throw new ArgumentNullException(nameof(Data));
                 }
 
@@ -85,7 +85,7 @@ namespace DaanV2.Binary {
             /// <param name="StartIndex">The startindex for the data</param>
             /// <returns>Converts the given byte array into an <see cref="Int64"/></returns>
             public static Int64 ToInt64(Byte[] Data, out Int32 Count, Int32 StartIndex = 0) {
-                if (Data == null) {
+                if (Data is null) {
                     throw new ArgumentNullException(nameof(Data));
                 }
 

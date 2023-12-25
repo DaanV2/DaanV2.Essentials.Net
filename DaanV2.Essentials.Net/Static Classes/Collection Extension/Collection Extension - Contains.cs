@@ -11,10 +11,10 @@ namespace DaanV2 {
         public static Boolean Contains<T>(this T[] Collection, T Value) {
             Int32 Max = Collection.Length;
 
-            if (Value == null) {
+            if (Value is null) {
                 //Find a null item
                 for (Int32 I = 0; I < Max; I++) {
-                    if (Collection[I] == null) {
+                    if (Collection[I] is null) {
                         return true;
                     }
                 }
@@ -39,10 +39,10 @@ namespace DaanV2 {
         public static Boolean Contains<T>(this IList<T> Collection, T Value) {
             Int32 Max = Collection.Count;
 
-            if (Value == null) {
+            if (Value is null) {
                 //Find a null item
                 for (Int32 I = 0; I < Max; I++) {
-                    if (Collection[I] == null) {
+                    if (Collection[I] is null) {
                         return true;
                     }
                 }

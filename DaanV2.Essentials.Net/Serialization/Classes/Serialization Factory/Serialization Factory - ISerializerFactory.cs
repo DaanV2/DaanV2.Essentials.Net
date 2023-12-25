@@ -11,7 +11,7 @@ namespace DaanV2.Serialization {
         /// <exception cref="Exception"></exception>
         [return: NotNull]
         public IDeserializer<TOut, Stream> GetDeserializer<TOut>() {
-            if (this.Deserializer == null) {
+            if (this.Deserializer is null) {
                 throw new Exception($"Deserializer type for '{this.Name}' not filled in");
             }
 
@@ -26,7 +26,7 @@ namespace DaanV2.Serialization {
         /// <exception cref="Exception"></exception>
         [return: NotNull]
         public ISerializer<TIn, Stream> GetSerializer<TIn>() {
-            if (this.Serializer == null) {
+            if (this.Serializer is null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
             }
 
@@ -41,7 +41,7 @@ namespace DaanV2.Serialization {
         /// <exception cref="Exception"></exception>
         [return: NotNull]
         public ISerializer<Object, Stream> GetSerializer(Type ForType) {
-            if (this.Serializer == null) {
+            if (this.Serializer is null) {
                 throw new Exception($"Serializer type for '{this.Name}' not filled in");
             }
 

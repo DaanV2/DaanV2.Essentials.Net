@@ -14,7 +14,7 @@ namespace DaanV2 {
             PriorityAttribute PAx = Tx.GetAttribute<PriorityAttribute>();
             PriorityAttribute PAy = Ty.GetAttribute<PriorityAttribute>();
 
-            return PAx == null || PAy == null ?
+            return PAx is null || PAy is null ?
                 Tx.Name.CompareTo(Ty.Name) :
                 PAx.Value.CompareTo(PAy.Value);
         }

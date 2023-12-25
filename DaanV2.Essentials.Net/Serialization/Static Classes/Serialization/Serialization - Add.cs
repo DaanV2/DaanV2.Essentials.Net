@@ -57,11 +57,11 @@ namespace DaanV2.Serialization {
                 DAttribute = Current.GetAttribute<DeserializerAttribute>();
 
                 //If null then no attribute was found
-                if (SAttribute != null) {
+                if (SAttribute is not null) {
                     Serialization.GetFactory(SAttribute.FactoryName).SetSerializeType(Current);
                 }
 
-                if (DAttribute != null) {
+                if (DAttribute is not null) {
                     Serialization.GetFactory(DAttribute.FactoryName).SetDeserializeType(Current);
                 }
             }

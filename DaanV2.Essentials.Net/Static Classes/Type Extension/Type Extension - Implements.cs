@@ -12,7 +12,7 @@ namespace DaanV2 {
             }
 
             Type Base = Value.BaseType;
-            if (Base == null) {
+            if (Base is null) {
                 return false;
             }
 

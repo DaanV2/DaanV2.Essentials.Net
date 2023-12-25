@@ -28,8 +28,8 @@ namespace DaanV2 {
         /// <summary>Returns a value that indicates whether this instance is equal to a specified object.</summary>
         /// <param name="other">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
-        public Boolean Equals(PriorityAttribute other) {
-            return other != null && this.Value == other.Value;
+        public Boolean Equals(PriorityAttribute? other) {
+            return other is not null && this.Value == other.Value;
         }
 
         /// <summary>Returns the hash code for this instance.</summary>

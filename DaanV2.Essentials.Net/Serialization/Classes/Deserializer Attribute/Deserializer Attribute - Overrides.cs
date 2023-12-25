@@ -29,7 +29,7 @@ namespace DaanV2.Serialization {
         /// <param name="other">The object to check against.</param>
         /// <returns>Returns a value that indicates whether this instance is equal to a specified object.</returns>
         public Boolean Equals(DeserializerAttribute other) {
-            return other != null && this._FactoryName == other._FactoryName;
+            return other is not null && this._FactoryName == other._FactoryName;
         }
 
         /// <summary>Returns the hash code for this instance.</summary>
