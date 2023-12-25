@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Builders {
     /// <summary>The interface that is responsible for forming the contract between builders and output types.</summary>
     /// <typeparam name="TypeToBuild">The output type that will be build.</typeparam>

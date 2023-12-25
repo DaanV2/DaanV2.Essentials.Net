@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-namespace DaanV2.Compilers {
+﻿namespace DaanV2.Compilers {
 
     /// <summary>The interface that responsible for how a decompiler should work.</summary>
     /// <typeparam name="TReceiver">The object type that can receive the output.</typeparam>

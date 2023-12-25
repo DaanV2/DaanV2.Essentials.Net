@@ -8,7 +8,7 @@ namespace DaanV2.Binary {
         /// </summary>
         /// <returns></returns>
         public List<Boolean> ToList() {
-            return new List<Boolean> {
+            return [
                 this.Flag1,
                 this.Flag2,
                 this.Flag3,
@@ -17,7 +17,7 @@ namespace DaanV2.Binary {
                 this.Flag6,
                 this.Flag7,
                 this.Flag8
-            };
+            ];
         }
 
         /// <summary>

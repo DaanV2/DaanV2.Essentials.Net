@@ -1,12 +1,9 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2.Binary {
 
     public static partial class BitConverter {
-        public static partial class Varint {
+        public static partial class VarInt {
 
             /// <summary>Check the amount of bytes that are needed to store the given value</summary>
             /// <param name="Value">The object to check</param>

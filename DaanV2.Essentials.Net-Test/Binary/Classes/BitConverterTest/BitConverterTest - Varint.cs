@@ -83,8 +83,8 @@ namespace UnitTests.Binary {
                 for (Int32 I = 0; I < this._DataSetsInt32.Length; I++) {
                     Int32 ExpectedValue = this._DataSetsInt32[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt32[I].ExpectedResult;
-                    Int32 Count = DaanV2.Binary.BitConverter.Varint.ByteCount((UInt32)ExpectedValue);
-                    Int32 ResultValue = DaanV2.Binary.BitConverter.Varint.ToInt32(ExpectedResult, 0);
+                    Int32 Count = DaanV2.Binary.BitConverter.VarInt.ByteCount((UInt32)ExpectedValue);
+                    Int32 ResultValue = DaanV2.Binary.BitConverter.VarInt.ToInt32(ExpectedResult, 0);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected count is wrong");
                     Assert.IsTrue(ExpectedValue == ResultValue, "Varint Conversion process failed");
@@ -96,8 +96,8 @@ namespace UnitTests.Binary {
                 for (Int32 I = 0; I < this._DataSetsInt32.Length; I++) {
                     Int32 ExpectedValue = this._DataSetsInt32[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt32[I].ExpectedResult;
-                    Byte[] ResultData = DaanV2.Binary.BitConverter.Varint.ToBytes(ExpectedValue);
-                    Int32 Count = DaanV2.Binary.BitConverter.Varint.ByteCount(ExpectedValue);
+                    Byte[] ResultData = DaanV2.Binary.BitConverter.VarInt.ToBytes(ExpectedValue);
+                    Int32 Count = DaanV2.Binary.BitConverter.VarInt.ByteCount(ExpectedValue);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(Count == ResultData.Length, "Result data is wrong");
@@ -110,8 +110,8 @@ namespace UnitTests.Binary {
                 for (Int32 I = 0; I < this._DataSetsInt64.Length; I++) {
                     Int64 ExpectedValue = this._DataSetsInt64[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt64[I].ExpectedResult;
-                    Int32 Count = DaanV2.Binary.BitConverter.Varint.ByteCount((UInt64)ExpectedValue);
-                    Int64 ResultValue = DaanV2.Binary.BitConverter.Varint.ToInt64(ExpectedResult, 0);
+                    Int32 Count = DaanV2.Binary.BitConverter.VarInt.ByteCount((UInt64)ExpectedValue);
+                    Int64 ResultValue = DaanV2.Binary.BitConverter.VarInt.ToInt64(ExpectedResult, 0);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(ExpectedValue == ResultValue, $"Varint Conversion process failed: {ExpectedValue} result in: {ResultValue}");
@@ -123,8 +123,8 @@ namespace UnitTests.Binary {
                 for (Int32 I = 0; I < this._DataSetsInt64.Length; I++) {
                     Int64 ExpectedValue = this._DataSetsInt64[I].Value;
                     Byte[] ExpectedResult = this._DataSetsInt64[I].ExpectedResult;
-                    Byte[] ResultData = DaanV2.Binary.BitConverter.Varint.ToBytes(ExpectedValue);
-                    Int32 Count = DaanV2.Binary.BitConverter.Varint.ByteCount(ExpectedValue);
+                    Byte[] ResultData = DaanV2.Binary.BitConverter.VarInt.ToBytes(ExpectedValue);
+                    Int32 Count = DaanV2.Binary.BitConverter.VarInt.ByteCount(ExpectedValue);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(Count == ResultData.Length, "Result data is wrong");
@@ -139,13 +139,13 @@ namespace UnitTests.Binary {
                     Byte[] ExpectedResult = this._DataSetsInt32[I].ExpectedResult;
 
                     var Stream = new MemoryStream(ExpectedResult);
-                    Int32 ResultValue = DaanV2.Binary.BitConverter.Varint.ReadInt32(Stream, out Int32 Count);
+                    Int32 ResultValue = DaanV2.Binary.BitConverter.VarInt.ReadInt32(Stream, out Int32 Count);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(ResultValue == ExpectedValue, $"Varint {ExpectedValue} went wrong, {ResultValue}");
 
                     Stream = new MemoryStream(new Byte[100]);
-                    DaanV2.Binary.BitConverter.Varint.Write(Stream, ResultValue);
+                    DaanV2.Binary.BitConverter.VarInt.Write(Stream, ResultValue);
 
                     Assert.IsTrue(Stream.Position == ExpectedResult.Length, "Expected result is wrong");
                     Byte[] Data = Stream.ToArray();
@@ -161,13 +161,13 @@ namespace UnitTests.Binary {
                     Byte[] ExpectedResult = this._DataSetsInt64[I].ExpectedResult;
 
                     var Stream = new MemoryStream(ExpectedResult);
-                    Int64 ResultValue = DaanV2.Binary.BitConverter.Varint.ReadInt64(Stream, out Int32 Count);
+                    Int64 ResultValue = DaanV2.Binary.BitConverter.VarInt.ReadInt64(Stream, out Int32 Count);
 
                     Assert.IsTrue(Count == ExpectedResult.Length, "Expected result is wrong");
                     Assert.IsTrue(ResultValue == ExpectedValue, $"Varint {ExpectedValue} went wrong, {ResultValue}");
 
                     Stream = new MemoryStream(new Byte[100]);
-                    DaanV2.Binary.BitConverter.Varint.Write(Stream, ResultValue);
+                    DaanV2.Binary.BitConverter.VarInt.Write(Stream, ResultValue);
 
                     Assert.IsTrue(Stream.Position == ExpectedResult.Length, "Expected result is wrong");
                     Byte[] Data = Stream.ToArray();
@@ -183,7 +183,7 @@ namespace UnitTests.Binary {
                     Byte[] ExpectedResult = this._DataSetsInt32[I].ExpectedResult;
 
                     Byte[] Array = new Byte[ExpectedResult.Length];
-                    Int32 ResultValue = DaanV2.Binary.BitConverter.Varint.OntoBytes(Array, ExpectedValue, 0);
+                    Int32 ResultValue = DaanV2.Binary.BitConverter.VarInt.OntoBytes(Array, ExpectedValue, 0);
 
                     Assert.IsTrue(ResultValue == ExpectedResult.Length, "Expected result is wrong");
                     TestArray(Array, ExpectedResult);
@@ -197,7 +197,7 @@ namespace UnitTests.Binary {
                     Byte[] ExpectedResult = this._DataSetsInt64[I].ExpectedResult;
 
                     Byte[] Array = new Byte[ExpectedResult.Length];
-                    Int32 ResultValue = DaanV2.Binary.BitConverter.Varint.OntoBytes(Array, ExpectedValue, 0);
+                    Int32 ResultValue = DaanV2.Binary.BitConverter.VarInt.OntoBytes(Array, ExpectedValue, 0);
 
                     Assert.IsTrue(ResultValue == ExpectedResult.Length, "Expected result is wrong");
                     TestArray(Array, ExpectedResult);

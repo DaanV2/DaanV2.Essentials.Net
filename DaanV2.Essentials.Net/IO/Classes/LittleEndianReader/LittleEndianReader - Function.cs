@@ -2,52 +2,46 @@
 
 namespace DaanV2.IO {
     public partial class LittleEndianReader : IEndianReader {
-        /// <summary>Reads an <see cref="Int16"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="Int16"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public Int16 ReadInt16() {
-            Span<Byte> Span = this.Int16Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(Int16)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToInt16(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToInt16(Span);
         }
 
-        /// <summary>Reads an <see cref="Int32"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="Int32"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public Int32 ReadInt32() {
-            Span<Byte> Span = this.Int32Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(Int32)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToInt32(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToInt32(Span);
         }
 
-        /// <summary>Reads an <see cref="Int64"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="Int64"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public Int64 ReadInt64() {
-            Span<Byte> Span = this.Int64Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(Int64)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToInt64(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToInt64(Span);
         }
 
-        /// <summary>Reads an <see cref="UInt16"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="UInt16"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public UInt16 ReadUInt16() {
-            Span<Byte> Span = this.UInt16Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(UInt16)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToUInt16(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToUInt16(Span);
         }
 
-        /// <summary>Reads an <see cref="UInt32"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="UInt32"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public UInt32 ReadUInt32() {
-            Span<Byte> Span = this.UInt32Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(UInt32)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToUInt32(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToUInt32(Span);
         }
 
-        /// <summary>Reads an <see cref="UInt64"/> from stream using little endian encoding</summary>        
-        /// <returns>Reads an <see cref="UInt64"/> from stream using little endian encoding</returns>
+        /// <inheritdoc/>
         public UInt64 ReadUInt64() {
-            Span<Byte> Span = this.UInt64Buffer();
+            Span<Byte> Span = stackalloc Byte[sizeof(UInt64)];
             this._BaseStream.Read(Span);
-            return Binary.BitConverter.LittleEndian.ToUInt64(this._Buffer);
+            return Binary.BitConverter.LittleEndian.ToUInt64(Span);
         }
     }
 }

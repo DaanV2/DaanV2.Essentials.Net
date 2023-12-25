@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2 {
     /// <summary>The interface responsible for forming on how an object needs to be copied.</summary>
     public interface ICopyable<T> {

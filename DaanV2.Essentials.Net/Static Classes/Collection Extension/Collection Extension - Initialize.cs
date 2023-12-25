@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2 {
     /// <summary>Extends different collection code.</summary>
     public static partial class CollectionExtension {

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <RootNamespace>DaanV2</RootNamespace>
     <AssemblyName>DaanV2.Essentials.Net</AssemblyName>
     <Platforms>AnyCPU;x64;x86</Platforms>
@@ -14,10 +14,17 @@
     <PackageProjectUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DaanV2/DaanV2.Essentials.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>essentials;interfaces</PackageTags>
+    <PackageTags>essentials;interfaces;binary</PackageTags>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <Title>$(AssemblyName)</Title>
+    <NeutralLanguage>aa</NeutralLanguage>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AnalysisLevel>6.0-all</AnalysisLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

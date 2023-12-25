@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Converters {
     /// <summary>The interface responsible for forming the contract on how converters should work.</summary>
     /// <typeparam name="TypeFrom">The type to convert.</typeparam>

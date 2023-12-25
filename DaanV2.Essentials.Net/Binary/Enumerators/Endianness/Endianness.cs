@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Binary {
     /// <summary>The enumerator that marks how data is saved, or should be saved</summary>
     public enum Endianness {

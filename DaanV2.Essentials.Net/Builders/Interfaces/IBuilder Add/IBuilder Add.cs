@@ -1,9 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System.Collections.Generic;
-
-namespace DaanV2.Builders {
+﻿namespace DaanV2.Builders {
     /// <summary>A subpart of a <see cref="IBuilder{TypeToBuild, TIn}"/> that specifies if a different object can be added.</summary>
     public interface IBuilderAdd<TypeToAdd> {
         /// <summary>Adds the specific object to the build.</summary>

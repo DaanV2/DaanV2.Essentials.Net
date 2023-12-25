@@ -5,12 +5,12 @@ using System.Runtime.CompilerServices;
 namespace DaanV2.IO {
     ///<summary>A file sorter that sorts file that all come from the same directory</summary>
     public readonly partial struct FileSorter {
-        private readonly Int32 Skip;
+        private readonly Int32 _Skip;
 
         /// <summary>Creates a new instance of <see cref="FileSorter"/></summary>
         /// <param name="Skip">The amount of character to skip at the start of the path</param>
         public FileSorter(Int32 Skip) {
-            this.Skip = Skip;
+            this._Skip = Skip;
         }
 
         /// <summary>Creates a new instance of <see cref="FileSorter"/></summary>
@@ -25,8 +25,8 @@ namespace DaanV2.IO {
         ///     0, span follows other.</returns>
         [MethodImpl(MethodImplOptions.AggressiveOptimization)]
         public Int32 Compare(String FilepathA, String FilepathB) {
-            ReadOnlySpan<Char> SpanA = FilepathA.AsSpan(this.Skip);
-            ReadOnlySpan<Char> SpanB = FilepathB.AsSpan(this.Skip);
+            ReadOnlySpan<Char> SpanA = FilepathA.AsSpan(this._Skip);
+            ReadOnlySpan<Char> SpanB = FilepathB.AsSpan(this._Skip);
 
             return SpanA.CompareTo(SpanB, StringComparison.Ordinal);
         }

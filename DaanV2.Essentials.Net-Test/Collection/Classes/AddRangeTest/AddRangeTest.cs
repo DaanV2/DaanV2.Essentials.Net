@@ -8,8 +8,8 @@ namespace UnitTests.Collection {
     [TestClass]
     public sealed partial class AddRangeTest {
 
-        public static List<Int32> Source1 = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        public static List<Int32> Source2 = new() { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        public static List<Int32> Source1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        public static List<Int32> Source2 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
         [TestMethod]
         public void AddRangeTest1() {

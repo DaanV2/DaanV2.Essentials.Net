@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Compilers {
     /// <summary>The interface responsible for forming the contract on how Decompilers should work.</summary>
     /// <typeparam name="TypeTo">The type that needs to be returned.</typeparam>

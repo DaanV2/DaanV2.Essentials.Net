@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2 {
     public static partial class TypeExtension {
@@ -19,7 +16,7 @@ namespace DaanV2 {
                 return false;
             }
 
-            return Base == Contains ? true : Base.Implements(Contains);
+            return Base == Contains || Base.Implements(Contains);
         }
     }
 }

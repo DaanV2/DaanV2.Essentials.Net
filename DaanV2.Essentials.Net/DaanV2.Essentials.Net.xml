@@ -675,10 +675,10 @@
         <member name="T:DaanV2.Binary.BitConverter.Varint">
             <summary>Provides support to convert byte array to Varint</summary>
         </member>
-        <member name="F:DaanV2.Binary.BitConverter.Varint._NonSignalMask">
+        <member name="F:DaanV2.Binary.BitConverter.Varint.NonSignalMask">
             <summary>The byte mask that is used to remove the signal bit</summary>
         </member>
-        <member name="F:DaanV2.Binary.BitConverter.Varint._SignalMask">
+        <member name="F:DaanV2.Binary.BitConverter.Varint.SignalMask">
             <summary>The byte mask that holds</summary>
         </member>
         <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.Int32)">
@@ -2605,7 +2605,7 @@
         </member>
         <member name="T:DaanV2.Serialization.JSONSerializer`1">
             <summary>A class that contects the build in JSON serializer from .Net into the <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>
-            <typeparam name="TypeSerialize">The type to serializer/deserialize.</typeparam>
+            <typeparam name="T">The type to serializer/deserialize.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.JSONSerializer`1.#ctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.JSONSerializer`1"/>.</summary>
@@ -2741,7 +2741,7 @@
         </member>
         <member name="T:DaanV2.Serialization.XmlSerializer`1">
             <summary>A class that contects the build in JSON serializer from .Net into the <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>
-            <typeparam name="TypeSerialize">The type to serializer/deserialize.</typeparam>
+            <typeparam name="T">The type to serializer/deserialize.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.XmlSerializer`1.#ctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.XmlSerializer`1"/>.</summary>
