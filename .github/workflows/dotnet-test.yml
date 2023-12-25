@@ -1,32 +1,43 @@
-name: .NET Unit test
+name: 📋 .NET Unit test
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - main
   pull_request:
 
 concurrency: 
-  group: ${{ github.workflow }}
+  group: ${{ github.ref }}
   cancel-in-progress: true
   
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    name: 🛠️ Build & 📋 Test on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: 
+          - windows-2019
+          - windows-latest
+          - ubuntu-latest
+          - macos-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+    - name: 📦 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🛠️ Setup .NET
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: |
+          6.0.x
+          7.0.x
+          8.0.x
 
-    - name: Test
-      continue-on-error: true
+    - name: 📥 Restore dependencies
+      run: dotnet restore --verbosity normal
+
+    - name: 🔨 Build
+      run: dotnet build --no-restore --verbosity normal
+
+    - name: 📋 Test
       run: dotnet test --no-restore --verbosity normal
-
-    - name: Report - create issue
-      continue-on-error: true
-      if: ${{ failure() }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh issue create -t "unit test failed" -a @me -l bug -b "job id ${{ github.job }}"      
