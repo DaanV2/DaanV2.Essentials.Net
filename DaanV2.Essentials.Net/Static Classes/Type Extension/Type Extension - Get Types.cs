@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
 

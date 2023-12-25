@@ -1,12 +1,9 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2.Binary {
 
     public static partial class BitConverter {
-        public static partial class Varint {
+        public static partial class VarInt {
             /// <summary>Converts the given byte array into an <see cref="Int32"/></summary>
             /// <param name="Data">The byte array to convert</param>
             /// <param name="StartIndex">The startindex for the data</param>
@@ -23,10 +20,10 @@ namespace DaanV2.Binary {
 
                 do {
                     Current = Data[Index];
-                    Out |= (Current & _NonSignalMask) << BitShift;
+                    Out |= (Current & NonSignalMask) << BitShift;
                     BitShift += 7;
                     Index++;
-                } while (Current >= BitConverter.Varint._SignalMask);
+                } while (Current >= BitConverter.VarInt.SignalMask);
 
                 return Out;
             }
@@ -48,10 +45,10 @@ namespace DaanV2.Binary {
 
                 do {
                     Current = Data[Index];
-                    Out |= (Current & _NonSignalMask) << BitShift;
+                    Out |= (Current & NonSignalMask) << BitShift;
                     BitShift += 7;
                     Index++;
-                } while (Current >= BitConverter.Varint._SignalMask);
+                } while (Current >= BitConverter.VarInt.SignalMask);
 
                 Count = Index - StartIndex;
 
@@ -74,10 +71,10 @@ namespace DaanV2.Binary {
 
                 do {
                     Current = Data[Index];
-                    Out |= (Int64)(((Int64)(Current & _NonSignalMask)) << BitShift);
+                    Out |= (Int64)(((Int64)(Current & NonSignalMask)) << BitShift);
                     BitShift += 7;
                     Index++;
-                } while (Current >= BitConverter.Varint._SignalMask);
+                } while (Current >= BitConverter.VarInt.SignalMask);
 
                 return Out;
             }
@@ -99,10 +96,10 @@ namespace DaanV2.Binary {
 
                 do {
                     Current = Data[Index];
-                    Out |= (Int64)((Current & _NonSignalMask) << BitShift);
+                    Out |= (Int64)((Current & NonSignalMask) << BitShift);
                     BitShift += 7;
                     Index++;
-                } while (Current >= BitConverter.Varint._SignalMask);
+                } while (Current >= BitConverter.VarInt.SignalMask);
 
                 Count = Index - StartIndex;
 

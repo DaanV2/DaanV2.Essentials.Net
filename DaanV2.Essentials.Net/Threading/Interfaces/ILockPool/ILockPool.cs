@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System.Threading;
+﻿using System.Threading;
 
 namespace DaanV2.Threading {
     ///DOLATER <summary>add description for interface: ILockPool</summary>

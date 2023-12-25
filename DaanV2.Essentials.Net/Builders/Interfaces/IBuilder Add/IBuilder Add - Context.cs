@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Builders {
     /// <summary>A subpart of a <see cref="IBuilder{TypeToBuild, TIn}"/> that specifies if a different object can be added with context.</summary>
     public interface IBuilderAddContext<TypeToAdd, ContextType> {

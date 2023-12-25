@@ -1,28 +1,25 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2.Binary {
 
     public static partial class BitConverter {
-        public static partial class Varint {
+        public static partial class VarInt {
             /// <summary>Converts the given value into a <see cref="Byte"/> array</summary>
             /// <param name="Value">The object to convert</param>
             /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Byte[] ToBytes(Int32 Value) {
-                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Count = VarInt.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1;
 
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Mark; I++) {
-                    Out[I] = (Byte)(Value | Varint._SignalMask);
+                    Out[I] = (Byte)(Value | VarInt.SignalMask);
 
                     Value >>= 7;
                 }
 
-                Out[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                Out[Mark] = (Byte)(Value & VarInt.NonSignalMask);
 
                 return Out;
             }
@@ -31,18 +28,18 @@ namespace DaanV2.Binary {
             /// <param name="Value">The object to convert</param>
             /// <returns>Converts the given value into a <see cref="Byte"/> array</returns>
             public static Byte[] ToBytes(Int64 Value) {
-                Int32 Count = Varint.ByteCount((UInt64)Value);
+                Int32 Count = VarInt.ByteCount((UInt64)Value);
                 Int32 Mark = Count - 1;
 
                 Byte[] Out = new Byte[Count];
 
                 for (Int32 I = 0; I < Mark; I++) {
-                    Out[I] = (Byte)(Value | Varint._SignalMask);
+                    Out[I] = (Byte)(Value | VarInt.SignalMask);
 
                     Value >>= 7;
                 }
 
-                Out[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                Out[Mark] = (Byte)(Value & VarInt.NonSignalMask);
 
                 return Out;
             }
@@ -57,7 +54,7 @@ namespace DaanV2.Binary {
                     throw new ArgumentNullException(nameof(Receiver));
                 }
 
-                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Count = VarInt.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1 + StartIndex;
 
                 if (Mark >= Receiver.Length) {
@@ -65,12 +62,12 @@ namespace DaanV2.Binary {
                 }
 
                 for (Int32 I = StartIndex; I < Mark; I++) {
-                    Receiver[I] = (Byte)(Value | Varint._SignalMask);
+                    Receiver[I] = (Byte)(Value | VarInt.SignalMask);
 
                     Value >>= 7;
                 }
 
-                Receiver[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                Receiver[Mark] = (Byte)(Value & VarInt.NonSignalMask);
                 return Count;
             }
 
@@ -84,7 +81,7 @@ namespace DaanV2.Binary {
                     throw new ArgumentNullException(nameof(Receiver));
                 }
 
-                Int32 Count = Varint.ByteCount((UInt32)Value);
+                Int32 Count = VarInt.ByteCount((UInt32)Value);
                 Int32 Mark = Count - 1 + StartIndex;
 
                 if (Mark >= Receiver.Length) {
@@ -92,12 +89,12 @@ namespace DaanV2.Binary {
                 }
 
                 for (Int32 I = StartIndex; I < Mark; I++) {
-                    Receiver[I] = (Byte)((Byte)(Value & Varint._NonSignalMask) | Varint._SignalMask);
+                    Receiver[I] = (Byte)((Byte)(Value & VarInt.NonSignalMask) | VarInt.SignalMask);
 
                     Value >>= 7;
                 }
 
-                Receiver[Mark] = (Byte)(Value & Varint._NonSignalMask);
+                Receiver[Mark] = (Byte)(Value & VarInt.NonSignalMask);
                 return Count;
             }
         }

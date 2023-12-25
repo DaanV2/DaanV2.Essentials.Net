@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace DaanV2 {
     /// <summary>The static class thats extends op on existing task code.</summary>

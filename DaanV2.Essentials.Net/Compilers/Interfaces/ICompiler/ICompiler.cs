@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Compilers {
     /// <summary>The interface that is responsible for forming the contract on how compilers should transfer data between files and object.</summary>
     /// <typeparam name="TypeProcess">The type to be compiled.</typeparam>

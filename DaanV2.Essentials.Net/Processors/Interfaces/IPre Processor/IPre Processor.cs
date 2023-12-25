@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Processors {
     /// <summary>The interface responsible for determing how pre processor should work.</summary>
     public interface IPreProcessor<T> {

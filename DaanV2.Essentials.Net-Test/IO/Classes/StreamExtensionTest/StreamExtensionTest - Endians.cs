@@ -13,7 +13,7 @@ namespace UnitTests.IO {
                 Byte[] lData = new Byte[sizeof(Int16)];
                 Array.Copy(Data, 0, lData, 0, lData.Length);
 
-                Int16 TestValue = Memory.BigEndian_ReadInt16();
+                Int16 TestValue = Memory.BigEndianReadInt16();
 
                 if (BitConverter.IsLittleEndian) {
                     Array.Reverse(lData);

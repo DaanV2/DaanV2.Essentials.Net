@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-namespace DaanV2.Processors {
+﻿namespace DaanV2.Processors {
     /// <summary>The interface responsible for Processors that have an output.</summary>
     public interface IProcessorOut<T, TypeOut, TypeContext> {
         /// <summary>Processes the given object into the specified type.</summary>

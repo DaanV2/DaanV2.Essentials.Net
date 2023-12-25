@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2 {
     /// <summary>The class that extends op on the existing type code.</summary>

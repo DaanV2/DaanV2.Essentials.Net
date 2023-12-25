@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2 {
     /// <summary>The interface responsible replacing the specified value with another.</summary>
     /// <typeparam name="T">The old and new type to replace.</typeparam>

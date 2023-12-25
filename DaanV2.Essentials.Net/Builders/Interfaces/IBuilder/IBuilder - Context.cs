@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Builders {
     /// <summary>The interface that responsible for building a specified class with/without context.</summary>
     /// <typeparam name="TypeToBuild">The type to build to.</typeparam>

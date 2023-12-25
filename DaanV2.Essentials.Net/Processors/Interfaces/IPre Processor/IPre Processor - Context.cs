@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-
+﻿
 namespace DaanV2.Processors {
     /// <summary>The interface responsible for forming the contract on how Pre processors should work.</summary>
     /// <typeparam name="T">The type of object to pre process.</typeparam>

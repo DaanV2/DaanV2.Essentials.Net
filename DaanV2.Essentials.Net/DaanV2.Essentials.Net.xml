@@ -672,125 +672,125 @@
             <param name="Data">The byte array to convert</param>
             <returns>Converts the given byte array into a <see cref="T:System.UInt64"/></returns>
         </member>
-        <member name="T:DaanV2.Binary.BitConverter.Varint">
-            <summary>Provides support to convert byte array to Varint</summary>
+        <member name="T:DaanV2.Binary.BitConverter.VarInt">
+            <summary>Provides support to convert byte array to VarInt</summary>
         </member>
-        <member name="F:DaanV2.Binary.BitConverter.Varint._NonSignalMask">
+        <member name="F:DaanV2.Binary.BitConverter.VarInt.NonSignalMask">
             <summary>The byte mask that is used to remove the signal bit</summary>
         </member>
-        <member name="F:DaanV2.Binary.BitConverter.Varint._SignalMask">
+        <member name="F:DaanV2.Binary.BitConverter.VarInt.SignalMask">
             <summary>The byte mask that holds</summary>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ByteCount(System.Int32)">
             <summary>Check the amount of bytes that are needed to store the given value</summary>
             <param name="Value">The object to check</param>
             <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.Int64)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ByteCount(System.Int64)">
             <summary>Check the amount of bytes that are needed to store the given value</summary>
             <param name="Value">The object to check</param>
             <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.UInt32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ByteCount(System.UInt32)">
             <summary>Check the amount of bytes that are needed to store the given value</summary>
             <param name="Value">The object to check</param>
             <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ByteCount(System.UInt64)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ByteCount(System.UInt64)">
             <summary>Check the amount of bytes that are needed to store the given value</summary>
             <param name="Value">The object to check</param>
             <returns>Check the amount of bytes that are needed to store the given value</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ReadInt32(System.IO.Stream,System.Int32@)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ReadInt32(System.IO.Stream,System.Int32@)">
             <summary>Read an <see cref="T:System.Int32"/> varint from stream</summary>
             <param name="stream">The stream to read from</param>
             <param name="Count">The amount of bytes that have been read</param>
             <returns>Read an <see cref="T:System.Int32"/> varint from stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ReadInt64(System.IO.Stream,System.Int32@)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ReadInt64(System.IO.Stream,System.Int32@)">
             <summary>Read an <see cref="T:System.Int64"/> varint from stream</summary>
             <param name="stream">The stream to read from</param>
             <param name="Count">The amount of bytes that have been read</param>
             <returns>Read an <see cref="T:System.Int64"/> varint from stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ReadInt32(System.IO.Stream)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ReadInt32(System.IO.Stream)">
             <summary>Read an <see cref="T:System.Int32"/> varint from stream</summary>
             <param name="stream">The stream to read from</param>
             <returns>Read an <see cref="T:System.Int32"/> varint from stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ReadInt64(System.IO.Stream)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ReadInt64(System.IO.Stream)">
             <summary>Read an <see cref="T:System.Int64"/> varint from stream</summary>
             <param name="stream">The stream to read from</param>
             <returns>Read an <see cref="T:System.Int64"/> varint from stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.Write(System.IO.Stream,System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.Write(System.IO.Stream,System.Int32)">
             <summary>Writes a <see cref="T:System.Int32"/> varint to stream</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to be written</param>
             <returns>Writes a <see cref="T:System.Int32"/> varint to stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.Write(System.IO.Stream,System.UInt32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.Write(System.IO.Stream,System.UInt32)">
             <summary>Writes a <see cref="T:System.Int32"/> varint to stream</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to be written</param>
             <returns>Writes a <see cref="T:System.Int32"/> varint to stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.Write(System.IO.Stream,System.Int64)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.Write(System.IO.Stream,System.Int64)">
             <summary>Writes a <see cref="T:System.Int64"/> varint to stream</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to be written</param>
             <returns>Writes a <see cref="T:System.Int64"/> varint to stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.Write(System.IO.Stream,System.UInt64)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.Write(System.IO.Stream,System.UInt64)">
             <summary>Writes a <see cref="T:System.Int64"/> varint to stream</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to be written</param>
             <returns>Writes a <see cref="T:System.Int64"/> varint to stream</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToBytes(System.Int32)">
             <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToBytes(System.Int64)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToBytes(System.Int64)">
             <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Value">The object to convert</param>
             <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int32,System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.OntoBytes(System.Byte[],System.Int32,System.Int32)">
             <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.OntoBytes(System.Byte[],System.Int64,System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.OntoBytes(System.Byte[],System.Int64,System.Int32)">
             <summary>Converts the given value into a <see cref="T:System.Byte"/> array</summary>
             <param name="Receiver">The array that receives the final data.</param>
             <param name="Value">The object to convert</param>
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given value into a <see cref="T:System.Byte"/> array</returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt32(System.Byte[],System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToInt32(System.Byte[],System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into an <see cref="T:System.Int32"/></returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt32(System.Byte[],System.Int32@,System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToInt32(System.Byte[],System.Int32@,System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="Count">The amount of bytes that have been read</param>
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into an <see cref="T:System.Int32"/></returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt64(System.Byte[],System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToInt64(System.Byte[],System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int32"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="StartIndex">The startindex for the data</param>
             <returns>Converts the given byte array into an <see cref="T:System.Int32"/></returns>
         </member>
-        <member name="M:DaanV2.Binary.BitConverter.Varint.ToInt64(System.Byte[],System.Int32@,System.Int32)">
+        <member name="M:DaanV2.Binary.BitConverter.VarInt.ToInt64(System.Byte[],System.Int32@,System.Int32)">
             <summary>Converts the given byte array into an <see cref="T:System.Int64"/></summary>
             <param name="Data">The byte array to convert</param>
             <param name="Count">The amount of bytes that have been read</param>
@@ -1496,475 +1496,144 @@
             <param name="OldValue">The old value to replace.</param>
             <param name="NewValue">The new value to insert.</param>
         </member>
-        <member name="T:DaanV2.IO.BufferedStream">
-            DOLATER <summary>add description for abstract class: BufferedStream</summary>
-            DOLATER <summary>add description for abstract class: BufferedStream</summary>
+        <member name="T:DaanV2.IO.WrapperStream">
+            <summary>An class that wraps around a base stream as a field</summary>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.UInt16_Index">
-            <summary></summary>
+        <member name="M:DaanV2.IO.WrapperStream.Dispose(System.Boolean)">
+            <inheritdoc/>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.Int16_Index">
-            <summary></summary>
+        <member name="M:DaanV2.IO.WrapperStream.#ctor(System.IO.Stream)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.IO.WrapperStream"/></summary>
+            <param name="BaseStream"></param>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.UInt32_Index">
-            <summary></summary>
+        <member name="P:DaanV2.IO.WrapperStream.CanRead">
+            <inheritdoc/>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.Int32_Index">
-            <summary></summary>
+        <member name="P:DaanV2.IO.WrapperStream.CanSeek">
+            <inheritdoc/>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.UInt64_Index">
-            <summary></summary>
+        <member name="P:DaanV2.IO.WrapperStream.CanWrite">
+            <inheritdoc/>
         </member>
-        <member name="F:DaanV2.IO.BufferedStream.Int64_Index">
-            <summary></summary>
+        <member name="P:DaanV2.IO.WrapperStream.Length">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.UInt16Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="P:DaanV2.IO.WrapperStream.Position">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.Int16Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="M:DaanV2.IO.WrapperStream.Flush">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.UInt32Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="M:DaanV2.IO.WrapperStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.Int32Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="M:DaanV2.IO.WrapperStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.UInt64Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="M:DaanV2.IO.WrapperStream.SetLength(System.Int64)">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.Int64Buffer">
-            <summary></summary>
-            <returns></returns>
+        <member name="M:DaanV2.IO.WrapperStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <inheritdoc/>
         </member>
-        <member name="M:DaanV2.IO.BufferedStream.Buffer">
-            <summary></summary>
-            <returns></returns>
-        </member>
-        <member name="M:DaanV2.IO.BufferedStream.#ctor">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:DaanV2.IO.BufferedStream.Finalize">
-            <summary>
-            
-            </summary>
+        <member name="F:DaanV2.IO.WrapperStream._BaseStream">
+            <summary>The wrapper stream</summary>
         </member>
         <member name="T:DaanV2.IO.BigEndianReader">
-            DOLATER <summary>add description for class: LittleEndianReader</summary>
+            DOLATER <summary>add description for class: BigEndianReader</summary>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadInt16">
-            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadInt32">
-            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadInt64">
-            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadUInt16">
-            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadUInt32">
-            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.ReadUInt64">
-            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianReader"/></summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianReader.CanRead">
-            <summary>Gets a value indicating whether the current stream supports reading.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianReader.CanSeek">
-            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianReader.CanWrite">
-            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianReader.Length">
-            <summary>Gets the length in bytes of the stream.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianReader.Position">
-            <summary>Gets or sets the position within the current stream.</summary>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Flush">
-            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
-            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
-            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
-            <param name="count">The maximum number of bytes to be read from the current stream.</param>
-            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
-            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
-            <param name="offset">A byte offset relative to the origin parameter.</param>
-            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
-            <returns>The new position within the current stream.</returns>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.SetLength(System.Int64)">
-            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
-            <param name="value">The desired length of the current stream in bytes.</param>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
-            <param name="count">The number of bytes to be written to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="F:DaanV2.IO.BigEndianReader._BaseStream">
-            <summary>
-            
-            </summary>
         </member>
         <member name="T:DaanV2.IO.BigEndianWriter">
             DOLATER <summary>add description for class: BigEndianWriter</summary>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.Write(System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>        
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.BigEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.BigEndianWriter"/></summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianWriter.CanRead">
-            <summary>Gets a value indicating whether the current stream supports reading.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianWriter.CanSeek">
-            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianWriter.CanWrite">
-            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianWriter.Length">
-            <summary>Gets the length in bytes of the stream.</summary>
-        </member>
-        <member name="P:DaanV2.IO.BigEndianWriter.Position">
-            <summary>Gets or sets the position within the current stream.</summary>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Flush">
-            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
-            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
-            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
-            <param name="count">The maximum number of bytes to be read from the current stream.</param>
-            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
-            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
-            <param name="offset">A byte offset relative to the origin parameter.</param>
-            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
-            <returns>The new position within the current stream.</returns>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.SetLength(System.Int64)">
-            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
-            <param name="value">The desired length of the current stream in bytes.</param>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
-            <param name="count">The number of bytes to be written to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.BigEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="F:DaanV2.IO.BigEndianWriter._BaseStream">
-            <summary>
-            
-            </summary>
         </member>
         <member name="T:DaanV2.IO.LittleEndianReader">
             DOLATER <summary>add description for class: LittleEndianReader</summary>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadInt16">
-            <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadInt32">
-            <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadInt64">
-            <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt16">
-            <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt32">
-            <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.ReadUInt64">
-            <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>        
-            <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianReader.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianReader"/></summary>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Finalize">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianReader.CanRead">
-            <summary>Gets a value indicating whether the current stream supports reading.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianReader.CanSeek">
-            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianReader.CanWrite">
-            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianReader.Length">
-            <summary>Gets the length in bytes of the stream.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianReader.Position">
-            <summary>Gets or sets the position within the current stream.</summary>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Flush">
-            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
-            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Read(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
-            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
-            <param name="count">The maximum number of bytes to be read from the current stream.</param>
-            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Seek(System.Int64,System.IO.SeekOrigin)">
-            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
-            <param name="offset">A byte offset relative to the origin parameter.</param>
-            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
-            <returns>The new position within the current stream.</returns>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.SetLength(System.Int64)">
-            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
-            <param name="value">The desired length of the current stream in bytes.</param>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianReader.Write(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
-            <param name="count">The number of bytes to be written to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="F:DaanV2.IO.LittleEndianReader._BaseStream">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:DaanV2.IO.LittleEndianReader._Buffer">
-            <summary>
-            
-            </summary>
         </member>
         <member name="T:DaanV2.IO.LittleEndianWriter">
             DOLATER <summary>add description for class: LittleEndianWriter</summary>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int16)">
-            <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int32)">
-            <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Int64)">
-            <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt16)">
-            <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt32)">
-            <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.UInt64)">
-            <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
-            <param name="Value">The value to write to stream</param>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.IO.LittleEndianWriter.#ctor(System.IO.Stream)">
             <summary>Creates a new instance of <see cref="T:DaanV2.IO.LittleEndianWriter"/></summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianWriter.CanRead">
-            <summary>Gets a value indicating whether the current stream supports reading.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianWriter.CanSeek">
-            <summary>Gets a value indicating whether the current stream supports seeking.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianWriter.CanWrite">
-            <summary>Gets a value indicating whether the current stream supports Writing.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianWriter.Length">
-            <summary>Gets the length in bytes of the stream.</summary>
-        </member>
-        <member name="P:DaanV2.IO.LittleEndianWriter.Position">
-            <summary>Gets or sets the position within the current stream.</summary>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Flush">
-            <summary>When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</summary>
-            <exception cref="T:System.IO.IOException">An I/O error occurs</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Read(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read. </summary>
-            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
-            <param name="count">The maximum number of bytes to be read from the current stream.</param>
-            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support reading.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Seek(System.Int64,System.IO.SeekOrigin)">
-            <summary>When overridden in a derived class, sets the position within the current stream.</summary>
-            <param name="offset">A byte offset relative to the origin parameter.</param>
-            <param name="origin">A value of type System.IO.SeekOrigin indicating the reference point used to obtain the new position.</param>
-            <returns>The new position within the current stream.</returns>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">he stream does not support seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.SetLength(System.Int64)">
-            <summary>When overridden in a derived class, sets the length of the current stream.</summary>
-            <param name="value">The desired length of the current stream in bytes.</param>
-            <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support both writing and seeking, such as if the stream is constructed from a pipe or console output.</exception>
-            <exception cref="T:System.ObjectDisposedException">Methods were called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.Byte[],System.Int32,System.Int32)">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
-            <param name="count">The number of bytes to be written to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="M:DaanV2.IO.LittleEndianWriter.Write(System.ReadOnlySpan{System.Byte})">
-            <summary>When overridden in a derived class, writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.</summary>
-            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
-            <exception cref="T:System.ArgumentException">The sum of offset and count is greater than the buffer length.</exception>
-            <exception cref="T:System.ArgumentNullException">buffer is null.</exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">offset or count is negative.</exception>
-            <exception cref="T:System.IO.IOException">An I/O error occurred, such as the specified file cannot be found.</exception>
-            <exception cref="T:System.NotSupportedException">The stream does not support writing.</exception>
-            <exception cref="T:System.ObjectDisposedException">System.IO.Stream.Write(System.Byte[],System.Int32,System.Int32) was called after the stream was closed.</exception>
-        </member>
-        <member name="F:DaanV2.IO.LittleEndianWriter._BaseStream">
-            <summary>
-            
-            </summary>
         </member>
         <member name="T:DaanV2.IO.IEndianReader">
             DOLATER <summary>add description for interface: IEndianReader</summary>
@@ -2102,10 +1771,10 @@
             <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
             <param name="count">The number of bytes to be written to the current stream.</param>
         </member>
-        <member name="T:DaanV2.IO.EndianStream">
-            DOLATER <summary>add description for class: EndianStream</summary>
+        <member name="T:DaanV2.IO.EndianStreams">
+            DOLATER <summary>add description for class: EndianStreams</summary>
         </member>
-        <member name="M:DaanV2.IO.EndianStream.CreateReader(System.IO.Stream,DaanV2.Binary.Endianness)">
+        <member name="M:DaanV2.IO.EndianStreams.CreateReader(System.IO.Stream,DaanV2.Binary.Endianness)">
             <summary>
             
             </summary>
@@ -2113,7 +1782,7 @@
             <param name="endianess"></param>
             <returns></returns>
         </member>
-        <member name="M:DaanV2.IO.EndianStream.CreateWriter(System.IO.Stream,DaanV2.Binary.Endianness)">
+        <member name="M:DaanV2.IO.EndianStreams.CreateWriter(System.IO.Stream,DaanV2.Binary.Endianness)">
             <summary>
             
             </summary>
@@ -2124,145 +1793,145 @@
         <member name="T:DaanV2.IO.StreamExtension">
             <summary>Extends default stream object with additional reading/writing operations</summary>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt16(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int16"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt32(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadInt32(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int32"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadInt64(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadInt64(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int64"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt16(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadUInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt16"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt32(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadUInt32(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt32"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_ReadUInt64(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianReadUInt64(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using big endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt16(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int16"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt32(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadInt32(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int32"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadInt64(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadInt64(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.Int64"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt16(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadUInt16(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt16"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt32(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadUInt32(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt32"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_ReadUInt64(System.IO.Stream)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianReadUInt64(System.IO.Stream)">
             <summary>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</summary>
             <param name="stream">The stream to read from</param>
             <returns>Reads an <see cref="T:System.UInt64"/> from stream using little endian encoding</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt32(System.IO.Stream,System.Int32@)">
+        <member name="M:DaanV2.IO.StreamExtension.VarintReadInt32(System.IO.Stream,System.Int32@)">
             <summary>Read an varint from stream into a <see cref="T:System.Int32" /></summary>
             <param name="stream">The stream to read from</param>
             <param name="Count">The amount of bytes read</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int32" /></returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_ReadInt64(System.IO.Stream,System.Int32@)">
+        <member name="M:DaanV2.IO.StreamExtension.VarintReadInt64(System.IO.Stream,System.Int32@)">
             <summary>Read an varint from stream into a <see cref="T:System.Int64" /></summary>
             <param name="stream">The stream to read from</param>
             <param name="Count">The amount of bytes read</param>
             <returns>Read an varint from stream into a <see cref="T:System.Int64" /></returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int16)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.Int16)">
             <summary>Writes an <see cref="T:System.Int16"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int32)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.Int32)">
             <summary>Writes an <see cref="T:System.Int32"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.Int64)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.Int64)">
             <summary>Writes an <see cref="T:System.Int64"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt16)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.UInt16)">
             <summary>Writes an <see cref="T:System.UInt16"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt32)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.UInt32)">
             <summary>Writes an <see cref="T:System.UInt32"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.BigEndian_Write(System.IO.Stream,System.UInt64)">
+        <member name="M:DaanV2.IO.StreamExtension.BigEndianWrite(System.IO.Stream,System.UInt64)">
             <summary>Writes an <see cref="T:System.UInt64"/> to stream using big endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int16)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.Int16)">
             <summary>Writes an <see cref="T:System.Int16"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int32)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.Int32)">
             <summary>Writes an <see cref="T:System.Int32"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.Int64)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.Int64)">
             <summary>Writes an <see cref="T:System.Int64"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt16)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.UInt16)">
             <summary>Writes an <see cref="T:System.UInt16"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt32)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.UInt32)">
             <summary>Writes an <see cref="T:System.UInt32"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.LittleEndian_Write(System.IO.Stream,System.UInt64)">
+        <member name="M:DaanV2.IO.StreamExtension.LittleEndianWrite(System.IO.Stream,System.UInt64)">
             <summary>Writes an <see cref="T:System.UInt64"/> to stream using little endian encoding</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The value to write to stream</param>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int32)">
+        <member name="M:DaanV2.IO.StreamExtension.VarIntWrite(System.IO.Stream,System.Int32)">
             <summary>Writes an varint to stream, returns the amount of bytes written</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The variable to write into the stream</param>
             <returns>Writes an varint from stream, returns the amount of bytes written</returns>
         </member>
-        <member name="M:DaanV2.IO.StreamExtension.Varint_Write(System.IO.Stream,System.Int64)">
+        <member name="M:DaanV2.IO.StreamExtension.VarIntWrite(System.IO.Stream,System.Int64)">
             <summary>Writes an varint from stream, returns the amount of bytes written</summary>
             <param name="stream">The stream to write to</param>
             <param name="Value">The variable to write into the stream</param>
@@ -2605,7 +2274,7 @@
         </member>
         <member name="T:DaanV2.Serialization.JSONSerializer`1">
             <summary>A class that contects the build in JSON serializer from .Net into the <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>
-            <typeparam name="TypeSerialize">The type to serializer/deserialize.</typeparam>
+            <typeparam name="T">The type to serializer/deserialize.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.JSONSerializer`1.#ctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.JSONSerializer`1"/>.</summary>
@@ -2741,20 +2410,16 @@
         </member>
         <member name="T:DaanV2.Serialization.XmlSerializer`1">
             <summary>A class that contects the build in JSON serializer from .Net into the <see cref="T:DaanV2.Serialization.Serialization"/>.</summary>
-            <typeparam name="TypeSerialize">The type to serializer/deserialize.</typeparam>
+            <typeparam name="T">The type to serializer/deserialize.</typeparam>
         </member>
         <member name="M:DaanV2.Serialization.XmlSerializer`1.#ctor">
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.XmlSerializer`1"/>.</summary>
         </member>
         <member name="M:DaanV2.Serialization.XmlSerializer`1.Deserialize(System.IO.Stream)">
-            <summary>Deserialize the given stream into the specified object.</summary>
-            <param name="stream">The strean to read the object from.</param>
-            <returns>Deserialize the given stream into the specified object.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:DaanV2.Serialization.XmlSerializer`1.Serialize(`0,System.IO.Stream)">
-            <summary>Serialize the given object in the given stream.</summary>
-            <param name="O">The object to serialize.</param>
-            <param name="stream">The stream to write the object to.</param>
+            <inheritdoc/>
         </member>
         <member name="F:DaanV2.Serialization.XmlSerializer`1._Serializer">
             <summary>The given xml serializer that connects to the interface.</summary>

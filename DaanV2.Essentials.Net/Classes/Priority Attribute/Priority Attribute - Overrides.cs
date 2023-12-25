@@ -1,7 +1,4 @@
-﻿/*ISC License
-
-Copyright(c) 2019, Daan Verstraten, daanverstraten@hotmail.com*/
-using System;
+﻿using System;
 
 namespace DaanV2 {
     public partial class PriorityAttribute : IEquatable<PriorityAttribute> {
@@ -38,14 +35,7 @@ namespace DaanV2 {
         /// <summary>Returns the hash code for this instance.</summary>
         /// <returns>Returns the hash code for this instance.</returns>
         public override Int32 GetHashCode() {
-#if NETCORE
             return HashCode.Combine(base.GetHashCode(), this.Value);
-#else
-            Int32 hashCode = -159790080;
-            hashCode = (hashCode * -1521134295) + base.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Value.GetHashCode();
-            return hashCode;
-#endif
         }
 
         /// <summary>Compare two <see cref="PriorityAttribute"/> if they are equal to each other.</summary>
