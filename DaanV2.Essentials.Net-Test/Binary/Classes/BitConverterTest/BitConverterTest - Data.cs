@@ -3,7 +3,7 @@
 namespace UnitTests.Binary {
 
     public partial class BitConverterTest {
-        /// <summary>Data template</summary>
+        /// <summary>Original template</summary>
         internal static Byte[] Data = new Byte[] {
             0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF
         };

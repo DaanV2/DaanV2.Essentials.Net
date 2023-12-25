@@ -4,12 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTests.Binary {
     public partial class BitConverterTest {
         public partial class Endian {
-            private const Int32 _Data = 0x0A0B0C0D;
+            private const Int32 Original = 0x0A0B0C0D;
 
             /// <summary>Tests if little endian is actually little endian</summary>
             [TestMethod]
             public void CheckLittleEndian() {
-                Byte[] Data = DaanV2.Binary.BitConverter.LittleEndian.ToBytes(_Data);
+                Byte[] Data = DaanV2.Binary.BitConverter.LittleEndian.ToBytes(Original);
 
                 Assert.AreEqual(Data.Length, 4);
 
@@ -22,7 +22,7 @@ namespace UnitTests.Binary {
             /// <summary>Tests if big endian is actually big endian</summary>
             [TestMethod]
             public void CheckBigEndian() {
-                Byte[] Data = DaanV2.Binary.BitConverter.BigEndian.ToBytes(_Data);
+                Byte[] Data = DaanV2.Binary.BitConverter.BigEndian.ToBytes(Original);
 
                 Assert.AreEqual(Data.Length, 4);
 

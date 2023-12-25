@@ -23,12 +23,12 @@ namespace UnitTests.Binary {
         public partial class Endian {
             [TestMethod]
             public void LittleEndianTest() {
-                Assert.IsTrue(BitConverter.LittleEndian.ToInt16(Data) == BitConverter.Endian.ToInt16(Data, Endianness.LittleEndian));
-                Assert.IsTrue(BitConverter.LittleEndian.ToInt32(Data) == BitConverter.Endian.ToInt32(Data, Endianness.LittleEndian));
-                Assert.IsTrue(BitConverter.LittleEndian.ToInt64(Data) == BitConverter.Endian.ToInt64(Data, Endianness.LittleEndian));
-                Assert.IsTrue(BitConverter.LittleEndian.ToUInt16(Data) == BitConverter.Endian.ToUInt16(Data, Endianness.LittleEndian));
-                Assert.IsTrue(BitConverter.LittleEndian.ToUInt32(Data) == BitConverter.Endian.ToUInt32(Data, Endianness.LittleEndian));
-                Assert.IsTrue(BitConverter.LittleEndian.ToUInt64(Data) == BitConverter.Endian.ToUInt64(Data, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToInt16(Original) == BitConverter.Endian.ToInt16(Original, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToInt32(Original) == BitConverter.Endian.ToInt32(Original, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToInt64(Original) == BitConverter.Endian.ToInt64(Original, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToUInt16(Original) == BitConverter.Endian.ToUInt16(Original, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToUInt32(Original) == BitConverter.Endian.ToUInt32(Original, Endianness.LittleEndian));
+                Assert.IsTrue(BitConverter.LittleEndian.ToUInt64(Original) == BitConverter.Endian.ToUInt64(Original, Endianness.LittleEndian));
 
 
                 TestArray(BitConverter.LittleEndian.ToBytes((System.Int16)0), BitConverter.Endian.ToBytes((System.Int16)0, Endianness.LittleEndian));
@@ -41,12 +41,12 @@ namespace UnitTests.Binary {
 
             [TestMethod]
             public void BigEndianTest() {
-                Assert.IsTrue(BitConverter.BigEndian.ToInt16(Data) == BitConverter.Endian.ToInt16(Data, Endianness.BigEndian));
-                Assert.IsTrue(BitConverter.BigEndian.ToInt32(Data) == BitConverter.Endian.ToInt32(Data, Endianness.BigEndian));
-                Assert.IsTrue(BitConverter.BigEndian.ToInt64(Data) == BitConverter.Endian.ToInt64(Data, Endianness.BigEndian));
-                Assert.IsTrue(BitConverter.BigEndian.ToUInt16(Data) == BitConverter.Endian.ToUInt16(Data, Endianness.BigEndian));
-                Assert.IsTrue(BitConverter.BigEndian.ToUInt32(Data) == BitConverter.Endian.ToUInt32(Data, Endianness.BigEndian));
-                Assert.IsTrue(BitConverter.BigEndian.ToUInt64(Data) == BitConverter.Endian.ToUInt64(Data, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToInt16(Original) == BitConverter.Endian.ToInt16(Original, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToInt32(Original) == BitConverter.Endian.ToInt32(Original, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToInt64(Original) == BitConverter.Endian.ToInt64(Original, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToUInt16(Original) == BitConverter.Endian.ToUInt16(Original, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToUInt32(Original) == BitConverter.Endian.ToUInt32(Original, Endianness.BigEndian));
+                Assert.IsTrue(BitConverter.BigEndian.ToUInt64(Original) == BitConverter.Endian.ToUInt64(Original, Endianness.BigEndian));
 
                 TestArray(BitConverter.BigEndian.ToBytes((System.Int16)0), BitConverter.Endian.ToBytes((System.Int16)0, Endianness.BigEndian));
                 TestArray(BitConverter.BigEndian.ToBytes(0), BitConverter.Endian.ToBytes(0, Endianness.BigEndian));
