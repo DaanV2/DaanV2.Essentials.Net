@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugger", "Debugger\Debugg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaanV2.Essentials.Net", "DaanV2.Essentials.Net\DaanV2.Essentials.Net.csproj", "{2E11EA58-757A-46C9-AFA2-F36C043043A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "DaanV2.Essentials.Net-Test\UnitTests.csproj", "{0678F1B2-A636-4B4A-8D09-A91A55E01595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{0678F1B2-A636-4B4A-8D09-A91A55E01595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
