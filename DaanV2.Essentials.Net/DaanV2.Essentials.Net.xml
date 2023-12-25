@@ -2089,7 +2089,7 @@
         <member name="M:DaanV2.Processors.ProcessorExtension.Postprocess``2(DaanV2.Processors.IPostProcessor{``0,``1},``0[],``1)">
             <summary>Puts a collection of given items through the postprocessor.</summary>
             <typeparam name="T">The type of object to process.</typeparam>
-            <typeparam name="TypeContext">The type of the context.</typeparam>
+            <typeparam name="TContext">The type of the context.</typeparam>
             <param name="Processor">The processor to use.</param>
             <param name="Items">The items to process.</param>
             <param name="Context">The context needed to process.</param>
@@ -2097,7 +2097,7 @@
         <member name="M:DaanV2.Processors.ProcessorExtension.Postprocess``2(DaanV2.Processors.IPostProcessor{``0,``1},System.Collections.Generic.IList{``0},``1)">
             <summary>Puts a collection of given items through the postprocessor.</summary>
             <typeparam name="T">The type of object to process.</typeparam>
-            <typeparam name="TypeContext">The type of the context.</typeparam>
+            <typeparam name="TContext">The type of the context.</typeparam>
             <param name="Processor">The processor to use.</param>
             <param name="Items">The items to process.</param>
             <param name="Context">The context needed to process.</param>
@@ -2105,7 +2105,7 @@
         <member name="M:DaanV2.Processors.ProcessorExtension.Postprocess``2(DaanV2.Processors.IPostProcessor{``0,``1},System.Collections.Generic.IEnumerable{``0},``1)">
             <summary>Puts a collection of given items through the postprocessor.</summary>
             <typeparam name="T">The type of object to process.</typeparam>
-            <typeparam name="TypeContext">The type of the context.</typeparam>
+            <typeparam name="TContext">The type of the context.</typeparam>
             <param name="Processor">The processor to use.</param>
             <param name="Items">The items to process.</param>
             <param name="Context">The context needed to process.</param>
@@ -2280,14 +2280,14 @@
             <summary>Creates a new instance of <see cref="T:DaanV2.Serialization.JSONSerializer`1"/>.</summary>
         </member>
         <member name="M:DaanV2.Serialization.JSONSerializer`1.Deserialize(System.IO.Stream)">
-            <summary>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</summary>
-            <param name="stream">The stream to read from.</param>
-            <returns>Deserialize the given stream into the specified <see cref="T:System.Type"/>.</returns>
+            <summary>Deserialize the given writer into the specified <see cref="T:System.Type"/>.</summary>
+            <param name="reader">The stream to read from.</param>
+            <returns>Deserialize the given writer into the specified <see cref="T:System.Type"/>.</returns>
         </member>
         <member name="M:DaanV2.Serialization.JSONSerializer`1.Serialize(`0,System.IO.Stream)">
-            <summary>Serializes the given object into the given stream.</summary>
+            <summary>Serializes the given object into the given writer.</summary>
             <param name="O">The object to serialize.</param>
-            <param name="stream">The stream to write to.</param>
+            <param name="writer">The writer to write to.</param>
         </member>
         <member name="F:DaanV2.Serialization.JSONSerializer`1._Options">
             <summary>The options to be used when generating a serializer.</summary>
@@ -2906,38 +2906,38 @@
         </member>
         <member name="M:DaanV2.TypeExtension.ContainsInterface(System.Type,System.Type)">
             <summary>Checks if the given type implement the given interface type.</summary>
-            <param name="Object">The object to look through.</param>
+            <param name="Search">The object to look through.</param>
             <param name="Contains">The interface type to find.</param>
             <returns>Checks if the given type implement the given interface type.</returns>
         </member>
         <member name="M:DaanV2.TypeExtension.ContainsAttribute(System.Type,System.Type,System.Boolean)">
             <summary>Checks if the specified type contains a type of attribute.</summary>
-            <param name="Object">The object to look through.</param>
+            <param name="Search">The object to look through.</param>
             <param name="Contains">The type to find in attributes.</param>
             <param name="Inherit">true to search this member's inheritance chain to find the attributes; otherwise, false. This parameter is ignored for properties and events.</param>
             <returns>Checks if the specified type contains a type of attribute.</returns>
         </member>
         <member name="M:DaanV2.TypeExtension.GetAttribute(System.Type,System.Type)">
             <summary>Returns the specified attribute.</summary>
-            <param name="Object">The object to retrieve attributes from.</param>
+            <param name="Search">The object to retrieve attributes from.</param>
             <param name="Value">The type of the attribute to return.</param>
             <returns>Returns the specified attribute.</returns>
         </member>
         <member name="M:DaanV2.TypeExtension.GetAttribute``1(System.Type)">
             <summary>Returns the specified attribute.</summary>
-            <param name="Object">The object to retrieve attributes from.</param>
+            <param name="Search">The object to retrieve attributes from.</param>
             <typeparam name="T">The type of the attribute to return.</typeparam>
             <returns>Returns the specified attribute.</returns>
         </member>
         <member name="M:DaanV2.TypeExtension.GetAttributes(System.Type,System.Type)">
             <summary>Returns the specified attributes.</summary>
-            <param name="Object">The object to retrieve attributes from.</param>
+            <param name="Search">The object to retrieve attributes from.</param>
             <param name="Value">The type of the attribute to return.</param>
             <returns>Returns the specified attributes.</returns>
         </member>
         <member name="M:DaanV2.TypeExtension.GetAttributes``1(System.Type)">
             <summary>Returns the specified attributes.</summary>
-            <param name="Object">The object to retrieve attributes from.</param>
+            <param name="Search">The object to retrieve attributes from.</param>
             <typeparam name="T">The type of the attribute to return.</typeparam>
             <returns>Returns the specified attributes.</returns>
         </member>

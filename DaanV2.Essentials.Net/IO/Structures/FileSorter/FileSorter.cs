@@ -36,7 +36,7 @@ namespace DaanV2.IO {
         /// <param name="Files">The files to sort</param>
         /// <param name="BaseFolder">The shared base folder of all files</param>
         [MethodImpl(MethodImplOptions.AggressiveOptimization)]
-        public static void Sort(String[] Files, String BaseFolder) {
+        public static void Sort([NotNull] String[] Files, String BaseFolder) {
             var Sorter = new FileSorter(BaseFolder);
             Array.Sort(Files, Sorter.Compare);
         }
@@ -45,7 +45,7 @@ namespace DaanV2.IO {
         /// <param name="Files">The files to sort</param>
         /// <param name="BaseFolder">The shared base folder of all files</param>
         [MethodImpl(MethodImplOptions.AggressiveOptimization)]
-        public static void Sort(List<String> Files, String BaseFolder) {
+        public static void Sort([NotNull] List<String> Files, String BaseFolder) {
             var Sorter = new FileSorter(BaseFolder);
             Files.Sort(Sorter.Compare);
         }
